@@ -1,36 +1,89 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Here's the modified README for Astro, following the structure and style of the Next.js README you provided:
+
+File: README.md
+
+````markdown
+# Astro Starter Kit: Basics
+
+This is an [Astro](https://astro.build/) project bootstrapped with [`create astro`](https://docs.astro.build/en/getting-started/).
 
 ## Getting Started
+
+1. Clone the repo
+
+2. Update the .env (if applicable)
 
 First, run the development server:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+
+# Install deps
+npm install
+
+# Run dev server
+npm dev
+```
+````
+
+Open [http://localhost:4321](http://localhost:4321) with your browser to see the result.
+
+## 🚀 Project Structure
+
+Inside of your Astro project, you'll see the following folders and files:
+
+```text
+/
+├── public/
+│   └── favicon.svg
+├── src/
+│   ├── components/
+│   │   └── Card.astro
+│   ├── layouts/
+│   │   └── Layout.astro
+│   └── pages/
+│       └── index.astro
+└── package.json
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Any static assets, like images, can be placed in the `public/` directory except if used within content
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## 🧞 Commands
 
-## Learn More
+All commands are run from the root of the project, from a terminal:
 
-To learn more about Next.js, take a look at the following resources:
+| Command                   | Action                                           |
+| :------------------------ | :----------------------------------------------- |
+| `npm install`             | Installs dependencies                            |
+| `npm run dev`             | Starts local dev server at `localhost:4321`      |
+| `npm run build`           | Build your production site to `./dist/`          |
+| `npm run preview`         | Preview your build locally, before deploying     |
+| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
+| `npm run astro -- --help` | Get help using the Astro CLI                     |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### pnpm
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- Fixing Prettier lint
 
-## Deploy on Vercel
+```bash
+npm format:write
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Convention
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- filename should be in `kebab-case`
+- variable name should be in `camelCase`
+- constant should be in `UPPERCASE`
+- component should be in `PascalCase`
+- [Git Commit Message](https://gist.github.com/joshbuchea/6f47e86d2510bce28f8e7f42ae84c716)
+
+### Docs
+
+- [Astro Documentation](https://docs.astro.build)
+- [Astro Discord Server](https://astro.build/chat)
+
+## 👀 Want to learn more?
+
+Feel free to check [Astro documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).

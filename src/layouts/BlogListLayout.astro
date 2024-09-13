@@ -1,0 +1,75 @@
+---
+import { getContentUrl } from "@/lib/route";
+
+import BaseLayout from "./BaseLayout.astro";
+import type { SupportedLanguage } from "@/i18n/ui";
+import type { CollectionEntry } from "astro:content";
+
+interface Props {
+  title: string;
+  description: string;
+  canonicalURL: string;
+  content: (
+    | CollectionEntry<"articles">
+    | CollectionEntry<"cybersecurity-tips">
+  )[];
+  image?: string;
+}
+
+const { title, description, canonicalURL, content, image } = Astro.props;
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  canonicalURL={canonicalURL}
+  image={image}
+  type="website"
+>
+  <Fragment slot="head">
+    <script
+      is:inline
+      type="application/ld+json"
+      set:html={JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        mainEntityOfPage: {
+          "@type": "WebPage",
+          "@id": Astro.url,
+        },
+        name: title,
+        description: description,
+        url: Astro.url,
+        image: new URL(image || "/default-og-image.jpg", Astro.url).toString(),
+        isPartOf: {
+          "@type": "WebSite",
+          name: "Digital Security Committee",
+          url: Astro.site,
+        },
+        about: {
+          "@type": "Thing",
+          name: "News Articles",
+        },
+        hasPart: content.map((item) => ({
+          "@type": "NewsArticle",
+          headline: item.data.title,
+          url: new URL(
+            getContentUrl(item, Astro.currentLocale as SupportedLanguage),
+            Astro.site,
+          ).toString(),
+          datePublished: new Date(item.data.date).toISOString(),
+          image: item.data.image
+            ? new URL(item.data.image.src, Astro.site).toString()
+            : undefined,
+          author: {
+            "@type": "Organization",
+            name: "Digital Security Committee",
+            url: Astro.site,
+          },
+        })),
+      })}
+    />
+  </Fragment>
+
+  <slot />
+</BaseLayout>

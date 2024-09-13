@@ -1,0 +1,33 @@
+---
+import Main from "@/components/Main.astro";
+import LeaderList from "@/components/page/leader/LeaderList.astro";
+import TextElement from "@/components/TextElement";
+
+import { languages, type SupportedLanguage } from "@/i18n/ui";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { getCollection } from "astro:content";
+
+const title = "DSC Chair's Remarks";
+
+export async function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({
+    params: { lang },
+  }));
+}
+
+const lang = Astro.params.lang as SupportedLanguage;
+let allLeaders = await getCollection("leaders");
+allLeaders = [];
+const leaders = allLeaders.filter((leader) => leader.data.lang === lang);
+---
+
+<BaseLayout title={title}>
+  <Main>
+    <section aria-label={title}>
+      <TextElement variant="heading" className="mb-4 text-center text-primary">
+        {title}
+      </TextElement>
+      <LeaderList leaders={leaders} lang={lang} />
+    </section>
+  </Main>
+</BaseLayout>
