@@ -1,0 +1,133 @@
+---
+import AboutComponent from "@/components/page/home/AboutComponent.astro";
+import HomeCarousel from "@/components/page/home/carousel/HomeCarousel.astro";
+import HomeArticleList from "@/components/page/home/HomeArticleList.astro";
+import HomeMain from "@/components/page/home/HomeMain.astro";
+import LawCardList from "@/components/page/home/law/LawCardList.astro";
+import TextElement from "@/components/TextElement";
+import UnitLinks from "@/components/UnitLinks";
+import WhatWeDoGrid from "@/components/WhatWeDoGird";
+
+import { languages, type SupportedLanguage } from "@/i18n/ui";
+import { useTranslations } from "@/i18n/utils";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { getCollection } from "astro:content";
+
+const lang = Astro.currentLocale as SupportedLanguage;
+
+export function getStaticPaths() {
+  return Object.values(languages).map((lang) => ({ params: { lang } }));
+}
+
+const allArticles = await getCollection("articles");
+
+const langArticles = allArticles.filter((tip) => tip.data.lang === lang);
+
+const latestArticles = langArticles
+  .sort(
+    (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime(),
+  )
+  .slice(0, 3);
+
+const allTips = await getCollection("cybersecurity-tips");
+
+const langTips = allTips.filter((tip) => tip.data.lang === lang);
+
+const latestTips = langTips
+  .sort(
+    (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime(),
+  )
+  .slice(0, 3);
+
+const allDirectives = await getCollection("directives");
+const langDirectives = allDirectives.filter(
+  (article) => article.data.lang === lang,
+);
+
+const featuredDirectives = langDirectives
+  .filter(
+    (directive) => directive.data.lang === lang && directive.data.featured,
+  )
+  .slice(0, 4);
+
+const t = useTranslations(lang);
+---
+
+<BaseLayout
+  title={`Digital Security Committee - D.S.C.`}
+  description={"The Digital Security Committee (D.S.C.) was established in order to ensure the efficient and effective in supporting the National Council for Digital Economy and Society, with function of leading, coordinating and promoting the management of digital security in Cambodia."}
+>
+  <HomeMain>
+    <TextElement variant="heading" className="sr-only">
+      It was popularised in the 1960s
+    </TextElement>
+    <HomeCarousel content={latestArticles} lang={lang} />
+    <div class="mx-auto flex flex-col items-center gap-12">
+      <section aria-labelledby="about-dsc" class="px-24 max-sm:p-5">
+        <div class="container">
+          <AboutComponent />
+        </div>
+      </section>
+      <section
+        aria-labelledby="what-we-do-heading"
+        class="w-full bg-shadow px-24 py-10 max-sm:p-5"
+      >
+        <div class="container">
+          <TextElement
+            variant="subheading"
+            id="what-we-do-heading"
+            className="mb-4 text-center text-primary"
+          >
+            {t("home.whatwedo")}
+          </TextElement>
+          <WhatWeDoGrid />
+        </div>
+      </section>
+      <section
+        aria-labelledby="units-under-dsc-heading"
+        class="px-24 max-sm:p-5"
+      >
+        <div class="container">
+          <TextElement
+            variant="subheading"
+            id="units-under-dsc-heading"
+            className="mb-4 text-center text-primary"
+          >
+            {"Units under Digital Security Committee"}
+          </TextElement>
+          <UnitLinks />
+        </div>
+      </section>
+      <section
+        aria-labelledby="cybersecurity-tips"
+        class="w-full bg-shadow px-24 py-10 max-sm:p-5"
+      >
+        <div class="container">
+          <TextElement
+            variant="subheading"
+            id="cybersecurity-tips-heading"
+            className="mb-4 text-center text-primary"
+          >
+            {"Cybersecurity Tips"}
+          </TextElement>
+          <HomeArticleList content={latestTips} lang={lang} />
+        </div>
+      </section>
+      <section
+        aria-labelledby="law-regulations-heading"
+        class="mb-5 px-24 max-sm:p-5"
+      >
+        <div class="container">
+          <TextElement
+            variant="subheading"
+            id="law-regulations-heading"
+            className="mb-4 text-center text-primary"
+          >
+            {"Laws and Regulations"}
+          </TextElement>
+          <LawCardList directives={featuredDirectives} lang={lang} />
+        </div>
+      </section>
+    </div>
+  </HomeMain>
+</BaseLayout>

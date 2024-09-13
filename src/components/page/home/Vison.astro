@@ -1,0 +1,51 @@
+---
+import LottieAnimation from "../../lottie/LottieAnimation";
+import TextElement from "../../TextElement";
+
+const visionList = [
+  {
+    text: "To fulfills its functions as the “Etat-Major” to the National Digital Economy and Society Council.",
+  },
+  {
+    text: "To act as a central command in charge of Cambodia’s digital security management.",
+  },
+  {
+    text: "To resist and respond to all form of cyberattacks, thereby safeguarding the digital security of Cambodia’s cyberspace.",
+  },
+  {
+    text: "To coordinate, direct, prepare, implement, monitor, and evaluate the implementation of policies, strategies, measures, technical standards and action plans related to digital security including cybersecurity, cybercrime, cyber defense, and cyber diplomacy.",
+  },
+  {
+    text: "To develop Digital Security Policy ‘s framework, regulation, and strategy related to Cambodia’s digital security. ",
+  },
+  {
+    text: "To ensure a successful implementation of the Cambodia Digital Economy and Society Policy Framework 2021 – 2035 and Digital Government Policy 2022-2035.",
+  },
+];
+---
+
+<div class="flex flex-col gap-8 md:flex-row">
+  <div class="w-full md:w-2/5">
+    <div class="h-[320px] md:h-auto">
+      <LottieAnimation animationType="vision" client:idle />
+    </div>
+  </div>
+  <div class="w-full md:w-3/5">
+    <TextElement variant="subheading" id="vision" className="mt-2 text-primary">
+      Vision
+    </TextElement>
+    <TextElement variant="body" className="mt-2">
+      To ensure a vibrant digital economy and digital security of the Kingdom of
+      Cambodia, The Digital Security Committee (D.S.C.) has the vision:
+    </TextElement>
+    <ul class="mt-2 list-disc pl-4">
+      {
+        visionList.map((vision) => (
+          <li>
+            <TextElement variant="body">{vision.text}</TextElement>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</div>

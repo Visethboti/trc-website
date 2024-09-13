@@ -1,0 +1,39 @@
+---
+import TextElement from "@/components/TextElement";
+
+import DirectiveCard from "./DirectiveCard.astro";
+import type { SupportedLanguage } from "@/i18n/ui";
+import type { CollectionEntry } from "astro:content";
+
+interface Props {
+  directives: CollectionEntry<"directives">[];
+  lang: SupportedLanguage;
+}
+
+const { directives, lang } = Astro.props;
+---
+
+<ul class="grid list-none grid-cols-1 gap-5 py-5 md:grid-cols-2 lg:grid-cols-3">
+  {
+    directives.length === 0 && (
+      <TextElement variant="paragraph">
+        There is no content available yet.
+      </TextElement>
+    )
+  }
+  {
+    directives.map((directive) => (
+      <li>
+        <DirectiveCard
+          title={directive.data.title}
+          body={directive.body}
+          date={directive.data.date}
+          image={directive.data.image}
+          lang={lang}
+          file={directive.data.file}
+          type={directive.data.type}
+        />
+      </li>
+    ))
+  }
+</ul>
