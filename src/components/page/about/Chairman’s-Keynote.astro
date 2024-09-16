@@ -13,31 +13,27 @@ const visionList = [
     text: "The policy provides the Telecommunication Regulator of Cambodia with the approaches and mechanisms for improving the quality and providing its services to the providers and users of telecommunications networks and services as per the needs at various places",
   },
 ];
-
 ---
 
 <div class="flex flex-col gap-8 lg:flex-row">
-  <div class="w-full ">
-    <div class="h-full ">
-        <Image
+  <div class="w-full">
+    <div class="h-full">
+      <Image
         src="/src/asset/about-trc/image 26.jpg"
         alt="descriptive text"
         width="900"
         height="150"
       />
-    </div> 
+    </div>
   </div>
 
   <div class="w-full">
-
     <ul class="grid gap-3">
       {
         visionList.map((vision) => (
-          
-            <TextElement variant="small">{vision.text}</TextElement> 
-          
+          <TextElement variant="small">{vision.text}</TextElement>
         ))
-      } 
+      }
     </ul>
   </div>
 </div>

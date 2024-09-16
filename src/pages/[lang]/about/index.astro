@@ -1,9 +1,9 @@
 ---
 import Main from "@/components/Main.astro";
-import AboutList from "@/components/page/about/AboutList.astro";
 import AboutTRC from "@/components/page/about/About-TRC.astro";
-import VisionMission from "@/components/page/about/Vision-&-Mission.astro";
+import AboutList from "@/components/page/about/AboutList.astro";
 import ChairmanKeynote from "@/components/page/about/Chairman’s-Keynote.astro";
+import VisionMission from "@/components/page/about/Vision-&-Mission.astro";
 import TextElement from "@/components/TextElement";
 
 import { ABOUT_TYPES } from "@/content/about.type";
@@ -52,25 +52,30 @@ const committeeList = [
   <Main>
     <div class="container flex flex-col gap-12">
       <section aria-label={"about dsc"}>
-          <div><TextElement
-            variant="subheading"
-            className="text-center"
-          >
-           Telecommunication Regulator of Cambodia
-          </TextElement></div>
+        <div>
+          <TextElement variant="subheading" className="text-center">
+            Telecommunication Regulator of Cambodia
+          </TextElement>
+        </div>
       </section>
       <section aria-labelledby="vision">
-        <TextElement variant="smallheading" className="pb-5"> Chairman’s Keynote </TextElement> 
+        <TextElement variant="smallheading" className="pb-5">
+          Chairman’s Keynote
+        </TextElement>
         <ChairmanKeynote />
       </section>
-      <hr class="border border-yellow-500 w-[15rem] lg:w-[50rem] mx-auto">
+      <hr class="mx-auto w-[15rem] border border-yellow-500 lg:w-[50rem]" />
       <section aria-labelledby="mission">
-        <TextElement variant="smallheading" className="pb-5"> Vision & Mission </TextElement>
+        <TextElement variant="smallheading" className="pb-5">
+          Vision & Mission
+        </TextElement>
         <VisionMission />
       </section>
-      <hr class="border border-yellow-500 w-[15rem] lg:w-[50rem] mx-auto ">
+      <hr class="mx-auto w-[15rem] border border-yellow-500 lg:w-[50rem]" />
       <section aria-labelledby="about">
-        <TextElement variant="smallheading" className="pb-5"> About TRC </TextElement>
+        <TextElement variant="smallheading" className="pb-5">
+          About TRC
+        </TextElement>
         <AboutTRC />
       </section>
     </div>

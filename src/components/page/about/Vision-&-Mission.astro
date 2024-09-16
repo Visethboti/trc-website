@@ -16,47 +16,44 @@ const missiontrcList = [
     text: "Implementing the National Broadband Policy and Strategic Action Plan adopted by the Royal Government of Cambodia;  ",
   },
   {
-    text:"Enforcing policies and regulations related to the telecommunications sector and information communication technology, as devised by the Ministry of Post and Telecommunications;"
+    text: "Enforcing policies and regulations related to the telecommunications sector and information communication technology, as devised by the Ministry of Post and Telecommunications;",
   },
   {
-    text:"Promoting public understanding and ensuring acceptable telecommunications services for everyone;"
+    text: "Promoting public understanding and ensuring acceptable telecommunications services for everyone;",
   },
   {
-    text:"Ensuring that consumers enjoy quality services at affordable prices;"
+    text: "Ensuring that consumers enjoy quality services at affordable prices;",
   },
   {
-    text:"Providing transparent regulatory processes and guidance;"
+    text: "Providing transparent regulatory processes and guidance;",
   },
   {
-    text:"Enforcing regulations for fair competition and efficiency in the telecommunications industry;"
+    text: "Enforcing regulations for fair competition and efficiency in the telecommunications industry;",
   },
   {
-    text:"Following international standards and practices that contribute to the development and"
+    text: "Following international standards and practices that contribute to the development and",
   },
 ];
-
 ---
 
 <div class="flex flex-col gap-8 lg:flex-row">
-  <div class="w-full ">
-        <Image
-        src="/src/asset/about-trc/image 27.jpg"
-        alt="descriptive text"
-        width="800"
-        height="500"
-      />
+  <div class="w-full">
+    <Image
+      src="/src/asset/about-trc/image 27.jpg"
+      alt="descriptive text"
+      width="800"
+      height="500"
+    />
   </div>
-  <div class="w-full ">
-    
+  <div class="w-full">
     <ul class="grid gap-3">
       {
         missionList.map((mission) => (
-          
-            <TextElement variant="small">{mission.text}</TextElement>
+          <TextElement variant="small">{mission.text}</TextElement>
         ))
       }
     </ul>
-    <ul class="pl-4 list-decimal">
+    <ul class="list-decimal pl-4">
       {
         missiontrcList.map((mission) => (
           <li>
