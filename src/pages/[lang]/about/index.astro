@@ -1,8 +1,9 @@
 ---
 import Main from "@/components/Main.astro";
 import AboutList from "@/components/page/about/AboutList.astro";
-import Mission from "@/components/page/home/Mission.astro";
-import Vision from "@/components/page/home/Vison.astro";
+import AboutTRC from "@/components/page/about/About-TRC.astro";
+import VisionMission from "@/components/page/about/Vision-&-Mission.astro";
+import ChairmanKeynote from "@/components/page/about/Chairman’s-Keynote.astro";
 import TextElement from "@/components/TextElement";
 
 import { ABOUT_TYPES } from "@/content/about.type";
@@ -49,74 +50,28 @@ const committeeList = [
   image={currentImage.src}
 >
   <Main>
-    <div class="flex flex-col gap-12 py-8">
+    <div class="container flex flex-col gap-12">
       <section aria-label={"about dsc"}>
-        <header>
-          <TextElement
-            variant="heading"
-            className="pb-6 text-center text-primary lg:text-3xl"
+          <div><TextElement
+            variant="subheading"
+            className="text-center"
           >
-            {t("about.dsc")}
-          </TextElement>
-          <TextElement variant="body" className="pb-6">
-            In 2021, to ensure the development of vibrant digital economy and
-            society of Cambodia, the Royal Government of Cambodia under the
-            leadership of <strong
-              >Samdech Akka Moha Sena Padei Techo Hun Sen</strong
-            >, has established the “National Digital Economy and Society
-            Council” in accordance with Cambodia Digital Economy and Society
-            Policy Framework 2021 – 2035.
-          </TextElement>
-          <TextElement variant="body" className="pb-6">
-            According to Cambodia Digital Economy and Society Policy Framework
-            2021 – 2035, the National Digital Economy and Society Council has
-            three “Etat-Major” committees that are responsible for specific
-            technical tasks. The committees are:
-          </TextElement>
-          <ul class="list-disc pb-6 pl-10">
-            {
-              committeeList.map((committee) => (
-                <li>
-                  <TextElement variant="body">{committee}</TextElement>
-                </li>
-              ))
-            }
-          </ul>
-          <TextElement variant="body" className="pb-6">
-            Throughout the process of digital transformation and implementation
-            of Cambodia Digital Economy and Society Policy Framework 2021 –
-            2035, the Royal Government of Cambodia has foreseen “Digital
-            Security” as a vital asset to ensure the successful implementation
-            of the framework itself and also to ensure that Cambodia’s
-            cyberspace is safe from cyber risk. Therefore, in 2024, The Royal
-            Government of Cambodia, under the leadership of <strong
-              >Samdech Moha Borvor Thipadei Hun Manet</strong
-            >, has established the “Digital Security Committee” which is the
-            technical committee responsible for managing Cambodia’s digital
-            security with the purpose of protecting the interest of users,
-            resisting cyber-attack and competent to respond to all areas,
-            including technical and strength, as well as the management of the
-            entire national social security.
-          </TextElement>
-        </header>
+           Telecommunication Regulator of Cambodia
+          </TextElement></div>
       </section>
       <section aria-labelledby="vision">
-        <Vision />
+        <TextElement variant="smallheading" className="pb-5"> Chairman’s Keynote </TextElement> 
+        <ChairmanKeynote />
       </section>
+      <hr class="border border-yellow-500 w-[15rem] lg:w-[50rem] mx-auto">
       <section aria-labelledby="mission">
-        <Mission />
+        <TextElement variant="smallheading" className="pb-5"> Vision & Mission </TextElement>
+        <VisionMission />
       </section>
-      <section aria-label={"Role and Responsibilites "}>
-        <TextElement
-          variant="subheading"
-          className="pb-6 text-center text-primary lg:text-3xl"
-        >
-          {t("about.roleResponsibilities")}
-        </TextElement>
-        <TextElement variant="body" className="text-center">
-          {t("about.roleResponsibilitiesText")}
-        </TextElement>
-        <AboutList abouts={roles} className="sm:grid-cols-2 lg:grid-cols-3" />
+      <hr class="border border-yellow-500 w-[15rem] lg:w-[50rem] mx-auto ">
+      <section aria-labelledby="about">
+        <TextElement variant="smallheading" className="pb-5"> About TRC </TextElement>
+        <AboutTRC />
       </section>
     </div>
   </Main>

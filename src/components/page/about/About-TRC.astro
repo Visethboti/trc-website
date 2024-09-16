@@ -1,0 +1,43 @@
+---
+import LottieAnimation from "../../lottie/LottieAnimation";
+import TextElement from "../../TextElement";
+import { Image } from "astro:assets";
+
+const aboutList = [
+  {
+    text: "The Telecommunication Regulator of Cambodia (TRC), established by the Law on Telecommunications in 2015, plays a crucial role in regulating Cambodia's telecommunications sector. As a public legal entity, TRC operates autonomously and independently from telecommunications operators and other individuals in the industry.",
+  },
+  {
+    text: "The main objective of TRC is to ensure fair, efficient, and transparent competition in the telecommunications sector. To achieve this goal, TRC formulates regulations and guidelines for the operation and provision of telecommunications services and networks in accordance with the Royal Government's policies. These regulations are implemented through the enforcement of relevant laws and serve as the legal framework for the sector",
+  },
+  {
+    text: "In addition to its regulatory and arbitration roles, TRC also supervises the telecommunications sector. TRC monitors compliance with regulations, investigates possible breaches, and takes appropriate action to maintain a level playing field for all industry players.Act as a policy maker to review and decide on proposal for revision and/or amendment of laws, regulations, and policies related to digital security.",
+  },
+ 
+];
+---
+
+<div class="flex flex-col gap-8 md:flex-row ">
+  <div class="w-full ">
+    <div class="h-full ">
+        <Image
+        src="/src/asset/about-trc/image (1).png"
+        alt="descriptive text"
+        width="900"
+        height="150"
+      />
+    </div> 
+  </div>
+  <div class="w-full ">
+    
+    <ul class="grid gap-3">
+      {
+        aboutList.map((about) => (
+          
+            <TextElement variant="small">{about.text}</TextElement>
+          
+        ))
+      }
+    </ul>
+  </div>
+</div>

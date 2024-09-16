@@ -1,0 +1,69 @@
+---
+import TextElement from "../../TextElement";
+import { Image } from "astro:assets";
+
+const missionList = [
+  {
+    text: "The Telecommunication Regulator of Cambodia (TRC) facilitates and regulates the telecommunications sector, promoting investment, innovation, and fair competition while providing high-quality, affordable, and accessible services to consumers. TRC contributes to the economic growth of Cambodia and uphold transparency, accountability, and ethical conduct.",
+  },
+  {
+    text: "The Telecommunication Regulator of Cambodia (TRC) performs its missions in response to the needs of consumers, operators, service providers, and suppliers in line with the Royal Government of Cambodia's policy towards ASEAN Economic Integration and Regional Globalization. The missions of the TRC include, but are not limited to: ",
+  },
+];
+
+const missiontrcList = [
+  {
+    text: "Implementing the National Broadband Policy and Strategic Action Plan adopted by the Royal Government of Cambodia;  ",
+  },
+  {
+    text:"Enforcing policies and regulations related to the telecommunications sector and information communication technology, as devised by the Ministry of Post and Telecommunications;"
+  },
+  {
+    text:"Promoting public understanding and ensuring acceptable telecommunications services for everyone;"
+  },
+  {
+    text:"Ensuring that consumers enjoy quality services at affordable prices;"
+  },
+  {
+    text:"Providing transparent regulatory processes and guidance;"
+  },
+  {
+    text:"Enforcing regulations for fair competition and efficiency in the telecommunications industry;"
+  },
+  {
+    text:"Following international standards and practices that contribute to the development and"
+  },
+];
+
+---
+
+<div class="flex flex-col gap-8 lg:flex-row">
+  <div class="w-full ">
+        <Image
+        src="/src/asset/about-trc/image 27.jpg"
+        alt="descriptive text"
+        width="800"
+        height="500"
+      />
+  </div>
+  <div class="w-full ">
+    
+    <ul class="grid gap-3">
+      {
+        missionList.map((mission) => (
+          
+            <TextElement variant="small">{mission.text}</TextElement>
+        ))
+      }
+    </ul>
+    <ul class="pl-4 list-decimal">
+      {
+        missiontrcList.map((mission) => (
+          <li>
+            <TextElement variant="small">{mission.text}</TextElement>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</div>

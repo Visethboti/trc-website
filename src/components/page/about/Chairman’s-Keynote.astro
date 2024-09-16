@@ -1,0 +1,43 @@
+---
+import TextElement from "../../TextElement";
+import { Image } from "astro:assets";
+
+const visionList = [
+  {
+    text: "Under the wise leadership of Prime Minister Samdech Akka Moha Sena Padei Techo HUN SEN, the development of the telecommunications and information technology sector, in line with the law, relevant frameworks and the policies of the Royal Government of Cambodia, is a key priority in the public administrative reform programs. This goal is at the core of the Rectangular Strategy, National Strategic Development Plan and political Platform of the Royal Government, aimed at promoting economic growth, employment, equity, and efficiency in the Kingdom of Cambodia.",
+  },
+  {
+    text: "Regulation of the telecommunications and ICT sector with high effectiveness, transparency, and quality, and provision of interest protection to service providers and network and telecommunications service users in line with the policy of the strategic development plan and legal frameworks in force defined by the Royal Government of Cambodia through the Ministry of Post and Telecommunications as the technical guardian are the primary function and duty of the Telecommunication Regulator of Cambodia. These functions are strategically important and cannot be subject to negligence or be overlooked, and the greatest attention shall be paid to their nationwide implementation as per the places, times, and needs of the people with the aim of achieving Cambodian Millennium Development Goals to contribute to promoting investment and development in the sector and to participate in boosting the national economy and alleviating poverty of the people of the Kingdom of Cambodia.",
+  },
+  {
+    text: "The policy provides the Telecommunication Regulator of Cambodia with the approaches and mechanisms for improving the quality and providing its services to the providers and users of telecommunications networks and services as per the needs at various places",
+  },
+];
+
+---
+
+<div class="flex flex-col gap-8 lg:flex-row">
+  <div class="w-full ">
+    <div class="h-full ">
+        <Image
+        src="/src/asset/about-trc/image 26.jpg"
+        alt="descriptive text"
+        width="900"
+        height="150"
+      />
+    </div> 
+  </div>
+
+  <div class="w-full">
+
+    <ul class="grid gap-3">
+      {
+        visionList.map((vision) => (
+          
+            <TextElement variant="small">{vision.text}</TextElement> 
+          
+        ))
+      } 
+    </ul>
+  </div>
+</div>
