@@ -1,16 +1,11 @@
 ---
 import Main from "@/components/Main.astro";
 import AboutTRC from "@/components/page/about/About-TRC.astro";
-import AboutList from "@/components/page/about/AboutList.astro";
 import ChairmanKeynote from "@/components/page/about/Chairman’s-Keynote.astro";
 import VisionMission from "@/components/page/about/Vision-&-Mission.astro";
 import TextElement from "@/components/TextElement";
-
-import { ABOUT_TYPES } from "@/content/about.type";
 import { languages, type SupportedLanguage } from "@/i18n/ui";
-import { useTranslations } from "@/i18n/utils";
 import OrganizationLayout from "@/layouts/OrganizationLayout.astro";
-import { getCollection } from "astro:content";
 import enAboutUs from "src/static/about-us/en-about-us.webp";
 import kmAboutUs from "src/static/about-us/km-about-us.webp";
 
@@ -21,10 +16,6 @@ export async function getStaticPaths() {
 }
 
 const lang = Astro.params.lang as SupportedLanguage;
-const t = useTranslations(lang);
-const allAbouts = await getCollection("abouts");
-const abouts = allAbouts.filter((about) => about.data.lang === lang);
-const roles = abouts.filter((about) => about.data.type === ABOUT_TYPES.ROLE);
 
 const langImages = {
   en: enAboutUs,
@@ -51,28 +42,28 @@ const committeeList = [
 >
   <Main>
     <div class="container flex flex-col gap-12">
-      <section aria-label={"about dsc"}>
+      <section aria-label={"about"}>
         <div>
           <TextElement variant="subheading" className="text-center">
             Telecommunication Regulator of Cambodia
           </TextElement>
         </div>
       </section>
-      <section aria-labelledby="vision">
+      <section aria-labelledby="chairman’s-keynote">
         <TextElement variant="smallheading" className="pb-5">
           Chairman’s Keynote
         </TextElement>
         <ChairmanKeynote />
       </section>
       <hr class="mx-auto w-[15rem] border border-yellow-500 lg:w-[50rem]" />
-      <section aria-labelledby="mission">
+      <section aria-labelledby="vision-&-mission">
         <TextElement variant="smallheading" className="pb-5">
           Vision & Mission
         </TextElement>
         <VisionMission />
       </section>
       <hr class="mx-auto w-[15rem] border border-yellow-500 lg:w-[50rem]" />
-      <section aria-labelledby="about">
+      <section aria-labelledby="about-trc">
         <TextElement variant="smallheading" className="pb-5">
           About TRC
         </TextElement>
