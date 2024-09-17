@@ -4,6 +4,7 @@ import AboutTRC from "@/components/page/about/About-TRC.astro";
 import ChairmanKeynote from "@/components/page/about/Chairman’s-Keynote.astro";
 import VisionMission from "@/components/page/about/Vision-&-Mission.astro";
 import TextElement from "@/components/TextElement";
+
 import { languages, type SupportedLanguage } from "@/i18n/ui";
 import OrganizationLayout from "@/layouts/OrganizationLayout.astro";
 import enAboutUs from "src/static/about-us/en-about-us.webp";
@@ -27,8 +28,6 @@ const currentImage = langImages[lang] || enAboutUs;
 const title = "Explore DSC";
 const description =
   "Learn about the Digital Security Committee's strategic goals, roles, and responsibilities in developing Cambodia's digital government policy for 2022-2035.";
-
-
 ---
 
 <OrganizationLayout
