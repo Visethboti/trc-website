@@ -1,0 +1,70 @@
+---
+import TextElement from "../../TextElement";
+import image from "/src/asset/about/mission-vision-img.jpg";
+import { Image } from "astro:assets";
+
+const missionList = [
+  {
+    text: "The Telecommunication Regulator of Cambodia (TRC) facilitates and regulates the telecommunications sector, promoting investment, innovation, and fair competition while providing high-quality, affordable, and accessible services to consumers. TRC contributes to the economic growth of Cambodia and uphold transparency, accountability, and ethical conduct.",
+  },
+  {
+    text: "The Telecommunication Regulator of Cambodia (TRC) performs its missions in response to the needs of consumers, operators, service providers, and suppliers in line with the Royal Government of Cambodia's policy towards ASEAN Economic Integration and Regional Globalization. The missions of the TRC include, but are not limited to: ",
+  },
+];
+const missiontrcList = [
+  {
+    text: "Implementing the National Broadband Policy and Strategic Action Plan adopted by the Royal Government of Cambodia;  ",
+  },
+  {
+    text: "Enforcing policies and regulations related to the telecommunications sector and information communication technology, as devised by the Ministry of Post and Telecommunications;",
+  },
+  {
+    text: "Promoting public understanding and ensuring acceptable telecommunications services for everyone;",
+  },
+  {
+    text: "Ensuring that consumers enjoy quality services at affordable prices;",
+  },
+  {
+    text: "Providing transparent regulatory processes and guidance;",
+  },
+  {
+    text: "Enforcing regulations for fair competition and efficiency in the telecommunications industry;",
+  },
+  {
+    text: "Following international standards and practices that contribute to the development and",
+  },
+];
+---
+
+<div class="flex flex-col gap-8 md:flex-row">
+  <div class="w-full md:w-1/2">
+    <Image
+      src={image}
+      alt="Descriptive text"
+      sizes="(max-width: 640px) 100vw, (max-width: 768px) 256px, (max-width: 1024px) 256px, 128px"
+      quality="high"
+      loading="lazy"
+      format="webp"
+    />
+  </div>
+  <div class="w-full md:w-1/2">
+    <ul class="space-y-3">
+      {
+        missionList.map((about) => (
+          <li>
+            <TextElement variant="small">{about.text}</TextElement>
+          </li>
+        ))
+      }
+    </ul>
+    <ul class="list-decimal pl-4 pt-4">
+      {
+        missiontrcList.map((mission) => (
+          <li>
+            <TextElement variant="small">{mission.text}</TextElement>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</div>
