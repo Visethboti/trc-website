@@ -126,12 +126,15 @@ export const getContentUrl = (
   const articlePath = Routes.Aritcles.replace(/^\//, "");
   const cybersecurityTipsPath = Routes.CybersecurityTips.replace(/^\//, "");
 
-  const urlGenerators = {
+  const urlGenerators: {
+    articles: () => string;
+    "cybersecurity-tips": () => string;
+  } = {
     articles: () => `${baseUrl}${articlePath}/${slug}`,
     "cybersecurity-tips": () => `${baseUrl}${cybersecurityTipsPath}/${slug}`,
   };
 
-  const generator = urlGenerators[entry.collection];
+  const generator = urlGenerators[entry.collection as keyof typeof urlGenerators];
   if (generator) {
     return generator();
   }
