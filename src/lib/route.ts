@@ -134,7 +134,7 @@ export const getContentUrl = (
     "cybersecurity-tips": () => `${baseUrl}${cybersecurityTipsPath}/${slug}`,
   };
 
-  const generator=urlGenerators[entry.collection as keyof typeof urlGenerators];
+  const generator = urlGenerators[entry.collection as keyof typeof urlGenerators];
   if (generator) {
     return generator();
   }
