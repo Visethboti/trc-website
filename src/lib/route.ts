@@ -30,8 +30,8 @@ export const NavRoutes = [
       { label: "Prakas", href: Routes.Home },
       { label: "Decisions", href: Routes.Home },
       { label: "Guidelines", href: Routes.Home },
-    ]
-   },
+    ],
+  },
   {
     label: "Media",
     children: [
@@ -61,7 +61,7 @@ export const NavRoutes = [
       { label: "About TRC", href: Routes.Home },
       { label: "TRC Leader", href: Routes.Home },
       { label: "TRC Structure", href: Routes.Home },
-    ]
+    ],
   },
   {
     label: "Contact",
@@ -82,9 +82,9 @@ export const NavRoutes = [
       { label: "Equipment Importation & Distribution Permit" },
       { label: "Tower Construction Permit" },
       { label: "Fiber Cable Construction Permit" },
-      { label: "Frequency Interference Complaint"},
-    ]
-  }
+      { label: "Frequency Interference Complaint" },
+    ],
+  },
 ];
 
 interface RouteType {
