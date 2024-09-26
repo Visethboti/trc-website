@@ -2,15 +2,13 @@
 import { getLocalizedRoutes, NavRoutes } from "@/lib/route";
 
 import MobileNavMenu from "@/components/header/MobileNavMenu";
-import NavMenu from "@/components/header/NavMenu";
+import { NavMenu } from "./header/NavMenu";
 
 import LanguageSwitcher from "./LanguageSwitcher";
-import { Button } from "./ui/button";
-import DSCHorizontalSubtitleBlue from "@/asset/logo/DSC-Horizontal-Subtitle-Blue.png";
+import TRCHorizontalSubtitleBlue from "@/asset/logo/TRC-Horizontal-Subtitle-Blue.png";
 import { defaultLang, type SupportedLanguage } from "@/i18n/ui";
 import { Image } from "astro:assets";
 import { getRelativeLocaleUrl } from "astro:i18n";
-import { TriangleAlert } from "lucide-react";
 
 const locale = Astro.currentLocale ?? defaultLang;
 const currentPath = Astro.url.pathname;
@@ -19,14 +17,14 @@ const navigationItems = getLocalizedRoutes(NavRoutes, locale);
 ---
 
 <a
-  class="absolute left-0 m-3 -translate-y-16 bg-primary p-3 text-primary-foreground transition focus:translate-y-0"
+  class="bg-primary text-primary-foreground absolute left-0 m-3 -translate-y-16 p-3 transition focus:translate-y-0"
   href="#main-content">Skip Navigation</a
 >
 <nav class="bg-primary-foreground shadow-md" aria-label="Main navigation">
   <div class="flex w-full items-center gap-2 p-6 sm:gap-4 lg:px-8 2xl:px-16">
     <a href={getRelativeLocaleUrl(locale)} aria-label="Go to home page">
       <Image
-        src={DSCHorizontalSubtitleBlue}
+        src={TRCHorizontalSubtitleBlue}
         alt=""
         class="w-56 min-w-56 object-cover md:w-60 lg:w-72"
         loading="eager"
@@ -34,8 +32,8 @@ const navigationItems = getLocalizedRoutes(NavRoutes, locale);
         format="webp"
       />
     </a>
-    <div class="grow"></div>
-    <NavMenu navMenuItem={navigationItems} client:load />
+    <div class="grow md:flex lg:hidden"></div>
+    <NavMenu client:load />
     <div class="flex w-fit p-2 align-middle">
       <LanguageSwitcher
         currentPath={currentPath}
@@ -44,9 +42,5 @@ const navigationItems = getLocalizedRoutes(NavRoutes, locale);
       />
     </div>
     <MobileNavMenu navMenuItem={navigationItems} client:load />
-    <Button className="hidden px-2 lg:block">
-      <TriangleAlert className="w-6 xl:hidden" />
-      <span class="hidden xl:flex">Report Incident</span>
-    </Button>
   </div>
 </nav>

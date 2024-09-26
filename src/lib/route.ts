@@ -20,28 +20,71 @@ export enum Routes {
 }
 
 export const NavRoutes = [
-  { label: "Home", href: Routes.Home },
   {
-    label: "Explore DSC",
+    label: "Laws & Regulartions",
     children: [
-      { label: "About DSC", href: Routes.About },
-      { label: "DSC's Structure", href: Routes.Structure },
-      { label: "DSC Chair's Remarks", href: Routes.ChairRemarks },
-      { label: "DSC's Units", href: Routes.Unit },
+      { label: "Laws", href: Routes.Home },
+      { label: "Royal Decrees", href: Routes.Home },
+      { label: "Sub Decrees", href: Routes.Home },
+      { label: "Circulations", href: Routes.Home },
+      { label: "Prakas", href: Routes.Home },
+      { label: "Decisions", href: Routes.Home },
+      { label: "Guidelines", href: Routes.Home },
+    ]
+   },
+  {
+    label: "Media",
+    children: [
+      { label: "News Releases", href: Routes.About },
+      { label: "Activities", href: Routes.Structure },
+      { label: "Events", href: Routes.ChairRemarks },
     ],
   },
   {
-    label: "Media Hub",
+    label: "Resources",
     children: [
-      { label: "Legislations", href: Routes.LawsRegulations },
-      { label: "Policies", href: Routes.Policies },
-      { label: "Press Release", href: Routes.PressRelease },
-      // temp: disable video page
-      // { label: "Videos", href: Routes.Videos },
+      { label: "Publications", href: Routes.LawsRegulations },
+      { label: "Telecom Statistics", href: Routes.Policies },
+      { label: "Active Operators", href: Routes.PressRelease },
+      { label: "Mobile Prefixes", href: Routes.Home },
+      { label: "Common Codes", href: Routes.Home },
+      { label: "Emergency Numbers", href: Routes.Home },
+      { label: "Qualified Import Agents", href: Routes.Home },
+      { label: "Tower Map", href: Routes.Home },
     ],
   },
-  { label: "News & Events", href: Routes.Aritcles },
-  { label: "Cybersecurity Tips", href: Routes.CybersecurityTips },
+  {
+    label: "About",
+    children: [
+      { label: "Chairman's Keynote", href: Routes.Home },
+      { label: "Vision & Mission", href: Routes.Home },
+      { label: "About TRC", href: Routes.Home },
+      { label: "TRC Leader", href: Routes.Home },
+      { label: "TRC Structure", href: Routes.Home },
+    ]
+  },
+  {
+    label: "Contact",
+  },
+  {
+    label: "Service",
+    children: [
+      { label: "Public" },
+      { label: "Domain .KH" },
+      { label: "Internet Cafe" },
+      { label: "Telecom Equipment Shop" },
+      { label: "Operator" },
+      { label: "Operational License" },
+      { label: "Spectrum License" },
+      { label: "Telecom Numbering Permit" },
+      { label: "Equipment TA Certificate" },
+      { label: "Qualified Agent Certification" },
+      { label: "Equipment Importation & Distribution Permit" },
+      { label: "Tower Construction Permit" },
+      { label: "Fiber Cable Construction Permit" },
+      { label: "Frequency Interference Complaint"},
+    ]
+  }
 ];
 
 interface RouteType {

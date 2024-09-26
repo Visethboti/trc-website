@@ -75,9 +75,6 @@ const NavMenu: React.FC<{ navMenuItem: NavMenuProps[] }> = ({
             </li>
           ))}
           <Separator />
-          <li className="flex justify-center pt-4">
-            <Button className="lg:hidden">Report Incident</Button>
-          </li>
         </ul>
       </SheetContent>
     </Sheet>
