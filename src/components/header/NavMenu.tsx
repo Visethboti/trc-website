@@ -1,26 +1,28 @@
-import { ChevronDown } from "lucide-react"
-
-import { Button } from "@/components/ui/button"
+import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuGroup,
   DropdownMenuItem,
-  DropdownMenuShortcut,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
+} from "@/components/ui/dropdown-menu";
+
+import { ChevronDown } from "lucide-react";
 
 export function NavMenu() {
   return (
     <div className="relative z-10 hidden w-full flex-1 items-center justify-center gap-2 xl:flex">
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
-          <Button variant="outline" className="flex items-center justify-center border-none focus:border-none">
+          <Button
+            variant="outline"
+            className="flex items-center justify-center border-none focus:border-none"
+          >
             Laws & Regulartion
             <ChevronDown className="mr-2 h-4 w-4" />
           </Button>
         </DropdownMenuTrigger>
-        <DropdownMenuContent className="w-44 flex items-center justify-center pt-4 pb-4">
+        <DropdownMenuContent className="flex w-44 items-center justify-center pb-4 pt-4">
           <DropdownMenuGroup>
             <DropdownMenuItem>
               <span>Laws</span>
@@ -49,12 +51,15 @@ export function NavMenu() {
 
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
-          <Button variant="outline" className="flex items-center justify-center border-none focus:border-none">
+          <Button
+            variant="outline"
+            className="flex items-center justify-center border-none focus:border-none"
+          >
             Media
             <ChevronDown className="mr-2 h-4 w-4" />
           </Button>
         </DropdownMenuTrigger>
-        <DropdownMenuContent className="w-40 flex items-center justify-center pt-4 pb-4">
+        <DropdownMenuContent className="flex w-40 items-center justify-center pb-4 pt-4">
           <DropdownMenuGroup>
             <DropdownMenuItem>
               <span>News Releases</span>
@@ -71,12 +76,15 @@ export function NavMenu() {
 
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
-          <Button variant="outline" className="flex items-center justify-center border-none focus:border-none">
+          <Button
+            variant="outline"
+            className="flex items-center justify-center border-none focus:border-none"
+          >
             Resources
             <ChevronDown className="mr-2 h-4 w-4" />
           </Button>
         </DropdownMenuTrigger>
-        <DropdownMenuContent className="w-56 flex items-center justify-center pt-4 pb-4">
+        <DropdownMenuContent className="flex w-56 items-center justify-center pb-4 pt-4">
           <DropdownMenuGroup>
             <DropdownMenuItem>
               <span>Publications</span>
@@ -106,14 +114,17 @@ export function NavMenu() {
         </DropdownMenuContent>
       </DropdownMenu>
 
-       <DropdownMenu>
+      <DropdownMenu>
         <DropdownMenuTrigger asChild>
-          <Button variant="outline" className="flex items-center justify-center border-none focus:border-none">
+          <Button
+            variant="outline"
+            className="flex items-center justify-center border-none focus:border-none"
+          >
             About
             <ChevronDown className="mr-2 h-4 w-4" />
           </Button>
         </DropdownMenuTrigger>
-        <DropdownMenuContent className="w-56 flex items-center justify-center pt-4 pb-4">
+        <DropdownMenuContent className="flex w-56 items-center justify-center pb-4 pt-4">
           <DropdownMenuGroup>
             <DropdownMenuItem>
               <span>Chairman's Keynote</span>
@@ -136,21 +147,31 @@ export function NavMenu() {
 
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
-          <Button variant="outline" className="flex items-center justify-center border-none focus:border-none">Contact</Button>
+          <Button
+            variant="outline"
+            className="flex items-center justify-center border-none focus:border-none"
+          >
+            Contact
+          </Button>
         </DropdownMenuTrigger>
       </DropdownMenu>
 
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
-          <Button variant="outline" className="flex items-center justify-center border-none focus:border-none">
+          <Button
+            variant="outline"
+            className="flex items-center justify-center border-none focus:border-none"
+          >
             Service
             <ChevronDown className="mr-2 h-4 w-4" />
           </Button>
         </DropdownMenuTrigger>
-        <DropdownMenuContent className="w-80 flex items-center justify-center">
+        <DropdownMenuContent className="flex w-80 items-center justify-center">
           <DropdownMenuGroup>
             <DropdownMenuItem>
-              <span className="w-20 h-8 flex items-center justify-center rounded bg-primary text-white">Public</span>
+              <span className="flex h-8 w-20 items-center justify-center rounded bg-primary text-white">
+                Public
+              </span>
             </DropdownMenuItem>
             <DropdownMenuItem>
               <span>Domain .KH</span>
@@ -162,7 +183,9 @@ export function NavMenu() {
               <span>Telecom Equipment Shop</span>
             </DropdownMenuItem>
             <DropdownMenuItem>
-              <span className="w-24 h-8 flex items-center justify-center rounded bg-primary text-white">Operator</span>
+              <span className="flex h-8 w-24 items-center justify-center rounded bg-primary text-white">
+                Operator
+              </span>
             </DropdownMenuItem>
             <DropdownMenuItem>
               <span>Operational License</span>
@@ -173,7 +196,7 @@ export function NavMenu() {
             <DropdownMenuItem>
               <span>Telecom Numbering Permit</span>
             </DropdownMenuItem>
-             <DropdownMenuItem>
+            <DropdownMenuItem>
               <span>Equipment TA Certificate</span>
             </DropdownMenuItem>
             <DropdownMenuItem>
@@ -195,5 +218,5 @@ export function NavMenu() {
         </DropdownMenuContent>
       </DropdownMenu>
     </div>
-  )
+  );
 }
