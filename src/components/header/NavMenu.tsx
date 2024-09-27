@@ -127,7 +127,7 @@ export function NavMenu() {
         <DropdownMenuContent className="flex w-56 items-center justify-center pb-4 pt-4">
           <DropdownMenuGroup>
             <DropdownMenuItem>
-              <span>Chairman's Keynote</span>
+              <span>Chairman Keynote</span>
             </DropdownMenuItem>
             <DropdownMenuItem>
               <span>Vision & Mission</span>
