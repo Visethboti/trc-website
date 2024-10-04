@@ -14,7 +14,7 @@ export const ListItem = React.forwardRef<
         <a
           ref={ref}
           className={cn(
-            "ml-1 block select-none rounded-md px-4 py-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+            "ml-1 block select-none rounded-md px-4 py-2 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
             className,
           )}
           {...props}
