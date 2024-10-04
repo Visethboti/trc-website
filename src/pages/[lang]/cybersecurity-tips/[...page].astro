@@ -15,7 +15,7 @@ export async function getStaticPaths({
   paginate: PaginateFunction;
 }) {
   const allLanguages = Object.values(languages);
-  const tips = await getCollection("cybersecurity-tips");
+  const tips = await getCollection("events");
 
   return allLanguages.flatMap((lang) => {
     const langTips = tips
