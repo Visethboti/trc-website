@@ -25,17 +25,15 @@ const trimmedTitle = title.trim().replace(/\s+/g, "-");
 
 <a href={href} aria-labelledby={`read-more-${href}`}>
   <article
-    class="flex h-full flex-col gap-5 rounded-lg border bg-card text-card-foreground shadow-sm sm:flex-row"
+    class="flex h-full flex-col overflow-hidden rounded-lg border bg-card text-card-foreground shadow-sm sm:flex-row"
     aria-labelledby={`article-${trimmedTitle}`}
   >
-    <figure
-      class="relative w-full overflow-hidden rounded-lg sm:w-2/5 md:w-1/3 lg:w-1/3 xl:w-1/4"
-    >
+    <figure class="relative w-full sm:w-2/5 md:w-1/3 lg:w-1/3 xl:w-1/4">
       <AspectRatio ratio={16 / 9}>
         <Image
           src={image}
           alt={title}
-          class="size-full rounded-lg"
+          class="size-full"
           loading="eager"
           widths={[320, 480, 640, 768, 1024]}
           sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
@@ -44,9 +42,8 @@ const trimmedTitle = title.trim().replace(/\s+/g, "-");
         />
       </AspectRatio>
     </figure>
-
     <div
-      class="relative flex w-full flex-col p-1 sm:w-3/5 md:w-2/3 lg:w-2/3 xl:w-3/4"
+      class="relative flex w-full flex-col p-4 sm:w-3/5 md:w-2/3 lg:w-2/3 xl:w-3/4"
     >
       <figure class="absolute bottom-0 right-0 w-1/4">
         <Image
@@ -67,11 +64,10 @@ const trimmedTitle = title.trim().replace(/\s+/g, "-");
         {title}
       </TextElement>
       <section aria-label="Article summary" class="grow">
-        <TextElement className="mt-1 line-clamp-1 text-card-foreground">
+        <TextElement className="mt-2 line-clamp-1 text-card-foreground">
           {description}
         </TextElement>
       </section>
-
       <time
         datetime={toISOString(date)}
         class="leading-2 text-left text-base text-mptc-secondary-foreground"

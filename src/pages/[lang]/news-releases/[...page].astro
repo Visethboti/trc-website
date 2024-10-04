@@ -1,0 +1,56 @@
+---
+import ContentList from "@/components/content-card/ContentList.astro";
+import Main from "@/components/Main.astro";
+import Pagination from "@/components/Pagination.astro";
+import TextElement from "@/components/TextElement";
+
+import { languages } from "@/i18n/ui";
+import BlogListLayout from "@/layouts/BlogListLayout.astro";
+import type { PaginateFunction } from "astro";
+import { getCollection } from "astro:content";
+
+export async function getStaticPaths({
+  paginate,
+}: {
+  paginate: PaginateFunction;
+}) {
+  const allLanguages = Object.values(languages);
+  const newsReleases = await getCollection("news-releases");
+
+  return allLanguages.flatMap((lang) => {
+    const langNewsReleases = newsReleases
+      .filter((newsRelease) => newsRelease.data.lang === lang)
+      .sort(
+        (a, b) =>
+          new Date(b.data.date).getTime() - new Date(a.data.date).getTime(),
+      );
+    return paginate(langNewsReleases, {
+      params: { lang },
+      pageSize: 10,
+    });
+  });
+}
+
+const { lang } = Astro.params;
+const { page } = Astro.props;
+
+const title = "News Releases";
+const description = "A collection of news releases.";
+---
+
+<BlogListLayout
+  title={title}
+  description={description}
+  canonicalURL={Astro.url.toString()}
+  content={page.data}
+>
+  <Main>
+    <section aria-label={title}>
+      <TextElement variant="heading" className="text-primary">
+        {title}
+      </TextElement>
+      <ContentList content={page.data} lang={lang} />
+      <Pagination page={page} />
+    </section>
+  </Main>
+</BlogListLayout>

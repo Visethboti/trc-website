@@ -17,6 +17,9 @@ export enum Routes {
   Projects = "/projects",
   Contact = "/contact",
   CybersecurityTips = "/cybersecurity-tips",
+  NewsRelease = "/news-releases",
+  Activities = "/activities",
+  Events = "/events",
 }
 
 export const NavRoutes = [
@@ -35,9 +38,9 @@ export const NavRoutes = [
   {
     label: "Media",
     children: [
-      { label: "News Releases", href: Routes.About },
-      { label: "Activities", href: Routes.Structure },
-      { label: "Events", href: Routes.ChairRemarks },
+      { label: "News Releases", href: Routes.NewsRelease },
+      { label: "Activities", href: Routes.Activities },
+      { label: "Events", href: Routes.Events },
     ],
   },
   {
@@ -118,7 +121,13 @@ export function getLocalizedRoutes(
 }
 
 export const getContentUrl = (
-  entry: CollectionEntry<"articles" | "cybersecurity-tips">,
+  entry: CollectionEntry<
+    | "articles"
+    | "cybersecurity-tips"
+    | "events"
+    | "news-releases"
+    | "activities"
+  >,
   lang: SupportedLanguage,
 ) => {
   const baseUrl = getRelativeLocaleUrl(lang);
@@ -126,13 +135,22 @@ export const getContentUrl = (
 
   const articlePath = Routes.Aritcles.replace(/^\//, "");
   const cybersecurityTipsPath = Routes.CybersecurityTips.replace(/^\//, "");
+  const newsReleasePath = Routes.NewsRelease.replace(/^\//, "");
+  const activitiesPath = Routes.Activities.replace(/^\//, "");
+  const eventsPath = Routes.Events.replace(/^\//, "");
 
   const urlGenerators: {
     articles: () => string;
     "cybersecurity-tips": () => string;
+    events: () => string;
+    "news-releases": () => string;
+    activities: () => string;
   } = {
     articles: () => `${baseUrl}${articlePath}/${slug}`,
     "cybersecurity-tips": () => `${baseUrl}${cybersecurityTipsPath}/${slug}`,
+    "news-releases": () => `${baseUrl}${newsReleasePath}/${slug}`,
+    activities: () => `${baseUrl}${activitiesPath}/${slug}`,
+    events: () => `${baseUrl}${eventsPath}/${slug}`,
   };
 
   const generator =
