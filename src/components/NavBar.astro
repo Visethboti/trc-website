@@ -3,7 +3,7 @@ import { getLocalizedRoutes, NavRoutes } from "@/lib/route";
 
 import MobileNavMenu from "@/components/header/MobileNavMenu";
 
-import { NavMenu } from "./header/NavMenu";
+import NavMenu from "./header/NavMenu";
 import LanguageSwitcher from "./LanguageSwitcher";
 import TRCHorizontalSubtitleBlue from "@/asset/logo/TRC-Horizontal-Subtitle-Blue.png";
 import { defaultLang, type SupportedLanguage } from "@/i18n/ui";
@@ -33,7 +33,7 @@ const navigationItems = getLocalizedRoutes(NavRoutes, locale);
       />
     </a>
     <div class="grow"></div>
-    <NavMenu client:load />
+    <NavMenu navMenuItem={navigationItems} client:load />
     <div class="flex w-fit p-2 align-middle">
       <LanguageSwitcher
         currentPath={currentPath}

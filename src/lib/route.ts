@@ -21,7 +21,7 @@ export enum Routes {
 
 export const NavRoutes = [
   {
-    label: "Laws & Regulartions",
+    label: "Laws & Regulations",
     children: [
       { label: "Laws", href: Routes.Home },
       { label: "Royal Decrees", href: Routes.Home },
@@ -65,6 +65,7 @@ export const NavRoutes = [
   },
   {
     label: "Contact",
+    href: Routes.Home,
   },
   {
     label: "Service",
