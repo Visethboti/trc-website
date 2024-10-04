@@ -19,10 +19,10 @@ export function NavMenu() {
             className="flex items-center justify-center border-none focus:border-none"
           >
             Laws & Regulartion
-            <ChevronDown className="mr-2 h-4 w-4" />
+            <ChevronDown className="mr-2 size-4" />
           </Button>
         </DropdownMenuTrigger>
-        <DropdownMenuContent className="flex w-44 items-center justify-center pb-4 pt-4">
+        <DropdownMenuContent className="flex w-44 items-center justify-center py-4">
           <DropdownMenuGroup>
             <DropdownMenuItem>
               <span>Laws</span>
@@ -56,10 +56,10 @@ export function NavMenu() {
             className="flex items-center justify-center border-none focus:border-none"
           >
             Media
-            <ChevronDown className="mr-2 h-4 w-4" />
+            <ChevronDown className="mr-2 size-4" />
           </Button>
         </DropdownMenuTrigger>
-        <DropdownMenuContent className="flex w-40 items-center justify-center pb-4 pt-4">
+        <DropdownMenuContent className="flex w-40 items-center justify-center py-4">
           <DropdownMenuGroup>
             <DropdownMenuItem>
               <span>News Releases</span>
@@ -81,10 +81,10 @@ export function NavMenu() {
             className="flex items-center justify-center border-none focus:border-none"
           >
             Resources
-            <ChevronDown className="mr-2 h-4 w-4" />
+            <ChevronDown className="mr-2 size-4" />
           </Button>
         </DropdownMenuTrigger>
-        <DropdownMenuContent className="flex w-56 items-center justify-center pb-4 pt-4">
+        <DropdownMenuContent className="flex w-56 items-center justify-center py-4">
           <DropdownMenuGroup>
             <DropdownMenuItem>
               <span>Publications</span>
@@ -121,10 +121,10 @@ export function NavMenu() {
             className="flex items-center justify-center border-none focus:border-none"
           >
             About
-            <ChevronDown className="mr-2 h-4 w-4" />
+            <ChevronDown className="mr-2 size-4" />
           </Button>
         </DropdownMenuTrigger>
-        <DropdownMenuContent className="flex w-56 items-center justify-center pb-4 pt-4">
+        <DropdownMenuContent className="flex w-56 items-center justify-center py-4">
           <DropdownMenuGroup>
             <DropdownMenuItem>
               <span>Chairman Keynote</span>
@@ -163,7 +163,7 @@ export function NavMenu() {
             className="flex items-center justify-center border-none focus:border-none"
           >
             Service
-            <ChevronDown className="mr-2 h-4 w-4" />
+            <ChevronDown className="mr-2 size-4" />
           </Button>
         </DropdownMenuTrigger>
         <DropdownMenuContent className="flex w-80 items-center justify-center">
