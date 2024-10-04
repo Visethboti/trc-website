@@ -64,10 +64,6 @@ export const NavRoutes = [
     ],
   },
   {
-    label: "Contact",
-    href: Routes.Home,
-  },
-  {
     label: "Service",
     children: [
       { label: "Public" },
@@ -85,6 +81,10 @@ export const NavRoutes = [
       { label: "Fiber Cable Construction Permit" },
       { label: "Frequency Interference Complaint" },
     ],
+  },
+  {
+    label: "Contact",
+    href: Routes.Home,
   },
 ];
 
