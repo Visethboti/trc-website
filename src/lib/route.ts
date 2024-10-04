@@ -66,11 +66,11 @@ export const NavRoutes = [
   {
     label: "Service",
     children: [
-      { label: "Public" },
+      { label: "Public", isTitle: true },
       { label: "Domain .KH" },
       { label: "Internet Cafe" },
       { label: "Telecom Equipment Shop" },
-      { label: "Operator" },
+      { label: "Operator", isTitle: true },
       { label: "Operational License" },
       { label: "Spectrum License" },
       { label: "Telecom Numbering Permit" },

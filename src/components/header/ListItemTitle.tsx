@@ -4,28 +4,21 @@ import { cn } from "@/lib/utils";
 
 import { NavigationMenuLink } from "@radix-ui/react-navigation-menu";
 
-export const ListItem = React.forwardRef<
+export const ListItemTitle = React.forwardRef<
   React.ElementRef<"a">,
   React.ComponentPropsWithoutRef<"a">
 >(({ className, title, children, ...props }, ref) => {
   return (
     <li>
       <NavigationMenuLink className="flex items-center" asChild>
-        <a
-          ref={ref}
-          className={cn(
-            "ml-1 block select-none rounded-md px-4 py-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
-            className,
-          )}
-          {...props}
-        >
+        <div className="my-2 rounded-md bg-primary px-4 py-3 text-white">
           <div className="text-sm font-medium leading-none">{title}</div>
           <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
             {children}
           </p>
-        </a>
+        </div>
       </NavigationMenuLink>
     </li>
   );
 });
-ListItem.displayName = "ListItem";
+ListItemTitle.displayName = "ListItemTitle";

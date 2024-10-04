@@ -9,11 +9,13 @@ import {
 } from "@/components/ui/navigation-menu";
 
 import { ListItem } from "./ListItem";
+import { ListItemTitle } from "./ListItemTitle";
 
 export interface NavMenuProps {
   href?: string;
   label: string;
   children?: NavMenuProps[];
+  isTitle?: boolean;
 }
 
 const NavMenu: React.FC<{ navMenuItem: NavMenuProps[] }> = ({
@@ -37,13 +39,21 @@ const NavMenu: React.FC<{ navMenuItem: NavMenuProps[] }> = ({
                   <NavigationMenuTrigger>{item.label}</NavigationMenuTrigger>
                   <NavigationMenuContent>
                     <ul className="grid w-[100px] p-2 md:w-[100px] md:grid-cols-1 lg:w-[250px]">
-                      {item.children?.map((child) => (
-                        <ListItem
-                          key={child.label}
-                          title={child.label}
-                          href={child.href}
-                        />
-                      ))}
+                      {item.children?.map((child) =>
+                        child.isTitle ? (
+                          <ListItemTitle
+                            key={child.label}
+                            title={child.label}
+                            href={child.href}
+                          />
+                        ) : (
+                          <ListItem
+                            key={child.label}
+                            title={child.label}
+                            href={child.href}
+                          />
+                        ),
+                      )}
                     </ul>
                   </NavigationMenuContent>
                 </>
