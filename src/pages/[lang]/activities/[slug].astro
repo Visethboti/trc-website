@@ -4,7 +4,7 @@ import ContentPage from "@/components/content-page/ContentPage.astro";
 import { getCollection } from "astro:content";
 
 export async function getStaticPaths() {
-  const pages = await getCollection("articles");
+  const pages = await getCollection("activities");
 
   return pages.map((page) => {
     const [lang, slug] = page.slug.split("/");
