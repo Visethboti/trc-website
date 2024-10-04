@@ -9,10 +9,16 @@ import TextElement from "@/components/TextElement";
 import type { SupportedLanguage } from "@/i18n/ui";
 import ArticleLayout from "@/layouts/ArticleLayout.astro";
 import { Image } from "astro:assets";
+import type { CollectionEntry } from "astro:content";
 import { Clock3, NotebookPen } from "lucide-react";
 
 interface Props {
-  page: any;
+  page:
+    | CollectionEntry<"articles">
+    | CollectionEntry<"cybersecurity-tips">
+    | CollectionEntry<"news-releases">
+    | CollectionEntry<"events">
+    | CollectionEntry<"activities">;
 }
 
 const { page } = Astro.props;
