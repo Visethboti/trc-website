@@ -1,13 +1,11 @@
 import React from "react";
 
-import { cn } from "@/lib/utils";
-
 import { NavigationMenuLink } from "@radix-ui/react-navigation-menu";
 
 export const ListItemTitle = React.forwardRef<
   React.ElementRef<"a">,
   React.ComponentPropsWithoutRef<"a">
->(({ className, title, children, ...props }, ref) => {
+>(({ title, children }) => {
   return (
     <li>
       <NavigationMenuLink className="flex items-center" asChild>

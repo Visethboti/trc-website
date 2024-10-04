@@ -44,7 +44,6 @@ const NavMenu: React.FC<{ navMenuItem: NavMenuProps[] }> = ({
                           <ListItemTitle
                             key={child.label}
                             title={child.label}
-                            href={child.href}
                           />
                         ) : (
                           <ListItem
