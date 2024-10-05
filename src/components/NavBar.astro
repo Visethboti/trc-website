@@ -3,7 +3,7 @@ import { getLocalizedRoutes, NavRoutes } from "@/lib/route";
 
 import MobileNavMenu from "@/components/header/MobileNavMenu";
 
-import { NavMenu } from "./header/NavMenu";
+import NavMenu from "./header/NavMenu";
 import LanguageSwitcher from "./LanguageSwitcher";
 import TRCHorizontalSubtitleBlue from "@/asset/logo/TRC-Horizontal-Subtitle-Blue.png";
 import { defaultLang, type SupportedLanguage } from "@/i18n/ui";
@@ -21,26 +21,24 @@ const navigationItems = getLocalizedRoutes(NavRoutes, locale);
   href="#main-content">Skip Navigation</a
 >
 <nav class="bg-primary-foreground shadow-md" aria-label="Main navigation">
-  <div class="flex w-full items-center gap-2 p-6 sm:gap-4 lg:px-8 2xl:px-16">
+  <div class="flex w-full items-center p-4 lg:px-8 2xl:px-12">
     <a href={getRelativeLocaleUrl(locale)} aria-label="Go to home page">
       <Image
         src={TRCHorizontalSubtitleBlue}
         alt=""
-        class="w-56 min-w-56 object-cover md:w-60 lg:w-72"
+        class="w-56 min-w-56 object-cover md:w-56 lg:w-72"
         loading="eager"
         quality="high"
         format="webp"
       />
     </a>
     <div class="grow"></div>
-    <NavMenu client:load />
-    <div class="flex w-fit p-2 align-middle">
-      <LanguageSwitcher
-        currentPath={currentPath}
-        initialLocale={locale as SupportedLanguage}
-        client:load
-      />
-    </div>
+    <NavMenu navMenuItem={navigationItems} client:load />
+    <LanguageSwitcher
+      currentPath={currentPath}
+      initialLocale={locale as SupportedLanguage}
+      client:load
+    />
     <MobileNavMenu navMenuItem={navigationItems} client:load />
   </div>
 </nav>

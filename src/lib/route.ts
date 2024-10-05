@@ -24,7 +24,7 @@ export enum Routes {
 
 export const NavRoutes = [
   {
-    label: "Laws & Regulartions",
+    label: "Laws & Regulations",
     children: [
       { label: "Laws", href: Routes.Home },
       { label: "Royal Decrees", href: Routes.Home },
@@ -67,16 +67,13 @@ export const NavRoutes = [
     ],
   },
   {
-    label: "Contact",
-  },
-  {
     label: "Service",
     children: [
-      { label: "Public" },
+      { label: "Public", isTitle: true },
       { label: "Domain .KH" },
       { label: "Internet Cafe" },
       { label: "Telecom Equipment Shop" },
-      { label: "Operator" },
+      { label: "Operator", isTitle: true },
       { label: "Operational License" },
       { label: "Spectrum License" },
       { label: "Telecom Numbering Permit" },
@@ -87,6 +84,10 @@ export const NavRoutes = [
       { label: "Fiber Cable Construction Permit" },
       { label: "Frequency Interference Complaint" },
     ],
+  },
+  {
+    label: "Contact",
+    href: Routes.Home,
   },
 ];
 
