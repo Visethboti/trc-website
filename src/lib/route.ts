@@ -5,11 +5,18 @@ import { getRelativeLocaleUrl } from "astro:i18n";
 
 export enum Routes {
   Home = "/",
+  LawsAndRegulations = "/laws-and-regulations",
+  LawsAndRegulationsLaws = LawsAndRegulations + "/laws",
+  LawsAndRegulationsRoyalDecrees = LawsAndRegulations + "/royal-decrees",
+  LawsAndRegulationsSubDecrees = LawsAndRegulations + "/sub-decrees",
+  LawsAndRegulationsCirculations = LawsAndRegulations + "/circulations",
+  LawsAndRegulationsPrakas = LawsAndRegulations + "/prakas",
+  LawsAndRegulationsDecisions = LawsAndRegulations + "/decisions",
+  LawsAndRegulationsGuidelines = LawsAndRegulations + "/guidelines",
   About = "/about",
   Structure = "/about/structure",
   ChairRemarks = "/about/chair-remarks",
   Unit = "/about/units",
-  LawsRegulations = "/laws-regulations",
   Policies = "/policies",
   PressRelease = "/press-release",
   Videos = "/videos",
@@ -26,13 +33,13 @@ export const NavRoutes = [
   {
     label: "Laws & Regulations",
     children: [
-      { label: "Laws", href: Routes.Home },
-      { label: "Royal Decrees", href: Routes.Home },
-      { label: "Sub Decrees", href: Routes.Home },
-      { label: "Circulations", href: Routes.Home },
-      { label: "Prakas", href: Routes.Home },
-      { label: "Decisions", href: Routes.Home },
-      { label: "Guidelines", href: Routes.Home },
+      { label: "Laws", href: Routes.LawsAndRegulationsLaws },
+      { label: "Royal Decrees", href: Routes.LawsAndRegulationsRoyalDecrees },
+      { label: "Sub Decrees", href: Routes.LawsAndRegulationsSubDecrees },
+      { label: "Circulations", href: Routes.LawsAndRegulationsCirculations },
+      { label: "Prakas", href: Routes.LawsAndRegulationsPrakas },
+      { label: "Decisions", href: Routes.LawsAndRegulationsDecisions },
+      { label: "Guidelines", href: Routes.LawsAndRegulationsGuidelines },
     ],
   },
   {
@@ -46,9 +53,9 @@ export const NavRoutes = [
   {
     label: "Resources",
     children: [
-      { label: "Publications", href: Routes.LawsRegulations },
-      { label: "Telecom Statistics", href: Routes.Policies },
-      { label: "Active Operators", href: Routes.PressRelease },
+      { label: "Publications", href: Routes.Home },
+      { label: "Telecom Statistics", href: Routes.Home },
+      { label: "Active Operators", href: Routes.Home },
       { label: "Mobile Prefixes", href: Routes.Home },
       { label: "Common Codes", href: Routes.Home },
       { label: "Emergency Numbers", href: Routes.Home },
