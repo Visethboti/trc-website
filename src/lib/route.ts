@@ -13,9 +13,14 @@ export enum Routes {
   Prakas = LawsAndRegulations + "/prakas",
   Decisions = LawsAndRegulations + "/decisions",
   Guidelines = LawsAndRegulations + "/guidelines",
+  Media = "/media",
+  NewsRelease = Media + "/news-releases",
+  Activities = Media + "/activities",
+  Events = Media + "/events",
   About = "/about",
-  Structure = "/about/structure",
-  ChairRemarks = "/about/chair-remarks",
+  ChairRemarks = About,
+  VisionMission = About,
+  Structure = About + "/structure",
   Unit = "/about/units",
   Policies = "/policies",
   PressRelease = "/press-release",
@@ -24,9 +29,6 @@ export enum Routes {
   Projects = "/projects",
   Contact = "/contact",
   CybersecurityTips = "/cybersecurity-tips",
-  NewsRelease = "/news-releases",
-  Activities = "/activities",
-  Events = "/events",
 }
 
 export const NavRoutes = [
@@ -66,9 +68,9 @@ export const NavRoutes = [
   {
     label: "About",
     children: [
-      { label: "Chairman's Keynote", href: Routes.Home },
-      { label: "Vision & Mission", href: Routes.Home },
-      { label: "About TRC", href: Routes.Home },
+      { label: "Chairman's Keynote", href: Routes.ChairRemarks },
+      { label: "Vision & Mission", href: Routes.VisionMission },
+      { label: "About TRC", href: Routes.About },
       { label: "TRC Leader", href: Routes.Home },
       { label: "TRC Structure", href: Routes.Home },
     ],
