@@ -5,11 +5,18 @@ import { getRelativeLocaleUrl } from "astro:i18n";
 
 export enum Routes {
   Home = "/",
+  LawsAndRegulations = "/laws-and-regulations",
+  Laws = LawsAndRegulations + "/laws",
+  RoyalDecrees = LawsAndRegulations + "/royal-decrees",
+  SubDecrees = LawsAndRegulations + "/sub-decrees",
+  Circulations = LawsAndRegulations + "/circulations",
+  Prakas = LawsAndRegulations + "/prakas",
+  Decisions = LawsAndRegulations + "/decisions",
+  Guidelines = LawsAndRegulations + "/guidelines",
   About = "/about",
   Structure = "/about/structure",
   ChairRemarks = "/about/chair-remarks",
   Unit = "/about/units",
-  LawsRegulations = "/laws-regulations",
   Policies = "/policies",
   PressRelease = "/press-release",
   Videos = "/videos",
@@ -26,13 +33,13 @@ export const NavRoutes = [
   {
     label: "Laws & Regulations",
     children: [
-      { label: "Laws", href: Routes.Home },
-      { label: "Royal Decrees", href: Routes.Home },
-      { label: "Sub Decrees", href: Routes.Home },
-      { label: "Circulations", href: Routes.Home },
-      { label: "Prakas", href: Routes.Home },
-      { label: "Decisions", href: Routes.Home },
-      { label: "Guidelines", href: Routes.Home },
+      { label: "Laws", href: Routes.Laws },
+      { label: "Royal Decrees", href: Routes.RoyalDecrees },
+      { label: "Sub Decrees", href: Routes.SubDecrees },
+      { label: "Circulations", href: Routes.Circulations },
+      { label: "Prakas", href: Routes.Prakas },
+      { label: "Decisions", href: Routes.Decisions },
+      { label: "Guidelines", href: Routes.Guidelines },
     ],
   },
   {
@@ -46,9 +53,9 @@ export const NavRoutes = [
   {
     label: "Resources",
     children: [
-      { label: "Publications", href: Routes.LawsRegulations },
-      { label: "Telecom Statistics", href: Routes.Policies },
-      { label: "Active Operators", href: Routes.PressRelease },
+      { label: "Publications", href: Routes.Home },
+      { label: "Telecom Statistics", href: Routes.Home },
+      { label: "Active Operators", href: Routes.Home },
       { label: "Mobile Prefixes", href: Routes.Home },
       { label: "Common Codes", href: Routes.Home },
       { label: "Emergency Numbers", href: Routes.Home },
