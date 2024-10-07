@@ -42,7 +42,7 @@ export default function ImageCarousel({ carouselDatas }: ImageCarouselProps) {
         {carouselDatas?.map((item, index) => (
           <CarouselItem
             key={item.data.title}
-            className="relative h-[450px] w-full"
+            className="relative h-[500px] w-full"
           >
             <img
               src={item.data.image.src}
@@ -58,7 +58,7 @@ export default function ImageCarousel({ carouselDatas }: ImageCarouselProps) {
               >
                 <div className="container">
                   <CardContent className="flex flex-col items-end justify-end space-y-4 p-0 text-center text-primary-foreground">
-                    <div className="flex max-w-96 flex-col items-end justify-end">
+                    <div className="flex w-1/2 flex-col items-end justify-end">
                       <Badge
                         variant="secondary"
                         className="mb-4 rounded-3xl bg-secondary px-7 py-2 text-white"
@@ -67,13 +67,13 @@ export default function ImageCarousel({ carouselDatas }: ImageCarouselProps) {
                       </Badge>
                       <TextElement
                         variant="title"
-                        className="line-clamp-4 whitespace-pre-line text-pretty text-right text-xl font-normal md:text-4xl"
+                        className="line-clamp-4 whitespace-pre-line text-pretty text-right text-xl font-normal leading-10 md:text-3xl"
                       >
                         {item.data.title}
                       </TextElement>
                     </div>
                   </CardContent>
-                  <div className="mt-16 flex items-center justify-end gap-5 text-secondary md:mt-28">
+                  <div className="mt-16 flex items-center justify-end gap-5 text-secondary">
                     <hr className="h-2 w-20 rounded-2xl border-none bg-secondary" />
                     {carouselDatas?.map((item, i) => (
                       <div key={i}>
