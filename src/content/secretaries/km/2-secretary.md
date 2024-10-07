@@ -1,7 +1,7 @@
 ---
 title: ឯកឧត្តម
 name: កែវ សុទ្ធិ
-role: deputy-secretary-general
+role: chair
 image: src/asset/secretaries/keo-sothie.jpg
 lang: km
 ---

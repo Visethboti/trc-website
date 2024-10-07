@@ -1,7 +1,7 @@
 ---
 title: H.E.
-name: Chea Vandeth
-role: secretary-general
-image: src/asset/secretaries/chea-vandeth.jpg
+name: Chenda Thong
+role: chair
+image: src/asset/secretaries/user-avatar.png
 lang: en
 ---

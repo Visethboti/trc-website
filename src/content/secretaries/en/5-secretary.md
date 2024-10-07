@@ -1,7 +1,7 @@
 ---
 title: H.E.
 name: Name
-role: deputy-secretary-general
+role: diretor
 image: src/asset/secretaries/user-avatar.png
 lang: en
 ---

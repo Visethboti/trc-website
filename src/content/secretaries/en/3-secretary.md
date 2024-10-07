@@ -1,7 +1,7 @@
 ---
 title: H.E.
-name: Name
-role: deputy-secretary-general
+name: Sothy Seng
+role: comissioner
 image: src/asset/secretaries/user-avatar.png
 lang: en
 ---

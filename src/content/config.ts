@@ -1,6 +1,6 @@
 import { ABOUT_TYPES, type AboutType } from "./about.type";
 import { DIRECTIVE_TYPES, type DirectiveType } from "./content.type";
-import { SECRETARY_TYPES, type SecretaryType } from "./secretary.type";
+import { LEADERS_TYPES, type LeadersType } from "./leader.type";
 import { languages } from "@/i18n/ui";
 import { defineCollection, z } from "astro:content";
 import type { SchemaContext } from "astro:content";
@@ -15,8 +15,8 @@ const AboutTypeEnum = z.enum(
   Object.values(ABOUT_TYPES) as [AboutType, ...AboutType[]],
 );
 
-const SecretaryTypeEnum = z.enum(
-  Object.values(SECRETARY_TYPES) as [SecretaryType, ...SecretaryType[]],
+const LeadersTypeEnum = z.enum(
+  Object.values(LEADERS_TYPES) as [LeadersType, ...LeadersType[]],
 );
 
 const articleSchema = ({ image }: SchemaContext) =>
@@ -94,7 +94,7 @@ const secretariesSchema = ({ image }: SchemaContext) =>
     name: z.string(),
     title: z.string(),
     image: image(),
-    role: SecretaryTypeEnum,
+    role: LeadersTypeEnum,
     lang: z.enum(SupportedLanguage),
   });
 

@@ -1,7 +1,7 @@
 ---
 title: H.E.
-name: Dorany Auk
-role: comissioner
+name: Kimsann Srun
+role: comssionerone
 image: src/asset/secretaries/user-avatar.png
 lang: en
 ---
