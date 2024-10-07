@@ -17,10 +17,7 @@ interface ImageCarouselProps {
   lang: SupportedLanguage;
 }
 
-export default function ImageCarousel({
-  carouselDatas,
-  lang,
-}: ImageCarouselProps) {
+export default function ImageCarousel({ carouselDatas }: ImageCarouselProps) {
   const plugin = useRef(
     Autoplay({
       delay: 4000,
