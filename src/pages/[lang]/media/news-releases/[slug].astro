@@ -1,0 +1,18 @@
+---
+import ContentPage from "@/components/content-page/ContentPage.astro";
+
+import { getCollection } from "astro:content";
+
+export async function getStaticPaths() {
+  const pages = await getCollection("news-releases");
+
+  return pages.map((page) => {
+    const [lang, slug] = page.slug.split("/");
+    return { params: { lang, slug }, props: { page } };
+  });
+}
+
+const { page } = Astro.props;
+---
+
+<ContentPage page={page} />

@@ -13,7 +13,6 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 
-import { Button } from "../ui/button";
 import { Separator } from "../ui/separator";
 import { Menu } from "lucide-react";
 
@@ -28,7 +27,7 @@ const NavMenu: React.FC<{ navMenuItem: NavMenuProps[] }> = ({
 }) => {
   return (
     <Sheet>
-      <SheetTrigger className="lg:hidden">
+      <SheetTrigger className="pl-4 lg:hidden">
         <Menu className="size-8 text-blue-950" aria-label="Open mobile menu" />
       </SheetTrigger>
       <SheetContent className="w-[300px] sm:w-[400px]">
@@ -75,9 +74,6 @@ const NavMenu: React.FC<{ navMenuItem: NavMenuProps[] }> = ({
             </li>
           ))}
           <Separator />
-          <li className="flex justify-center pt-4">
-            <Button className="lg:hidden">Report Incident</Button>
-          </li>
         </ul>
       </SheetContent>
     </Sheet>

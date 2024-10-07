@@ -21,7 +21,9 @@ const LeadersTypeEnum = z.enum(
 
 const articleSchema = ({ image }: SchemaContext) =>
   z.object({
-    author: z.string().default("Digital Security Committee"),
+    author: z
+      .string()
+      .default("Telecommunication Regulator of Cambodia - T.R.C."),
     categories: z.array(z.string()).default(["News", "Article"]),
     date: z.string(),
     featured: z.boolean(),
@@ -104,6 +106,9 @@ const secretariesCollection = defineCollection({
 
 export const collections = {
   "cybersecurity-tips": articlesCollection,
+  "news-releases": articlesCollection,
+  activities: articlesCollection,
+  events: articlesCollection,
   articles: articlesCollection,
   directives: directivesCollection,
   abouts: aboutsCollection,

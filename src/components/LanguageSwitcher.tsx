@@ -36,6 +36,7 @@ const LanguageSwitcher = ({
       onClick={toggleLanguage}
       type="button"
       aria-label={`Current language: ${languageNames[initialLocale]}. Click to toggle language.`}
+      className="min-w-max px-2"
     >
       <img src={icon.src} width="26" height="26" alt="" />
     </button>

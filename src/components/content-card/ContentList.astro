@@ -9,6 +9,9 @@ interface Props {
   content: (
     | CollectionEntry<"articles">
     | CollectionEntry<"cybersecurity-tips">
+    | CollectionEntry<"news-releases">
+    | CollectionEntry<"events">
+    | CollectionEntry<"activities">
   )[];
   lang: SupportedLanguage;
 }
@@ -16,9 +19,7 @@ interface Props {
 const { content, lang } = Astro.props;
 ---
 
-<ul
-  class="grid list-none auto-rows-fr grid-cols-1 gap-5 py-5 md:grid-cols-2 lg:grid-cols-3"
->
+<ul class="flex flex-col gap-5 pt-5 md:grid md:grid-cols-1 lg:grid-cols-1">
   {
     content.map((item) => (
       <li>
