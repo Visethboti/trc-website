@@ -16,7 +16,7 @@ import type { CollectionEntry } from "astro:content";
 import Autoplay from "embla-carousel-autoplay";
 
 interface ImageCarouselProps {
-  carouselDatas: CollectionEntry<"articles">[];
+  carouselDatas: CollectionEntry<"activities">[];
   lang: SupportedLanguage;
 }
 
