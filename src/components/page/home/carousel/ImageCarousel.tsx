@@ -1,14 +1,11 @@
 import { useRef } from "react";
 
-import { getContentUrl } from "@/lib/route";
-
 import { CardContent } from "@/components/ui/card";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
 } from "@/components/ui/carousel";
-import { ButtonLink } from "@/components/ButtonLink";
 import TextElement from "@/components/TextElement";
 
 import type { SupportedLanguage } from "@/i18n/ui";
@@ -51,29 +48,19 @@ export default function ImageCarousel({
               className="absolute inset-0 size-full object-cover object-center"
               loading="eager"
             />
-            <div className="absolute inset-0 flex items-center justify-center bg-black/70">
-              <CardContent className="container mx-auto flex flex-col items-center justify-center space-y-4 p-4 text-center text-primary-foreground sm:p-6 md:p-8">
-                <TextElement
-                  variant="title"
-                  className="line-clamp-4 whitespace-pre-line text-pretty text-xl md:text-4xl"
-                >
-                  {item.data.title}
-                </TextElement>
-                <TextElement
-                  variant="paragraph"
-                  className="line-clamp-4 whitespace-pre-line text-pretty text-sm md:text-base"
-                >
-                  {item.data.description}
-                </TextElement>
-                <ButtonLink
-                  href={getContentUrl(item, lang)}
-                  aria-labelledby={`read-more-${item.slug}`}
-                >
-                  <span id={`read-more-${item.slug}`}>
-                    Read more
-                    <span className="sr-only"> about {item.data.title}</span>
-                  </span>
-                </ButtonLink>
+            <div className="absolute inset-0 flex items-center justify-end bg-black/70">
+              <CardContent className="container flex flex-col items-end justify-end space-y-4 p-4 text-center text-primary-foreground sm:p-6 md:p-8">
+                <div className="flex max-w-96 flex-col items-end justify-end">
+                  <div className="mb-4 rounded-3xl bg-secondary px-7 py-2 text-white">
+                    Activity
+                  </div>
+                  <TextElement
+                    variant="title"
+                    className="line-clamp-4 whitespace-pre-line text-pretty text-right text-xl md:text-4xl"
+                  >
+                    {item.data.title}
+                  </TextElement>
+                </div>
               </CardContent>
             </div>
           </CarouselItem>
