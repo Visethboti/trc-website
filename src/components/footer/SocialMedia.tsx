@@ -1,20 +1,19 @@
 import {
   FacebookIcon,
-  InstagramIcon,
-  LinkedinIcon,
-  TwitterIcon,
+  TelegramIcon,
+  YouTubeIcon,
 } from "./SocialMediaLinks";
 
 export default function SocialMedia() {
   const socialMediaLinks = [
-    { Icon: TwitterIcon, label: "Twitter", link: "/" },
     { Icon: FacebookIcon, label: "Facebook", link: "/" },
-    { Icon: InstagramIcon, label: "Instagram", link: "/" },
-    { Icon: LinkedinIcon, label: "LinkedIn", link: "/" },
+    { Icon: TelegramIcon, label: "Telegram", link: "/" },
+    { Icon: YouTubeIcon, label: "Youtube", link: "/" },
   ];
 
   return (
     <nav aria-label="Social Media Links">
+      <h2 className="mb-4 text-lg font-semibold">Follow us</h2>
       <ul className="flex gap-6">
         {socialMediaLinks.map(({ Icon, label, link }) => (
           <li key={label}>
