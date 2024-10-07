@@ -1,31 +1,33 @@
 ---
 import { getLocalizedRoutes, NavRoutes } from "@/lib/route";
 
-import { defaultLang } from "@/i18n/ui";
 import SocialMedia from "./footer/SocialMedia";
-import { PhoneIcon, MailIcon, MapPinIcon } from "./footer/SocialMediaLinks";
+import { MailIcon, MapPinIcon, PhoneIcon } from "./footer/SocialMediaLinks";
+import { defaultLang } from "@/i18n/ui";
 
 const locale = Astro.currentLocale ?? defaultLang;
 
 const navigationItems = getLocalizedRoutes(NavRoutes, locale);
 ---
 
-<footer class="bg-primary text-primary-foreground mt-auto w-auto">
+<footer class="mt-auto w-auto bg-primary text-primary-foreground">
   <div class="w-full px-4 py-12 lg:p-8 2xl:px-16">
     <div class="flex flex-col gap-12 lg:flex-row lg:justify-center">
       <div class="grid gap-4 lg:w-3/4 lg:grid-cols-2">
         <address class="not-italic">
-          <h2 class="mb-4 text-lg font-semibold">Telecommunication Regulator of Cambodia</h2>
+          <h2 class="mb-4 text-lg font-semibold">
+            Telecommunication Regulator of Cambodia
+          </h2>
           <ul class="space-y-3">
             <li>
               <a href="tel:+85594858349751" class="flex hover:underline">
-                <PhoneIcon/>
+                <PhoneIcon />
                 <span class="ml-4">(855) 23 722 333 / 6789</span>
               </a>
             </li>
             <li>
               <a href="mailto:example@gmail.com" class="flex hover:underline">
-                <MailIcon/>
+                <MailIcon />
                 <span class="ml-4">info@trc.gov.kh</span>
               </a>
             </li>
@@ -36,8 +38,10 @@ const navigationItems = getLocalizedRoutes(NavRoutes, locale);
                 rel="noopener noreferrer"
                 class="flex hover:underline"
               >
-                <MapPinIcon/>
-                <span class="ml-4">Street 102, Sangkat Wat Phnom, Khan Daun Penh, Phnom Penh</span>
+                <MapPinIcon />
+                <span class="ml-4"
+                  >Street 102, Sangkat Wat Phnom, Khan Daun Penh, Phnom Penh</span
+                >
               </a>
             </li>
           </ul>
@@ -69,13 +73,13 @@ const navigationItems = getLocalizedRoutes(NavRoutes, locale);
           </nav>
           <div class="ml-40">
             <SocialMedia />
-          </div> 
+          </div>
         </div>
       </div>
     </div>
     <hr class="my-8 w-full border-orange-500" />
-    <div class="flex items-center justify-center ">
-      <p>Copyright ©2024 All Rights Reserved | TRC </p>
+    <div class="flex items-center justify-center">
+      <p>Copyright ©2024 All Rights Reserved | TRC</p>
     </div>
   </div>
 </footer>
