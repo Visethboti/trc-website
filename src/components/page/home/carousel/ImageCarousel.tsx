@@ -75,7 +75,7 @@ export default function ImageCarousel({ carouselDatas }: ImageCarouselProps) {
                   </CardContent>
                   <div className="mt-16 flex items-center justify-end gap-5 text-secondary">
                     <hr className="h-2 w-20 rounded-2xl border-none bg-secondary" />
-                    {carouselDatas?.map((item, i) => (
+                    {carouselDatas?.map((_, i) => (
                       <div key={i}>
                         {index === i ? (
                           <div className="font-semibold">{index + 1}</div>
