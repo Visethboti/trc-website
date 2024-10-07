@@ -1,8 +1,4 @@
-import {
-  FacebookIcon,
-  TelegramIcon,
-  YouTubeIcon,
-} from "./SocialMediaLinks";
+import { FacebookIcon, TelegramIcon, YouTubeIcon } from "./SocialMediaLinks";
 
 export default function SocialMedia() {
   const socialMediaLinks = [
