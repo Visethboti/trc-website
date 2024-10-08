@@ -73,7 +73,7 @@ export const NavRoutes = [
       { label: "Chairman's Keynote", href: Routes.ChairRemarks },
       { label: "Vision & Mission", href: Routes.VisionMission },
       { label: "About TRC", href: Routes.About },
-      { label: "TRC Leader", href: Routes.Home },
+      { label: "TRC Leader", href: Routes.Structure },
       { label: "TRC Structure", href: Routes.Home },
     ],
   },
