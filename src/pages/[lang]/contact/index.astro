@@ -1,0 +1,43 @@
+---
+import Main from "@/components/Main.astro";
+import Form from "@/components/page/contactus/form.astro";
+import Location from "@/components/page/contactus/location.astro";
+import TextElement from "@/components/TextElement";
+
+import { languages, type SupportedLanguage } from "@/i18n/ui";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { getCollection } from "astro:content";
+
+const title = "DSC Chair's Remarks";
+
+export async function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({
+    params: { lang },
+  }));
+}
+
+const lang = Astro.params.lang as SupportedLanguage;
+let allLeaders = await getCollection("leaders");
+allLeaders = [];
+const leaders = allLeaders.filter((leader) => leader.data.lang === lang);
+---
+
+<BaseLayout title={title}>
+  <Main>
+    <header>
+      <TextElement variant="heading" className="text-center">
+        Contact
+      </TextElement>
+    </header>
+    <section aria-label={title} class="py-12">
+      <div class="flex flex-col gap-8 md:flex-row">
+        <div class="w-full md:w-1/2">
+          <Form />
+        </div>
+        <div class="w-full md:w-1/2">
+          <Location />
+        </div>
+      </div>
+    </section>
+  </Main>
+</BaseLayout>

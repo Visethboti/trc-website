@@ -98,7 +98,7 @@ export const NavRoutes = [
   },
   {
     label: "Contact",
-    href: Routes.Home,
+    href: Routes.Contact,
   },
 ];
 
