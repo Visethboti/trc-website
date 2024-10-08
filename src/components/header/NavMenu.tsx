@@ -12,6 +12,7 @@ import { ListItem } from "./ListItem";
 import { ListItemTitle } from "./ListItemTitle";
 
 export interface NavMenuProps {
+  icon: ImageMetadata;
   href?: string;
   label: string;
   children?: NavMenuProps[];
@@ -50,6 +51,7 @@ const NavMenu: React.FC<{ navMenuItem: NavMenuProps[] }> = ({
                             key={child.label}
                             title={child.label}
                             href={child.href}
+                            svgIcon={child.icon}
                           />
                         ),
                       )}
