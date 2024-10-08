@@ -3,8 +3,8 @@ import { getLocalizedRoutes, NavRoutes } from "@/lib/route";
 
 import SocialMedia from "./footer/SocialMedia";
 import { MailIcon, MapPinIcon, PhoneIcon } from "./footer/SocialMediaLinks";
-import { defaultLang } from "@/i18n/ui";
 import { Separator } from "./ui/separator";
+import { defaultLang } from "@/i18n/ui";
 
 const locale = Astro.currentLocale ?? defaultLang;
 
@@ -70,16 +70,14 @@ const navigationItems = getLocalizedRoutes(NavRoutes, locale);
                   ),
                 )
               }
-            </ul>  
+            </ul>
           </nav>
           <SocialMedia />
         </div>
       </div>
     </div>
   </div>
-  <Separator 
-    className="h-[2px] w-full"
-  />
+  <Separator className="h-[2px] w-full" />
   <div class="flex items-center justify-center px-4 py-12 lg:p-8 2xl:px-16">
     <p>Copyright ©2024 All Rights Reserved | TRC</p>
   </div>
