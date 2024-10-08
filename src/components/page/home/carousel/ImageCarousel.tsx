@@ -51,14 +51,14 @@ export default function ImageCarousel({ carouselDatas }: ImageCarouselProps) {
               className="absolute inset-0 size-full object-cover object-center"
               loading="eager"
             />
-            <div className="absolute inset-0 flex w-full items-center justify-end bg-gradient-to-r from-transparent to-black/50">
+            <div className="absolute inset-0 flex w-full items-center justify-center bg-black/70 lg:justify-end lg:bg-transparent lg:bg-gradient-to-r lg:from-transparent lg:to-black/50">
               <section
                 aria-labelledby="about-dsc"
                 className="w-full px-24 max-sm:p-5"
               >
                 <div className="container">
-                  <CardContent className="flex flex-col items-end justify-end space-y-4 p-0 text-center text-primary-foreground">
-                    <div className="flex w-1/2 flex-col items-end justify-end">
+                  <CardContent className="flex flex-col items-center justify-center space-y-4 p-0 text-center text-primary-foreground lg:items-end lg:justify-end">
+                    <div className="flex w-full flex-col items-center justify-center lg:w-1/2 lg:items-end lg:justify-end">
                       <Badge
                         variant="secondary"
                         className="mb-4 rounded-3xl bg-secondary px-7 py-2 text-white"
@@ -67,13 +67,13 @@ export default function ImageCarousel({ carouselDatas }: ImageCarouselProps) {
                       </Badge>
                       <TextElement
                         variant="title"
-                        className="line-clamp-4 whitespace-pre-line text-pretty text-right text-xl font-normal leading-10 md:text-3xl"
+                        className="line-clamp-4 whitespace-pre-line text-pretty text-center text-xl font-normal leading-10 lg:text-right lg:text-3xl"
                       >
                         {item.data.title}
                       </TextElement>
                     </div>
                   </CardContent>
-                  <div className="mt-16 flex items-center justify-end gap-5 text-secondary">
+                  <div className="mt-16 flex items-center justify-center gap-5 text-secondary lg:items-center lg:justify-end">
                     <hr className="h-2 w-20 rounded-2xl border-none bg-secondary" />
                     {carouselDatas?.map((_, i) => (
                       <div key={i}>
@@ -91,8 +91,16 @@ export default function ImageCarousel({ carouselDatas }: ImageCarouselProps) {
           </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselPrevious variant="link" size="icon" className="left-0" />
-      <CarouselNext variant="link" size="icon" className="right-0" />
+      <CarouselPrevious
+        variant="link"
+        size="icon"
+        className="left-14 hidden lg:flex"
+      />
+      <CarouselNext
+        variant="link"
+        size="icon"
+        className="right-14 hidden lg:flex"
+      />
     </Carousel>
   );
 }
