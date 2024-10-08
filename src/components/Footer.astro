@@ -4,6 +4,7 @@ import { getLocalizedRoutes, NavRoutes } from "@/lib/route";
 import SocialMedia from "./footer/SocialMedia";
 import { MailIcon, MapPinIcon, PhoneIcon } from "./footer/SocialMediaLinks";
 import { defaultLang } from "@/i18n/ui";
+import { Separator } from "./ui/separator";
 
 const locale = Astro.currentLocale ?? defaultLang;
 
@@ -11,7 +12,7 @@ const navigationItems = getLocalizedRoutes(NavRoutes, locale);
 ---
 
 <footer class="mt-auto w-auto bg-primary text-primary-foreground">
-  <div class="w-full px-4 py-12 lg:p-8 2xl:px-16">
+  <div class="w-full px-4 py-8 lg:p-8 2xl:px-16">
     <div class="flex flex-col gap-12 lg:flex-row lg:justify-center">
       <div class="grid gap-4 lg:w-3/4 lg:grid-cols-2">
         <address class="not-italic">
@@ -46,7 +47,7 @@ const navigationItems = getLocalizedRoutes(NavRoutes, locale);
             </li>
           </ul>
         </address>
-        <div class="flex justify-end">
+        <div class="flex flex-col gap-4 lg:flex-row lg:justify-end">
           <nav>
             <h2 class="mb-4 text-lg font-semibold">Quick Links</h2>
             <ul class="space-y-3">
@@ -69,17 +70,17 @@ const navigationItems = getLocalizedRoutes(NavRoutes, locale);
                   ),
                 )
               }
-            </ul>
+            </ul>  
           </nav>
-          <div class="ml-40">
-            <SocialMedia />
-          </div>
+          <SocialMedia />
         </div>
       </div>
     </div>
-    <hr class="my-8 w-full border-orange-500" />
-    <div class="flex items-center justify-center">
-      <p>Copyright ©2024 All Rights Reserved | TRC</p>
-    </div>
+  </div>
+  <Separator 
+    className="h-[2px] w-full"
+  />
+  <div class="flex items-center justify-center px-4 py-12 lg:p-8 2xl:px-16">
+    <p>Copyright ©2024 All Rights Reserved | TRC</p>
   </div>
 </footer>
