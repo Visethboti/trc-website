@@ -1,9 +1,9 @@
 ---
-import AboutComponent from "@/components/page/home/AboutComponent.astro";
 import HomeCarousel from "@/components/page/home/carousel/HomeCarousel.astro";
 import HomeArticleList from "@/components/page/home/HomeArticleList.astro";
 import HomeMain from "@/components/page/home/HomeMain.astro";
 import LawCardList from "@/components/page/home/law/LawCardList.astro";
+import MediaComponent from "@/components/page/home/media/Media.astro";
 import TextElement from "@/components/TextElement";
 import UnitLinks from "@/components/UnitLinks";
 import WhatWeDoGrid from "@/components/WhatWeDoGird";
@@ -50,6 +50,17 @@ const featuredDirectives = langDirectives
   )
   .slice(0, 4);
 
+const allActivities = await getCollection("activities");
+const allEvents = await getCollection("events");
+const allNewsReleases = await getCollection("news-releases");
+const allMedia = [...allActivities, ...allEvents, ...allNewsReleases];
+// console.log("1", allMedia);
+
+const langMedia = allMedia.filter((article) => article.data.lang === lang);
+
+const featuredMedia = langMedia
+  .filter((directive) => directive.data.lang === lang)
+  .slice(0, 4);
 const t = useTranslations(lang);
 ---
 
@@ -65,7 +76,7 @@ const t = useTranslations(lang);
     <div class="mx-auto flex flex-col items-center gap-12">
       <section aria-labelledby="about-dsc" class="px-24 max-sm:p-5">
         <div class="container">
-          <AboutComponent />
+          <MediaComponent content={featuredMedia} lang={lang} />
         </div>
       </section>
       <section

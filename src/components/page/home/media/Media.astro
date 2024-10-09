@@ -1,0 +1,58 @@
+---
+import { getContentUrl } from "@/lib/route";
+
+import CardMedia from "@/components/page/home/media/CardMedia.astro";
+import CardMediaMain from "@/components/page/home/media/CardMediaMain.astro";
+import TextElement from "@/components/TextElement";
+
+import { type SupportedLanguage } from "@/i18n/ui";
+import { useTranslations } from "@/i18n/utils";
+import type { CollectionEntry } from "astro:content";
+
+interface Props {
+  content: CollectionEntry<"events" | "news-releases" | "activities">[];
+  lang: SupportedLanguage;
+}
+
+const { content, lang } = Astro.props;
+
+const t = useTranslations(lang);
+
+const firstContent = content[0];
+console.log(content);
+console.log(firstContent);
+
+const restContent = content.slice(1);
+---
+
+<div class="pt-8 lg:pt-16">
+  <TextElement variant="subheading" className="mb-6 text-primary xl:mb-10"
+    >{t("home.media")}</TextElement
+  >
+  <CardMediaMain
+    title={firstContent.data.title}
+    lang={lang}
+    href={getContentUrl(firstContent, lang)}
+    date={firstContent.data.date}
+    image={firstContent.data.image}
+    type={firstContent.data.type}
+  />
+  <ul
+    class="flex list-none flex-col gap-5 pt-10 lg:grid xl:grid-cols-4 2xl:grid-cols-4"
+  >
+    {
+      restContent.map((item) => (
+        <li>
+          <CardMedia
+            title={item.data.title}
+            lang={lang}
+            href={getContentUrl(item, lang)}
+            date={item.data.date}
+            image={item.data.image}
+            type={item.data.type}
+          />
+        </li>
+      ))
+    }
+  </ul>
+</div>

@@ -1,0 +1,95 @@
+---
+import { formatDate } from "@/lib/date-helper";
+
+import { Badge } from "@/components/ui/badge";
+import TextElement from "@/components/TextElement";
+
+import networkPattern from "@/asset/Network Pattern.png";
+import type { MediaType } from "@/content/media.type";
+import type { SupportedLanguage } from "@/i18n/ui";
+import type { ImageMetadata } from "astro";
+import { Image } from "astro:assets";
+
+interface Props {
+  title: string;
+  date: string;
+  lang: SupportedLanguage;
+  href: string;
+  image: ImageMetadata;
+  type: MediaType;
+}
+
+const { title, href, image, date, lang, type } = Astro.props as Props;
+---
+
+<a href={href} aria-labelledby={`read-more-${href}`}>
+  <article
+    class="relative flex h-full flex-col gap-5 rounded-2xl border border-solid border-primary bg-card text-card-foreground shadow-sm xl:flex-row xl:gap-0 xl:rounded-3xl"
+  >
+    <figure
+      class="relative w-full max-w-3xl overflow-hidden rounded-t-2xl xl:rounded-3xl"
+    >
+      <Image
+        src={image}
+        alt="image"
+        widths={[384, 512, 768]}
+        sizes="(max-width: 640px) 100vw, (max-width: 768px) 256px, (max-width: 1024px) 256px, 128px"
+        quality="high"
+        class="h-40 max-h-80 w-full object-cover sm:h-full"
+        loading="lazy"
+        format="webp"
+      />
+    </figure>
+    <div class="flex w-full flex-col gap-2 px-4 pb-4 xl:hidden">
+      <TextElement
+        variant="caption"
+        className="line-clamp-4 scroll-m-20 text-pretty text-base font-normal leading-6 tracking-tight xl:text-lg"
+      >
+        {title}
+      </TextElement>
+      <time
+        class="text-xs mb-8 text-left font-light"
+        datetime={new Date(date).toISOString()}
+      >
+        {formatDate(date, lang)}
+      </time>
+      <Badge
+        variant="secondary"
+        className="text-xs w-fit px-3 py-1 font-normal capitalize text-white xl:px-5 xl:text-base"
+        >{type}</Badge
+      >
+    </div>
+    <div
+      class="hidden w-full p-10 xl:flex xl:flex-col xl:items-stretch xl:gap-2"
+    >
+      <Badge
+        variant="secondary"
+        className="text-xs mb-4 w-fit px-3 py-1 font-normal capitalize text-white xl:px-5 xl:text-sm"
+        >{type}</Badge
+      >
+      <TextElement
+        variant="caption"
+        className="mb-auto line-clamp-4 grow scroll-m-20 text-pretty text-base font-normal leading-6 tracking-tight xl:text-lg"
+      >
+        {title}
+      </TextElement>
+      <time
+        class="text-xs mt-auto text-left font-light"
+        datetime={new Date(date).toISOString()}
+      >
+        {formatDate(date, lang)}
+      </time>
+    </div>
+    <figure class="absolute bottom-0 right-0 w-1/4 min-w-40">
+      <Image
+        src={networkPattern}
+        alt={title}
+        loading="eager"
+        widths={[320, 480, 640, 768, 1024]}
+        sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+        quality="mid"
+        format="webp"
+      />
+    </figure>
+  </article>
+</a>
