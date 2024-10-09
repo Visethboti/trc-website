@@ -4,9 +4,8 @@ import Form from "@/components/page/contactus/form.astro";
 import Location from "@/components/page/contactus/location.astro";
 import TextElement from "@/components/TextElement";
 
-import { languages, type SupportedLanguage } from "@/i18n/ui";
+import { languages } from "@/i18n/ui";
 import BaseLayout from "@/layouts/BaseLayout.astro";
-import { getCollection } from "astro:content";
 
 const title = "DSC Chair's Remarks";
 
@@ -15,11 +14,6 @@ export async function getStaticPaths() {
     params: { lang },
   }));
 }
-
-const lang = Astro.params.lang as SupportedLanguage;
-let allLeaders = await getCollection("leaders");
-allLeaders = [];
-const leaders = allLeaders.filter((leader) => leader.data.lang === lang);
 ---
 
 <BaseLayout title={title}>
