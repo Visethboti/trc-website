@@ -12,7 +12,7 @@ import { ListItem } from "./ListItem";
 import { ListItemTitle } from "./ListItemTitle";
 
 export interface NavMenuProps {
-  icon: ImageMetadata;
+  icon?: ImageMetadata;
   href?: string;
   label: string;
   children?: NavMenuProps[];
