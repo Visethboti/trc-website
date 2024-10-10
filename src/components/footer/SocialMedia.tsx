@@ -8,7 +8,7 @@ export default function SocialMedia() {
   ];
 
   return (
-    <nav aria-label="Social Media Links">
+    <nav aria-label="Social Media Links" className="lg:col-span-1">
       <h2 className="mb-4 text-lg font-semibold">Follow us</h2>
       <ul className="flex gap-6">
         {socialMediaLinks.map(({ Icon, label, link }) => (
