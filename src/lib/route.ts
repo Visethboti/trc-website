@@ -16,6 +16,7 @@ export enum Routes {
   Media = "/media",
   Resources = "/resources",
   MobilePrefixes = Resources + "/mobile-prefixes",
+  CommonCodes = Resources + "/common-codes",
   NewsRelease = Media + "/news-releases",
   Activities = Media + "/activities",
   Events = Media + "/events",
@@ -60,8 +61,13 @@ export const NavRoutes = [
       { label: "Publications", href: Routes.Home },
       { label: "Telecom Statistics", href: Routes.Home },
       { label: "Active Operators", href: Routes.Home },
+<<<<<<< HEAD
       { label: "Mobile Prefixes", href: Routes.MobilePrefixes },
       { label: "Common Codes", href: Routes.Home },
+=======
+      { label: "Mobile Prefixes", href: Routes.Home },
+      { label: "Common Codes", href: Routes.CommonCodes },
+>>>>>>> main
       { label: "Emergency Numbers", href: Routes.Home },
       { label: "Qualified Import Agents", href: Routes.Home },
       { label: "Tower Map", href: Routes.Home },
