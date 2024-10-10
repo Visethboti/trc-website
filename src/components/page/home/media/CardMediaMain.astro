@@ -55,7 +55,7 @@ const { title, href, image, date, lang, type } = Astro.props as Props;
       </time>
       <Badge
         variant="secondary"
-        className="text-xs w-fit px-3 py-1 font-normal capitalize text-white xl:px-5 xl:text-base"
+        className="text-xs w-fit px-3 py-1 font-normal capitalize text-white hover:bg-secondary xl:px-5 xl:text-base"
         >{type}</Badge
       >
     </div>
@@ -64,7 +64,7 @@ const { title, href, image, date, lang, type } = Astro.props as Props;
     >
       <Badge
         variant="secondary"
-        className="text-xs mb-4 w-fit px-3 py-1 font-normal capitalize text-white xl:px-5 xl:text-sm"
+        className="text-xs mb-4 w-fit px-3 py-1 font-normal capitalize text-white hover:bg-secondary xl:px-5 xl:text-sm"
         >{type}</Badge
       >
       <TextElement

@@ -50,11 +50,9 @@ const featuredDirectives = langDirectives
   )
   .slice(0, 4);
 
-const allActivities = await getCollection("activities");
 const allEvents = await getCollection("events");
 const allNewsReleases = await getCollection("news-releases");
 const allMedia = [...allActivities, ...allEvents, ...allNewsReleases];
-// console.log("1", allMedia);
 
 const langMedia = allMedia.filter((article) => article.data.lang === lang);
 

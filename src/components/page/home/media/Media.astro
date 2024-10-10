@@ -1,6 +1,7 @@
 ---
 import { getContentUrl } from "@/lib/route";
 
+import { ButtonLink } from "@/components/ButtonLink";
 import CardMedia from "@/components/page/home/media/CardMedia.astro";
 import CardMediaMain from "@/components/page/home/media/CardMediaMain.astro";
 import TextElement from "@/components/TextElement";
@@ -37,9 +38,7 @@ const restContent = content.slice(1);
     image={firstContent.data.image}
     type={firstContent.data.type}
   />
-  <ul
-    class="flex list-none flex-col gap-5 pt-10 lg:grid xl:grid-cols-4 2xl:grid-cols-4"
-  >
+  <ul class="flex list-none flex-col gap-7 pt-10 lg:grid xl:grid-cols-4">
     {
       restContent.map((item) => (
         <li>
@@ -55,4 +54,13 @@ const restContent = content.slice(1);
       ))
     }
   </ul>
+
+  <div class="mt-10 hidden w-full justify-center xl:flex">
+    <ButtonLink
+      href={`/${lang}/media/news-releases`}
+      className="mt-3 rounded-2xl bg-primary px-8 py-2.5 text-lg font-normal text-white"
+    >
+      <span class="flex items-center gap-3">{t("home.seeMoreMedia")} </span>
+    </ButtonLink>
+  </div>
 </div>
