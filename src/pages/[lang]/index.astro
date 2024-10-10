@@ -19,11 +19,11 @@ export function getStaticPaths() {
   return Object.values(languages).map((lang) => ({ params: { lang } }));
 }
 
-const allArticles = await getCollection("articles");
+const allActivities = await getCollection("activities");
 
-const langArticles = allArticles.filter((tip) => tip.data.lang === lang);
+const langActivities = allActivities.filter((tip) => tip.data.lang === lang);
 
-const latestArticles = langArticles
+const latestActivities = langActivities
   .sort(
     (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime(),
   )
@@ -72,7 +72,7 @@ const t = useTranslations(lang);
     <TextElement variant="heading" className="sr-only">
       It was popularised in the 1960s
     </TextElement>
-    <HomeCarousel content={latestArticles} lang={lang} />
+    <HomeCarousel content={latestActivities} lang={lang} />
     <div class="mx-auto flex flex-col items-center gap-12">
       <section aria-labelledby="about-dsc" class="px-24 max-sm:p-5">
         <div class="container">
