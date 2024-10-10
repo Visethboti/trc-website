@@ -1,0 +1,35 @@
+---
+import Main from "@/components/Main.astro";
+import TextElement from "@/components/TextElement";
+
+import image from "@/asset/resources/common-codes.png";
+import { languages } from "@/i18n/ui";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { Image } from "astro:assets";
+
+const title = "Common Codes";
+
+export async function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({
+    params: { lang },
+  }));
+}
+---
+
+<BaseLayout title={title}>
+  <Main>
+    <section aria-label={title} class="pb-6">
+      <TextElement variant="heading" className="text-center text-primary">
+        {title}
+      </TextElement>
+    </section>
+    <Image
+      src={image}
+      alt="Common Codes"
+      loading="lazy"
+      quality="high"
+      format="webp"
+      class={"pb-6"}
+    />
+  </Main>
+</BaseLayout>

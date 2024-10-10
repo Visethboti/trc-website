@@ -28,9 +28,6 @@ export default function ImageCarousel({ carouselDatas }: ImageCarouselProps) {
       stopOnInteraction: false,
     }),
   );
-  // checkIndex(index) {
-  //   if()
-  // }
 
   return (
     <Carousel
@@ -61,7 +58,7 @@ export default function ImageCarousel({ carouselDatas }: ImageCarouselProps) {
                     <div className="flex w-full flex-col items-center justify-center lg:w-1/2 lg:items-end lg:justify-end">
                       <Badge
                         variant="secondary"
-                        className="mb-4 rounded-3xl bg-secondary px-7 py-2 text-white"
+                        className="mb-4 rounded-3xl bg-secondary px-7 py-2 text-white hover:bg-secondary"
                       >
                         Activity
                       </Badge>
