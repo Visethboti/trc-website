@@ -1,7 +1,7 @@
 ---
-title: H.E.
-name: Name
-role: deputy-secretary-general
+title: ឯកឧត្តម
+name: ជា ច័ន្ទតារ៉ា
+role: comissioner
 image: src/asset/secretaries/user-avatar.png
 lang: km
 ---
