@@ -3,7 +3,6 @@ import Main from "@/components/Main.astro";
 import Structure from "@/components/page/about/StructureTrc.astro";
 
 import { languages, type SupportedLanguage } from "@/i18n/ui";
-import { useTranslations } from "@/i18n/utils";
 import OrganizationLayout from "@/layouts/OrganizationLayout.astro";
 import enAboutUs from "src/static/about-us/en-about-us.webp";
 import kmAboutUs from "src/static/about-us/km-about-us.webp";
@@ -15,7 +14,6 @@ export async function getStaticPaths() {
 }
 
 const lang = Astro.params.lang as SupportedLanguage;
-const t = useTranslations(lang);
 
 const langImages = {
   en: enAboutUs,
