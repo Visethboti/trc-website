@@ -33,12 +33,12 @@ const absoluteFileUrl = new URL(file, Astro.url.origin).href;
     class="flex h-full flex-col overflow-hidden rounded-lg border bg-card text-card-foreground shadow-sm sm:flex-row"
     aria-labelledby={`article-${title}`}
   >
-    <figure class="relative w-full sm:w-2/5 md:w-1/3 lg:w-1/3 xl:w-1/4">
+    <figure class="md:1/3 lg :w-1/4 relative w-full sm:w-2/5 xl:w-1/5">
       <AspectRatio ratio={16 / 9}>
         <Image
           src={image}
           alt={title}
-          class="size-full"
+          class="size-full object-contain"
           loading="eager"
           widths={[320, 480, 640, 768, 1024]}
           sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
@@ -48,7 +48,7 @@ const absoluteFileUrl = new URL(file, Astro.url.origin).href;
       </AspectRatio>
     </figure>
     <div
-      class="relative flex w-full flex-col p-4 sm:w-3/5 md:w-2/3 lg:w-2/3 xl:w-3/4"
+      class="md:2/3 relative flex w-full flex-col p-4 sm:w-3/5 lg:w-3/4 xl:w-4/5"
     >
       <figure class="absolute bottom-0 right-0 w-1/4">
         <Image
