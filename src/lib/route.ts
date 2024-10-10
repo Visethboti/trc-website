@@ -24,7 +24,7 @@ export enum Routes {
   ChairRemarks = About,
   VisionMission = About,
   Structure = About + "/structure",
-  Unit = "/about/units",
+  TrcStructure = About + "/trcstructure",
   Policies = "/policies",
   PressRelease = "/press-release",
   Videos = "/videos",
@@ -75,7 +75,7 @@ export const NavRoutes = [
       { label: "Vision & Mission", href: Routes.VisionMission },
       { label: "About TRC", href: Routes.About },
       { label: "TRC Leader", href: Routes.Home },
-      { label: "TRC Structure", href: Routes.Home },
+      { label: "TRC Structure", href: Routes.TrcStructure },
     ],
   },
   {
