@@ -1,5 +1,7 @@
 export const ui: Record<string, Record<string, string>> = {
   en: {
+    previous: "Previous",
+    next: "Next",
     "nav.home": "Home",
     "nav.about": "About",
     "nav.projects": "Projects",
@@ -50,6 +52,8 @@ export const ui: Record<string, Record<string, string>> = {
       "The Unit in charge of cyber diplomacy under the jurisdiction of the Ministry of Foreign Affairs and International Cooperation shall perform the additional function as the Cyber Diplomatic Unit, and shall serve as the assistant for the General Secretariat of the D.S.C. The Cyber Diplomatic Unit shall fulfill the roles and duties as set out in the legal instruments related to digital security management",
   },
   km: {
+    previous: "Previous",
+    next: "Next",
     "nav.home": "Home",
     "nav.about": "About",
     "nav.projects": "Projects",

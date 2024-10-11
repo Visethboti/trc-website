@@ -1,0 +1,42 @@
+---
+import { ButtonLink } from "@/components/ButtonLink";
+
+import { type SupportedLanguage } from "@/i18n/ui";
+import { useTranslations } from "@/i18n/utils";
+
+interface Props {
+  previousUrl?: string;
+  nextUrl?: string;
+}
+
+const { previousUrl, nextUrl } = Astro.props;
+const lang = Astro.currentLocale as SupportedLanguage;
+const t = useTranslations(lang);
+---
+
+<div>
+  <div class="flex justify-center pt-5">
+    {
+      previousUrl && (
+        <ButtonLink
+          href={previousUrl}
+          className="w-full"
+          aria-labelledby={`read-more-${previousUrl}`}
+        >
+          <span id={`read-more-${previousUrl}`}>{t("previous")}</span>
+        </ButtonLink>
+      )
+    }
+    {
+      nextUrl && (
+        <ButtonLink
+          href={nextUrl}
+          className="w-full"
+          aria-labelledby={`read-more-${nextUrl}`}
+        >
+          <span id={`read-more-${nextUrl}`}>{t("next")}</span>
+        </ButtonLink>
+      )
+    }
+  </div>
+</div>
