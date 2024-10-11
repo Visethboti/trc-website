@@ -1,8 +1,10 @@
 ---
 import { ButtonLink } from "@/components/ButtonLink";
 
+import { Separator } from "./ui/separator";
 import { type SupportedLanguage } from "@/i18n/ui";
 import { useTranslations } from "@/i18n/utils";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 interface Props {
   previousUrl?: string;
@@ -15,28 +17,35 @@ const t = useTranslations(lang);
 ---
 
 <div>
-  <div class="flex justify-center pt-5">
-    {
-      previousUrl && (
-        <ButtonLink
-          href={previousUrl}
-          className="w-full"
-          aria-labelledby={`read-more-${previousUrl}`}
-        >
-          <span id={`read-more-${previousUrl}`}>{t("previous")}</span>
-        </ButtonLink>
-      )
-    }
-    {
-      nextUrl && (
-        <ButtonLink
-          href={nextUrl}
-          className="w-full"
-          aria-labelledby={`read-more-${nextUrl}`}
-        >
-          <span id={`read-more-${nextUrl}`}>{t("next")}</span>
-        </ButtonLink>
-      )
-    }
+  <div class="pt-5">
+    <Separator className="h-[2px] w-full bg-secondary" />
+    <div class="flex">
+      {
+        previousUrl && (
+          <ButtonLink
+            href={previousUrl}
+            className="w-full text-lg lg:text-2xl no-underline p-12 lg:py-16  text-text bg-white"
+            aria-labelledby={`read-more-${previousUrl}`}
+          >
+            <ChevronLeft className="size-9 lg:size-12 text-text" />
+            <span id={`read-more-${previousUrl}`}>{t("previous")}</span>
+          </ButtonLink>
+        )
+      }
+      {
+        nextUrl && (
+          <ButtonLink
+            href={nextUrl}
+            className="w-full text-lg lg:text-2xl no-underline p-12 lg:py-16 bg-white text-text"
+            aria-labelledby={`read-more-${nextUrl}`}
+          >
+            <span id={`read-more-${nextUrl}`}>{t("next")}</span>
+            <ChevronRight className="size-9 lg:size-12 text-text" />
+          </ButtonLink>
+        )
+      }
+    </div>
+
+    <Separator className="h-[2px] w-full bg-secondary" />
   </div>
 </div>

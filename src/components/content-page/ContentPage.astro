@@ -3,18 +3,17 @@ import { formatDate, toISOString } from "@/lib/date-helper";
 
 import { Separator } from "@/components/ui/separator";
 import Main from "@/components/Main.astro";
-// import NextPreviousButton from "@/components/NextPreviousButton.astro";
+import NextPreviousButton from "@/components/NextPreviousButton.astro";
 import ProseWrapper from "@/components/ProseWrapper.astro";
 import TextElement from "@/components/TextElement";
 
 import type { SupportedLanguage } from "@/i18n/ui";
 import ArticleLayout from "@/layouts/ArticleLayout.astro";
 import { Image } from "astro:assets";
-import type { CollectionEntry } from "astro:content";
+import type { CollectionEntry, ContentEntryMap } from "astro:content";
 import { getCollection } from "astro:content";
 import { Clock3, NotebookPen } from "lucide-react";
 
-// import { type SupportedLanguage } from "@/i18n/ui";
 interface Props {
   page:
     | CollectionEntry<"articles">
@@ -25,22 +24,24 @@ interface Props {
 }
 
 const { page } = Astro.props;
-// const lang = Astro.currentLocale as SupportedLanguage;
 const {
   params: { lang },
 } = Astro;
 const { Content } = await page.render();
 
 const publicationDate = new Date(page.data.date);
-console.log(lang);
 
 let previous = "";
 let next = "";
-const articles = await getCollection("events");
-const langArticles = articles.filter((article) => article.data.lang === lang);
-
 const url = Astro.url.pathname;
-const baseUrl = url.split("/").slice(0, -1).join("/");
+const splitUrl = url.split("/");
+const baseUrl = splitUrl.slice(0, -1).join("/");
+
+const type = splitUrl[splitUrl.length - 2] as keyof ContentEntryMap;
+console.log(type);
+
+const articles = await getCollection(type);
+const langArticles = articles.filter((article) => article.data.lang === lang);
 
 langArticles.map((article, index) => {
   if (page.id === article.id) {
@@ -122,9 +123,7 @@ langArticles.map((article, index) => {
       <section>
         <Content />
       </section>
-      <div class="size-full h-10 bg-red-300">{previous}</div>
-      <div>{next}</div>
-      <!-- <NextPreviousButton previousUrl={previousPage} nextUrl={nextPage} /> -->
+      <NextPreviousButton previousUrl={previous} nextUrl={next} />
     </ProseWrapper>
   </Main>
 </ArticleLayout>
