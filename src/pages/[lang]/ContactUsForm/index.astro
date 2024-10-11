@@ -7,7 +7,7 @@ import TextElement from "@/components/TextElement";
 import { languages } from "@/i18n/ui";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 
-const title = "DSC Chair's Remarks";
+const title = "Contact Us TRC";
 
 export async function getStaticPaths() {
   return Object.keys(languages).map((lang) => ({
@@ -19,7 +19,7 @@ export async function getStaticPaths() {
 <BaseLayout title={title}>
   <Main>
     <header>
-      <TextElement variant="heading" className="text-center">
+      <TextElement variant="heading" className="text-center text-primary">
         Contact
       </TextElement>
     </header>
