@@ -24,10 +24,10 @@ const t = useTranslations(lang);
         previousUrl && (
           <ButtonLink
             href={previousUrl}
-            className="w-full text-lg lg:text-2xl no-underline p-12 lg:py-16  text-text bg-white"
+            className="text-text w-full bg-white p-12 text-lg no-underline lg:py-16 lg:text-2xl"
             aria-labelledby={`read-more-${previousUrl}`}
           >
-            <ChevronLeft className="size-9 lg:size-12 text-text" />
+            <ChevronLeft className="text-text size-9 lg:size-12" />
             <span id={`read-more-${previousUrl}`}>{t("previous")}</span>
           </ButtonLink>
         )
@@ -36,11 +36,11 @@ const t = useTranslations(lang);
         nextUrl && (
           <ButtonLink
             href={nextUrl}
-            className="w-full text-lg lg:text-2xl no-underline p-12 lg:py-16 bg-white text-text"
+            className="text-text w-full bg-white p-12 text-lg no-underline lg:py-16 lg:text-2xl"
             aria-labelledby={`read-more-${nextUrl}`}
           >
             <span id={`read-more-${nextUrl}`}>{t("next")}</span>
-            <ChevronRight className="size-9 lg:size-12 text-text" />
+            <ChevronRight className="text-text size-9 lg:size-12" />
           </ButtonLink>
         )
       }
