@@ -1,3 +1,15 @@
+import Complaint from "@/asset/service-icons/Complaint.svg";
+import Domain from "@/asset/service-icons/Domain.svg";
+import FiberCable from "@/asset/service-icons/Fiber Cable.svg";
+import Import from "@/asset/service-icons/Import.svg";
+import InternetCafe from "@/asset/service-icons/Internet Cafe.svg";
+import ISP from "@/asset/service-icons/ISP.svg";
+import NumberingPermit from "@/asset/service-icons/Numbering Permit.svg";
+import QualifiesAgent from "@/asset/service-icons/Qualified Agent.svg";
+import Spectrum from "@/asset/service-icons/Spectrum.svg";
+import TACertificate from "@/asset/service-icons/TA Certificate.svg";
+import TelecomShop from "@/asset/service-icons/Telecom Shop.svg";
+import TowerConstructionPermit from "@/asset/service-icons/Tower Construction Permit.svg";
 import type { SupportedLanguage } from "@/i18n/ui";
 import { removeLanguagePrefix } from "@/i18n/utils";
 import type { CollectionEntry } from "astro:content";
@@ -23,8 +35,7 @@ export enum Routes {
   About = "/about",
   ChairRemarks = About,
   VisionMission = About,
-  Structure = About + "/structure",
-  Unit = "/about/units",
+  TrcStructure = About + "/structure",
   Policies = "/policies",
   PressRelease = "/press-release",
   Videos = "/videos",
@@ -75,26 +86,53 @@ export const NavRoutes = [
       { label: "Vision & Mission", href: Routes.VisionMission },
       { label: "About TRC", href: Routes.About },
       { label: "TRC Leader", href: Routes.Home },
-      { label: "TRC Structure", href: Routes.Home },
+      { label: "TRC Structure", href: Routes.TrcStructure },
     ],
   },
   {
     label: "Service",
     children: [
       { label: "Public", isTitle: true },
-      { label: "Domain .KH" },
-      { label: "Internet Cafe" },
-      { label: "Telecom Equipment Shop" },
+      { label: "Domain .KH", icon: Domain },
+      {
+        label: "Internet Cafe",
+        icon: InternetCafe,
+      },
+      {
+        label: "Telecom Equipment Shop",
+        icon: TelecomShop,
+      },
       { label: "Operator", isTitle: true },
-      { label: "Operational License" },
-      { label: "Spectrum License" },
-      { label: "Telecom Numbering Permit" },
-      { label: "Equipment TA Certificate" },
-      { label: "Qualified Agent Certification" },
-      { label: "Equipment Importation & Distribution Permit" },
-      { label: "Tower Construction Permit" },
-      { label: "Fiber Cable Construction Permit" },
-      { label: "Frequency Interference Complaint" },
+      { label: "Operational License", icon: ISP },
+      { label: "Spectrum License", icon: Spectrum },
+      {
+        label: "Telecom Numbering Permit",
+        icon: NumberingPermit,
+      },
+      {
+        label: "Equipment TA Certificate",
+        icon: TACertificate,
+      },
+      {
+        label: "Qualified Agent Certification",
+        icon: QualifiesAgent,
+      },
+      {
+        label: "Equipment Importation & Distribution Permit",
+        icon: Import,
+      },
+      {
+        label: "Tower Construction Permit",
+        icon: TowerConstructionPermit,
+      },
+      {
+        label: "Fiber Cable Construction Permit",
+        icon: FiberCable,
+      },
+      {
+        label: "Frequency Interference Complaint",
+        icon: Complaint,
+      },
     ],
   },
   {
