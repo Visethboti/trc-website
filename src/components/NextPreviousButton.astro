@@ -1,0 +1,51 @@
+---
+import { ButtonLink } from "@/components/ButtonLink";
+
+import { Separator } from "./ui/separator";
+import { type SupportedLanguage } from "@/i18n/ui";
+import { useTranslations } from "@/i18n/utils";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+
+interface Props {
+  previousUrl?: string;
+  nextUrl?: string;
+}
+
+const { previousUrl, nextUrl } = Astro.props;
+const lang = Astro.currentLocale as SupportedLanguage;
+const t = useTranslations(lang);
+---
+
+<div>
+  <div class="pt-5">
+    <Separator className="h-[2px] w-full bg-secondary" />
+    <div class="flex">
+      {
+        previousUrl && (
+          <ButtonLink
+            href={previousUrl}
+            className="text-text w-full bg-white p-12 text-lg no-underline lg:py-16 lg:text-2xl"
+            aria-labelledby={`read-more-${previousUrl}`}
+          >
+            <ChevronLeft className="text-text size-9 lg:size-12" />
+            <span id={`read-more-${previousUrl}`}>{t("previous")}</span>
+          </ButtonLink>
+        )
+      }
+      {
+        nextUrl && (
+          <ButtonLink
+            href={nextUrl}
+            className="text-text w-full bg-white p-12 text-lg no-underline lg:py-16 lg:text-2xl"
+            aria-labelledby={`read-more-${nextUrl}`}
+          >
+            <span id={`read-more-${nextUrl}`}>{t("next")}</span>
+            <ChevronRight className="text-text size-9 lg:size-12" />
+          </ButtonLink>
+        )
+      }
+    </div>
+
+    <Separator className="h-[2px] w-full bg-secondary" />
+  </div>
+</div>
