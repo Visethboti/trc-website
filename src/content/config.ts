@@ -1,6 +1,7 @@
 import { ABOUT_TYPES, type AboutType } from "./about.type";
 import { DIRECTIVE_TYPES, type DirectiveType } from "./content.type";
 import { LEADERS_TYPES, type LeadersType } from "./leader.type";
+import { MEDIA_TYPES, type MediaType } from "./media.type";
 import { languages } from "@/i18n/ui";
 import { defineCollection, z } from "astro:content";
 import type { SchemaContext } from "astro:content";
@@ -9,6 +10,10 @@ const SupportedLanguage = Object.values(languages) as [string, ...string[]];
 
 const DirectiveTypeEnum = z.enum(
   Object.values(DIRECTIVE_TYPES) as [DirectiveType, ...DirectiveType[]],
+);
+
+const MediaTypeEnum = z.enum(
+  Object.values(MEDIA_TYPES) as [MediaType, ...MediaType[]],
 );
 
 const AboutTypeEnum = z.enum(
@@ -37,6 +42,27 @@ const articleSchema = ({ image }: SchemaContext) =>
 
 const articlesCollection = defineCollection({
   schema: articleSchema,
+});
+
+const mediaSchema = ({ image }: SchemaContext) =>
+  z.object({
+    author: z
+      .string()
+      .default("Telecommunication Regulator of Cambodia - T.R.C."),
+    categories: z.array(z.string()).default(["News", "Article"]),
+    date: z.string(),
+    featured: z.boolean(),
+    image: image(),
+    title: z.string(),
+    description: z.string().max(160, {
+      message: "Description must be at most 160 characters long",
+    }),
+    lang: z.enum(SupportedLanguage),
+    type: MediaTypeEnum,
+  });
+
+const mediaCollection = defineCollection({
+  schema: mediaSchema,
 });
 
 const directiveSchema = ({ image }: SchemaContext) =>
@@ -106,9 +132,9 @@ const secretariesCollection = defineCollection({
 
 export const collections = {
   "cybersecurity-tips": articlesCollection,
-  "news-releases": articlesCollection,
-  activities: articlesCollection,
-  events: articlesCollection,
+  "news-releases": mediaCollection,
+  activities: mediaCollection,
+  events: mediaCollection,
   articles: articlesCollection,
   directives: directivesCollection,
   abouts: aboutsCollection,

@@ -1,9 +1,9 @@
 ---
-import AboutComponent from "@/components/page/home/AboutComponent.astro";
 import HomeCarousel from "@/components/page/home/carousel/HomeCarousel.astro";
 import HomeArticleList from "@/components/page/home/HomeArticleList.astro";
 import HomeMain from "@/components/page/home/HomeMain.astro";
 import LawCardList from "@/components/page/home/law/LawCardList.astro";
+import MediaComponent from "@/components/page/home/media/Media.astro";
 import TextElement from "@/components/TextElement";
 import UnitLinks from "@/components/UnitLinks";
 import WhatWeDoGrid from "@/components/WhatWeDoGird";
@@ -19,11 +19,11 @@ export function getStaticPaths() {
   return Object.values(languages).map((lang) => ({ params: { lang } }));
 }
 
-const allArticles = await getCollection("articles");
+const allActivities = await getCollection("activities");
 
-const langArticles = allArticles.filter((tip) => tip.data.lang === lang);
+const langActivities = allActivities.filter((tip) => tip.data.lang === lang);
 
-const latestArticles = langArticles
+const latestActivities = langActivities
   .sort(
     (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime(),
   )
@@ -50,6 +50,15 @@ const featuredDirectives = langDirectives
   )
   .slice(0, 4);
 
+const allEvents = await getCollection("events");
+const allNewsReleases = await getCollection("news-releases");
+const allMedia = [...allActivities, ...allEvents, ...allNewsReleases];
+
+const langMedia = allMedia.filter((article) => article.data.lang === lang);
+
+const featuredMedia = langMedia
+  .filter((directive) => directive.data.lang === lang)
+  .slice(0, 4);
 const t = useTranslations(lang);
 ---
 
@@ -61,11 +70,11 @@ const t = useTranslations(lang);
     <TextElement variant="heading" className="sr-only">
       It was popularised in the 1960s
     </TextElement>
-    <HomeCarousel content={latestArticles} lang={lang} />
+    <HomeCarousel content={latestActivities} lang={lang} />
     <div class="mx-auto flex flex-col items-center gap-12">
       <section aria-labelledby="about-dsc" class="px-24 max-sm:p-5">
         <div class="container">
-          <AboutComponent />
+          <MediaComponent content={featuredMedia} lang={lang} />
         </div>
       </section>
       <section

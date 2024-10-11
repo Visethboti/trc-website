@@ -5,7 +5,7 @@ import type { SupportedLanguage } from "@/i18n/ui";
 import type { CollectionEntry } from "astro:content";
 
 interface Props {
-  content: CollectionEntry<"articles">[];
+  content: CollectionEntry<"activities">[];
   lang: SupportedLanguage;
 }
 
@@ -13,7 +13,7 @@ const { content, lang } = Astro.props;
 ---
 
 <section aria-label="Carousel">
-  <div class="relative h-[350px] w-full md:h-[450px]">
+  <div class="relative h-[500px] w-full">
     <ImageCarousel carouselDatas={content} lang={lang} client:load />
   </div>
 </section>
