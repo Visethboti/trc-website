@@ -4,6 +4,8 @@ export const ui: Record<string, Record<string, string>> = {
     "nav.about": "About",
     "nav.projects": "Projects",
     "home.whatwedo": "What We Do",
+    "home.media": "Media",
+    "home.seeMoreMedia": "See more media",
     "structure.heading": "Organization Structure of D.S.C.",
     "structure.intro":
       "The Royal Government has established the Digital Security Committee (D.S.C.) in order to ensure the efficient and effective function in leading, coordinating and promoting the management of digital security to protect the interests of all social actors against all forms of attacks as to respond to all technical aspects and relevant forces and thereby maintaining and protecting digital security.",
@@ -54,6 +56,8 @@ export const ui: Record<string, Record<string, string>> = {
     "nav.about": "About",
     "nav.projects": "Projects",
     "home.whatwedo": "What We Do",
+    "home.media": "Media",
+    "home.seeMoreMedia": "See more media",
     "structure.heading": "Organization Structure of D.S.C.",
     "structure.intro":
       "The Royal Government has established the Digital Security Committee (D.S.C.) in order to ensure the efficient and effective function in leading, coordinating and promoting the management of digital security to protect the interests of all social actors against all forms of attacks as to respond to all technical aspects and relevant forces and thereby maintaining and protecting digital security.",
