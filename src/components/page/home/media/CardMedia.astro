@@ -24,10 +24,10 @@ const { title, href, image, date, lang, type } = Astro.props as Props;
 
 <a href={href} aria-labelledby={`read-more-${href}`}>
   <article
-    class="relative flex h-full gap-6 rounded-2xl border border-solid border-primary bg-card text-card-foreground shadow-sm xl:flex-col xl:gap-0 2xl:rounded-3xl"
+    class="relative flex h-full gap-3 rounded-2xl border border-solid border-primary bg-card text-card-foreground shadow-sm sm:gap-5 xl:flex-col xl:gap-0 2xl:rounded-3xl"
   >
     <figure
-      class="relative w-full max-w-2xl overflow-hidden rounded-l-2xl xl:rounded-t-3xl xl:rounded-bl-none"
+      class="relative w-1/3 overflow-hidden rounded-l-2xl xl:w-full xl:rounded-t-3xl xl:rounded-bl-none"
     >
       <Image
         src={image}
@@ -35,20 +35,20 @@ const { title, href, image, date, lang, type } = Astro.props as Props;
         widths={[384, 512, 768]}
         sizes="(max-width: 640px) 100vw, (max-width: 768px) 256px, (max-width: 1024px) 256px, 128px"
         quality="high"
-        class="h-40 max-h-80 w-full object-cover sm:h-full"
+        class="size-full max-h-52 object-cover sm:h-full xl:max-h-80"
         loading="lazy"
         format="webp"
       />
     </figure>
-    <div class="flex w-full flex-col gap-6 py-3 pr-3 xl:hidden">
+    <div class="flex w-2/3 flex-col gap-1.5 py-3 pr-3 xl:hidden xl:w-full">
       <TextElement
         variant="caption"
-        className="line-clamp-4 scroll-m-20 text-pretty text-base font-normal leading-6 tracking-tight xl:text-lg"
+        className="line-clamp-3 scroll-m-20 text-pretty text-base font-normal leading-6 tracking-tight sm:line-clamp-4 xl:text-lg"
       >
         {title}
       </TextElement>
       <time
-        class="text-xs mb-8 text-left font-light"
+        class="text-xs text-left font-light sm:mb-4"
         datetime={new Date(date).toISOString()}
       >
         {formatDate(date, lang)}
@@ -60,7 +60,7 @@ const { title, href, image, date, lang, type } = Astro.props as Props;
       >
     </div>
     <div
-      class="hidden h-72 w-full p-5 xl:flex xl:flex-col xl:items-stretch xl:gap-0"
+      class="hidden h-72 w-2/3 p-5 xl:flex xl:w-full xl:flex-col xl:items-stretch xl:gap-0"
     >
       <Badge
         variant="secondary"

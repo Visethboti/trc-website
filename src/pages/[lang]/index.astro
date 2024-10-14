@@ -72,14 +72,17 @@ const t = useTranslations(lang);
     </TextElement>
     <HomeCarousel content={latestActivities} lang={lang} />
     <div class="mx-auto flex flex-col items-center gap-12">
-      <section aria-labelledby="about-dsc" class="px-24 max-sm:p-5">
+      <section
+        aria-labelledby="about-dsc"
+        class="px-24 max-lg:p-10 max-md:p-5 max-sm:p-0"
+      >
         <div class="container">
           <MediaComponent content={featuredMedia} lang={lang} />
         </div>
       </section>
       <section
         aria-labelledby="what-we-do-heading"
-        class="w-full bg-shadow px-24 py-10 max-sm:p-5"
+        class="w-full bg-shadow px-24 py-10 max-lg:p-10 max-md:p-5 max-sm:px-0 max-sm:py-5"
       >
         <div class="container">
           <TextElement
@@ -94,7 +97,7 @@ const t = useTranslations(lang);
       </section>
       <section
         aria-labelledby="units-under-dsc-heading"
-        class="px-24 max-sm:p-5"
+        class="px-24 max-lg:p-10 max-md:p-5 max-sm:px-0 max-sm:py-5"
       >
         <div class="container">
           <TextElement
@@ -109,7 +112,7 @@ const t = useTranslations(lang);
       </section>
       <section
         aria-labelledby="cybersecurity-tips"
-        class="w-full bg-shadow px-24 py-10 max-sm:p-5"
+        class="w-full bg-shadow px-24 py-10 max-lg:p-10 max-md:p-5 max-sm:px-0 max-sm:py-5"
       >
         <div class="container">
           <TextElement
@@ -124,7 +127,7 @@ const t = useTranslations(lang);
       </section>
       <section
         aria-labelledby="law-regulations-heading"
-        class="mb-5 px-24 max-sm:p-5"
+        class="mb-5 px-24 max-lg:p-10 max-md:p-5 max-sm:px-0 max-sm:py-5"
       >
         <div class="container">
           <TextElement
