@@ -36,7 +36,7 @@ export default function UnitLinks() {
               href={item.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex flex-col items-center gap-10 hover:underline"
+              className="group flex flex-col items-center hover:underline"
               aria-label={`${item.label} (opens in a new tab)`}
             >
               <div className="flex flex-col items-center">
@@ -46,7 +46,7 @@ export default function UnitLinks() {
                   width="100"
                   height="100"
                 />
-                <span className="text-center underline hover:text-primary">
+                <span className="ml-2 mt-5 text-center underline hover:text-primary">
                   {item.label}
                 </span>
               </div>
