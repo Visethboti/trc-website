@@ -1,7 +1,7 @@
 ---
 title: លោក 
 name: វ៉ែន ទីន
-role: diretor
+role: director
 image: src/asset/secretaries/user-avatar.png
 lang: km
 ---
