@@ -1,49 +1,52 @@
-import DSCLogo from "@/asset/logo/DSC-PNG-Logo.png";
+import CADTLogo from "@/asset/logo/CADT.png";
+import CPLogo from "@/asset/logo/Cambodia-Post.png";
+import MPTCLogo from "@/asset/logo/MPTC.png";
+import TCLogo from "@/asset/logo/Telcom-Cambodia.png";
 
 export default function UnitLinks() {
   const ExternalLinks = [
     {
-      label: "Cambodian Cybersecurity Unit",
+      label: "Ministry of Post and Telecommunications",
       link: "https://mptc.gov.kh",
-      image: DSCLogo,
+      image: MPTCLogo,
     },
     {
-      label: "Anti-Cybsecurity Unit",
-      link: "https://mptc.gov.kh",
-      image: DSCLogo,
+      label: "Telecome Cambodia",
+      link: "http://tc.com.kh",
+      image: TCLogo,
     },
     {
-      label: "National Cyberspace Defense Unit",
-      link: "https://mptc.gov.kh",
-      image: DSCLogo,
+      label: "Cambodia Post",
+      link: "https://cambodiapost.com.kh/",
+      image: CPLogo,
     },
     {
-      label: "Cyber Diplomacy Unit",
-      link: "https://mptc.gov.kh",
-      image: DSCLogo,
+      label: "Cambodia Academy of Deigial Technology",
+      link: "https://www.cadt.edu.kh/",
+      image: CADTLogo,
     },
   ];
 
   return (
     <nav>
-      <ul className="grid list-none grid-cols-1 gap-4 py-5 md:grid-cols-2 lg:grid-cols-4">
+      <ul className="grid list-none grid-cols-1 gap-4 py-10 md:grid-cols-2 lg:grid-cols-4">
         {ExternalLinks.map((item) => (
           <li key={item.label}>
             <a
               href={item.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex items-start gap-4 hover:underline"
+              className="group flex flex-col items-center gap-10 hover:underline"
               aria-label={`${item.label} (opens in a new tab)`}
             >
-              <div className="flex items-center">
+              <div className="flex flex-col items-center">
                 <img
                   src={item.image.src}
                   alt={item.label}
-                  width="30"
-                  height="30"
+                  width="100"
+                  height="100"
                 />
-                <span className="ml-2 underline hover:text-primary">
+                <span className="text-center underline hover:text-primary">
                   {item.label}
                 </span>
               </div>
