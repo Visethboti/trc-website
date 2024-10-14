@@ -24,10 +24,10 @@ const { title, href, image, date, lang, type } = Astro.props as Props;
 
 <a href={href} aria-labelledby={`read-more-${href}`}>
   <article
-    class="relative flex h-full flex-col gap-5 rounded-2xl border border-solid border-primary bg-card text-card-foreground shadow-sm xl:flex-row xl:gap-0 xl:rounded-3xl"
+    class="relative flex h-full flex-col gap-4 rounded-2xl border border-solid border-primary bg-card text-card-foreground shadow-sm xl:flex-row xl:gap-0 xl:rounded-3xl"
   >
     <figure
-      class="relative w-full max-w-3xl overflow-hidden rounded-t-2xl xl:rounded-3xl"
+      class="relative w-full overflow-hidden rounded-t-2xl xl:rounded-3xl"
     >
       <Image
         src={image}
@@ -35,7 +35,7 @@ const { title, href, image, date, lang, type } = Astro.props as Props;
         widths={[384, 512, 768]}
         sizes="(max-width: 640px) 100vw, (max-width: 768px) 256px, (max-width: 1024px) 256px, 128px"
         quality="high"
-        class="h-40 max-h-80 w-full object-cover sm:h-full"
+        class="size-full max-h-72 object-cover"
         loading="lazy"
         format="webp"
       />
@@ -43,7 +43,7 @@ const { title, href, image, date, lang, type } = Astro.props as Props;
     <div class="flex w-full flex-col gap-2 px-4 pb-4 xl:hidden">
       <TextElement
         variant="caption"
-        className="line-clamp-4 scroll-m-20 text-pretty text-base font-normal leading-6 tracking-tight xl:text-lg"
+        className="text-xs line-clamp-4 scroll-m-20 text-pretty font-normal leading-6 tracking-tight md:text-base xl:text-lg"
       >
         {title}
       </TextElement>

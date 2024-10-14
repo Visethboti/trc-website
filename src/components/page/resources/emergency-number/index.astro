@@ -1,19 +1,137 @@
 ---
-import MAFF from "./MinistryOfAgriculture.astro";
-import MOH from "./MinistryOfHealth.astro";
-import MOI from "./MinistryOfInterior.astro";
-import MLVT from "./MinistryOfLabor.astro";
-import Other from "./Other.astro";
+import EmergencyList from "./EmergencyList.astro";
+
+const MOI = [
+  {
+    Title: "Police",
+    Number: "117",
+  },
+  {
+    Title: "Fire Fighter",
+    Number: "118",
+  },
+  {
+    Title: "Public Security",
+    Number: "1283",
+  },
+  {
+    Title: "Immigration",
+    Number: "11284",
+  },
+  {
+    Title: "Human Trafficking",
+    Number: "1288",
+  },
+  {
+    Title: "Monitoring of mail and registration list",
+    Number: "1290",
+  },
+  {
+    Title: "Broadcast radio and interactive television stations",
+    Number: "1276",
+  },
+];
+
+const MOH = [
+  {
+    Title: "Calmette Hospital",
+    Number: "115",
+  },
+  {
+    Title: "Ambulance Car",
+    Number: "119",
+  },
+];
+const MAFF = [
+  {
+    Title: "Avian Influenza",
+    Number: "1287 / 1289",
+  },
+];
+const MLVT = [
+  {
+    Title: "Occupational Accidents",
+    Number: "1286",
+  },
+  {
+    Title: "Labour Law",
+    Number: "1297",
+  },
+];
+const Other = [
+  {
+    Title: "Child and Youth Benefits",
+    Number: "1280",
+  },
+  {
+    Title: "Legal services for the poor",
+    Number: "1281",
+  },
+  {
+    Title: "Anti-Corruption Unit",
+    Number: "1282",
+  },
+  {
+    Title: "National Election committee",
+    Number: "1285",
+  },
+  {
+    Title: "National Blood Transfusion Center Cambodia",
+    Number: "1291",
+  },
+  {
+    Title: "Legal Counsel",
+    Number: "1292",
+  },
+  {
+    Title: "One World UK Organization",
+    Number: "1293",
+  },
+  {
+    Title: "National Committee for Disaster Management",
+    Number: "1294",
+  },
+  {
+    Title: "Family Health International 360",
+    Number: "1295",
+  },
+  {
+    Title: "People In Need Organization",
+    Number: "1296",
+  },
+  {
+    Title: "Electricite Du Cambodge (EDC)",
+    Number: "1298",
+  },
+  {
+    Title: "Phnom Penh Capital Hall",
+    Number: "1299",
+  },
+  {
+    Title: "General Department of Taxation",
+    Number: "1277",
+  },
+  {
+    Title: "Union of Youth Federations of Cambodia",
+    Number: "1278 / 1279",
+  },
+];
 ---
 
 <div class="grid grid-cols-1 gap-7 md:grid-cols-1 lg:grid-cols-2">
   <div class="flex flex-col gap-4">
-    <MOI />
-    <MOH />
-    <MAFF />
-    <MLVT />
+    <EmergencyList ministry="Ministry of Interior" emergencyList={MOI} />
+    <EmergencyList ministry="Ministry of Health" emergencyList={MOH} />
+    <EmergencyList
+      ministry="Ministry of Agricuture Forestry and Fisheries"
+      emergencyList={MAFF}
+    />
+    <EmergencyList
+      ministry="Ministry of Labor and Vocational Training"
+      emergencyList={MLVT}
+    />
   </div>
   <div class="flex flex-col gap-4">
-    <Other />
+    <EmergencyList ministry="Other" emergencyList={Other} />
   </div>
 </div>
