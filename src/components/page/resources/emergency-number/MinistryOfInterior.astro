@@ -1,0 +1,59 @@
+---
+import TextElement from "@/components/TextElement";
+
+const NumberList = [
+  {
+    Title: "Police",
+    Number: "117",
+  },
+  {
+    Title: "Fire Fighter",
+    Number: "118",
+  },
+  {
+    Title: "Public Security",
+    Number: "1283",
+  },
+  {
+    Title: "Immigration",
+    Number: "11284",
+  },
+  {
+    Title: "Human Trafficking",
+    Number: "1288",
+  },
+  {
+    Title: "Monitoring of mail and registration list",
+    Number: "1290",
+  },
+  {
+    Title: "Broadcast radio and interactive television stations",
+    Number: "1276",
+  },
+];
+---
+
+<div class="flex flex-col rounded-lg border p-5">
+  <div class="flex flex-row justify-between p-4">
+    <TextElement variant="title">Ministry of Interior</TextElement>
+    <TextElement variant="title">Numbers</TextElement>
+  </div>
+  <hr />
+  {
+    NumberList.map((number) => (
+      <div class="flex flex-row justify-between p-4">
+        <TextElement variant="body">{number.Title}</TextElement>
+        <ul>
+          <li>
+            <a
+              href="tel:{number.Number}"
+              class="flex text-primary hover:underline"
+            >
+              {number.Number}
+            </a>
+          </li>
+        </ul>
+      </div>
+    ))
+  }
+</div>

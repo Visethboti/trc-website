@@ -1,0 +1,19 @@
+---
+import MAFF from "./MinistryOfAgriculture.astro";
+import MOH from "./MinistryOfHealth.astro";
+import MOI from "./MinistryOfInterior.astro";
+import MLVT from "./MinistryOfLabor.astro";
+import Other from "./Other.astro";
+---
+
+<div class="grid grid-cols-1 gap-7 md:grid-cols-1 lg:grid-cols-2">
+  <div class="flex flex-col gap-4">
+    <MOI />
+    <MOH />
+    <MAFF />
+    <MLVT />
+  </div>
+  <div class="flex flex-col gap-4">
+    <Other />
+  </div>
+</div>

@@ -1,0 +1,39 @@
+---
+import TextElement from "@/components/TextElement";
+
+const NumberList = [
+  {
+    Title: "Calmette Hospital",
+    Number: "115",
+  },
+  {
+    Title: "Ambulance Car",
+    Number: "119",
+  },
+];
+---
+
+<div class="flex flex-col rounded-lg border p-5">
+  <div class="flex flex-row justify-between p-4">
+    <TextElement variant="title">Ministry of Health</TextElement>
+    <TextElement variant="title">Number</TextElement>
+  </div>
+  <hr />
+  {
+    NumberList.map((number) => (
+      <div class="flex flex-row justify-between p-4">
+        <TextElement variant="body">{number.Title}</TextElement>
+        <ul>
+          <li>
+            <a
+              href="tel:{number.Number}"
+              class="flex text-primary hover:underline"
+            >
+              {number.Number}
+            </a>
+          </li>
+        </ul>
+      </div>
+    ))
+  }
+</div>
