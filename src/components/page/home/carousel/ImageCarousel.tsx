@@ -51,7 +51,7 @@ export default function ImageCarousel({ carouselDatas }: ImageCarouselProps) {
             <div className="absolute inset-0 flex w-full items-center justify-center bg-black/70 lg:justify-end lg:bg-transparent lg:bg-gradient-to-r lg:from-transparent lg:to-black/50">
               <section
                 aria-labelledby="about-dsc"
-                className="w-full px-24 max-sm:p-5"
+                className="w-full px-24 max-lg:p-10 max-md:p-5 max-sm:px-0 max-sm:py-5"
               >
                 <div className="container">
                   <CardContent className="flex flex-col items-center justify-center space-y-4 p-0 text-center text-primary-foreground lg:items-end lg:justify-end">
