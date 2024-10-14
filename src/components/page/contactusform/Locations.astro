@@ -14,26 +14,25 @@ const contactItems = [
 ];
 ---
 
-<div class="rounded-2xl border border-gray-500">
-  <div class="rounded-t-2xl bg-secondary">
-    <TextElement variant="paragraph" className="p-4 text-white">
-      Telecommunication Regulator of Cambodia
-    </TextElement>
-  </div>
-  <div class="rounded-b-lg">
-    {
-      contactItems.map((item) => (
-        <div class="flex items-center gap-4 px-4 py-2">
-          <TextElement variant="small" className="">
-            <item.icon size={20} />
-          </TextElement>
-          <TextElement variant="small" className="">
-            {item.label}
-          </TextElement>
-        </div>
-      ))
-    }
-  </div>
+<TextElement
+  variant="paragraph"
+  className="rounded-t-2xl bg-secondary p-4 text-white"
+>
+  Telecommunication Regulator of Cambodia
+</TextElement>
+<div class="rounded-b-2xl border border-t-0 border-black">
+  {
+    contactItems.map((item) => (
+      <div class="flex items-center gap-4 px-4 py-2">
+        <TextElement variant="small" className="">
+          <item.icon size={20} />
+        </TextElement>
+        <TextElement variant="small" className="">
+          {item.label}
+        </TextElement>
+      </div>
+    ))
+  }
 </div>
 <iframe
   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13307.85787177001!2d104.91857956848632!3d11.566522571802162!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31095142eadcf8db%3A0xbd4e32a5eccddfb7!2z4Z6A4Z-S4Z6a4Z6f4Z694Z6E4Z6U4Z-S4Z6a4Z6a4Z-D4Z6f4Z6O4Z644Z6Z4Z-NIOGek-Get-GehOGekeGevOGemuGeguGemOGek-GetuGeguGemOGek-GfjQ!5e0!3m2!1skm!2skh!4v1728374461088!5m2!1skm!2skh"
