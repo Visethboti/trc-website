@@ -1,0 +1,38 @@
+---
+import TextElement from "@/components/TextElement";
+
+interface Props {
+  ministry: string;
+  emergencyList: {
+    Title: string;
+    Number: string;
+  }[];
+}
+
+const { ministry, emergencyList } = Astro.props;
+---
+
+<div class="flex flex-col rounded-lg border p-5">
+  <div class="flex flex-row justify-between p-4">
+    <TextElement variant="title">{ministry}</TextElement>
+    <TextElement variant="title">Number</TextElement>
+  </div>
+  <hr />
+  {
+    emergencyList.map((data) => (
+      <div class="flex flex-row justify-between p-4">
+        <TextElement variant="body">{data.Title}</TextElement>
+        <ul>
+          <li>
+            <a
+              href="tel:{number.Number}"
+              class="flex text-primary hover:underline"
+            >
+              <strong>{data.Number}</strong>
+            </a>
+          </li>
+        </ul>
+      </div>
+    ))
+  }
+</div>
