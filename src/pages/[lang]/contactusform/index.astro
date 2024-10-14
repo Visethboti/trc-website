@@ -1,0 +1,37 @@
+---
+import Main from "@/components/Main.astro";
+import Form from "@/components/page/contactusform/Form.astro";
+import Locations from "@/components/page/contactusform/Locations.astro";
+import TextElement from "@/components/TextElement";
+
+import { languages } from "@/i18n/ui";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+
+const title = "Contact Us TRC";
+
+export async function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({
+    params: { lang },
+  }));
+}
+---
+
+<BaseLayout title={title}>
+  <Main>
+    <header>
+      <TextElement variant="heading" className="text-center text-primary">
+        Contact
+      </TextElement>
+    </header>
+    <section aria-label={title} class="py-12">
+      <div class="flex flex-col gap-8 md:flex-row">
+        <div class="w-full md:w-1/2">
+          <Form />
+        </div>
+        <div class="w-full md:w-1/2">
+          <Locations />
+        </div>
+      </div>
+    </section>
+  </Main>
+</BaseLayout>
