@@ -18,8 +18,8 @@ const { title, image, name } = Astro.props as Props;
   >
     <Image src={image} alt="" class="size-full object-cover" />
   </div>
-  <figcaption class="text-center text-lg text-white md:text-xl">
-    {title}<span class="ml-3 font-bold">{name}</span>
+  <figcaption class="text-center font-bold text-white md:text-xl">
+    {title}<span class="ml-3">{name}</span>
   </figcaption>
 </figure>
 <div class="relative">

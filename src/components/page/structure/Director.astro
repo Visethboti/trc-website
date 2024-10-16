@@ -8,10 +8,10 @@ interface Props {
   title: string;
   image: ImageMetadata;
   name: string;
-  role: string;
+  organization: string;
 }
 
-const { title, image, name, role } = Astro.props as Props;
+const { title, image, name, organization } = Astro.props as Props;
 ---
 
 <figure class="grid place-items-center gap-y-5 py-10">
@@ -20,8 +20,8 @@ const { title, image, name, role } = Astro.props as Props;
   >
     <Image src={image} alt="" class="size-full object-cover" />
   </div>
-  <figcaption class="text-center text-lg md:text-xl">
-    {title}<span class="ml-3 font-bold">{name}</span>
-    <TextElement>{role}</TextElement>
+  <figcaption class="text-center font-bold md:text-xl">
+    {title}<span class="ml-3">{name}</span>
+    <TextElement className="font-medium">{organization}</TextElement>
   </figcaption>
 </figure>

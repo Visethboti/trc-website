@@ -122,6 +122,7 @@ const secretariesSchema = ({ image }: SchemaContext) =>
     name: z.string(),
     title: z.string(),
     image: image(),
+    organization: z.string(),
     role: LeadersTypeEnum,
     lang: z.enum(SupportedLanguage),
   });
