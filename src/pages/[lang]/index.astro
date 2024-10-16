@@ -5,7 +5,7 @@ import HomeMain from "@/components/page/home/HomeMain.astro";
 import LawCardList from "@/components/page/home/law/LawCardList.astro";
 import MediaComponent from "@/components/page/home/media/Media.astro";
 import TextElement from "@/components/TextElement";
-import UnitLinks from "@/components/UnitLinks";
+import UnitLinks from "@/components/UnitLinks.astro";
 import WhatWeDoGrid from "@/components/WhatWeDoGird";
 
 import { languages, type SupportedLanguage } from "@/i18n/ui";
@@ -95,21 +95,7 @@ const t = useTranslations(lang);
           <WhatWeDoGrid />
         </div>
       </section>
-      <section
-        aria-labelledby="units-under-dsc-heading"
-        class="px-24 max-lg:p-10 max-md:p-5 max-sm:px-0 max-sm:py-5"
-      >
-        <div class="container">
-          <TextElement
-            variant="subheading"
-            id="units-under-dsc-heading"
-            className="mb-4 text-center text-primary"
-          >
-            {"Units under Digital Security Committee"}
-          </TextElement>
-          <UnitLinks />
-        </div>
-      </section>
+
       <section
         aria-labelledby="cybersecurity-tips"
         class="w-full bg-shadow px-24 py-10 max-lg:p-10 max-md:p-5 max-sm:px-0 max-sm:py-5"
@@ -138,6 +124,21 @@ const t = useTranslations(lang);
             {"Laws and Regulations"}
           </TextElement>
           <LawCardList directives={featuredDirectives} lang={lang} />
+        </div>
+      </section>
+      <section
+        aria-labelledby="Ministry and Autonomous Units"
+        class="max-lg:p-10 max-md:p-5 max-sm:px-0 max-sm:py-5"
+      >
+        <div class="container">
+          <TextElement
+            variant="subheading"
+            id="Ministry and Autonomous Units"
+            className="text-primary"
+          >
+            {"Ministry and Autonomous Units"}
+          </TextElement>
+          <UnitLinks />
         </div>
       </section>
     </div>
