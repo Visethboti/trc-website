@@ -1,9 +1,9 @@
 ---
 categories: ["News"]
-date: 05/03/2024
+date: 12/07/2022
 featured: false
-image: src/asset/articles/1-article-dsc-meeting/article-1-photo-2.webp
-title: This is Events in Khmer កិច្ចប្រជុំ​ ប្រកាសសមាសភាព
+image: src/asset/media/Media 2.jpg
+title: TRC commissioners joined the opening ceremony "Project of 5G and Digital Future of Cambodia" hosted by the US Embassy
 author: Digital Security Committee
 description: ឯកឧត្តម ជា វ៉ាន់ដេត បានអញ្ជើញចូលរួមកិច្ចប្រជុំ ដេីម្បីប្រកាសសមាសភាព និងផ្សព្វផ្សាយគោលការណ៍ណែនាំសម្រាប់ គ.ស.ឌ. ក្រោមអធិបតីភាពឯកឧត្តមសន្តិបណ្ឌិត នេត សាវឿន
 lang: km

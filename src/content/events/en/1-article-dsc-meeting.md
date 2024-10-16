@@ -1,9 +1,9 @@
 ---
 categories: ["News"]
-date: 05/03/2024
+date: 12/07/2022
 featured: false
-image: src/asset/articles/1-article-dsc-meeting/article-1-photo-2.webp
-title: This is Events in English Meeting to officially announce the composition and disseminate guidelines for the Digital Security Committee (D.S.C.) at Office of the Council of Ministers
+image: src/asset/media/Media 2.jpg
+title: TRC commissioners joined the opening ceremony "Project of 5G and Digital Future of Cambodia" hosted by the US Embassy
 author: Digital Security Committee
 description: On behalf of Samdech Thipadei HUN MANET, Prime Minister, H.E. Santibandit Neth Savoeun, Deputy Prime Minister has presided over the meeting.
 lang: en
