@@ -2,7 +2,7 @@
 categories: ["News"]
 date: 12/07/2022
 featured: false
-image: src/asset/media/Media 2.jpg
+image: src/asset/media/media-2.jpg
 title: TRC commissioners joined the opening ceremony "Project of 5G and Digital Future of Cambodia" hosted by the US Embassy
 author: Digital Security Committee
 description: ឯកឧត្តម ជា វ៉ាន់ដេត បានអញ្ជើញចូលរួមកិច្ចប្រជុំ ដេីម្បីប្រកាសសមាសភាព និងផ្សព្វផ្សាយគោលការណ៍ណែនាំសម្រាប់ គ.ស.ឌ. ក្រោមអធិបតីភាពឯកឧត្តមសន្តិបណ្ឌិត នេត សាវឿន

@@ -2,7 +2,7 @@
 categories: ["News"]
 date: 12/1/2022
 featured: false
-image: src/asset/media/Media 3.jpg
+image: src/asset/media/media-3.jpg
 title: TRC commissioners measured the quality of services on the high-speed road from Phnom Penh to Sihanoukville
 author: Digital Security Committee
 description: On behalf of Samdech Thipadei HUN MANET, Prime Minister, H.E. Santibandit Neth Savoeun, Deputy Prime Minister has presided over the meeting.

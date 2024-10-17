@@ -2,7 +2,7 @@
 categories: ["News"]
 date: 12/07/2022
 featured: false
-image: src/asset/media/Media 2.jpg
+image: src/asset/media/media-2.jpg
 title: TRC commissioners joined the opening ceremony "Project of 5G and Digital Future of Cambodia" hosted by the US Embassy
 author: Digital Security Committee
 description: On behalf of Samdech Thipadei HUN MANET, Prime Minister, H.E. Santibandit Neth Savoeun, Deputy Prime Minister has presided over the meeting.

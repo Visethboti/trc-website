@@ -2,7 +2,7 @@
 categories: ["News"]
 date: 05/31/2023
 featured: false
-image: src/asset/media/Carousel 1.jpg
+image: src/asset/media/carousel.jpg
 title: Telecommunication Regulator of Cambodia (TRC) and the Securities Exchange Regulator of Cambodia (SERC) organized a collaborative Capacity Building Training on "Cybersecurity”
 author: Digital Security Committee
 description: ឯកឧត្តម ជា វ៉ាន់ដេត បានអញ្ជើញចូលរួមកិច្ចប្រជុំ ដេីម្បីប្រកាសសមាសភាព និងផ្សព្វផ្សាយគោលការណ៍ណែនាំសម្រាប់ គ.ស.ឌ. ក្រោមអធិបតីភាពឯកឧត្តមសន្តិបណ្ឌិត នេត សាវឿន

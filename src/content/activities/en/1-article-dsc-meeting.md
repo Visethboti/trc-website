@@ -2,7 +2,7 @@
 categories: ["News"]
 date: 05/31/2023
 featured: false
-image: src/asset/media/Carousel 1.jpg
+image: src/asset/media/carousel.jpg
 title: Telecommunication Regulator of Cambodia (TRC) and the Securities Exchange Regulator of Cambodia (SERC) organized a collaborative Capacity Building Training on "Cybersecurity”
 author: Digital Security Committee
 description: On behalf of Samdech Thipadei HUN MANET, Prime Minister, H.E. Santibandit Neth Savoeun, Deputy Prime Minister has presided over the meeting.
