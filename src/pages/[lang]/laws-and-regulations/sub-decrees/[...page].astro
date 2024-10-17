@@ -1,14 +1,17 @@
 ---
-import ContentList from "@/components/content-card/ContentList.astro";
+import DirectiveCardList from "@/components/directive/DirectiveCardList.astro";
 import Main from "@/components/Main.astro";
 import Pagination from "@/components/Pagination.astro";
 import TextElement from "@/components/TextElement";
 
+import { DIRECTIVE_TYPES } from "@/content/content.type";
 import { languages } from "@/i18n/ui";
-import BlogListLayout from "@/layouts/BlogListLayout.astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
 import { PER_PAGE } from "@/utils/constant.ts";
 import type { PaginateFunction } from "astro";
 import { getCollection } from "astro:content";
+
+const title = "Sub Decrees";
 
 export async function getStaticPaths({
   paginate,
@@ -16,16 +19,20 @@ export async function getStaticPaths({
   paginate: PaginateFunction;
 }) {
   const allLanguages = Object.values(languages);
-  const newsReleases = await getCollection("news-releases");
+  const directives = await getCollection("directives");
 
   return allLanguages.flatMap((lang) => {
-    const langNewsReleases = newsReleases
-      .filter((newsRelease) => newsRelease.data.lang === lang)
+    const langDirectives = directives
+      .filter(
+        (directive) =>
+          directive.data.lang === lang &&
+          directive.data.type === DIRECTIVE_TYPES.SUB_DECREE,
+      )
       .sort(
         (a, b) =>
           new Date(b.data.date).getTime() - new Date(a.data.date).getTime(),
       );
-    return paginate(langNewsReleases, {
+    return paginate(langDirectives, {
       params: { lang },
       pageSize: PER_PAGE,
     });
@@ -34,24 +41,18 @@ export async function getStaticPaths({
 
 const { lang } = Astro.params;
 const { page } = Astro.props;
-
-const title = "News Releases";
-const description = "A collection of news releases.";
 ---
 
-<BlogListLayout
-  title={title}
-  description={description}
-  canonicalURL={Astro.url.toString()}
-  content={page.data}
->
+<BaseLayout title={title}>
   <Main>
     <section aria-label={title}>
-      <TextElement variant="heading" className="text-primary">
-        {title}
-      </TextElement>
-      <ContentList content={page.data} lang={lang} />
+      <header>
+        <TextElement variant="heading" className="text-primary">
+          {title}
+        </TextElement>
+      </header>
+      <DirectiveCardList directives={page.data} lang={lang} />
       <Pagination page={page} />
     </section>
   </Main>
-</BlogListLayout>
+</BaseLayout>

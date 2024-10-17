@@ -6,6 +6,7 @@ import TextElement from "@/components/TextElement";
 
 import { languages } from "@/i18n/ui";
 import BlogListLayout from "@/layouts/BlogListLayout.astro";
+import { PER_PAGE } from "@/utils/constant.ts";
 import type { PaginateFunction } from "astro";
 import { getCollection } from "astro:content";
 
@@ -26,7 +27,7 @@ export async function getStaticPaths({
       );
     return paginate(langActivities, {
       params: { lang },
-      pageSize: 10,
+      pageSize: PER_PAGE,
     });
   });
 }
