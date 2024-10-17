@@ -42,7 +42,7 @@ export enum Routes {
   Videos = "/videos",
   Aritcles = "/articles",
   Projects = "/projects",
-  Contact = "/contact",
+  ContactUsForm = "/contactusform",
   CybersecurityTips = "/cybersecurity-tips",
 }
 
@@ -138,7 +138,7 @@ export const NavRoutes = [
   },
   {
     label: "Contact",
-    href: Routes.Home,
+    href: Routes.ContactUsForm,
   },
 ];
 

@@ -1,0 +1,48 @@
+---
+import UnitLinkCard from "./UnitLinkCard.astro";
+import CADTLogo from "@/asset/logo/CADT.png";
+import CPLogo from "@/asset/logo/Cambodia-Post.png";
+import MPTCLogo from "@/asset/logo/MPTC.png";
+import TCLogo from "@/asset/logo/Telcom-Cambodia.png";
+
+const ExternalLinks = [
+  {
+    label: "Ministry of Post and Telecommunications",
+    link: "https://mptc.gov.kh",
+    image: MPTCLogo,
+  },
+  {
+    label: "Telecom Cambodia",
+    link: "http://tc.com.kh",
+    image: TCLogo,
+  },
+  {
+    label: "Cambodia Post",
+    link: "https://cambodiapost.com.kh/",
+    image: CPLogo,
+  },
+  {
+    label: "Cambodia Academy of Digital Technology",
+    link: "https://www.cadt.edu.kh/",
+    image: CADTLogo,
+  },
+];
+---
+
+<nav>
+  <ul
+    class="grid list-none grid-cols-1 gap-4 py-5 md:grid-cols-2 lg:grid-cols-4"
+  >
+    {
+      ExternalLinks.map((item) => (
+        <li>
+          <UnitLinkCard
+            label={item.label}
+            image={item.image}
+            link={item.link}
+          />
+        </li>
+      ))
+    }
+  </ul>
+</nav>
