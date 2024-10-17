@@ -1,7 +1,8 @@
 ---
 title: ឯកឧត្តម
-name: កែវ សុទ្ធិ
-role: deputy-secretary-general
-image: src/asset/secretaries/keo-sothie.jpg
+name: អូក ដូរ៉ានី
+role: comissioner
+organization: Deputy Prime Minister, Minister of Economy and Finance
+image: src/asset/secretaries/user-avatar.png
 lang: km
 ---
