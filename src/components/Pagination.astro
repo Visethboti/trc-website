@@ -1,4 +1,7 @@
 ---
+import PaginationComponent from "@/components/PaginationComponent.astro";
+import TextElement from "@/components/TextElement";
+
 import type { Page } from "astro";
 
 interface Props {
@@ -6,30 +9,17 @@ interface Props {
 }
 
 const { page } = Astro.props;
+console.log(page);
 ---
 
-<nav aria-label="Pagination" class="mt-8 flex justify-center">
-  {
-    page.url.prev && (
-      <a
-        href={page.url.prev}
-        class="mr-4 rounded bg-primary px-4 py-2 text-primary-foreground"
-      >
-        Previous
-      </a>
-    )
-  }
-  <span class="px-4 py-2">
-    Page {page.currentPage} of {page.lastPage}
-  </span>
-  {
-    page.url.next && (
-      <a
-        href={page.url.next}
-        class="ml-4 rounded bg-primary px-4 py-2 text-primary-foreground"
-      >
-        Next
-      </a>
-    )
-  }
-</nav>
+<div
+  aria-label="Pagination"
+  class="mt-12 flex items-center justify-center gap-10"
+>
+  <TextElement variant="paragraph" className="hidden lg:inline-block">
+    Showing<span> {page.start + 1}</span>
+    {page.end !== page.start && <span>to {page.end + 1}</span>}
+    of <span>{page.total}</span>
+  </TextElement>
+  <PaginationComponent page={page} />
+</div>
