@@ -53,7 +53,8 @@ const PaginationLink = ({
   size = "icon",
   ...props
 }: PaginationLinkProps) => (
-  <a
+  // eslint-disable-next-line jsx-a11y/anchor-has-content
+  <
     aria-current={isActive ? "page" : undefined}
     className={cn(
       buttonVariants({
@@ -146,7 +147,7 @@ const PaginationEllipsis = ({
     className={cn("flex h-9 w-9 items-center justify-center", className)}
     {...props}
   >
-    <MoreHorizontal className="h-4 w-4 text-primary" />
+    <MoreHorizontal className="size-4 text-primary" />
     <span className="sr-only">More pages</span>
   </span>
 );
