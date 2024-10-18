@@ -42,20 +42,20 @@ const { title, href, image, date, lang, type } = Astro.props as Props;
     </figure>
     <div class="flex w-2/3 flex-col gap-1.5 py-3 pr-3 xl:hidden xl:w-full">
       <TextElement
-        variant="caption"
-        className="line-clamp-3 scroll-m-20 text-pretty text-base font-normal leading-6 tracking-tight sm:line-clamp-4 xl:text-lg"
+        variant="smalltitle"
+        className="line-clamp-3 scroll-m-20 text-pretty font-normal leading-6 tracking-tight sm:line-clamp-4 xl:text-lg"
       >
         {title}
       </TextElement>
       <time
-        class="text-xs text-left font-light sm:mb-4"
+        class="text-left text-xs font-light sm:mb-4"
         datetime={new Date(date).toISOString()}
       >
         {formatDate(date, lang)}
       </time>
       <Badge
         variant="secondary"
-        className="text-xs w-fit px-3 py-1 font-normal capitalize text-white hover:bg-secondary xl:px-5 xl:text-base"
+        className="w-fit px-3 py-1 text-xs font-normal capitalize text-white hover:bg-secondary xl:px-5 xl:text-base"
         >{type}</Badge
       >
     </div>
@@ -64,17 +64,17 @@ const { title, href, image, date, lang, type } = Astro.props as Props;
     >
       <Badge
         variant="secondary"
-        className="text-xs -ml-9 mb-3 w-fit px-3 py-1 font-normal capitalize text-white hover:bg-secondary xl:px-5 xl:text-sm"
+        className="-ml-9 mb-3 w-fit px-3 py-1 text-xs font-normal capitalize text-white hover:bg-secondary xl:px-5 xl:text-sm"
         >{type}</Badge
       >
       <TextElement
-        variant="caption"
-        className="mb-auto line-clamp-4 scroll-m-20 text-pretty text-base font-normal leading-6 tracking-tight"
+        variant="smalltitle"
+        className="mb-auto line-clamp-4 scroll-m-20 text-pretty font-normal leading-6 tracking-tight"
       >
         {title}
       </TextElement>
       <time
-        class="text-xs mt-auto flex grow items-end text-left font-light"
+        class="mt-auto flex grow items-end text-left text-xs font-light"
         datetime={new Date(date).toISOString()}
       >
         {formatDate(date, lang)}

@@ -111,7 +111,7 @@ if (page.lastPage < visiblePages) {
       }
       <PaginationItem>
         <PaginationLink
-          className="text-base font-normal md:text-lg"
+          className="text-base font-normal"
           href={baseUrl}
           isActive={isActive(1)}>1</PaginationLink
         >
@@ -127,7 +127,7 @@ if (page.lastPage < visiblePages) {
         pageNumbers.map((page) => (
           <PaginationItem>
             <PaginationLink
-              className="text-base font-normal md:text-lg"
+              className="text-base font-normal"
               href={`${baseUrl}/${page}`}
               isActive={isActive(page)}
             >
@@ -148,7 +148,7 @@ if (page.lastPage < visiblePages) {
         page.lastPage !== 1 && (
           <PaginationItem>
             <PaginationLink
-              className="text-base font-normal md:text-lg"
+              className="text-base font-normal"
               href={`${baseUrl}/${page.lastPage}`}
               isActive={isActive(page.lastPage)}
             >

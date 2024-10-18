@@ -20,7 +20,7 @@ const navigationItems = getLocalizedRoutes(NavRoutes, locale);
   class="absolute left-0 m-3 -translate-y-16 bg-primary p-3 text-primary-foreground transition focus:translate-y-0"
   href="#main-content">Skip Navigation</a
 >
-<nav class="bg-primary-foreground shadow-md" aria-label="Main navigation">
+<nav class="bg-primary text-white shadow-md" aria-label="Main navigation">
   <div class="flex w-full items-center p-4 lg:px-8 2xl:px-12">
     <a href={getRelativeLocaleUrl(locale)} aria-label="Go to home page">
       <Image
@@ -33,7 +33,11 @@ const navigationItems = getLocalizedRoutes(NavRoutes, locale);
       />
     </a>
     <div class="grow"></div>
-    <NavMenu navMenuItem={navigationItems} client:load />
+    <NavMenu
+      currentPath={currentPath}
+      navMenuItem={navigationItems}
+      client:load
+    />
     <LanguageSwitcher
       currentPath={currentPath}
       initialLocale={locale as SupportedLanguage}
