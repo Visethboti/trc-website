@@ -48,14 +48,14 @@ const { title, href, image, date, lang, type } = Astro.props as Props;
         {title}
       </TextElement>
       <time
-        class="text-xs mb-8 text-left font-light"
+        class="mb-8 text-left text-xs font-light"
         datetime={new Date(date).toISOString()}
       >
         {formatDate(date, lang)}
       </time>
       <Badge
         variant="secondary"
-        className="text-xs w-fit px-3 py-1 font-normal capitalize text-white hover:bg-secondary xl:px-5 xl:text-base"
+        className="w-fit px-3 py-1 text-xs font-normal capitalize text-white hover:bg-secondary xl:px-5 xl:text-base"
         >{type}</Badge
       >
     </div>
@@ -64,7 +64,7 @@ const { title, href, image, date, lang, type } = Astro.props as Props;
     >
       <Badge
         variant="secondary"
-        className="text-xs mb-4 w-fit px-3 py-1 font-normal capitalize text-white hover:bg-secondary xl:px-5 xl:text-sm"
+        className="mb-4 w-fit px-3 py-1 text-xs font-normal capitalize text-white hover:bg-secondary xl:px-5 xl:text-sm"
         >{type}</Badge
       >
       <TextElement
@@ -74,7 +74,7 @@ const { title, href, image, date, lang, type } = Astro.props as Props;
         {title}
       </TextElement>
       <time
-        class="text-xs mt-auto text-left font-light"
+        class="mt-auto text-left text-xs font-light"
         datetime={new Date(date).toISOString()}
       >
         {formatDate(date, lang)}
