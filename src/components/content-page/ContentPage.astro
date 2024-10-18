@@ -89,30 +89,23 @@ langArticles.map((article, index) => {
           </figcaption>
         </figure>
         <div class="my-6 space-y-6">
-          <TextElement variant="heading" className="mb-0">
+          <TextElement variant="subheading" className="mb-0">
             {page.data.title}
           </TextElement>
-          <TextElement variant="body" className="text-xl text-muted-foreground">
-            {page.data.description}
-          </TextElement>
-          <div class="flex items-center gap-4 text-muted-foreground">
+          <div class="flex items-center gap-10 text-muted-foreground">
             <span class="author byline flex flex-row gap-2">
-              <span class="sr-only">Author:</span>
-              <NotebookPen
-                size={16}
-                className="self-center"
-                aria-hidden="true"
-              />
-              <span>Camcert</span>
+              <span class="italic text-secondary">Published:</span>
+
+              <span class="italic">{page.data.author}</span>
             </span>
-            <span class="text-muted-foreground/50" aria-hidden="true">|</span>
+
             <time
               datetime={toISOString(publicationDate)}
               class="dateline flex flex-row gap-2"
             >
-              <span class="sr-only">Publication date:</span>
-              <Clock3 size={16} className="self-center" aria-hidden="true" />
-              <span
+              <span class="italic text-secondary">Date:</span>
+
+              <span class="italic"
                 >{formatDate(publicationDate, lang as SupportedLanguage)}</span
               >
             </time>

@@ -52,13 +52,13 @@ const featuredDirectives = langDirectives
 
 const allEvents = await getCollection("events");
 const allNewsReleases = await getCollection("news-releases");
-const allMedia = [...allActivities, ...allEvents, ...allNewsReleases];
+const allMedia = [...allActivities, ...allNewsReleases, ...allEvents];
 
 const langMedia = allMedia.filter((article) => article.data.lang === lang);
 
 const featuredMedia = langMedia
   .filter((directive) => directive.data.lang === lang)
-  .slice(0, 4);
+  .slice(0, 5);
 const t = useTranslations(lang);
 ---
 

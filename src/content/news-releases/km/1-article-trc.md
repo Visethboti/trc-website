@@ -1,13 +1,15 @@
 ---
 categories: ["News"]
-date: 12/07/2022
+date: 05/03/2024
 featured: false
-image: src/asset/media/media-2.jpg
-title: TRC commissioners joined the opening ceremony "Project of 5G and Digital Future of Cambodia" hosted by the US Embassy
-author: Digital Security Committee
-description: ឯកឧត្តម ជា វ៉ាន់ដេត បានអញ្ជើញចូលរួមកិច្ចប្រជុំ ដេីម្បីប្រកាសសមាសភាព និងផ្សព្វផ្សាយគោលការណ៍ណែនាំសម្រាប់ គ.ស.ឌ. ក្រោមអធិបតីភាពឯកឧត្តមសន្តិបណ្ឌិត នេត សាវឿន
+image: src/asset/media/new-release/1-article/photo-1.jpg
+title: Announcement On The Use of Common Codes *1201#, *1202#, *1203*
+ PIN#, and 1204 For All Mobile Networks
+author: Ministry of Post and Telecommunications
+description: Announcement On The Use of Common Codes *1201#, *1202#, *1203*
+ PIN#, and 1204 For All Mobile Networks
 lang: km
-type: event
+type: new-release
 ---
 
 ឯកឧត្តមសន្តិបណ្ឌិត នេត សាវឿន ឧបនាយករដ្ឋមន្ត្រី តំណាងដ៏ខ្ពង់ខ្ពស់ សម្តេចមហាបវរធិបតី
@@ -26,12 +28,5 @@ type: event
 
 រាជធានីភ្នំពេញ៖ សាលប្រជុំទីស្តីការគណៈរដ្ឋមន្ត្រី​ ថ្ងៃទី៣ ឧសភា ឆ្នាំ២០២៤
 
-![photo 2](src/asset/articles/1-article-dsc-meeting/article-1-photo-1.webp)
-![photo 3](src/asset/articles/1-article-dsc-meeting/article-1-photo-3.webp)
-![photo 4](src/asset/articles/1-article-dsc-meeting/article-1-photo-4.webp)
-![photo 5](src/asset/articles/1-article-dsc-meeting/article-1-photo-5.webp)
-![photo 6](src/asset/articles/1-article-dsc-meeting/article-1-photo-6.webp)
-![photo 7](src/asset/articles/1-article-dsc-meeting/article-1-photo-7.webp)
-![photo 8](src/asset/articles/1-article-dsc-meeting/article-1-photo-8.webp)
-![photo 9](src/asset/articles/1-article-dsc-meeting/article-1-photo-9.webp)
-![photo 10](src/asset/articles/1-article-dsc-meeting/article-1-photo-10.webp)
+![photo 2](src/asset/media/activities/1-article/photo-8.png)
+![photo 3](src/asset/media/activities/1-article/thumbnail.jpg)
