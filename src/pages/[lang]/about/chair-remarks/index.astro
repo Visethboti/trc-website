@@ -24,7 +24,7 @@ const leaders = allLeaders.filter((leader) => leader.data.lang === lang);
 <BaseLayout title={title}>
   <Main>
     <section aria-label={title}>
-      <TextElement variant="heading" className="mb-4 text-center text-primary">
+      <TextElement variant="heading" className="text-text mb-4 text-center">
         {title}
       </TextElement>
       <LeaderList leaders={leaders} lang={lang} />

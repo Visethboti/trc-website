@@ -42,8 +42,8 @@ const { title, href, image, date, lang, type } = Astro.props as Props;
     </figure>
     <div class="flex w-full flex-col gap-2 px-4 pb-4 xl:hidden">
       <TextElement
-        variant="caption"
-        className="text-xs line-clamp-4 scroll-m-20 text-pretty font-normal leading-6 tracking-tight md:text-base xl:text-lg"
+        variant="title"
+        className="line-clamp-4 scroll-m-20 text-pretty font-normal leading-6 tracking-tight"
       >
         {title}
       </TextElement>
@@ -68,8 +68,8 @@ const { title, href, image, date, lang, type } = Astro.props as Props;
         >{type}</Badge
       >
       <TextElement
-        variant="caption"
-        className="mb-auto line-clamp-4 grow scroll-m-20 text-pretty text-base font-normal leading-6 tracking-tight xl:text-lg"
+        variant="title"
+        className="mb-auto line-clamp-4 grow scroll-m-20 text-pretty font-normal leading-6 tracking-tight"
       >
         {title}
       </TextElement>

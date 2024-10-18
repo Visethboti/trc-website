@@ -57,22 +57,25 @@ const trimmedTitle = title.trim().replace(/\s+/g, "-");
         />
       </figure>
       <TextElement
-        variant="smallheading"
-        className="line-clamp-2"
+        variant="title"
+        className="line-clamp-2 font-bold leading-8"
         id={`article-${trimmedTitle}`}
       >
         {title}
       </TextElement>
       <section aria-label="Article summary" class="grow">
-        <TextElement className="mt-2 line-clamp-1 text-card-foreground">
+        <TextElement
+          variant="base"
+          className="mt-2 line-clamp-1 text-card-foreground lg:mt-3"
+        >
           {description}
         </TextElement>
       </section>
       <time
         datetime={toISOString(date)}
-        class="leading-2 text-left text-base text-mptc-secondary-foreground"
+        class="leading-2 text-text text-xs text-left"
       >
-        <TextElement className="sr-only" variant="paragraph"
+        <TextElement className="sr-only" variant="small"
           >published on:</TextElement
         >
         {formatDate(date, lang)}

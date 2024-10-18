@@ -16,7 +16,7 @@ console.log(page);
   aria-label="Pagination"
   class="mt-12 flex items-center justify-center gap-10"
 >
-  <TextElement variant="paragraph" className="hidden lg:inline-block">
+  <TextElement variant="body" className="hidden lg:inline-block">
     Showing<span> {page.start + 1}</span>
     {page.end !== page.start && <span>to {page.end + 1}</span>}
     of <span>{page.total}</span>

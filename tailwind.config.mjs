@@ -7,7 +7,10 @@ export default {
   prefix: "",
   theme: {
     fontSize: {
+      "2xs": "0.75rem",
+      xs: "0.875rem",
       sm: "0.9375rem",
+      16: "1rem",
       base: "1.125rem",
       lg: "1.25rem",
       xl: "1.5rem",
@@ -15,6 +18,7 @@ export default {
       "3xl": "2rem",
       "4xl": "2.25rem",
       "5xl": "2.5rem",
+      "6xl": "4rem",
     },
     container: {
       center: true,
@@ -25,7 +29,7 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ["Kantumruy Pro", "sans-serif"],
+        sans: ["Calisto MT", "Kantumruy Pro", "sans-serif"],
       },
       colors: {
         border: "hsl(var(--border))",

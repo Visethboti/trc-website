@@ -58,7 +58,7 @@ const langMedia = allMedia.filter((article) => article.data.lang === lang);
 
 const featuredMedia = langMedia
   .filter((directive) => directive.data.lang === lang)
-  .slice(0, 4);
+  .slice(0, 5);
 const t = useTranslations(lang);
 ---
 
@@ -88,7 +88,7 @@ const t = useTranslations(lang);
           <TextElement
             variant="subheading"
             id="what-we-do-heading"
-            className="mb-4 text-center text-primary"
+            className="mb-4 text-center text-foreground"
           >
             {t("home.whatwedo")}
           </TextElement>
@@ -131,7 +131,7 @@ const t = useTranslations(lang);
           <TextElement
             variant="subheading"
             id="Ministry and Autonomous Units"
-            className="mb-4 text-primary"
+            className="text-text mb-4"
           >
             {"Ministry and Autonomous Units"}
           </TextElement>

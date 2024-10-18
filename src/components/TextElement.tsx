@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils";
 const CONFIG = {
   heading: {
     tag: "h1",
-    tw: "scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl text-text",
+    tw: "scroll-m-20 text-4xl font-bold tracking-tight lg:text-5xl text-text",
   },
   subheading: {
     tag: "h2",
@@ -11,27 +11,43 @@ const CONFIG = {
   },
   smallheading: {
     tag: "h2",
-    tw: "scroll-m-20 text-lg font-semibold tracking-tight text-text",
+    tw: "scroll-m-20 text-lg lg:text-xl font-bold tracking-tight text-text",
   },
   title: {
     tag: "h3",
-    tw: "scroll-m-20 text-base font-semibold tracking-tight text-text",
+    tw: "scroll-m-20 text-lg lg:text-xl font-medium tracking-tight text-text",
   },
-  caption: {
+  mediumtitle: {
+    tag: "h3",
+    tw: "scroll-m-20 text-base lg:text-lg font-medium tracking-tight text-text",
+  },
+  smalltitle: {
     tag: "h4",
-    tw: "scroll-m-20 text-base font-medium tracking-tight text-text",
+    tw: "scroll-m-20 text-16 font-medium tracking-tight text-text",
+  },
+  large: {
+    tag: "p",
+    tw: "leading-7 text-4xl lg:text-6xl text-text",
+  },
+  medium: {
+    tag: "p",
+    tw: "leading-7 text-xl lg:text-2xl xl:text-4xl text-text",
+  },
+  paragraph: {
+    tag: "p",
+    tw: "leading-7 text-base lg:text-lg [&:not(:first-child)]:mt-6 text-text",
   },
   body: {
     tag: "p",
     tw: "leading-6 text-base text-text",
   },
+  base: {
+    tag: "p",
+    tw: "leading-6 text-16 text-text",
+  },
   small: {
     tag: "p",
-    tw: "leading-6 text-sm text-text",
-  },
-  paragraph: {
-    tag: "p",
-    tw: "leading-7 text-base [&:not(:first-child)]:mt-6 text-text",
+    tw: "leading-6 text-xs text-text",
   },
 } as const;
 

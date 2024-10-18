@@ -62,7 +62,7 @@ const absoluteFileUrl = new URL(file, Astro.url.origin).href;
         />
       </figure>
       <TextElement
-        variant="smallheading"
+        variant="mediumtitle"
         className="line-clamp-2"
         id={`article-${title}`}
       >
@@ -70,9 +70,9 @@ const absoluteFileUrl = new URL(file, Astro.url.origin).href;
       </TextElement>
       <time
         datetime={toISOString(date)}
-        class="leading-2 mt-4 text-left text-base text-mptc-secondary-foreground"
+        class="leading-2 text-text text-xs mt-4 text-left"
       >
-        <TextElement className="sr-only" variant="paragraph"
+        <TextElement className="sr-only" variant="small"
           >published on:</TextElement
         >
         {formatDate(date, lang)}
