@@ -1,7 +1,8 @@
 ---
 title: H.E.
-name: Keo Sothie
-role: deputy-secretary-general
-image: src/asset/secretaries/keo-sothie.jpg
+name: Dorany Auk
+role: comissioner
+organization: Deputy Prime Minister, Minister of Economy and Finance
+image: src/asset/secretaries/user-avatar.png
 lang: en
 ---

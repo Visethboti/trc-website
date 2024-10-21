@@ -1,0 +1,58 @@
+---
+import DirectiveCardList from "@/components/directive/DirectiveCardList.astro";
+import Main from "@/components/Main.astro";
+import Pagination from "@/components/Pagination.astro";
+import TextElement from "@/components/TextElement";
+
+import { DIRECTIVE_TYPES } from "@/content/content.type";
+import { languages } from "@/i18n/ui";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { PER_PAGE } from "@/utils/constant.ts";
+import type { PaginateFunction } from "astro";
+import { getCollection } from "astro:content";
+
+const title = "Circulations";
+
+export async function getStaticPaths({
+  paginate,
+}: {
+  paginate: PaginateFunction;
+}) {
+  const allLanguages = Object.values(languages);
+  const directives = await getCollection("directives");
+
+  return allLanguages.flatMap((lang) => {
+    const langDirectives = directives
+      .filter(
+        (directive) =>
+          directive.data.lang === lang &&
+          directive.data.type === DIRECTIVE_TYPES.CIRCULATION,
+      )
+      .sort(
+        (a, b) =>
+          new Date(b.data.date).getTime() - new Date(a.data.date).getTime(),
+      );
+    return paginate(langDirectives, {
+      params: { lang },
+      pageSize: PER_PAGE,
+    });
+  });
+}
+
+const { lang } = Astro.params;
+const { page } = Astro.props;
+---
+
+<BaseLayout title={title}>
+  <Main>
+    <section aria-label={title}>
+      <header>
+        <TextElement variant="heading" className="text-center">
+          {title}
+        </TextElement>
+      </header>
+      <DirectiveCardList directives={page.data} lang={lang} />
+      <Pagination page={page} />
+    </section>
+  </Main>
+</BaseLayout>

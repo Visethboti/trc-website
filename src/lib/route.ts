@@ -36,7 +36,8 @@ export enum Routes {
   About = "/about",
   ChairRemarks = About,
   VisionMission = About,
-  TrcStructure = About + "/structure",
+  TrcLeader = About + "/trc-leader",
+  TrcStructure = About + "/trcstructure",
   Policies = "/policies",
   PressRelease = "/press-release",
   Videos = "/videos",
@@ -44,6 +45,7 @@ export enum Routes {
   Projects = "/projects",
   ContactUsForm = "/contactusform",
   CybersecurityTips = "/cybersecurity-tips",
+  UnderConstruction = "/under-construction",
 }
 
 export const NavRoutes = [
@@ -70,14 +72,14 @@ export const NavRoutes = [
   {
     label: "Resources",
     children: [
-      { label: "Publications", href: Routes.Home },
-      { label: "Telecom Statistics", href: Routes.Home },
-      { label: "Active Operators", href: Routes.Home },
+      { label: "Publications", href: Routes.UnderConstruction },
+      { label: "Telecom Statistics", href: Routes.UnderConstruction },
+      { label: "Active Operators", href: Routes.UnderConstruction },
       { label: "Mobile Prefixes", href: Routes.MobilePrefixes },
       { label: "Common Codes", href: Routes.CommonCodes },
       { label: "Emergency Numbers", href: Routes.EmergencyNumbers },
-      { label: "Qualified Import Agents", href: Routes.Home },
-      { label: "Tower Map", href: Routes.Home },
+      { label: "Qualified Import Agents", href: Routes.UnderConstruction },
+      { label: "Tower Map", href: Routes.UnderConstruction },
     ],
   },
   {
@@ -86,7 +88,7 @@ export const NavRoutes = [
       { label: "Chairman's Keynote", href: Routes.ChairRemarks },
       { label: "Vision & Mission", href: Routes.VisionMission },
       { label: "About TRC", href: Routes.About },
-      { label: "TRC Leader", href: Routes.Home },
+      { label: "TRC Leader", href: Routes.TrcLeader },
       { label: "TRC Structure", href: Routes.TrcStructure },
     ],
   },
@@ -94,44 +96,65 @@ export const NavRoutes = [
     label: "Service",
     children: [
       { label: "Public", isTitle: true },
-      { label: "Domain .KH", icon: Domain },
+      {
+        label: "Domain .KH",
+        href: Routes.UnderConstruction,
+        icon: Domain,
+      },
       {
         label: "Internet Cafe",
+        href: Routes.UnderConstruction,
         icon: InternetCafe,
       },
       {
         label: "Telecom Equipment Shop",
+        href: Routes.UnderConstruction,
         icon: TelecomShop,
       },
       { label: "Operator", isTitle: true },
-      { label: "Operational License", icon: ISP },
-      { label: "Spectrum License", icon: Spectrum },
+      {
+        label: "Operational License",
+        href: Routes.UnderConstruction,
+        icon: ISP,
+      },
+      {
+        label: "Spectrum License",
+        href: Routes.UnderConstruction,
+        icon: Spectrum,
+      },
       {
         label: "Telecom Numbering Permit",
+        href: Routes.UnderConstruction,
         icon: NumberingPermit,
       },
       {
         label: "Equipment TA Certificate",
+        href: Routes.UnderConstruction,
         icon: TACertificate,
       },
       {
         label: "Qualified Agent Certification",
+        href: Routes.UnderConstruction,
         icon: QualifiesAgent,
       },
       {
         label: "Equipment Importation & Distribution Permit",
+        href: Routes.UnderConstruction,
         icon: Import,
       },
       {
         label: "Tower Construction Permit",
+        href: Routes.UnderConstruction,
         icon: TowerConstructionPermit,
       },
       {
         label: "Fiber Cable Construction Permit",
+        href: Routes.UnderConstruction,
         icon: FiberCable,
       },
       {
         label: "Frequency Interference Complaint",
+        href: Routes.UnderConstruction,
         icon: Complaint,
       },
     ],
@@ -145,6 +168,7 @@ export const NavRoutes = [
 interface RouteType {
   href?: string;
   label: string;
+  icon?: ImageMetadata;
   children?: RouteType[];
 }
 
@@ -154,10 +178,18 @@ export function getLocalizedRoutes(
 ): RouteType[] {
   return paths.map((path) => {
     if (path.href) {
-      return {
-        label: path.label,
-        href: getRelativeLocaleUrl(locale, path.href),
-      };
+      if (path.icon) {
+        return {
+          label: path.label,
+          href: getRelativeLocaleUrl(locale, path.href),
+          icon: path.icon,
+        };
+      } else {
+        return {
+          label: path.label,
+          href: getRelativeLocaleUrl(locale, path.href),
+        };
+      }
     }
 
     if (path.children) {

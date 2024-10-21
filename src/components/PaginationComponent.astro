@@ -1,0 +1,176 @@
+---
+import {
+  Pagination,
+  PaginationContent,
+  PaginationEllipsis,
+  PaginationFirst,
+  PaginationItem,
+  PaginationLast,
+  PaginationLink,
+  PaginationNext,
+  PaginationPrevious,
+} from "@/components/ui/pagination";
+
+import type { Page } from "astro";
+
+interface Props {
+  page: Page;
+}
+
+const { page } = Astro.props;
+
+let baseUrl = "";
+if (page.currentPage === 1) {
+  baseUrl = page.url.current;
+} else {
+  const url = Astro.url.pathname;
+  const splitUrl = url.split("/");
+  baseUrl = splitUrl.slice(0, -1).join("/");
+}
+const isActive = (index: number) => {
+  if (page.currentPage === index) {
+    return true;
+  } else {
+    return false;
+  }
+};
+let visiblePages = 5;
+// visiblePages is how many pages number you see on screen and it is divided into 2 side (left and right)
+let sideVisiblePages = Math.floor(visiblePages / 2);
+let current = page.currentPage;
+let pageNumbers = [];
+let frontPageNumbers = [];
+let backPageNumbers = [];
+
+if (page.lastPage < visiblePages) {
+  visiblePages = page.lastPage;
+  let i = 2;
+  while (i < visiblePages) {
+    pageNumbers.push(i);
+    i++;
+  }
+} else {
+  if (current <= sideVisiblePages + 1) {
+    let i = 2;
+    while (i < current) {
+      frontPageNumbers.push(i);
+      i++;
+    }
+  } else {
+    let i = sideVisiblePages;
+    while (i > 0) {
+      frontPageNumbers.push(current - i);
+      i--;
+    }
+  }
+
+  if (current >= page.lastPage - sideVisiblePages) {
+    let i = current + 1;
+    while (page.lastPage > i) {
+      backPageNumbers.push(i);
+      i++;
+    }
+  } else {
+    let i = 1;
+    while (i <= sideVisiblePages) {
+      backPageNumbers.push(current + i);
+      i++;
+    }
+  }
+
+  if (page.currentPage === 1 || page.currentPage === page.lastPage) {
+    pageNumbers = [...frontPageNumbers, ...backPageNumbers];
+  } else {
+    pageNumbers = [...frontPageNumbers, current, ...backPageNumbers];
+  }
+}
+---
+
+<div class="text-base">
+  <Pagination>
+    <PaginationContent>
+      {
+        page.url?.first && (
+          <PaginationItem>
+            <PaginationFirst
+              className="hidden sm:flex"
+              href={page.url?.first}
+            />
+          </PaginationItem>
+        )
+      }
+      {
+        page.url?.prev && (
+          <PaginationItem>
+            <PaginationPrevious
+              className="hidden sm:flex"
+              href={page.url?.prev}
+            />
+          </PaginationItem>
+        )
+      }
+      <PaginationItem>
+        <PaginationLink
+          className="text-base font-normal"
+          href={baseUrl}
+          isActive={isActive(1)}>1</PaginationLink
+        >
+      </PaginationItem>
+      {
+        page.currentPage > sideVisiblePages + 2 && (
+          <PaginationItem>
+            <PaginationEllipsis />
+          </PaginationItem>
+        )
+      }
+      {
+        pageNumbers.map((page) => (
+          <PaginationItem>
+            <PaginationLink
+              className="text-base font-normal"
+              href={`${baseUrl}/${page}`}
+              isActive={isActive(page)}
+            >
+              {page}
+            </PaginationLink>
+          </PaginationItem>
+        ))
+      }
+      {
+        page.currentPage + sideVisiblePages + 1 < page.lastPage && (
+          <PaginationItem>
+            <PaginationEllipsis />
+          </PaginationItem>
+        )
+      }
+
+      {
+        page.lastPage !== 1 && (
+          <PaginationItem>
+            <PaginationLink
+              className="text-base font-normal"
+              href={`${baseUrl}/${page.lastPage}`}
+              isActive={isActive(page.lastPage)}
+            >
+              {page.lastPage}
+            </PaginationLink>
+          </PaginationItem>
+        )
+      }
+      {
+        page.url?.next && (
+          <PaginationItem>
+            <PaginationNext className="hidden sm:flex" href={page.url?.next} />
+          </PaginationItem>
+        )
+      }
+      {
+        page.url?.last && (
+          <PaginationItem>
+            <PaginationLast className="hidden sm:flex" href={page.url?.last} />
+          </PaginationItem>
+        )
+      }
+    </PaginationContent>
+  </Pagination>
+</div>

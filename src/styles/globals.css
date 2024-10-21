@@ -3,6 +3,14 @@
 @tailwind utilities;
 
 @font-face {
+  font-family: "Calisto MT";
+  font-weight: 100 200 300 400 500 600 700;
+  font-display: optional;
+  src:
+    url("/assets/fonts/calist.woff2") format("woff2"),
+    url("/assets/fonts/calist.woff") format("woff");
+}
+@font-face {
   font-family: "Kantumruy Pro";
   font-weight: 100 700;
   font-display: optional;
@@ -14,15 +22,17 @@
 @layer base {
   :root {
     --background: 240, 100%, 99%;
-    --foreground: 215 0% 10%;
-    --card: 215 0% 100%;
-    --card-foreground: 215 0% 15%;
+    --foreground: 0, 0%, 15%;
+    --card: 240, 100%, 99%;
+    --card-foreground: 240, 100%, 10%;
     --popover: 215 0% 100%;
     --popover-foreground: 215 95% 10%;
     --primary: 223, 68%, 29%;
     --primary-foreground: 0 0% 100%;
     --secondary: 42, 99%, 46%;
     --secondary-foreground: 0 0% 0%;
+    --secondary-dark: 47, 57%, 45%;
+    --text: 0, 0%, 15%;
     --muted: 177 10% 95%;
     --muted-foreground: 215 0% 40%;
     --accent: 177 10% 90%;
@@ -34,7 +44,6 @@
     --ring: 215 61.6% 28.6%;
     --radius: 0.5rem;
     --shadow: 0, 0%, 88%, 0.45;
-    --text: 0, 0%, 15%;
 
     --mptc-secondary: 0, 86%, 53%;
     --mptc-secondary-foreground: 0, 86%, 39%;

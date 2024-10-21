@@ -1,7 +1,8 @@
 ---
 title: H.E.
-name: Name
-role: deputy-secretary-general
+name: Sothy Seng
+role: comissioner
+organization: Deputy Prime Minister, Minister of Economy and Finance
 image: src/asset/secretaries/user-avatar.png
 lang: en
 ---

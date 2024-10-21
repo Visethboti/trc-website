@@ -1,9 +1,9 @@
 ---
+import UnitLinkCard from "./UnitLinkCard.astro";
 import CADTLogo from "@/asset/logo/CADT.png";
 import CPLogo from "@/asset/logo/Cambodia-Post.png";
 import MPTCLogo from "@/asset/logo/MPTC.png";
 import TCLogo from "@/asset/logo/Telcom-Cambodia.png";
-import { Image } from "astro:assets";
 
 const ExternalLinks = [
   {
@@ -12,7 +12,7 @@ const ExternalLinks = [
     image: MPTCLogo,
   },
   {
-    label: "Telecome Cambodia",
+    label: "Telecom Cambodia",
     link: "http://tc.com.kh",
     image: TCLogo,
   },
@@ -22,7 +22,7 @@ const ExternalLinks = [
     image: CPLogo,
   },
   {
-    label: "Cambodia Academy of Deigial Technology",
+    label: "Cambodia Academy of Digital Technology",
     link: "https://www.cadt.edu.kh/",
     image: CADTLogo,
   },
@@ -31,33 +31,16 @@ const ExternalLinks = [
 
 <nav>
   <ul
-    class="grid list-none grid-cols-1 gap-4 py-10 md:grid-cols-2 lg:grid-cols-4"
+    class="grid list-none grid-cols-1 gap-4 py-5 md:grid-cols-2 lg:grid-cols-4"
   >
     {
       ExternalLinks.map((item) => (
         <li>
-          <a
-            href={item.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            class="group flex flex-col items-center hover:underline"
-            aria-label={`${item.label} (opens in a new tab)`}
-          >
-            <div class="flex flex-col items-center">
-              <Image
-                src={item.image}
-                alt={item.label}
-                class={"size-44"}
-                sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
-                loading="lazy"
-                quality="high"
-                format="webp"
-              />
-              <span class="ml-2 mt-5 text-center underline hover:text-primary">
-                {item.label}
-              </span>
-            </div>
-          </a>
+          <UnitLinkCard
+            label={item.label}
+            image={item.image}
+            link={item.link}
+          />
         </li>
       ))
     }

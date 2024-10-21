@@ -24,7 +24,7 @@ const { title, href, image, date, lang, type } = Astro.props as Props;
 
 <a href={href} aria-labelledby={`read-more-${href}`}>
   <article
-    class="relative flex h-full flex-col gap-4 rounded-2xl border border-solid border-primary bg-card text-card-foreground shadow-sm xl:flex-row xl:gap-0 xl:rounded-3xl"
+    class="relative flex h-full flex-col gap-4 overflow-hidden rounded-2xl border border-solid border-primary bg-card text-card-foreground shadow-sm xl:flex-row xl:gap-0 xl:rounded-3xl"
   >
     <figure
       class="relative w-full overflow-hidden rounded-t-2xl xl:rounded-3xl"
@@ -42,20 +42,20 @@ const { title, href, image, date, lang, type } = Astro.props as Props;
     </figure>
     <div class="flex w-full flex-col gap-2 px-4 pb-4 xl:hidden">
       <TextElement
-        variant="caption"
-        className="text-xs line-clamp-4 scroll-m-20 text-pretty font-normal leading-6 tracking-tight md:text-base xl:text-lg"
+        variant="title"
+        className="line-clamp-4 scroll-m-20 text-pretty font-normal leading-6 tracking-tight"
       >
         {title}
       </TextElement>
       <time
-        class="text-xs mb-8 text-left font-light"
+        class="mb-8 text-left text-xs font-light"
         datetime={new Date(date).toISOString()}
       >
         {formatDate(date, lang)}
       </time>
       <Badge
         variant="secondary"
-        className="text-xs w-fit px-3 py-1 font-normal capitalize text-white hover:bg-secondary xl:px-5 xl:text-base"
+        className="w-fit px-3 py-1 text-xs font-normal capitalize text-white hover:bg-secondary xl:px-5 xl:text-base"
         >{type}</Badge
       >
     </div>
@@ -64,17 +64,17 @@ const { title, href, image, date, lang, type } = Astro.props as Props;
     >
       <Badge
         variant="secondary"
-        className="text-xs mb-4 w-fit px-3 py-1 font-normal capitalize text-white hover:bg-secondary xl:px-5 xl:text-sm"
+        className="mb-4 w-fit px-3 py-1 text-xs font-normal capitalize text-white hover:bg-secondary xl:px-5 xl:text-sm"
         >{type}</Badge
       >
       <TextElement
-        variant="caption"
-        className="mb-auto line-clamp-4 grow scroll-m-20 text-pretty text-base font-normal leading-6 tracking-tight xl:text-lg"
+        variant="title"
+        className="mb-auto line-clamp-4 grow scroll-m-20 text-pretty font-normal leading-6 tracking-tight"
       >
         {title}
       </TextElement>
       <time
-        class="text-xs mt-auto text-left font-light"
+        class="mt-auto text-left text-xs font-light"
         datetime={new Date(date).toISOString()}
       >
         {formatDate(date, lang)}

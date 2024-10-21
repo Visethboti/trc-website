@@ -58,13 +58,13 @@ export default function ImageCarousel({ carouselDatas }: ImageCarouselProps) {
                     <div className="flex w-full flex-col items-center justify-center lg:w-1/2 lg:items-end lg:justify-end">
                       <Badge
                         variant="secondary"
-                        className="mb-4 rounded-3xl bg-secondary px-7 py-2 text-white hover:bg-secondary"
+                        className="mb-4 rounded-3xl bg-secondary px-7 py-2 font-normal text-white hover:bg-secondary"
                       >
                         Activity
                       </Badge>
                       <TextElement
-                        variant="title"
-                        className="line-clamp-4 whitespace-pre-line text-pretty text-center text-xl font-normal leading-10 lg:text-right lg:text-3xl"
+                        variant="medium"
+                        className="line-clamp-4 whitespace-pre-line text-pretty text-center font-normal leading-10 lg:text-right"
                       >
                         {item.data.title}
                       </TextElement>
