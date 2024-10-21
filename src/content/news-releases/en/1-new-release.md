@@ -2,7 +2,7 @@
 categories: ["News"]
 date: 05/03/2024
 featured: false
-image: src/asset/media/new-release/1-article/photo-1.jpg
+image: src/asset/media/new-release/1-new-release/photo-1.jpg
 title: Announcement On The Use of Common Codes *1201#, *1202#, *1203*
  PIN#, and 1204 For All Mobile Networks
 author: Ministry of Post and Telecommunications
@@ -34,6 +34,6 @@ The Ministry of Post and Telecommunications would like to inform the
  please contact the TRC hotline at 6789 during business hours.
 
 
-![photo 2](src/asset/media/photo-8.png)
-![photo 3](src/asset/media/thumbnail.jpg)
+![photo 2](src/asset/media/new-release/1-new-release/photo-2.png)
+![photo 3](src/asset/media/new-release/1-article/photo-3.jpg)
 

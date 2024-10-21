@@ -2,7 +2,7 @@
 categories: ["News"]
 date: 05/03/2024
 featured: false
-image: src/asset/media/new-release/1-article/photo-1.jpg
+image: src/asset/media/new-release/1-new-release/photo-1.jpg
 title: Announcement On The Use of Common Codes *1201#, *1202#, *1203*
  PIN#, and 1204 For All Mobile Networks
 author: Ministry of Post and Telecommunications
@@ -28,5 +28,5 @@ type: new-release
 
 រាជធានីភ្នំពេញ៖ សាលប្រជុំទីស្តីការគណៈរដ្ឋមន្ត្រី​ ថ្ងៃទី៣ ឧសភា ឆ្នាំ២០២៤
 
-![photo 2](src/asset/media/activities/1-article/photo-3.png)
-![photo 3](src/asset/media/activities/1-article/photo-4.jpg)
+![photo 2](src/asset/media/new-release/1-new-release/photo-2.png)
+![photo 3](src/asset/media/new-release/1-new-release/photo-3.jpg)
