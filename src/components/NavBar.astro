@@ -12,7 +12,6 @@ import { getRelativeLocaleUrl } from "astro:i18n";
 
 const locale = Astro.currentLocale ?? defaultLang;
 const currentPath = Astro.url.pathname;
-
 const navigationItems = getLocalizedRoutes(NavRoutes, locale);
 ---
 
