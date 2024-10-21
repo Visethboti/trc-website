@@ -28,5 +28,5 @@ type: new-release
 
 រាជធានីភ្នំពេញ៖ សាលប្រជុំទីស្តីការគណៈរដ្ឋមន្ត្រី​ ថ្ងៃទី៣ ឧសភា ឆ្នាំ២០២៤
 
-![photo 2](src/asset/media/activities/1-article/photo-8.png)
-![photo 3](src/asset/media/activities/1-article/thumbnail.jpg)
+![photo 2](src/asset/media/activities/1-article/photo-3.png)
+![photo 3](src/asset/media/activities/1-article/photo-4.jpg)
