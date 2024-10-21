@@ -1,0 +1,35 @@
+---
+import { Button } from "@/components/ui/button";
+
+import { defaultLang, languages, type SupportedLanguage } from "@/i18n/ui";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+
+export async function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({
+    params: { lang },
+  }));
+}
+const lang = Astro.params.lang as SupportedLanguage;
+
+const homepageUrl = `/${lang}`;
+---
+
+<BaseLayout title={"Page Not Found"}>
+  <div
+    class="flex flex-col items-center justify-center bg-gradient-to-b from-gray-100 to-white text-center"
+    style="min-height: 100vh;"
+  >
+    <div class="flex flex-col gap-4 rounded-lg p-12">
+      <h1 class="text-[64px] font-bold uppercase text-red-600">coming soon</h1>
+      <p class="mt-5 text-2xl font-light text-gray-800 md:text-3xl">
+        {"We are currently working hard on this page"}
+      </p>
+      <p class="mt-2 text-gray-600">
+        {"We will be back soon, Thank you for your patience."}
+      </p>
+    </div>
+    <Button>
+      <a href={homepageUrl}>{"Go back to homepage"}</a>
+    </Button>
+  </div>
+</BaseLayout>
