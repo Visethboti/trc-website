@@ -1,11 +1,12 @@
 ---
 categories: ["News"]
-date: 05/03/2024
+date: 11/20/2020
 featured: false
-image: src/asset/articles/1-article-dsc-meeting/article-1-photo-2.webp
-title: This is activities in khmer កិច្ចប្រជុំ​ ប្រកាសសមាសភាព
-author: Digital Security Committee
-description: ឯកឧត្តម ជា វ៉ាន់ដេត បានអញ្ជើញចូលរួមកិច្ចប្រជុំ ដេីម្បីប្រកាសសមាសភាព និងផ្សព្វផ្សាយគោលការណ៍ណែនាំសម្រាប់ គ.ស.ឌ. ក្រោមអធិបតីភាពឯកឧត្តមសន្តិបណ្ឌិត នេត សាវឿន
+image: src/asset/media/activities/1-activity/photo-1.jpg
+title: TMinister Vandeth Chea Participates in the TRC Leadership Transfer
+ Ceremony
+author: Telecommunication Regulator of Cambodia
+description: ឯកឧត្តម ជា វ៉ាន់ដេត ចូលរួមក្នុងពិធីការផ្ទេរតំណែងថ្នាក់ដឹកនាំ TRC
 lang: km
 type: activity
 ---
@@ -26,12 +27,11 @@ type: activity
 
 រាជធានីភ្នំពេញ៖ សាលប្រជុំទីស្តីការគណៈរដ្ឋមន្ត្រី​ ថ្ងៃទី៣ ឧសភា ឆ្នាំ២០២៤
 
-![photo 2](src/asset/articles/1-article-dsc-meeting/article-1-photo-1.webp)
-![photo 3](src/asset/articles/1-article-dsc-meeting/article-1-photo-3.webp)
-![photo 4](src/asset/articles/1-article-dsc-meeting/article-1-photo-4.webp)
-![photo 5](src/asset/articles/1-article-dsc-meeting/article-1-photo-5.webp)
-![photo 6](src/asset/articles/1-article-dsc-meeting/article-1-photo-6.webp)
-![photo 7](src/asset/articles/1-article-dsc-meeting/article-1-photo-7.webp)
-![photo 8](src/asset/articles/1-article-dsc-meeting/article-1-photo-8.webp)
-![photo 9](src/asset/articles/1-article-dsc-meeting/article-1-photo-9.webp)
-![photo 10](src/asset/articles/1-article-dsc-meeting/article-1-photo-10.webp)
+
+![photo 2](src/asset/media/event/1-event/photo-1.jpg)
+![photo 3](src/asset/media/event/1-event/photo-2.jpg)
+![photo 4](src/asset/media/event/1-event/photo-3.jpg)
+![photo 5](src/asset/media/event/1-event/photo-4.jpg)
+![photo 6](src/asset/media/event/1-event/photo-5.jpg)
+![photo 7](src/asset/media/event/1-event/photo-6.jpg)
+![photo 8](src/asset/media/event/1-event/photo-7.jpg)
