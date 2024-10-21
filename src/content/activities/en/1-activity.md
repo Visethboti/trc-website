@@ -50,10 +50,10 @@ O Phnom Penh, 26 November 2020, Minister of Post and
  leaderships, officials, and employees for their contribution to TRC’s missions
  and goals as well as to the public good.
 
-![photo 2](src/asset/media/event/1-event/photo-1.jpg)
-![photo 3](src/asset/media/event/1-event/photo-2.jpg)
-![photo 4](src/asset/media/event/1-event/photo-3.jpg)
-![photo 5](src/asset/media/event/1-event/photo-4.jpg)
-![photo 6](src/asset/media/event/1-event/photo-5.jpg)
-![photo 7](src/asset/media/event/1-event/photo-6.jpg)
-![photo 8](src/asset/media/event/1-event/photo-7.jpg)
+![photo 2](src/asset/media/activities/1-activity/photo-1.jpg)
+![photo 3](src/asset/media/activities/1-activity/photo-2.jpg)
+![photo 4](src/asset/media/activities/1-activity/photo-3.jpg)
+![photo 5](src/asset/media/activities/1-activity/photo-4.jpg)
+![photo 6](src/asset/media/activities/1-activity/photo-5.jpg)
+![photo 7](src/asset/media/activities/1-activity/photo-6.jpg)
+![photo 8](src/asset/media/activities/1-activity/photo-7.jpg)
