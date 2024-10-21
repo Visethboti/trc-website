@@ -13,7 +13,7 @@ interface ListItemProps extends React.ComponentPropsWithoutRef<"a"> {
 export const MobileListItem = React.forwardRef<
   React.ElementRef<"a">,
   ListItemProps
->(({ className, title, children, svgIcon, href, ...props }, ref) => {
+>(({ className, title, children, svgIcon, href, ...props }) => {
   return (
     <li>
       <a
