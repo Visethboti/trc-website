@@ -35,7 +35,9 @@ const restContent = content.slice(1);
     image={firstContent.data.image}
     type={firstContent.data.type}
   />
-  <ul class="flex list-none flex-col gap-7 pt-10 lg:grid xl:grid-cols-4">
+  <ul
+    class="flex list-none flex-col gap-7 pt-5 lg:grid lg:pt-10 xl:grid-cols-4"
+  >
     {
       restContent.map((item) => (
         <li>
