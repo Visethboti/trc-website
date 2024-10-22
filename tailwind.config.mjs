@@ -7,6 +7,7 @@ export default {
   prefix: "",
   theme: {
     fontSize: {
+      "3xs": "0.625rem",
       "2xs": "0.75rem",
       xs: "0.875rem",
       sm: "0.9375rem",
