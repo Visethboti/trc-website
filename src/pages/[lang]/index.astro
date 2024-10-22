@@ -8,7 +8,7 @@ import UnitLinks from "@/components/UnitLinks.astro";
 
 import CommonCodes from "@/asset/resources/common-codes.png";
 import { languages, type SupportedLanguage } from "@/i18n/ui";
-import { useTranslations } from "@/i18n/utils";
+// import { useTranslations } from "@/i18n/utils";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import { Image } from "astro:assets";
 import { getCollection } from "astro:content";
@@ -29,27 +29,6 @@ const latestActivities = langActivities
   )
   .slice(0, 3);
 
-const allTips = await getCollection("cybersecurity-tips");
-
-const langTips = allTips.filter((tip) => tip.data.lang === lang);
-
-const latestTips = langTips
-  .sort(
-    (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime(),
-  )
-  .slice(0, 3);
-
-const allDirectives = await getCollection("directives");
-const langDirectives = allDirectives.filter(
-  (article) => article.data.lang === lang,
-);
-
-const featuredDirectives = langDirectives
-  .filter(
-    (directive) => directive.data.lang === lang && directive.data.featured,
-  )
-  .slice(0, 4);
-
 const allEvents = await getCollection("events");
 const allNewsReleases = await getCollection("news-releases");
 const allMedia = [...allActivities, ...allEvents, ...allNewsReleases];
@@ -61,7 +40,7 @@ const featuredMedia = langMedia
     (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime(),
   )
   .slice(0, 5);
-const t = useTranslations(lang);
+// const t = useTranslations(lang);
 ---
 
 <BaseLayout

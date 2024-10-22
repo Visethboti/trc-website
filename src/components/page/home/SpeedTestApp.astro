@@ -4,12 +4,7 @@ import TextElement from "@/components/TextElement";
 import AppStore from "@/asset/app-store.svg";
 import GooglePlay from "@/asset/google-play.svg";
 import Mockup from "@/asset/mockup.png";
-import { type SupportedLanguage } from "@/i18n/ui";
-import { useTranslations } from "@/i18n/utils";
 import { Image } from "astro:assets";
-
-const lang = Astro.currentLocale as SupportedLanguage;
-const t = useTranslations(lang);
 
 const mbcUrl = "https://mbc.gov.kh";
 const appStoreUrl =
@@ -34,13 +29,19 @@ const googlePlayUrl =
       results and user-friendly. For more related information, please visit <a
         href={mbcUrl}
         target="_blank"
+        rel="noopener noreferrer"
         class="font-bold text-primary">mbc.gov.kh</a
       >
     </TextElement>
     <div
       class="mt-4 flex justify-between gap-4 md:mt-8 lg:mt-8 lg:gap-12 2xl:mt-16 2xl:gap-12"
     >
-      <a href={appStoreUrl} target="_blank" class="w-full">
+      <a
+        href={appStoreUrl}
+        target="_blank"
+        class="w-full"
+        rel="noopener noreferrer"
+      >
         <Image
           src={AppStore}
           alt="Mockup"
@@ -50,7 +51,12 @@ const googlePlayUrl =
           class="w-full"
         />
       </a>
-      <a href={googlePlayUrl} target="_blank" class="w-full">
+      <a
+        href={googlePlayUrl}
+        target="_blank"
+        class="w-full"
+        rel="noopener noreferrer"
+      >
         <Image
           src={GooglePlay}
           alt="Mockup"
