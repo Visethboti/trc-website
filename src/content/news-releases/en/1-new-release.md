@@ -8,7 +8,7 @@ title: Announcement On The Use of Common Codes *1201#, *1202#, *1203*
 author: Ministry of Post and Telecommunications
 description: On behalf of Samdech Thipadei HUN MANET, Prime Minister, H.E. Santibandit Neth Savoeun, Deputy Prime Minister has presided over the meeting.
 lang: en
-type: new-release
+type: news-release
 ---
 
 The Ministry of Post and Telecommunications would like to inform the

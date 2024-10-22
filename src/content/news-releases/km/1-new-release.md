@@ -4,12 +4,12 @@ date: 05/03/2024
 featured: false
 image: src/asset/media/new-release/1-new-release/photo-1.jpg
 title: Announcement On The Use of Common Codes *1201#, *1202#, *1203*
- PIN#, and 1204 For All Mobile Networks
+  PIN#, and 1204 For All Mobile Networks
 author: Ministry of Post and Telecommunications
 description: Announcement On The Use of Common Codes *1201#, *1202#, *1203*
- PIN#, and 1204 For All Mobile Networks
+  PIN#, and 1204 For All Mobile Networks
 lang: km
-type: new-release
+type: news-release
 ---
 
 ឯកឧត្តមសន្តិបណ្ឌិត នេត សាវឿន ឧបនាយករដ្ឋមន្ត្រី តំណាងដ៏ខ្ពង់ខ្ពស់ សម្តេចមហាបវរធិបតី
