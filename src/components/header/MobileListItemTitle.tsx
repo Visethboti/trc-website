@@ -8,7 +8,7 @@ export const MobileListItemTitle: React.FC<ListItemTitleProps> = ({
   return (
     <li className="items-center">
       <div className="my-2 rounded-md bg-primary px-4 py-3 text-white">
-        <p className="text-sm font-medium leading-none">{title}</p>
+        <p className="text-16 font-medium leading-none">{title}</p>
       </div>
     </li>
   );
