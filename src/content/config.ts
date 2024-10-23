@@ -1,5 +1,4 @@
 import { ABOUT_TYPES, type AboutType } from "./about.type";
-import { ACTIVE_TYPES, type ActiveType } from "./active.type";
 import { DIRECTIVE_TYPES, type DirectiveType } from "./content.type";
 import { LEADERS_TYPES, type LeadersType } from "./leader.type";
 import { MEDIA_TYPES, type MediaType } from "./media.type";
@@ -15,10 +14,6 @@ const DirectiveTypeEnum = z.enum(
 
 const MediaTypeEnum = z.enum(
   Object.values(MEDIA_TYPES) as [MediaType, ...MediaType[]],
-);
-
-const ActiveTypeEnum = z.enum(
-  Object.values(ACTIVE_TYPES) as [ActiveType, ...ActiveType[]],
 );
 
 const AboutTypeEnum = z.enum(
