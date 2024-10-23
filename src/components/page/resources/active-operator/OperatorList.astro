@@ -1,6 +1,4 @@
 ---
-// import { getContentUrl } from "@/lib/route";
-
 import OperatorCard from "./OperatorCard.astro";
 import type { SupportedLanguage } from "@/i18n/ui";
 import type { CollectionEntry } from "astro:content";
@@ -15,14 +13,13 @@ const { content, lang } = Astro.props;
 
 <ul class="flex flex-col gap-5 pt-5 md:grid md:grid-cols-1 lg:grid-cols-1">
   {
-    content.map((item) => (
+    content.map((item, index) => (
       <li>
         <OperatorCard
           image={item.data.image}
           title={item.data.title}
-          body={item.body}
           description={item.data.description}
-          number={item.data.number}
+          number={index + 1}
           phone={item.data.phone}
           address={item.data.address}
           lang={lang}

@@ -10,10 +10,9 @@ import { MapIcon, Phone } from "lucide-react";
 interface Props {
   title: string;
   image: ImageMetadata;
-  body: string;
   description: string;
   phone: string;
-  number: string;
+  number: number;
   address: string;
   lang: SupportedLanguage;
 }
@@ -30,10 +29,9 @@ console.log(phoneNumberArray);
     class="md:w-3/2 relative grid w-full items-center justify-items-center sm:w-2/5 lg:w-2/3 xl:w-1/5"
   >
     <TextElement variant="paragraph">
-      {number}
+      {number}.
     </TextElement>
   </div>
-
   <figure class="sm:w-1/1 relative grid flex-col md:w-1/2 lg:w-4/5 xl:w-1/3">
     <AspectRatio
       ratio={16 / 9}
@@ -59,7 +57,7 @@ console.log(phoneNumberArray);
     </TextElement>
   </div>
   <div
-    class="flex w-full flex-col gap-2 p-4 sm:w-3/5 md:w-2/3 lg:w-2/3 lg:gap-8 xl:w-3/5"
+    class="flex w-full flex-col gap-2 p-4 sm:w-3/5 md:w-2/3 lg:w-2/3 lg:gap-4 xl:w-3/5"
   >
     <div class="rounded-lg border p-2">
       <TextElement variant="body" className="text-center">

@@ -72,22 +72,14 @@ const mediaCollection = defineCollection({
 
 const activeSchema = ({ image }: SchemaContext) =>
   z.object({
-    author: z
-      .string()
-      .default("Telecommunication Regulator of Cambodia - T.R.C."),
-    categories: z.array(z.string()).default(["News", "Article"]),
-    date: z.string(),
-    number: z.string(),
     phone: z.string(),
     address: z.string(),
-    featured: z.boolean(),
     image: image(),
     title: z.string(),
     description: z.string().max(160, {
       message: "Description must be at most 160 characters long",
     }),
     lang: z.enum(SupportedLanguage),
-    type: ActiveTypeEnum,
   });
 
 const activesCollection = defineCollection({
