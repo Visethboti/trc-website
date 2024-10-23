@@ -73,8 +73,8 @@ export const NavRoutes = [
   {
     label: "Resources",
     children: [
-      { label: "Publications", href: Routes.Home },
-      { label: "Telecom Statistics", href: Routes.Home },
+      { label: "Publications", href: Routes.UnderConstruction },
+      { label: "Telecom Statistics", href: Routes.UnderConstruction },
       { label: "Active Operators", href: Routes.ActiveOperator },
       { label: "Mobile Prefixes", href: Routes.MobilePrefixes },
       { label: "Common Codes", href: Routes.CommonCodes },
