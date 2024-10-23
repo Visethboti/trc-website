@@ -6,7 +6,6 @@ import { MEDIA_TYPES, type MediaType } from "./media.type";
 import { languages } from "@/i18n/ui";
 import { defineCollection, z } from "astro:content";
 import type { SchemaContext } from "astro:content";
-import type { Phone } from "lucide-react";
 
 const SupportedLanguage = Object.values(languages) as [string, ...string[]];
 
