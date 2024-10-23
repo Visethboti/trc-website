@@ -23,7 +23,7 @@ interface ImageCarouselProps {
 export default function ImageCarousel({ carouselDatas }: ImageCarouselProps) {
   const plugin = useRef(
     Autoplay({
-      delay: 4000,
+      delay: 5000,
       playOnInit: true,
       stopOnInteraction: false,
     }),

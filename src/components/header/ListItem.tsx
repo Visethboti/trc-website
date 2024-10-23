@@ -24,7 +24,7 @@ export const ListItem = React.forwardRef<React.ElementRef<"a">, ListItemProps>(
             {...props}
           >
             <div className="flex w-full justify-between">
-              <div className="pr-4 text-sm font-medium leading-tight">
+              <div className="pr-4 text-16 font-medium leading-tight">
                 {title}
               </div>
               {svgIcon && (
@@ -37,7 +37,7 @@ export const ListItem = React.forwardRef<React.ElementRef<"a">, ListItemProps>(
                 />
               )}
             </div>
-            <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+            <p className="line-clamp-2 text-16 leading-snug text-muted-foreground">
               {children}
             </p>
           </a>
