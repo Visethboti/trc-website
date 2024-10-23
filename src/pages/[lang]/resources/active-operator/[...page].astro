@@ -1,0 +1,50 @@
+---
+import Main from "@/components/Main.astro";
+import OperatorList from "@/components/page/resources/active-operator/OperatorList.astro";
+import Pagination from "@/components/Pagination.astro";
+import TextElement from "@/components/TextElement";
+
+import { languages } from "@/i18n/ui";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { PER_PAGE } from "@/utils/constant.ts";
+import type { PaginateFunction } from "astro";
+import { getCollection } from "astro:content";
+
+export async function getStaticPaths({
+  paginate,
+}: {
+  paginate: PaginateFunction;
+}) {
+  const allLanguages = Object.values(languages);
+  const actives = await getCollection("actives");
+
+  return allLanguages.flatMap((lang) => {
+    const langActives = actives
+      .filter((active) => active.data.lang === lang)
+      .sort(
+        (a, b) =>
+          new Date(b.data.date).getTime() - new Date(a.data.date).getTime(),
+      );
+    return paginate(langActives, {
+      params: { lang },
+      pageSize: PER_PAGE,
+    });
+  });
+}
+
+const { lang } = Astro.params;
+const { page } = Astro.props;
+
+const title = "Actives Operator";
+---
+
+<BaseLayout title={title}>
+  <Main>
+    <section aria-label={title}>
+      <TextElement variant="heading" className="text-center">
+        {title}
+      </TextElement>
+      <OperatorList content={page.data} lang={lang} />
+    </section>
+  </Main>
+</BaseLayout>
