@@ -1,0 +1,80 @@
+---
+import TextElement from "@/components/TextElement";
+
+import AppStore from "@/asset/app-store.svg";
+import GooglePlay from "@/asset/google-play.svg";
+import Mockup from "@/asset/mockup.png";
+import { Image } from "astro:assets";
+
+const mbcUrl = "https://mbc.gov.kh";
+const appStoreUrl =
+  "https://apps.apple.com/kh/app/mptc-speed-test/id1597737736";
+const googlePlayUrl =
+  "https://play.google.com/store/apps/details?id=com.samknows.mptc&pli=1";
+---
+
+<div class="flex items-center gap-4 pb-2 md:pb-6 lg:gap-12 xl:pb-10">
+  <div class="mb-3 w-full">
+    <TextElement variant="heading" className="text-text text-lg md:text-2xl"
+      >MPTC</TextElement
+    >
+    <TextElement variant="heading" className="text-text text-lg md:text-2xl"
+      >Speed Test App</TextElement
+    >
+    <TextElement
+      variant="paragraph"
+      className="max-sm:text-3xs [&:not(:first-child)]:max-sm:mt-3"
+    >
+      Measure mobile boardhand performance anywhere and anytime with accurate
+      results and user-friendly. For more related information, please visit <a
+        href={mbcUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="font-bold text-primary">mbc.gov.kh</a
+      >
+    </TextElement>
+    <div
+      class="mt-4 flex justify-between gap-4 md:mt-8 lg:mt-8 lg:gap-12 2xl:mt-16 2xl:gap-12"
+    >
+      <a
+        href={appStoreUrl}
+        target="_blank"
+        class="w-full"
+        rel="noopener noreferrer"
+      >
+        <Image
+          src={AppStore}
+          alt="Mockup"
+          loading="lazy"
+          quality="high"
+          format="webp"
+          class="w-full"
+        />
+      </a>
+      <a
+        href={googlePlayUrl}
+        target="_blank"
+        class="w-full"
+        rel="noopener noreferrer"
+      >
+        <Image
+          src={GooglePlay}
+          alt="Mockup"
+          loading="lazy"
+          quality="high"
+          format="webp"
+          class="w-full"
+        />
+      </a>
+    </div>
+  </div>
+  <div class="w-full">
+    <Image
+      src={Mockup}
+      alt="Mockup"
+      loading="lazy"
+      quality="high"
+      format="webp"
+    />
+  </div>
+</div>

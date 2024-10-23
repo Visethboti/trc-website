@@ -24,7 +24,7 @@ const { title, href, image, date, lang, type } = Astro.props as Props;
 
 <a href={href} aria-labelledby={`read-more-${href}`}>
   <article
-    class="relative flex h-full flex-col gap-4 rounded-2xl border border-solid border-primary bg-card text-card-foreground shadow-sm xl:flex-row xl:gap-0 xl:rounded-3xl"
+    class="relative flex h-full flex-col gap-4 overflow-hidden rounded-2xl border border-solid border-primary bg-card text-card-foreground shadow-sm xl:flex-row xl:gap-0 xl:rounded-3xl"
   >
     <figure
       class="relative w-full overflow-hidden rounded-t-2xl xl:rounded-3xl"
