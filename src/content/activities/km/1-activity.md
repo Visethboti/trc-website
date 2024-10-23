@@ -3,8 +3,7 @@ categories: ["News"]
 date: 11/20/2020
 featured: false
 image: src/asset/media/activities/1-activity/photo-1.jpg
-title: TMinister Vandeth Chea Participates in the TRC Leadership Transfer
- Ceremony
+title: Minister Vandeth Chea Participates in the TRC Leadership Transfer Ceremony
 author: Telecommunication Regulator of Cambodia
 description: ឯកឧត្តម ជា វ៉ាន់ដេត ចូលរួមក្នុងពិធីការផ្ទេរតំណែងថ្នាក់ដឹកនាំ TRC
 lang: km
@@ -26,7 +25,6 @@ type: activity
 ធានានិងការពារសន្តិសុខឌីជីថល៕
 
 រាជធានីភ្នំពេញ៖ សាលប្រជុំទីស្តីការគណៈរដ្ឋមន្ត្រី​ ថ្ងៃទី៣ ឧសភា ឆ្នាំ២០២៤
-
 
 ![photo 2](src/asset/media/activities/1-activity/photo-1.jpg)
 ![photo 3](src/asset/media/activities/1-activity/photo-2.jpg)
