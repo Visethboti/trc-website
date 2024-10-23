@@ -19,7 +19,10 @@ const navigationItems = getLocalizedRoutes(NavRoutes, locale);
   class="absolute left-0 m-3 -translate-y-16 bg-primary p-3 text-primary-foreground transition focus:translate-y-0"
   href="#main-content">Skip Navigation</a
 >
-<nav class="bg-primary text-white shadow-md" aria-label="Main navigation">
+<nav
+  class="bg-white text-white shadow-md sm:bg-[linear-gradient(-45deg,_hsl(var(--primary))_50%,_white_50%)] lg:bg-[linear-gradient(-45deg,_hsl(var(--primary))_72%,_white_72%)] xl:bg-[linear-gradient(-45deg,_hsl(var(--primary))_70%,_white_70%)]"
+  aria-label="Main navigation"
+>
   <div class="flex w-full items-center p-4 lg:px-8 2xl:px-12">
     <a href={getRelativeLocaleUrl(locale)} aria-label="Go to home page">
       <Image
