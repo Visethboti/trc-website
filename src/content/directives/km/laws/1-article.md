@@ -1,11 +1,9 @@
 ---
-date: 08/07/2021
-file: royal-decrees/royal-decree-organization-function-of-national-digital-economy-society-council.pdf
+date: 11/02/2019
+file: laws-regulations/Laws/law-on-electronic-commerce.pdf
 featured: true
-image: src/asset/directives/royal-decree-functioning.png
-title: This is a law in Khmer Royal-Decree No. NS/RKT/0821/564 on the Organization and Functioning of National Council for Digital Economy and Society.
+image: src/asset/laws-regulations/Laws//consumer-protection-law.png
+title: ច្បាប់ស្តីពីពាណិជ្ជកម្មតាមប្រព័ន្ធអេឡិចត្រូនិក
 type: law
 lang: km
 ---
-
-Collaboration is a key component of many creative endeavors, and music production is no exception. In fact, collaboration can be essential to the success of a music project, as it allows for the pooling of diverse talents and perspectives to create something truly unique and compelling.
