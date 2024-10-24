@@ -1,5 +1,4 @@
 ---
-import { AspectRatio } from "@/components/ui/aspect-ratio";
 import TextElement from "@/components/TextElement";
 
 import type { SupportedLanguage } from "@/i18n/ui";
@@ -16,85 +15,63 @@ interface Props {
   address: string;
   lang: SupportedLanguage;
 }
+
 const { title, phone, number, address, image, description } =
   Astro.props as Props;
+
 const phoneNumberArray = phone.split("/");
-console.log(phoneNumberArray);
 ---
 
-<div
-  class="flex h-full flex-col gap-5 overflow-hidden rounded-lg border bg-card text-card-foreground shadow-sm sm:flex-row"
->
-  <div
-    class="md:w-3/2 relative grid w-full items-center justify-items-center sm:w-2/5 lg:w-2/3 xl:w-1/5"
-  >
-    <TextElement variant="paragraph">
-      {number}.
-    </TextElement>
-  </div>
-  <figure class="sm:w-1/1 relative grid flex-col md:w-1/2 lg:w-4/5 xl:w-1/3">
-    <AspectRatio
-      ratio={16 / 9}
-      className="grid items-center justify-items-center"
+<div class="flex h-full flex-col gap-4 rounded-lg border p-4 lg:flex-row">
+  <div class="grid gap-4 sm:flex">
+    <div class="grid items-center">
+      <TextElement variant="body">{number}.</TextElement>
+    </div>
+    <figure
+      class="grid flex-col items-center justify-items-center lg:w-2/5 xl:w-1/3"
     >
       <Image
         src={image}
         alt={title}
-        class="size-24"
+        class="size-22"
         loading="eager"
         widths={[320, 480, 640, 768, 1024]}
         sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
         quality="mid"
         format="webp"
       />
-    </AspectRatio>
-  </figure>
-  <div
-    class="md:w-3/2 relative grid w-full items-center px-2 sm:w-2/5 lg:w-2/3 xl:w-3/5"
-  >
-    <TextElement variant="paragraph" className="items-center py-4">
-      {title}
-    </TextElement>
-  </div>
-  <div
-    class="flex w-full flex-col gap-2 p-4 sm:w-3/5 md:w-2/3 lg:w-2/3 lg:gap-4 xl:w-3/5"
-  >
-    <div class="rounded-lg border p-2">
-      <TextElement variant="body" className="text-center">
-        {description}
-      </TextElement>
-    </div>
-    <div class="rounded-lg border p-2">
-      <TextElement variant="body" className="text-center">
-        {description}
-      </TextElement>
+    </figure>
+    <div class="grid w-full items-center xl:w-2/4">
+      <TextElement variant="mediumtitle">{title}</TextElement>
     </div>
   </div>
-  <div
-    class="md:w-3/2 xl:w-4/2 relative grid w-full items-center px-2 sm:w-2/5 lg:w-2/3"
-  >
-    <div class="flex gap-2 py-4">
-      <TextElement variant="body" className="">
-        <MapIcon size={20} />
-      </TextElement>
-      <TextElement variant="body" className="">
-        #{address}
-      </TextElement>
+  <div class="grid gap-4 sm:flex lg:flex-col xl:w-2/5">
+    <div class="w-full rounded-lg border p-2">
+      <TextElement variant="body" className="text-center"
+        >{description}</TextElement
+      >
+    </div>
+    <div class="w-full rounded-lg border p-2">
+      <TextElement variant="body" className="text-center"
+        >{description}</TextElement
+      >
     </div>
   </div>
-  <div
-    class="md:w-3/2 relative grid w-full items-center p-2 sm:w-2/5 lg:w-2/3 xl:w-2/5"
-  >
-    <div class="flex">
-      <Phone size={20} className="mr-2" />
-      <div>
-        {
-          phoneNumberArray.map((phone) => (
-            <TextElement variant="body" className="block">
-              {phone}
-            </TextElement>
-          ))
-        }
+  <div class="grid items-center gap-4 sm:flex xl:w-3/5">
+    <div class="flex w-full gap-2 lg:w-2/3 xl:w-3/5">
+      <div><MapIcon size={20} /></div>
+      <div><TextElement variant="body">#{address}</TextElement></div>
+    </div>
+    <div class="grid items-center sm:w-1/3 lg:w-2/4 xl:w-2/5">
+      <div class="flex gap-2">
+        <Phone size={20} />
+        <div>
+          {
+            phoneNumberArray.map((phone) => (
+              <TextElement variant="body">{phone}</TextElement>
+            ))
+          }
+        </div>
       </div>
     </div>
   </div>
