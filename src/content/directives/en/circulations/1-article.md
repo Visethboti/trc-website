@@ -1,11 +1,9 @@
 ---
-date: 08/07/2021
-file: royal-decrees/royal-decree-organization-function-of-national-digital-economy-society-council.pdf
+date: 08/18/2019
+file: laws-regulations/Circulation/Circular on Strengthening the Management of the Electronic Gambling Business through the Internet Locally and Internationally of all Kinds and all Forms in the Kingdom of Cambodia.pdf
 featured: true
 image: src/asset/directives/royal-decree-functioning.png
-title: This is a Circulation in English Royal-Decree No. NS/RKT/0821/564 on the Organization and Functioning of National Council for Digital Economy and Society.
+title: Circular on Strengthening the Management of the Electronic Gambling Business through the Internet Locally and Internationally of all Kinds and all Forms in the Kingdom of Cambodia
 type: circulation
 lang: en
 ---
-
-Collaboration is a key component of many creative endeavors, and music production is no exception. In fact, collaboration can be essential to the success of a music project, as it allows for the pooling of diverse talents and perspectives to create something truly unique and compelling.
