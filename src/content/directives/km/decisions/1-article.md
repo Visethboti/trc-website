@@ -1,11 +1,9 @@
 ---
-date: 08/10/2021
-file: royal-decrees/Placeholder-PDF.pdf
+date: 04/16/2020
+file: laws-regulations/Decision/Decision on Telecommunications Numbering Code Management.pdf
 featured: false
 image: src/asset/security-tips/anti-virus-tip.jpg
-title: This is a Mock Decision in Khmer
+title: សេចក្តីសម្រេចស្តីពីការគ្រប់គ្រងលេខកូដទូរគមនាគមន៍
 type: decision
 lang: km
 ---
-
-Collaboration is a key component of many creative endeavors, and music production is no exception. In fact, collaboration can be essential to the success of a music project, as it allows for the pooling of diverse talents and perspectives to create something truly unique and compelling.
