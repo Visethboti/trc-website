@@ -2,7 +2,7 @@
 date: 11/02/2019
 file: laws-regulations/Laws/consumer-protection-law.pdf
 featured: true
-image: src/asset/laws-regulations/Laws/consumer-protection-law.png
+image: src/asset/laws-regulations/royal-decree-thumnail.png
 title: ច្បាប់ស្តីពីកិច្ចការពារអ្នកប្រើប្រាស់
 type: law
 lang: km
