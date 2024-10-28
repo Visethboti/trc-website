@@ -71,9 +71,8 @@ const activeSchema = ({ image }: SchemaContext) =>
     address: z.string(),
     image: image(),
     title: z.string(),
-    description: z.string().max(160, {
-      message: "Description must be at most 160 characters long",
-    }),
+    descriptionOne: z.string().default("NULL"),
+    descriptionTwo: z.string().default("NULL"),
     lang: z.enum(SupportedLanguage),
   });
 
