@@ -1,11 +1,9 @@
 ---
-date: 08/07/2021
-file: royal-decrees/royal-decree-organization-function-of-national-digital-economy-society-council.pdf
+date: 08/23/2000
+file: "laws-regulations/royalDecree/Royal Decree on Establishment a National Authority for Preparation and Development Policy.pdf"
 featured: true
-image: src/asset/directives/royal-decree-functioning.png
-title: Royal-Decree No. NS/RKT/0821/564 on the Organization and Functioning of National Council for Digital Economy and Society.
+image: src/asset/laws-regulations/royal-decree-thumnail.png
+title: ព្រះរាជក្រឹត្យបង្កើតអាជ្ញាធរជាតិមួយ​សម្រាប់ទទួល​បន្ទុករៀបចំនិងអភិវឌ្ឍន៍គោលនយោបាយ
 type: royal-decree
 lang: km
 ---
-
-Collaboration is a key component of many creative endeavors, and music production is no exception. In fact, collaboration can be essential to the success of a music project, as it allows for the pooling of diverse talents and perspectives to create something truly unique and compelling.
