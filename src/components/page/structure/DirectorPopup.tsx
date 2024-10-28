@@ -19,7 +19,13 @@ interface Props {
   children: React.ReactNode;
 }
 
-const Director = ({ title, image, name, organization, children }: Props) => {
+const DirectorPopup = ({
+  title,
+  image,
+  name,
+  organization,
+  children,
+}: Props) => {
   return (
     <Dialog>
       <DialogTrigger className="grid place-items-center gap-y-5 py-10">
@@ -71,4 +77,4 @@ const Director = ({ title, image, name, organization, children }: Props) => {
   );
 };
 
-export default Director;
+export default DirectorPopup;

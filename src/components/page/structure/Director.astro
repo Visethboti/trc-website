@@ -4,7 +4,7 @@ import DirectorPopup from "@/components/page/structure/DirectorPopup";
 import type { ImageMetadata } from "astro";
 import type { AstroComponentFactory } from "astro/runtime/server/index.js";
 
-interface Props {
+interface DirectorProps {
   title: string;
   image: ImageMetadata;
   name: string;
@@ -12,16 +12,17 @@ interface Props {
   Content: AstroComponentFactory;
 }
 
-const { title, image, name, organization, Content } = Astro.props as Props;
+const { title, image, name, organization, Content } =
+  Astro.props as DirectorProps;
 ---
 
 <section class="grid place-items-center gap-y-5">
   <DirectorPopup
-    client:load
     title={title}
     image={image}
     name={name}
     organization={organization}
+    client:load
   >
     <section class="space-y-6 py-8 text-white md:py-11">
       <Content />
