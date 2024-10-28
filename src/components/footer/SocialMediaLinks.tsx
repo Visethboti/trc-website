@@ -218,3 +218,23 @@ export function YouTubeIcon(props: React.SVGProps<SVGSVGElement>) {
     </svg>
   );
 }
+
+export function DownloadIcon(props: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M12 15L12 3M12 15L8 11M12 15L16 11" />
+      <path d="M2 17L2.62127 19.4851C2.84385 20.3754 3.64382 21 4.56155 21H12H19.4384C20.3562 21 21.1561 20.3754 21.3787 19.4851L22 17" />
+    </svg>
+  );
+}
