@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import TextElement from "@/components/TextElement";
 
-import networkPattern from "@/asset/Network Pattern.png";
+import networkPattern from "@/asset/network-pattern.png";
 import { Fade } from "react-awesome-reveal";
 
 interface ChairmanCardProps {
