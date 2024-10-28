@@ -65,6 +65,21 @@ const mediaCollection = defineCollection({
   schema: mediaSchema,
 });
 
+const activeSchema = ({ image }: SchemaContext) =>
+  z.object({
+    phone: z.string(),
+    address: z.string(),
+    image: image(),
+    title: z.string(),
+    descriptionOne: z.string().default("NULL"),
+    descriptionTwo: z.string().default("NULL"),
+    lang: z.enum(SupportedLanguage),
+  });
+
+const activesCollection = defineCollection({
+  schema: activeSchema,
+});
+
 const directiveSchema = ({ image }: SchemaContext) =>
   z.object({
     date: z.string(),
@@ -139,6 +154,7 @@ export const collections = {
   articles: articlesCollection,
   directives: directivesCollection,
   abouts: aboutsCollection,
+  actives: activesCollection,
   leaders: leaderCollection,
   "board-members": boardMembersCollection,
   secretaries: secretariesCollection,
