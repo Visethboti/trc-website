@@ -4,7 +4,7 @@ import { formatDate } from "@/lib/date-helper";
 import { Badge } from "@/components/ui/badge";
 import TextElement from "@/components/TextElement";
 
-import networkPattern from "@/asset/Network Pattern.png";
+import networkPatterns from "@/asset/Network Patterns.png";
 import type { MediaType } from "@/content/media.type";
 import type { SupportedLanguage } from "@/i18n/ui";
 import type { ImageMetadata } from "astro";
@@ -44,7 +44,7 @@ const articleType = type.replace(/-/g, " ");
     <div class="flex w-2/3 flex-col gap-1.5 py-3 pr-3 xl:hidden xl:w-full">
       <TextElement
         variant="smalltitle"
-        className="line-clamp-3 scroll-m-20 text-pretty font-normal leading-6 tracking-tight sm:line-clamp-4 xl:text-lg"
+        className="line-clamp-2 scroll-m-20 text-pretty font-normal leading-6 tracking-tight sm:line-clamp-4 xl:text-lg"
       >
         {title}
       </TextElement>
@@ -82,17 +82,17 @@ const articleType = type.replace(/-/g, " ");
       </time>
     </div>
     <figure
-      class="absolute bottom-0 right-0 w-1/4 min-w-40 rounded-2xl xl:rounded-3xl"
+      class="absolute bottom-0 right-0 w-2/6 rounded-2xl sm:w-1/4 xl:w-1/2 2xl:rounded-3xl"
     >
       <Image
-        src={networkPattern}
+        src={networkPatterns}
         alt={title}
         loading="eager"
         widths={[320, 480, 640, 768, 1024]}
         sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
         quality="mid"
         format="webp"
-        class="rounded-2xl 2xl:rounded-3xl"
+        class="w-full rounded-r-2xl xl:rounded-r-3xl"
       />
     </figure>
   </article>
