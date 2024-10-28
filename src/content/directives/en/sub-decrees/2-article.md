@@ -1,9 +1,9 @@
 ---
-date: 05/01/2024
-file: sub-decrees/sub-decree-organization-function-of-digital-security-committee.pdf
+date: 02/16/2021
+file: laws-regulations/subDecree/Sub-Decree on the Establishment of National Internet Gateway.pdf
 featured: true
-image: src/asset/directives/sub-decree-dsc.png
-title: Sub-Decree No. 44 ANKR.BT on the Organization and Functioning of Digital Security Committee.
+image: src/asset/laws-regulations/royal-decree-thumnail.png
+title: Sub-Decree on the Establishment of National Internet Gateway
 type: sub-decree
 lang: en
 ---
