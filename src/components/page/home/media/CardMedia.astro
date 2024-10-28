@@ -4,7 +4,7 @@ import { formatDate } from "@/lib/date-helper";
 import { Badge } from "@/components/ui/badge";
 import TextElement from "@/components/TextElement";
 
-import networkPatterns from "@/asset/network-pattern.png";
+import networkPattern from "@/asset/network-pattern.png";
 import type { MediaType } from "@/content/media.type";
 import type { SupportedLanguage } from "@/i18n/ui";
 import type { ImageMetadata } from "astro";
@@ -83,7 +83,7 @@ const articleType = type.replace(/-/g, " ");
       class="absolute bottom-0 right-0 w-1/4 rounded-2xl sm:w-1/4 xl:w-1/2 2xl:rounded-3xl"
     >
       <Image
-        src={networkPatterns}
+        src={networkPattern}
         alt={title}
         loading="eager"
         widths={[320, 480, 640, 768, 1024]}

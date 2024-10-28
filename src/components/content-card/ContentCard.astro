@@ -3,7 +3,7 @@ import { formatDate, toISOString } from "@/lib/date-helper";
 
 import TextElement from "../TextElement";
 import { AspectRatio } from "../ui/aspect-ratio";
-import networkPatterns from "@/asset/network-pattern.png";
+import networkPattern from "@/asset/network-pattern.png";
 import type { SupportedLanguage } from "@/i18n/ui";
 import type { ImageMetadata } from "astro";
 import { Image } from "astro:assets";
@@ -47,7 +47,7 @@ const trimmedTitle = title.trim().replace(/\s+/g, "-");
     >
       <figure class="absolute bottom-0 right-0 w-1/5 lg:w-1/4 xl:w-1/6">
         <Image
-          src={networkPatterns}
+          src={networkPattern}
           alt={title}
           loading="eager"
           widths={[320, 480, 640, 768, 1024]}
