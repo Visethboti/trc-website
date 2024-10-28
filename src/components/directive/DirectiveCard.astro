@@ -30,7 +30,7 @@ const absoluteFileUrl = new URL(file, Astro.url.origin).href;
   aria-label={`(opens PDF in a new tab) Read full ${type} on ${title}`}
 >
   <article
-    class="flex h-full flex-col overflow-hidden rounded-lg border bg-card text-card-foreground shadow-sm transition duration-500 ease-out hover:bg-primary hover:text-white sm:flex-row"
+    class="flex h-full flex-col overflow-hidden rounded-xl border-2 border-solid border-textcolor bg-card text-card-foreground shadow-sm transition duration-500 ease-out hover:bg-primary hover:text-white sm:flex-row lg:rounded-3xl"
     aria-labelledby={`article-${title}`}
   >
     <figure class="md:1/3 lg :w-1/4 relative w-full sm:w-2/5 xl:w-1/5">
@@ -48,9 +48,11 @@ const absoluteFileUrl = new URL(file, Astro.url.origin).href;
       </AspectRatio>
     </figure>
     <div
-      class="md:2/3 relative flex w-full flex-col p-4 sm:w-3/5 lg:w-3/4 xl:w-4/5"
+      class="relative flex w-full flex-col p-4 sm:w-3/5 md:w-2/3 lg:w-3/4 xl:w-4/5"
     >
-      <figure class="absolute bottom-0 right-0 w-1/4">
+      <figure
+        class="absolute bottom-0 right-0 w-1/5 sm:w-1/3 lg:w-2/5 xl:w-1/6"
+      >
         <Image
           src={networkPatterns}
           alt={title}
