@@ -8,7 +8,7 @@ import {
 } from "@/components/ui/dialog";
 import TextElement from "@/components/TextElement";
 
-import networkPattern from "@/asset/Network Pattern.png";
+import networkPattern from "@/asset/network-pattern.png";
 import type { ImageMetadata } from "astro";
 
 interface Props {
