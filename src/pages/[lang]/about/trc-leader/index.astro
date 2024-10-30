@@ -41,19 +41,14 @@ const directors = allLeaders.filter(
         TRC Leader
       </TextElement>
     </header>
-    <div class="flex flex-nowrap gap-5">
-      <aside class="relative hidden lg:flex">
-        <ul class="fixed left-5 top-1/2 2xl:left-28">
-          <li><a href="#chairman/">Chairman</a></li>
-          <li><a href="#comissioner/">Commissioner</a></li>
-          <li><a href="#director/">Director</a></li>
-        </ul>
-      </aside>
-      <aside class="hidden lg:invisible lg:flex">
-        <ul>
-          <li><a href="#chairman/">Chairman</a></li>
-          <li><a href="#comissioner/">Commissioner</a></li>
-          <li><a href="#director/">Director</a></li>
+    <div class="flex flex-nowrap gap-5 2xl:gap-10">
+      <aside class="sticky top-1/2 h-full">
+        <ul class="hidden lg:flex lg:flex-col">
+          <li class="whitespace-nowrap"><a href="#chairman/">Chairman</a></li>
+          <li class="whitespace-nowrap">
+            <a href="#comissioner/">Commissioner</a>
+          </li>
+          <li class="whitespace-nowrap"><a href="#director/">Director</a></li>
         </ul>
       </aside>
 
