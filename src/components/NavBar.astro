@@ -9,8 +9,9 @@ import TRCHorizontalSubtitleBlue from "@/asset/logo/TRC-Horizontal-Subtitle-Blue
 import { defaultLang, type SupportedLanguage } from "@/i18n/ui";
 import { Image } from "astro:assets";
 import { getRelativeLocaleUrl } from "astro:i18n";
+import { getLangFromUrl } from "src/i18n/utils.ts";
 
-const locale = Astro.currentLocale ?? defaultLang;
+const locale = getLangFromUrl(Astro.url) ?? defaultLang;
 const currentPath = Astro.url.pathname;
 const navigationItems = getLocalizedRoutes(NavRoutes, locale);
 ---
