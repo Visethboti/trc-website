@@ -143,6 +143,7 @@ const directors = allLeaders.filter(
 
 <script>
   window.addEventListener("DOMContentLoaded", () => {
+    // eslint-disable-next-line prettier/prettier
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         const id = entry.target.getAttribute("id");
