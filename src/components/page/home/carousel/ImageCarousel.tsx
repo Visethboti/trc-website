@@ -77,11 +77,13 @@ export default function ImageCarousel({
                       </div>
                     </CardContent>
                     <div className="mt-16 flex items-center justify-center gap-5 text-secondary lg:items-center lg:justify-end">
-                      <hr className="h-2 w-20 rounded-2xl border-none bg-secondary" />
                       {carouselDatas?.map((_, i) => (
                         <div key={i}>
                           {index === i ? (
-                            <div className="font-semibold">{index + 1}</div>
+                            <div className="flex items-center gap-5">
+                              <hr className="h-2 w-20 rounded-2xl border-none bg-secondary" />
+                              <div className="font-semibold">{index + 1}</div>
+                            </div>
                           ) : (
                             <div className="size-2 rounded-full border-2 border-solid border-secondary"></div>
                           )}
