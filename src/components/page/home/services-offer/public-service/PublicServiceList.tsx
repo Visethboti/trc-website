@@ -22,8 +22,8 @@ const ExternalLinks = [
 
 const PublicServiceList: React.FC = () => {
   return (
-    <nav>
-      <ul className="flex w-full list-none flex-row items-center justify-center gap-4 space-x-8 md:grid-cols-2 lg:grid-cols-4">
+    <nav className="flex justify-center">
+      <ul className="grid grid-cols-3 gap-5 xl:gap-10">
         {ExternalLinks.map((item) => (
           <li key={item.label}>
             <PublicService label={item.label} image={item.image} />

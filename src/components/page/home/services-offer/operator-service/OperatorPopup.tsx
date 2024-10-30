@@ -5,14 +5,16 @@ const OperatorPopup = () => {
   return (
     <Dialog>
       <DialogTrigger>
-        <div className="flex h-[400px] w-[300px] flex-col items-center justify-center rounded-2xl border">
+        <div className="flex h-[200px] w-[120px] flex-col items-center justify-center rounded-2xl border lg:h-[300px] lg:w-[150px] xl:h-[400px] xl:w-[250px] 2xl:w-[300px]">
           <img
             src="/src/asset/service/ISP.png"
             alt="hello"
             className="mb-2 size-14 rounded-lg"
             loading="lazy"
           />
-          <span>Internet Service Provider License</span>
+          <span className="w-4/4 text-center text-xs">
+            Internet Service Provider License
+          </span>
         </div>
       </DialogTrigger>
       <DialogContent className="h-[500px] w-[900px]">
