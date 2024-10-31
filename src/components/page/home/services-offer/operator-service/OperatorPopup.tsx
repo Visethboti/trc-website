@@ -34,17 +34,17 @@ const OperatorPopup = () => {
             {Array.from({ length: 6 }).map((_, index) => (
               <div
                 key={index}
-                className="h-[90px] w-[300px] rounded-2xl bg-primary p-4 text-xs text-white md:h-[100px] md:w-[250px] lg:w-[300px]"
+                className="h-[90px] w-[300px] rounded-2xl bg-primary p-4 text-xs text-white md:h-[100px] md:w-[350px] lg:w-[300px]"
               >
                 <span>License to use mobile number or telecom numbers</span>
                 <div className="flex items-center justify-around">
                   <img
                     src="/src/asset/network-Pattern.png"
                     alt="Network Pattern"
-                    className="mr-40 h-8 rounded-lg md:mr-28 md:mt-2 md:h-[35px] lg:mr-40"
+                    className="md:mr-30 mr-40 h-8 rounded-lg md:mt-4 md:h-[48px] lg:mr-40 lg:mt-1 lg:h-[38px]"
                     loading="lazy"
                   />
-                  <div className="md:mt-2">
+                  <div className="md:mt-5 lg:mt-2">
                     <DownloadIcon />
                   </div>
                 </div>
