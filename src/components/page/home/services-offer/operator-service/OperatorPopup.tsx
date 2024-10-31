@@ -4,8 +4,8 @@ import { DownloadIcon } from "@/components/footer/SocialMediaLinks";
 const OperatorPopup = () => {
   return (
     <Dialog>
-      <DialogTrigger>
-        <div className="flex h-[200px] w-[120px] flex-col items-center justify-center rounded-2xl border lg:h-[300px] lg:w-[150px] xl:h-[400px] xl:w-[250px] 2xl:w-[300px]">
+      <DialogTrigger style={{ width: "100%" }}>
+        <div className="w-100 flex h-[203px] flex-col items-center justify-center rounded-2xl border md:h-[194px] lg:h-[240px] xl:h-[300px]">
           <img
             src="/src/asset/service/ISP.png"
             alt="hello"
