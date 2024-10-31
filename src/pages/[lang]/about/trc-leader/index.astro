@@ -41,7 +41,7 @@ const directors = allLeaders.filter(
         TRC Leader
       </TextElement>
     </header>
-    <div class="flex flex-nowrap gap-5 2xl:gap-10">
+    <div class="flex flex-nowrap gap-0 lg:gap-5 2xl:gap-10">
       <aside class="sticky top-1/2 h-full">
         <ul class="hidden lg:flex lg:flex-col">
           <li class="whitespace-nowrap"><a href="#chairman/">Chairman</a></li>
@@ -59,7 +59,7 @@ const directors = allLeaders.filter(
         </TextElement>
         <section
           aria-label="Leadership"
-          class="overflow-hidden bg-blue-900"
+          class="scroll-mt-20 overflow-hidden bg-blue-900 2xl:scroll-mt-[93px]"
           id="chairman/"
         >
           {
@@ -76,7 +76,11 @@ const directors = allLeaders.filter(
             })
           }
         </section>
-        <section aria-label="Leadership" class="" id="comissioner/">
+        <section
+          aria-label="Leadership"
+          id="comissioner/"
+          class="scroll-mt-20 2xl:scroll-mt-[93px]"
+        >
           <TextElement
             variant="subheading"
             className="py-12 text-center text-primary"
@@ -103,7 +107,11 @@ const directors = allLeaders.filter(
             </ul>
           </div>
         </section>
-        <section aria-label="Leadership" class="" id="director/">
+        <section
+          aria-label="Leadership"
+          id="director/"
+          class="scroll-mt-20 2xl:scroll-mt-[93px]"
+        >
           <TextElement
             variant="subheading"
             className="py-12 text-center text-primary"
