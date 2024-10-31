@@ -8,7 +8,7 @@ const OperatorPopup = () => {
         <div className="w-100 flex h-[203px] flex-col items-center justify-center rounded-2xl border md:h-[194px] lg:h-[240px] xl:h-[300px]">
           <img
             src="/src/asset/service/ISP.png"
-            alt="hello"
+            alt="ISP"
             className="mb-2 size-14 rounded-lg"
             loading="lazy"
           />
@@ -17,102 +17,39 @@ const OperatorPopup = () => {
           </span>
         </div>
       </DialogTrigger>
-      <DialogContent className="h-[500px] w-[900px]">
-        <div className="flex items-center justify-around">
-          <div className="flex size-[200px] flex-col items-center justify-center text-center">
+      <DialogContent className="h-auto w-screen max-w-[1000px] p-4 md:w-[90vw] md:p-8">
+        <div className="flex flex-col items-center justify-center md:flex-row md:justify-around">
+          <div className="mb-6 flex flex-col items-center justify-center text-center md:mb-0 md:w-auto">
             <img
               src="/src/asset/service/ISP-Blue.png"
-              alt="hello"
-              className="mb-2 size-14 rounded-lg"
+              alt="ISP"
+              className="mb-2 size-10 rounded-lg"
               loading="lazy"
             />
-            <span>Internet Service Provider License</span>
+            <span className="w-4/4 text-center text-xs">
+              Internet Service Provider License
+            </span>
           </div>
-          <div className="grid grid-cols-2 gap-5">
-            <div className="h-[130px] w-[300px] rounded-2xl bg-primary p-4 text-sm text-white">
-              <span>License to use mobile number or telecom numbers</span>
-              <div className="flex">
-                <img
-                  src="/src/asset/Network Pattern.png"
-                  alt="hello"
-                  className="mr-24 mt-1 h-16 rounded-lg"
-                  loading="lazy"
-                />
-                <div className="mt-8">
-                  <DownloadIcon />
+          <div className="grid grid-cols-1 gap-3 md:grid-cols-1 lg:grid-cols-2">
+            {Array.from({ length: 6 }).map((_, index) => (
+              <div
+                key={index}
+                className="h-[90px] w-[300px] rounded-2xl bg-primary p-4 text-xs text-white md:h-[100px] md:w-[250px] lg:w-[300px]"
+              >
+                <span>License to use mobile number or telecom numbers</span>
+                <div className="flex items-center justify-around">
+                  <img
+                    src="/src/asset/network-Pattern.png"
+                    alt="Network Pattern"
+                    className="mr-40 h-8 rounded-lg md:mr-28 md:mt-2 md:h-[35px] lg:mr-40"
+                    loading="lazy"
+                  />
+                  <div className="md:mt-2">
+                    <DownloadIcon />
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className="h-[130px] w-[300px] rounded-2xl bg-primary p-4 text-sm text-white">
-              <span>License to use mobile number or telecom numbers</span>
-              <div className="flex">
-                <img
-                  src="/src/asset/Network Pattern.png"
-                  alt="hello"
-                  className="mr-24 mt-1 h-16 rounded-lg"
-                  loading="lazy"
-                />
-                <div className="mt-8">
-                  <DownloadIcon />
-                </div>
-              </div>
-            </div>
-            <div className="h-[130px] w-[300px] rounded-2xl bg-primary p-4 text-sm text-white">
-              <span>License to use mobile number or telecom numbers</span>
-              <div className="flex">
-                <img
-                  src="/src/asset/Network Pattern.png"
-                  alt="hello"
-                  className="mr-24 mt-1 h-16 rounded-lg"
-                  loading="lazy"
-                />
-                <div className="mt-8">
-                  <DownloadIcon />
-                </div>
-              </div>
-            </div>
-            <div className="h-[130px] w-[300px] rounded-2xl bg-primary p-4 text-sm text-white">
-              <span>License to use mobile number or telecom numbers</span>
-              <div className="flex">
-                <img
-                  src="/src/asset/Network Pattern.png"
-                  alt="hello"
-                  className="mr-24 mt-1 h-16 rounded-lg"
-                  loading="lazy"
-                />
-                <div className="mt-8">
-                  <DownloadIcon />
-                </div>
-              </div>
-            </div>
-            <div className="h-[130px] w-[300px] rounded-2xl bg-primary p-4 text-sm text-white">
-              <span>License to use mobile number or telecom numbers</span>
-              <div className="flex">
-                <img
-                  src="/src/asset/Network Pattern.png"
-                  alt="hello"
-                  className="mr-24 mt-1 h-16 rounded-lg"
-                  loading="lazy"
-                />
-                <div className="mt-8">
-                  <DownloadIcon />
-                </div>
-              </div>
-            </div>
-            <div className="h-[130px] w-[300px] rounded-2xl bg-primary p-4 text-sm text-white">
-              <span>License to use mobile number or telecom numbers</span>
-              <div className="flex">
-                <img
-                  src="/src/asset/Network Pattern.png"
-                  alt="hello"
-                  className="mr-24 mt-1 h-16 rounded-lg"
-                  loading="lazy"
-                />
-                <div className="mt-8">
-                  <DownloadIcon />
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </DialogContent>
