@@ -13,7 +13,7 @@ interface ListItemProps extends React.ComponentPropsWithoutRef<"a"> {
 export const MobileListItem = React.forwardRef<
   React.ElementRef<"a">,
   ListItemProps
->(({ className, title, children, svgIcon, href, ...props }) => {
+>(({ className, title, children, svgIcon, href, ...props }, ref) => {
   return (
     <li>
       <a
@@ -23,9 +23,10 @@ export const MobileListItem = React.forwardRef<
           className,
         )}
         {...props}
+        ref={ref}
       >
         <div className="flex w-full justify-between">
-          <div className="pr-4 text-sm font-medium leading-tight">{title}</div>
+          <div className="pr-4 text-16 font-medium leading-tight">{title}</div>
           {svgIcon && (
             <ReactSVG
               src={svgIcon.src}
@@ -36,7 +37,7 @@ export const MobileListItem = React.forwardRef<
             />
           )}
         </div>
-        <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+        <p className="line-clamp-2 text-16 leading-snug text-muted-foreground">
           {children}
         </p>
       </a>

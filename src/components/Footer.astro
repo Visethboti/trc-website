@@ -9,6 +9,14 @@ import { defaultLang } from "@/i18n/ui";
 const locale = Astro.currentLocale ?? defaultLang;
 
 const navigationItems = getLocalizedRoutes(NavRoutes, locale);
+const quickLinks = navigationItems
+  .flatMap((item) => item.children || [])
+  .filter(
+    (child) =>
+      child.label.toLowerCase() === "mobile prefixes" ||
+      child.label.toLowerCase() === "common codes" ||
+      child.label.toLowerCase() === "emergency numbers",
+  );
 ---
 
 <footer class="mt-auto w-auto bg-primary text-primary-foreground">
@@ -47,28 +55,18 @@ const navigationItems = getLocalizedRoutes(NavRoutes, locale);
             </li>
           </ul>
         </address>
-        <div class="lg:col-span-1"></div>
+        <div class="hidden lg:col-span-1 lg:flex"></div>
         <nav class="lg:col-span-1">
           <h2 class="mb-4 text-lg font-semibold">Quick Links</h2>
           <ul class="space-y-3">
             {
-              navigationItems.map((item) =>
-                item.href ? (
-                  <li>
-                    <a href={item.href} class="hover:underline">
-                      {item.label}
-                    </a>
-                  </li>
-                ) : item.children ? (
-                  <li>
-                    <a href={item.children[0]?.href} class="hover:underline">
-                      {item.label}
-                    </a>
-                  </li>
-                ) : (
-                  ""
-                ),
-              )
+              quickLinks.map((item) => (
+                <li>
+                  <a href={item.href} class="hover:underline">
+                    {item.label}
+                  </a>
+                </li>
+              ))
             }
           </ul>
         </nav>

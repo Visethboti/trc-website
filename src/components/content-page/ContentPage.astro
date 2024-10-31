@@ -86,8 +86,8 @@ langArticles.map((article, index) => {
           <TextElement variant="subheading" className="mb-0">
             {page.data.title}
           </TextElement>
-          <div class="flex items-center gap-10 text-muted-foreground">
-            <span class="author byline flex flex-row gap-2">
+          <div class="items-center gap-10 text-muted-foreground sm:flex">
+            <span class="author byline flex flex-row gap-2 text-sm">
               <span class="italic text-secondary">Published:</span>
 
               <span class="italic">{page.data.author}</span>
@@ -95,7 +95,7 @@ langArticles.map((article, index) => {
 
             <time
               datetime={toISOString(publicationDate)}
-              class="dateline flex flex-row gap-2"
+              class="dateline flex flex-row gap-2 text-sm"
             >
               <span class="italic text-secondary">Date:</span>
 
