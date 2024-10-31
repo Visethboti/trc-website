@@ -1,9 +1,9 @@
 ---
-date: 08/07/2021
-file: royal-decrees/royal-decree-organization-function-of-national-digital-economy-society-council.pdf
+date: 09/09/2020
+file: laws-regulations/Guideline/Guideline on the Application for a Permit to Build Cell Tower.pdf
 featured: true
-image: src/asset/directives/royal-decree-functioning.png
-title: This is a Guideline in English Royal-Decree No. NS/RKT/0821/564 on the Organization and Functioning of National Council for Digital Economy and Society.
+image: src/asset/laws-regulations/royal-decree-thumnail.png
+title: Guideline on the Application for a Permit to Build Cell Tower
 type: guideline
 lang: en
 ---

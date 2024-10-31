@@ -1,27 +1,31 @@
 ---
-import TextElement from "@/components/TextElement";
+import DirectorPopup from "@/components/page/structure/DirectorPopup";
 
 import type { ImageMetadata } from "astro";
-import { Image } from "astro:assets";
+import type { AstroComponentFactory } from "astro/runtime/server/index.js";
 
-interface Props {
+interface DirectorProps {
   title: string;
   image: ImageMetadata;
   name: string;
-  organization: string;
+  organization?: string;
+  Content: AstroComponentFactory;
 }
 
-const { title, image, name, organization } = Astro.props as Props;
+const { title, image, name, organization, Content } =
+  Astro.props as DirectorProps;
 ---
 
-<figure class="grid place-items-center gap-y-5 py-10">
-  <div
-    class="relative size-52 overflow-hidden rounded-full drop-shadow-lg dark:border-gray-300"
+<section class="grid place-items-center gap-y-5">
+  <DirectorPopup
+    title={title}
+    image={image}
+    name={name}
+    organization={organization}
+    client:load
   >
-    <Image src={image} alt="" class="size-full object-cover" />
-  </div>
-  <figcaption class="text-center font-bold md:text-xl">
-    {title}<span class="ml-3">{name}</span>
-    <TextElement className="font-medium">{organization}</TextElement>
-  </figcaption>
-</figure>
+    <section class="space-y-6 py-8 text-white md:py-11">
+      <Content />
+    </section>
+  </DirectorPopup>
+</section>

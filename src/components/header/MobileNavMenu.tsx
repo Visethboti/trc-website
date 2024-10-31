@@ -14,12 +14,16 @@ import {
 } from "@/components/ui/sheet";
 
 import { Separator } from "../ui/separator";
+import { MobileListItem } from "./MobileListItem";
+import { MobileListItemTitle } from "./MobileListItemTitle";
 import { Menu } from "lucide-react";
 
 export interface NavMenuProps {
   href?: string;
   label: string;
+  icon?: ImageMetadata;
   children?: NavMenuProps[];
+  isTitle?: boolean;
 }
 
 const NavMenu: React.FC<{ navMenuItem: NavMenuProps[] }> = ({
@@ -28,7 +32,10 @@ const NavMenu: React.FC<{ navMenuItem: NavMenuProps[] }> = ({
   return (
     <Sheet>
       <SheetTrigger className="pl-4 lg:hidden">
-        <Menu className="size-8 text-blue-950" aria-label="Open mobile menu" />
+        <Menu
+          className="size-8 text-primary sm:text-white"
+          aria-label="Open mobile menu"
+        />
       </SheetTrigger>
       <SheetContent className="w-[300px] sm:w-[400px]">
         <SheetHeader className="sr-only">
@@ -51,21 +58,26 @@ const NavMenu: React.FC<{ navMenuItem: NavMenuProps[] }> = ({
                     value={`item_${index}`}
                     className="rounded border-0 data-[state=open]:bg-accent/50"
                   >
-                    <AccordionTrigger className="rounded-md bg-transparent px-4 py-2 text-sm font-medium hover:bg-accent hover:no-underline md:text-base">
+                    <AccordionTrigger className="rounded-md bg-transparent p-2 text-sm font-medium hover:bg-accent hover:no-underline md:text-base">
                       {item.label}
                     </AccordionTrigger>
-                    <AccordionContent className="border-t bg-transparent px-4 py-2">
+                    <AccordionContent className="border-t bg-transparent p-2">
                       <ul>
-                        {item.children?.map((child) => (
-                          <li
-                            key={child.label}
-                            className="rounded-md bg-transparent text-sm font-medium hover:bg-accent md:text-base"
-                          >
-                            <a className="block px-4 py-2" href={child.href}>
-                              {child.label}
-                            </a>
-                          </li>
-                        ))}
+                        {item.children?.map((child) =>
+                          child?.isTitle ? (
+                            <MobileListItemTitle
+                              key={child.label}
+                              title={child.label}
+                            />
+                          ) : (
+                            <MobileListItem
+                              key={child.label}
+                              title={child.label}
+                              href={child.href}
+                              svgIcon={child.icon}
+                            />
+                          ),
+                        )}
                       </ul>
                     </AccordionContent>
                   </AccordionItem>

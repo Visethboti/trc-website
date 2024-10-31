@@ -4,7 +4,7 @@ import { formatDate } from "@/lib/date-helper";
 import { Badge } from "@/components/ui/badge";
 import TextElement from "@/components/TextElement";
 
-import networkPattern from "@/asset/Network Pattern.png";
+import networkPattern from "@/asset/network-pattern.png";
 import type { MediaType } from "@/content/media.type";
 import type { SupportedLanguage } from "@/i18n/ui";
 import type { ImageMetadata } from "astro";
@@ -20,15 +20,14 @@ interface Props {
 }
 
 const { title, href, image, date, lang, type } = Astro.props as Props;
+const articleType = type.replace(/-/g, " ");
 ---
 
 <a href={href} aria-labelledby={`read-more-${href}`}>
   <article
-    class="relative flex h-full flex-col gap-4 rounded-2xl border border-solid border-primary bg-card text-card-foreground shadow-sm xl:flex-row xl:gap-0 xl:rounded-3xl"
+    class="relative flex h-full flex-col gap-4 overflow-hidden rounded-2xl border-2 border-solid border-primary bg-card text-card-foreground shadow-sm transition duration-300 ease-out hover:bg-primary hover:text-white xl:flex-row xl:gap-0 xl:rounded-3xl"
   >
-    <figure
-      class="relative w-full overflow-hidden rounded-t-2xl xl:rounded-3xl"
-    >
+    <figure class="relative w-full overflow-hidden">
       <Image
         src={image}
         alt="image"
@@ -43,7 +42,7 @@ const { title, href, image, date, lang, type } = Astro.props as Props;
     <div class="flex w-full flex-col gap-2 px-4 pb-4 xl:hidden">
       <TextElement
         variant="title"
-        className="line-clamp-4 scroll-m-20 text-pretty font-normal leading-6 tracking-tight"
+        className="line-clamp-3 scroll-m-20 text-pretty font-normal leading-8"
       >
         {title}
       </TextElement>
@@ -56,7 +55,7 @@ const { title, href, image, date, lang, type } = Astro.props as Props;
       <Badge
         variant="secondary"
         className="w-fit px-3 py-1 text-xs font-normal capitalize text-white hover:bg-secondary xl:px-5 xl:text-base"
-        >{type}</Badge
+        >{articleType}</Badge
       >
     </div>
     <div
@@ -65,11 +64,11 @@ const { title, href, image, date, lang, type } = Astro.props as Props;
       <Badge
         variant="secondary"
         className="mb-4 w-fit px-3 py-1 text-xs font-normal capitalize text-white hover:bg-secondary xl:px-5 xl:text-sm"
-        >{type}</Badge
+        >{articleType}</Badge
       >
       <TextElement
         variant="title"
-        className="mb-auto line-clamp-4 grow scroll-m-20 text-pretty font-normal leading-6 tracking-tight"
+        className="mb-auto line-clamp-4 grow scroll-m-20 text-pretty font-normal leading-8"
       >
         {title}
       </TextElement>
@@ -80,7 +79,9 @@ const { title, href, image, date, lang, type } = Astro.props as Props;
         {formatDate(date, lang)}
       </time>
     </div>
-    <figure class="absolute bottom-0 right-0 w-1/4 min-w-40">
+    <figure
+      class="absolute bottom-0 right-0 w-2/5 sm:w-2/5 md:w-1/4 lg:w-1/5 xl:w-1/6"
+    >
       <Image
         src={networkPattern}
         alt={title}

@@ -9,7 +9,7 @@ export const ListItemTitle: React.FC<ListItemTitleProps> = ({ title }) => {
     <li>
       <NavigationMenuLink className="flex items-center" asChild>
         <div className="my-2 rounded-md bg-primary px-4 py-3 text-white">
-          <p className="text-sm font-medium leading-none">{title}</p>
+          <p className="text-16 font-medium leading-none">{title}</p>
         </div>
       </NavigationMenuLink>
     </li>
