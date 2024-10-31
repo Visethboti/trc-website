@@ -48,26 +48,91 @@ const description =
           </TextElement>
         </header>
       </section>
-      <section aria-labelledby="chairman-keynote">
-        <TextElement variant="subheading" className="p-2">
-          Chairman’s Keynote
-        </TextElement>
-        <ChairmanKeynote />
-      </section>
-      <Separator className="mx-auto border border-yellow-500 lg:w-[50rem]" />
-      <section aria-labelledby="mission-vision">
-        <TextElement variant="subheading" className="p-2">
-          Mission & Vision
-        </TextElement>
-        <MissionVision />
-      </section>
-      <Separator className="mx-auto border border-yellow-500 lg:w-[50rem]" />
-      <section aria-labelledby="about-trc">
-        <TextElement variant="subheading" className="p-2">
-          About TRC
-        </TextElement>
-        <AboutTRC />
-      </section>
+      <div class="flex flex-nowrap gap-5 2xl:gap-10">
+        <aside class="sticky top-1/2 size-full">
+          <ul class="hidden lg:flex lg:flex-col">
+            <li class="whitespace-nowrap">
+              <a href="#chairman-keynote/">Chairman keynote</a>
+            </li>
+            <li class="whitespace-nowrap">
+              <a href="#mission-vision/">Mission & Vision</a>
+            </li>
+            <li class="whitespace-nowrap">
+              <a href="#about-trc/">About TRC</a>
+            </li>
+          </ul>
+        </aside>
+        <main>
+          <section
+            aria-labelledby="chairman-keynote"
+            id="chairman-keynote/"
+            class="scroll-mt-20 2xl:scroll-mt-[93px]"
+          >
+            <TextElement variant="subheading" className="p-2">
+              Chairman’s Keynote
+            </TextElement>
+            <ChairmanKeynote />
+          </section>
+          <Separator
+            className="mx-auto border border-yellow-500 lg:w-[50rem]"
+          />
+          <section
+            aria-labelledby="mission-vision"
+            id="mission-vision/"
+            class="scroll-mt-20 2xl:scroll-mt-[93px]"
+          >
+            <TextElement variant="subheading" className="p-2">
+              Mission & Vision
+            </TextElement>
+            <MissionVision />
+          </section>
+          <Separator
+            className="mx-auto border border-yellow-500 lg:w-[50rem]"
+          />
+          <section
+            aria-labelledby="about-trc"
+            id="about-trc/"
+            class="scroll-mt-20 2xl:scroll-mt-[93px]"
+          >
+            <TextElement variant="subheading" className="p-2">
+              About TRC
+            </TextElement>
+            <AboutTRC />
+          </section>
+        </main>
+      </div>
     </div>
   </Main>
 </OrganizationLayout>
+
+<script>
+  (() => {
+    window.addEventListener("DOMContentLoaded", () => {
+      const observer = new IntersectionObserver((entries) => {
+        let foundFirstVisible = false;
+
+        entries.forEach((entry) => {
+          const id = entry.target.getAttribute("id");
+
+          const listItem = document.querySelector(`li a[href="#${id}"]`);
+
+          if (entry.intersectionRatio > 0 && !foundFirstVisible) {
+            if (listItem && listItem.parentElement) {
+              listItem.parentElement.classList.add("text-secondary");
+            }
+            foundFirstVisible = true;
+          } else {
+            if (listItem && listItem.parentElement) {
+              listItem.parentElement.classList.remove("text-secondary");
+            }
+          }
+        });
+      });
+
+      document.querySelectorAll("section[id]").forEach((section) => {
+        observer.observe(section);
+      });
+      // eslint-disable-next-line prettier/prettier
+    });
+  })();
+</script>
