@@ -23,7 +23,7 @@ const OperatorPopup = () => {
             <img
               src="/src/asset/service/ISP-Blue.png"
               alt="ISP"
-              className="mb-2 size-10 rounded-lg"
+              className="mb-2 size-10 rounded-lg md:size-28"
               loading="lazy"
             />
             <span className="w-4/4 text-center text-xs">
