@@ -30,7 +30,11 @@ const DirectorPopup = ({
     <Dialog>
       <DialogTrigger className="grid place-items-center gap-y-5 py-10">
         <div className="relative size-52 overflow-hidden rounded-full drop-shadow-lg dark:border-gray-300">
-          <img src={image.src} alt="" className="size-full object-cover" />
+          <img
+            src={image.src}
+            alt={`${title}${name}`}
+            className="size-full object-cover"
+          />
         </div>
         <figcaption className="text-center font-bold md:text-xl">
           {title}
@@ -44,7 +48,7 @@ const DirectorPopup = ({
           <DialogTitle className="flex items-end justify-start gap-4 md:gap-8">
             <img
               src={image.src}
-              alt=""
+              alt={`${title}${name}`}
               className="size-full max-w-28 rounded-full object-cover lg:max-w-40"
             />
             <div className="grow border-b border-solid border-secondary">
@@ -61,7 +65,7 @@ const DirectorPopup = ({
             <div className="absolute right-[-24px] top-[-24px] w-1/3 min-w-40 lg:right-[-40px] lg:top-[-40px]">
               <img
                 src={networkPattern.src}
-                alt={title}
+                alt="Gradient Network"
                 loading="eager"
                 sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
                 className="rotate-180 opacity-40"

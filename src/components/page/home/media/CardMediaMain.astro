@@ -30,7 +30,7 @@ const articleType = type.replace(/-/g, " ");
     <figure class="relative w-full overflow-hidden">
       <Image
         src={image}
-        alt="image"
+        alt={type}
         widths={[384, 512, 768]}
         sizes="(max-width: 640px) 100vw, (max-width: 768px) 256px, (max-width: 1024px) 256px, 128px"
         quality="high"
@@ -84,7 +84,7 @@ const articleType = type.replace(/-/g, " ");
     >
       <Image
         src={networkPattern}
-        alt={title}
+        alt="Gradient Network"
         loading="eager"
         widths={[320, 480, 640, 768, 1024]}
         sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
