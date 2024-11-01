@@ -22,7 +22,7 @@ const { title, name, image, organization, role } = Astro.props as Props;
   <div class="size-24 shrink-0 sm:size-32 lg:size-40">
     <Image
       src={image}
-      alt={`${title} - ${name}`}
+      alt={`${title}${name}`}
       class="aspect-square size-full object-cover"
       loading="eager"
     />

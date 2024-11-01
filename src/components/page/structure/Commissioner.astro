@@ -15,7 +15,7 @@ const { title, image, name } = Astro.props as Props;
   <div
     class="relative size-52 overflow-hidden rounded-full drop-shadow-lg dark:border-gray-300"
   >
-    <Image src={image} alt="" class="size-full object-cover" />
+    <Image src={image} alt={`${title}${name}`} class="size-full object-cover" />
   </div>
   <figcaption class="text-center font-bold md:text-xl">
     {title}<span class="ml-3">{name}</span>
