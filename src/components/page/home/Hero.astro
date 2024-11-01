@@ -16,7 +16,7 @@ const { title, subtitle } = Astro.props;
   <div class="relative h-[350px] w-full md:h-[450px]">
     <Image
       src={heroImage}
-      alt=""
+      alt={title}
       class="absolute inset-0 size-full object-cover"
       loading="eager"
       quality="high"

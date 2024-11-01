@@ -48,7 +48,11 @@ const ChairmanCard = ({ children, title, name, image }: ChairmanCardProps) => {
             Chairman
           </TextElement>
           <div className="relative size-60 overflow-hidden rounded-full drop-shadow-lg dark:border-gray-300">
-            <img src={image.src} alt="" className="size-full object-cover" />
+            <img
+              src={image.src}
+              alt={`${title}${name}`}
+              className="size-full object-cover"
+            />
           </div>
           <figcaption className="py-4 text-center font-bold text-white md:text-xl">
             {title}
@@ -65,7 +69,7 @@ const ChairmanCard = ({ children, title, name, image }: ChairmanCardProps) => {
       >
         <img
           src={networkPattern.src}
-          alt={title}
+          alt="Gradient Network"
           loading="eager"
           sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
         />
