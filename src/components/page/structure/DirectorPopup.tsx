@@ -65,7 +65,7 @@ const DirectorPopup = ({
             <div className="absolute right-[-24px] top-[-24px] w-1/3 min-w-40 lg:right-[-40px] lg:top-[-40px]">
               <img
                 src={networkPattern.src}
-                alt="Gradient Network"
+                alt="gradient network"
                 loading="eager"
                 sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
                 className="rotate-180 opacity-40"

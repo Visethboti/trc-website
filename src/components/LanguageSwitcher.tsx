@@ -42,7 +42,7 @@ const LanguageSwitcher = ({
           aria-label={`Current language: ${languageNames[initialLocale]}. Click to toggle language.`}
           className={`ml-5 min-w-max rounded ${initialLocale === "km" ? "border-4" : ""} border-solid border-secondary 2xl:ml-10`}
         >
-          <img src={kmIcon.src} width="28" height="26" alt="Khmer Flag" />
+          <img src={kmIcon.src} width="28" height="26" alt="khmer flag" />
         </button>
         <button
           onClick={toggleLanguage}
@@ -50,7 +50,7 @@ const LanguageSwitcher = ({
           aria-label={`Current language: ${languageNames[initialLocale]}. Click to toggle language.`}
           className={`ml-3 min-w-max rounded ${initialLocale === "en" ? "border-4" : ""} border-solid border-secondary 2xl:ml-6`}
         >
-          <img src={enIcon.src} width="28" height="26" alt="Uk Flag" />
+          <img src={enIcon.src} width="28" height="26" alt="uk flag" />
         </button>
       </div>
       <button
@@ -59,7 +59,7 @@ const LanguageSwitcher = ({
         aria-label={`Current language: ${languageNames[initialLocale]}. Click to toggle language.`}
         className="ml-5 flex min-w-max rounded-full border-2 border-solid border-secondary sm:flex md:flex lg:hidden 2xl:ml-10"
       >
-        <img src={icon.src} width="26" height="26" alt="Flag" />
+        <img src={icon.src} width="26" height="26" alt="flag" />
       </button>
     </>
   );
