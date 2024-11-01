@@ -9,7 +9,7 @@ const OperatorService = () => {
         </div>
         <div className="min-w-100 flex h-[203px] flex-col items-center justify-center rounded-2xl border md:h-[194px] lg:h-[240px] xl:h-[300px]">
           <img
-            src="/src/asset/service/Spectrum.png"
+            src="/src/asset/service-icons/Spectrum.svg"
             alt="Spectrum"
             className="mb-2 size-14 rounded-lg"
             loading="lazy"
@@ -20,7 +20,7 @@ const OperatorService = () => {
       <div className="grid grid-cols-1 gap-8 gap-x-14 md:grid-cols-2 md:gap-3">
         <div className="flex h-[85px] min-w-[140px] flex-row items-center justify-center rounded-2xl border lg:h-[110px] xl:h-[140px]">
           <img
-            src="/src/asset/service/Tower-Construction-Permit.png"
+            src="/src/asset/service-icons/Tower Construction Permit.svg"
             alt="Tower Construction"
             className="mb-2 size-[30px] rounded-lg"
             loading="lazy"
@@ -29,7 +29,7 @@ const OperatorService = () => {
         </div>
         <div className="flex h-[85px] min-w-[140px] flex-row items-center justify-center rounded-2xl border lg:h-[110px] xl:h-[140px]">
           <img
-            src="/src/asset/service/Fiber-Cable.png"
+            src="/src/asset/service-icons/Fiber Cable.svg"
             alt="Fiber Cable"
             className="mb-2 size-[30px] rounded-lg"
             loading="lazy"
@@ -40,7 +40,7 @@ const OperatorService = () => {
         </div>
         <div className="flex h-[85px] min-w-[140px] flex-row items-center justify-center rounded-2xl border lg:h-[110px] xl:mt-2 xl:h-[140px]">
           <img
-            src="/src/asset/service/Numbering-Permit.png"
+            src="/src/asset/service-icons/Numbering Permit.svg"
             alt="Numbering Permit"
             className="mb-2 size-[30px] rounded-lg"
             loading="lazy"
@@ -51,7 +51,7 @@ const OperatorService = () => {
         </div>
         <div className="flex h-[85px] min-w-[140px] flex-row items-center justify-center rounded-2xl border lg:h-[110px] xl:mt-2 xl:h-[140px]">
           <img
-            src="/src/asset/service/Import.png"
+            src="/src/asset/service-icons/Import.svg"
             alt="Import"
             className="mb-2 ml-2 size-[30px] rounded-lg"
             loading="lazy"
@@ -64,7 +64,7 @@ const OperatorService = () => {
       <div className="grid grid-cols-1 gap-8">
         <div className="w-100 flex h-[203px] flex-col items-center justify-center rounded-2xl border md:h-[85px] md:w-[306px] md:flex-row lg:h-[110px] lg:w-[378px] xl:h-[140px] xl:w-[586px] 2xl:w-[680px]">
           <img
-            src="/src/asset/service/Complaint.png"
+            src="/src/asset/service-icons/Complaint.svg"
             alt="Complaint"
             className="mb-2 ml-2 size-14 rounded-lg"
             loading="lazy"
@@ -77,7 +77,7 @@ const OperatorService = () => {
       <div className="grid grid-cols-1 gap-8 gap-x-14 md:grid-cols-2 md:gap-x-3">
         <div className="flex h-[85px] min-w-[140px] flex-row items-center justify-center rounded-2xl border lg:h-[110px] xl:h-[140px]">
           <img
-            src="/src/asset/service/TA-Certificate.png"
+            src="/src/asset/service-icons/TA Certificate.svg"
             alt="TA Certificate"
             className="mb-2 ml-2 size-[30px] rounded-lg"
             loading="lazy"
@@ -88,7 +88,7 @@ const OperatorService = () => {
         </div>
         <div className="flex h-[85px] min-w-[140px] flex-row items-center justify-center rounded-2xl border lg:h-[110px] xl:h-[140px]">
           <img
-            src="/src/asset/service/Qualified-Agent.png"
+            src="/src/asset/service-icons/Qualified Agent.svg"
             alt="Qualified"
             className="mb-2 ml-2 size-[30px] rounded-lg"
             loading="lazy"

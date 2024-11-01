@@ -1,9 +1,9 @@
 import React from "react";
 
 import PublicService from "./PublicService";
-import Domain from "@/asset/service/Domain.png";
-import InternetCafe from "@/asset/service/Internet-Cafe.png";
-import TelecomShop from "@/asset/service/Telecom-Shop.png";
+import Domain from "@/asset/service-icons/Domain.svg";
+import InternetCafe from "@/asset/service-icons/Internet Cafe.svg";
+import TelecomShop from "@/asset/service-icons/Telecom Shop.svg";
 
 const ExternalLinks = [
   {

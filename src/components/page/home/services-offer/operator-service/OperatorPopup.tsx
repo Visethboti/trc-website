@@ -7,7 +7,7 @@ const OperatorPopup = () => {
       <DialogTrigger style={{ width: "100%" }}>
         <div className="w-100 flex h-[203px] flex-col items-center justify-center rounded-2xl border md:h-[194px] lg:h-[240px] xl:h-[300px]">
           <img
-            src="/src/asset/service/ISP.png"
+            src="/src/asset/service-icons/ISP.svg"
             alt="ISP"
             className="mb-2 size-14 rounded-lg"
             loading="lazy"
@@ -21,7 +21,7 @@ const OperatorPopup = () => {
         <div className="flex flex-col items-center justify-center md:flex-row md:justify-around">
           <div className="mb-6 flex flex-col items-center justify-center text-center md:mb-0 md:w-auto">
             <img
-              src="/src/asset/service/ISP-Blue.png"
+              src="/src/asset/service/ISP.svg"
               alt="ISP"
               className="mb-2 size-10 rounded-lg md:size-28"
               loading="lazy"
