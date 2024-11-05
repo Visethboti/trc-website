@@ -35,8 +35,8 @@ export const ListItem = React.forwardRef<React.ElementRef<"a">, ListItemProps>(
                     svg.classList.add("size-5");
                     const paths = svg.querySelectorAll("path");
                     paths.forEach((path) => {
-                      path.setAttribute("fill", "#17347B");
-                      path.setAttribute("stroke", "#17347B");
+                      path.classList.add("fill-primary");
+                      path.classList.add("stroke-primary");
                     });
                   }}
                 />

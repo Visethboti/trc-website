@@ -1,3 +1,5 @@
+import TextElement from "@/components/TextElement";
+
 import OperatorPopup from "./OperatorPopup";
 
 const OperatorService = () => {
@@ -14,51 +16,55 @@ const OperatorService = () => {
             className="mb-2 size-14 rounded-lg"
             loading="lazy"
           />
-          <span className="w-4/4 text-center text-xs">Spectrum License</span>
+          <TextElement className="w-full text-center text-xs">
+            Spectrum License
+          </TextElement>
         </div>
       </div>
-      <div className="grid grid-cols-1 gap-8 gap-x-14 md:grid-cols-2 md:gap-3">
-        <div className="flex h-[85px] min-w-[140px] flex-row items-center justify-center rounded-2xl border lg:h-[110px] xl:h-[140px]">
+      <div className="grid grid-cols-1 gap-7 gap-x-14 md:grid-cols-2 md:gap-3">
+        <div className="flex h-[85px] min-w-[140px] flex-row items-center justify-center rounded-2xl border md:h-[91px] lg:h-[112px] xl:h-[140px]">
           <img
             src="/src/asset/service-icons/Tower Construction Permit.svg"
             alt="Tower Construction"
             className="mb-2 size-[30px] rounded-lg"
             loading="lazy"
           />
-          <span className="w-3/4 text-center">Tower Construction Permit</span>
+          <TextElement className="w-3/4 text-center text-xs">
+            Tower Construction Permit
+          </TextElement>
         </div>
-        <div className="flex h-[85px] min-w-[140px] flex-row items-center justify-center rounded-2xl border lg:h-[110px] xl:h-[140px]">
+        <div className="flex h-[85px] min-w-[140px] flex-row items-center justify-center rounded-2xl border md:h-[91px] lg:h-[112px] xl:h-[140px]">
           <img
             src="/src/asset/service-icons/Fiber Cable.svg"
             alt="Fiber Cable"
             className="mb-2 size-[30px] rounded-lg"
             loading="lazy"
           />
-          <span className="w-3/4 text-center text-xs">
+          <TextElement className="w-3/4 text-center text-xs">
             Fiber Cable Construction Permit
-          </span>
+          </TextElement>
         </div>
-        <div className="flex h-[85px] min-w-[140px] flex-row items-center justify-center rounded-2xl border lg:h-[110px] xl:mt-2 xl:h-[140px]">
+        <div className="flex h-[85px] min-w-[140px] flex-row items-center justify-center rounded-2xl border md:h-[91px] lg:h-[112px] xl:mt-2 xl:h-[140px]">
           <img
             src="/src/asset/service-icons/Numbering Permit.svg"
             alt="Numbering Permit"
             className="mb-2 size-[30px] rounded-lg"
             loading="lazy"
           />
-          <span className="w-3/4 text-center text-xs">
+          <TextElement className="w-3/4 text-center text-xs">
             Telecom Numbering Permit
-          </span>
+          </TextElement>
         </div>
-        <div className="flex h-[85px] min-w-[140px] flex-row items-center justify-center rounded-2xl border lg:h-[110px] xl:mt-2 xl:h-[140px]">
+        <div className="flex h-[85px] min-w-[140px] flex-row items-center justify-center rounded-2xl border md:h-[91px] lg:h-[112px] xl:mt-2 xl:h-[140px]">
           <img
             src="/src/asset/service-icons/Import.svg"
             alt="Import"
             className="mb-2 ml-2 size-[30px] rounded-lg"
             loading="lazy"
           />
-          <span className="w-3/4 text-center text-xs">
+          <TextElement className="w-3/4 text-center text-xs">
             Equipment Importation & Distribution Permit
-          </span>
+          </TextElement>
         </div>
       </div>
       <div className="grid grid-cols-1 gap-8">
@@ -69,9 +75,9 @@ const OperatorService = () => {
             className="mb-2 ml-2 size-14 rounded-lg"
             loading="lazy"
           />
-          <span className="w-3/5 text-center text-xs">
+          <TextElement className="w-3/5 text-center text-xs">
             Frequency Interference Complaint
-          </span>
+          </TextElement>
         </div>
       </div>
       <div className="grid grid-cols-1 gap-8 gap-x-14 md:grid-cols-2 md:gap-x-3">
@@ -82,9 +88,9 @@ const OperatorService = () => {
             className="mb-2 ml-2 size-[30px] rounded-lg"
             loading="lazy"
           />
-          <span className="w-3/4 text-center text-xs">
+          <TextElement className="w-3/4 text-center text-xs">
             Equipment Type Approvel Certificate
-          </span>
+          </TextElement>
         </div>
         <div className="flex h-[85px] min-w-[140px] flex-row items-center justify-center rounded-2xl border lg:h-[110px] xl:h-[140px]">
           <img
@@ -93,9 +99,9 @@ const OperatorService = () => {
             className="mb-2 ml-2 size-[30px] rounded-lg"
             loading="lazy"
           />
-          <span className="w-3/4 text-center text-xs">
+          <TextElement className="w-3/4 text-center text-xs">
             Qualified Agent Certificate
-          </span>
+          </TextElement>
         </div>
       </div>
     </div>

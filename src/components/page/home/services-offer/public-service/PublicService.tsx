@@ -1,5 +1,7 @@
 import React from "react";
 
+import TextElement from "@/components/TextElement";
+
 import type { ImageMetadata } from "astro";
 
 interface Props {
@@ -16,7 +18,9 @@ const PublicService: React.FC<Props> = ({ label, image }) => {
         className="mb-2 size-[58px] rounded-lg md:size-[76px] lg:size-[100px]"
         loading="lazy"
       />
-      <span className="w-3/5 text-center text-xs lg:w-full">{label}</span>
+      <TextElement className="w-3/5 text-center text-xs lg:w-full">
+        {label}
+      </TextElement>
     </div>
   );
 };
