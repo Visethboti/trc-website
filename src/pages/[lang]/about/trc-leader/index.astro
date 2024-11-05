@@ -35,16 +35,18 @@ const directors = allLeaders.filter(
 ---
 
 <BaseLayout title={title}>
-  <Main>
+  <Main class="max-w-[1680px]">
     <header>
       <TextElement variant="heading" className="text-text text-center">
         TRC Leader
       </TextElement>
     </header>
-    <div class="flex flex-nowrap gap-0 lg:gap-5 2xl:gap-10">
+    <div class="flex flex-nowrap gap-0 xl:gap-5 2xl:gap-10">
       <aside class="sticky top-1/2 h-full">
-        <ul class="hidden lg:flex lg:flex-col">
-          <li class="whitespace-nowrap"><a href="#chairman/">Chairman</a></li>
+        <ul class="hidden xl:flex xl:flex-col">
+          <li class="whitespace-nowrap text-secondary">
+            <a href="#chairman/">Chairman</a>
+          </li>
           <li class="whitespace-nowrap">
             <a href="#comissioner/">Commissioner</a>
           </li>
@@ -52,7 +54,7 @@ const directors = allLeaders.filter(
         </ul>
       </aside>
 
-      <main>
+      <main class="w-full">
         <TextElement variant="body" className="py-2 pb-6 text-center">
           The Telecommunication Regulator of Cambodia is led by Chairman Chenda
           Thong, along with the following Commissioners and Directors of Bureaus
@@ -140,33 +142,45 @@ const directors = allLeaders.filter(
           </div>
         </section>
       </main>
+      <div class="invisible">
+        <ul class="hidden xl:flex xl:flex-col">
+          <li class="whitespace-nowrap">Chairman</li>
+          <li class="whitespace-nowrap">Commissioner</li>
+          <li class="whitespace-nowrap">Director</li>
+        </ul>
+      </div>
     </div>
   </Main>
 </BaseLayout>
 
 <script>
   window.addEventListener("DOMContentLoaded", () => {
-    // eslint-disable-next-line prettier/prettier
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        const id = entry.target.getAttribute("id");
+    const sections = document.querySelectorAll("section[id]");
+    const navLinks = Array.from(document.querySelectorAll("li a"));
 
-        const listItem = document.querySelector(`li a[href="#${id}"]`);
+    const handleScroll = () => {
+      let closestSection = sections[0];
+      let minDistance = Math.abs(sections[0].getBoundingClientRect().top);
 
-        if (entry.intersectionRatio > 0) {
-          if (listItem && listItem.parentElement) {
-            listItem.parentElement.classList.add("text-secondary");
-          }
-        } else {
-          if (listItem && listItem.parentElement) {
-            listItem.parentElement.classList.remove("text-secondary");
-          }
+      sections.forEach((section) => {
+        const distance = Math.abs(section.getBoundingClientRect().top);
+        if (distance < minDistance) {
+          minDistance = distance;
+          closestSection = section;
         }
       });
-    });
 
-    document.querySelectorAll("section[id]").forEach((section) => {
-      observer.observe(section);
-    });
+      navLinks.forEach((link) =>
+        link.parentElement?.classList.remove("text-secondary"),
+      );
+
+      const id = closestSection.getAttribute("id");
+      const activeLink = document.querySelector(`li a[href="#${id}"]`);
+      if (activeLink && activeLink.parentElement) {
+        activeLink.parentElement.classList.add("text-secondary");
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
   });
 </script>
