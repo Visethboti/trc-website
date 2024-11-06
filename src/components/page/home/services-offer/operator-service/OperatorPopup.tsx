@@ -35,13 +35,13 @@ const OperatorPopup = () => {
                 });
               }}
             />
-            <span className="w-full text-center text-xs">
+            <span className="w-full text-center text-xs text-primary">
               Internet Service Provider License
             </span>
           </div>
           <div className="grid grid-cols-1 gap-3 md:grid-cols-1 lg:grid-cols-2">
             <div>
-              <TextElement className="text-xs">
+              <TextElement className="mb-2 text-xs font-semibold">
                 Application requesting for ISP License
               </TextElement>
               <div className="h-[90px] w-[300px] rounded-2xl bg-primary p-4 text-xs text-white md:h-[100px] md:w-[350px] lg:w-[300px]">
@@ -59,7 +59,7 @@ const OperatorPopup = () => {
                 </div>
               </div>
             </div>
-            <div className="h-[90px] w-[300px] rounded-2xl bg-primary p-4 text-xs text-white md:h-[100px] md:w-[350px] lg:mt-5 lg:w-[300px]">
+            <div className="h-[90px] w-[300px] rounded-2xl bg-primary p-4 text-xs text-white md:h-[100px] md:w-[350px] lg:mt-7 lg:w-[300px]">
               <span>License to use mobile number or telecom numbers</span>
               <div className="flex items-center justify-around">
                 <img
@@ -74,7 +74,7 @@ const OperatorPopup = () => {
               </div>
             </div>
             <div>
-              <TextElement className="text-xs">
+              <TextElement className="mb-2 text-xs font-semibold">
                 Application requesting for ISP License
               </TextElement>
               <div className="h-[90px] w-[300px] rounded-2xl bg-primary p-4 text-xs text-white md:h-[100px] md:w-[350px] lg:w-[300px]">
@@ -92,7 +92,7 @@ const OperatorPopup = () => {
                 </div>
               </div>
             </div>
-            <div className="h-[90px] w-[300px] rounded-2xl bg-primary p-4 text-xs text-white md:h-[100px] md:w-[350px] lg:mt-5 lg:w-[300px]">
+            <div className="h-[90px] w-[300px] rounded-2xl bg-primary p-4 text-xs text-white md:h-[100px] md:w-[350px] lg:mt-7 lg:w-[300px]">
               <span>License to use mobile number or telecom numbers</span>
               <div className="flex items-center justify-around">
                 <img
@@ -107,7 +107,7 @@ const OperatorPopup = () => {
               </div>
             </div>
             <div>
-              <TextElement className="text-xs">
+              <TextElement className="mb-2 text-xs font-semibold">
                 Application requesting for ISP License
               </TextElement>
               <div className="h-[90px] w-[300px] rounded-2xl bg-primary p-4 text-xs text-white md:h-[100px] md:w-[350px] lg:w-[300px]">
@@ -125,7 +125,7 @@ const OperatorPopup = () => {
                 </div>
               </div>
             </div>
-            <div className="h-[90px] w-[300px] rounded-2xl bg-primary p-4 text-xs text-white md:h-[100px] md:w-[350px] lg:mt-5 lg:w-[300px]">
+            <div className="h-[90px] w-[300px] rounded-2xl bg-primary p-4 text-xs text-white md:h-[100px] md:w-[350px] lg:mt-7 lg:w-[300px]">
               <span>License to use mobile number or telecom numbers</span>
               <div className="flex items-center justify-around">
                 <img
