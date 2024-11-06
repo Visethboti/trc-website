@@ -58,6 +58,19 @@
         "astro/no-conflict-set-directives": "error",
         "astro/no-unused-define-vars-in-style": "error"
       }
+    },
+    {
+      "files": ["**/*.astro/*.js", "*.astro/*.js"],
+      "env": {
+        "browser": true,
+        "es2020": true
+      },
+      "parserOptions": {
+        "sourceType": "module"
+      },
+      "rules": {
+        "prettier/prettier": "off"
+      }
     }
   ]
 }

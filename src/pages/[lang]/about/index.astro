@@ -36,7 +36,7 @@ const description =
   description={description}
   image={currentImage.src}
 >
-  <Main>
+  <Main class="max-w-[1680px]">
     <div class="flex flex-col gap-12 py-8">
       <section aria-label={"about dsc"}>
         <header>
@@ -48,10 +48,10 @@ const description =
           </TextElement>
         </header>
       </section>
-      <div class="flex flex-nowrap gap-0 lg:gap-5 2xl:gap-10">
-        <aside class="sticky top-1/2 h-full lg:size-full">
-          <ul class="hidden lg:flex lg:flex-col">
-            <li class="whitespace-nowrap">
+      <div class="flex flex-nowrap gap-0 xl:gap-5 2xl:gap-10">
+        <aside class="sticky top-1/2 h-full">
+          <ul class="hidden xl:flex xl:flex-col">
+            <li class="whitespace-nowrap text-secondary">
               <a href="#chairman-keynote/">Chairman keynote</a>
             </li>
             <li class="whitespace-nowrap">
@@ -62,7 +62,7 @@ const description =
             </li>
           </ul>
         </aside>
-        <main>
+        <main class="w-full">
           <section
             aria-labelledby="chairman-keynote"
             id="chairman-keynote/"
@@ -100,39 +100,46 @@ const description =
             <AboutTRC />
           </section>
         </main>
+        <aside class="invisible">
+          <ul class="hidden xl:flex xl:flex-col">
+            <li class="whitespace-nowrap">Chairman keynote</li>
+            <li class="whitespace-nowrap">Mission & Vision</li>
+            <li class="whitespace-nowrap">About TRC</li>
+          </ul>
+        </aside>
       </div>
     </div>
   </Main>
 </OrganizationLayout>
 
 <script>
-  (() => {
-    window.addEventListener("DOMContentLoaded", () => {
-      const observer = new IntersectionObserver((entries) => {
-        let foundFirstVisible = false;
+  window.addEventListener("DOMContentLoaded", () => {
+    const sections = document.querySelectorAll("section[id]");
+    const navLinks = Array.from(document.querySelectorAll("li a"));
 
-        entries.forEach((entry) => {
-          const id = entry.target.getAttribute("id");
+    const handleScroll = () => {
+      let closestSection = sections[0];
+      let minDistance = Math.abs(sections[0].getBoundingClientRect().top);
 
-          const listItem = document.querySelector(`li a[href="#${id}"]`);
-
-          if (entry.intersectionRatio > 0 && !foundFirstVisible) {
-            if (listItem && listItem.parentElement) {
-              listItem.parentElement.classList.add("text-secondary");
-            }
-            foundFirstVisible = true;
-          } else {
-            if (listItem && listItem.parentElement) {
-              listItem.parentElement.classList.remove("text-secondary");
-            }
-          }
-        });
+      sections.forEach((section) => {
+        const distance = Math.abs(section.getBoundingClientRect().top);
+        if (distance < minDistance) {
+          minDistance = distance;
+          closestSection = section;
+        }
       });
 
-      document.querySelectorAll("section[id]").forEach((section) => {
-        observer.observe(section);
-      });
-      // eslint-disable-next-line prettier/prettier
-    });
-  })();
+      navLinks.forEach((link) =>
+        link.parentElement?.classList.remove("text-secondary"),
+      );
+
+      const id = closestSection.getAttribute("id");
+      const activeLink = document.querySelector(`li a[href="#${id}"]`);
+      if (activeLink && activeLink.parentElement) {
+        activeLink.parentElement.classList.add("text-secondary");
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+  });
 </script>
