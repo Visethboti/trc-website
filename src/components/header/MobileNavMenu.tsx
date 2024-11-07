@@ -34,7 +34,7 @@ const NavMenu: React.FC<{ navMenuItem: NavMenuProps[] }> = ({
       <SheetTrigger className="pl-4 lg:hidden">
         <Menu className="size-8 text-white" aria-label="Open mobile menu" />
       </SheetTrigger>
-      <SheetContent className="w-[300px] sm:w-[400px]">
+      <SheetContent className="top-[90px] w-[300px] sm:w-[400px]">
         <SheetHeader className="sr-only">
           <SheetTitle>Mobile Menu</SheetTitle>
           <SheetDescription>Mobile Navigation</SheetDescription>
@@ -55,7 +55,7 @@ const NavMenu: React.FC<{ navMenuItem: NavMenuProps[] }> = ({
                     value={`item_${index}`}
                     className="rounded border-0 data-[state=open]:bg-accent/50"
                   >
-                    <AccordionTrigger className="rounded-md bg-transparent p-2 text-sm font-medium hover:bg-accent hover:no-underline md:text-base">
+                    <AccordionTrigger className="bg-transparent p-2 text-sm font-medium hover:bg-accent hover:no-underline md:text-base">
                       {item.label}
                     </AccordionTrigger>
                     <AccordionContent className="border-t bg-transparent p-2">
