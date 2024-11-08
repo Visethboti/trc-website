@@ -4,19 +4,19 @@ import TextElement from "@/components/TextElement";
 
 import { ReactSVG } from "react-svg";
 
-const TowerConstructionPopup = () => {
+const InternetServicePopup = () => {
   return (
     <Dialog>
       <DialogTrigger style={{ width: "100%" }}>
-        <div className="flex h-[85px] min-w-[140px] flex-row items-center justify-center rounded-2xl border md:h-[91px] lg:h-[112px] xl:h-[140px]">
+        <div className="min-w-100 flex h-[203px] flex-col items-center justify-center rounded-2xl border md:h-[194px] lg:h-[240px] xl:h-[300px]">
           <img
-            src="/src/asset/service-icons/Tower Construction Permit.svg"
-            alt="Tower Construction"
-            className="mb-2 size-[30px] rounded-lg"
+            src="/src/asset/service-icons/ISP.svg"
+            alt="Spectrum"
+            className="mb-2 size-14 rounded-lg"
             loading="lazy"
           />
-          <TextElement className="w-3/4 text-center text-xs">
-            Tower Construction Permit
+          <TextElement className="w-full text-center text-xs">
+            Internet Service Provider License
           </TextElement>
         </div>
       </DialogTrigger>
@@ -24,7 +24,7 @@ const TowerConstructionPopup = () => {
         <div className="flex flex-col items-center justify-center md:flex-row md:justify-around">
           <div className="mb-6 flex flex-col items-center justify-center text-center md:mb-0 md:w-auto">
             <ReactSVG
-              src="/src/asset/service-icons/Tower Construction Permit.svg"
+              src="/src/asset/service-icons/Complaint.svg"
               className="mb-4 size-14"
               beforeInjection={(svg) => {
                 svg.classList.add("size-14");
@@ -36,25 +36,28 @@ const TowerConstructionPopup = () => {
               }}
             />
             <span className="w-full text-center text-xs text-primary">
-              Tower Construction Permit
+              Internet Service Provider License
             </span>
           </div>
           <div className="flex flex-col">
             <div>
               <TextElement className="w-5/5 mb-2 text-xs font-semibold md:w-[330px]">
-                Application requesting for Tower Construction Permit License
+                Application requesting for Internet Service Provider License
               </TextElement>
-              <div className="h-[100px] w-[300px] rounded-2xl bg-primary p-4 text-xs text-white">
-                <a href="/public/service/for-operator/TowerConstruction/The Application for Tower Construction.pdf">
-                  <span>The Application for Tower Construction</span>
-                  <div className="flex items-center justify-between">
+              <div className="mb-3 h-[90px] w-[300px] rounded-2xl bg-primary p-4 text-xs text-white md:h-[100px]">
+                <a href="/public/service/for-operator/InternetService/The Application for License on Operation and Provision of Internet Service.pdf">
+                  <span>
+                    The Application for License on Operation and Provision of
+                    Internet Service
+                  </span>
+                  <div className="flex items-center justify-around">
                     <img
                       src="/src/asset/network-Pattern.png"
                       alt="Network Pattern"
-                      className="md:mr-30 mr-4 mt-6 h-[39px] rounded-lg"
+                      className="md:mr-30 mr-40 h-8 rounded-lg md:mt-1 md:h-[38px]"
                       loading="lazy"
                     />
-                    <div className="mt-6">
+                    <div className="lg:mt-2">
                       <DownloadIcon />
                     </div>
                   </div>
@@ -68,4 +71,4 @@ const TowerConstructionPopup = () => {
   );
 };
 
-export default TowerConstructionPopup;
+export default InternetServicePopup;

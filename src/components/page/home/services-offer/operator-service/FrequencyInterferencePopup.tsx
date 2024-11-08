@@ -42,7 +42,8 @@ const FrequencyInterferencePopup = () => {
           <div className="flex flex-col">
             <div>
               <TextElement className="w-5/5 mb-2 text-xs font-semibold md:w-[330px]">
-                Application requesting for Fiber Cable Construction License
+                Application requesting for Frequency Interference Complaint
+                License
               </TextElement>
               <div className="mb-3 h-[100px] w-[300px] rounded-2xl bg-primary p-4 text-xs text-white">
                 <a href="/public/service/for-operator/FrequencyInterference/Complaint Form.pdf">
