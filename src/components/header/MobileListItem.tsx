@@ -32,6 +32,7 @@ export const MobileListItem = React.forwardRef<
               src={svgIcon.src}
               className="size-5"
               beforeInjection={(svg) => {
+                svg.classList.add("nav-svg-color");
                 svg.classList.add("size-5");
               }}
             />

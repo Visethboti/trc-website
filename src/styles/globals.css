@@ -57,4 +57,15 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  .menu-accordion-item[data-state="open"] {
+    color: rgba(236, 166, 1, 1) !important;
+    border-style: none !important;
+  }
+
+  .nav-svg-color {
+    background: hsl(var(--primary));
+    padding: 4px;
+    border-radius: 4px;
+  }
 }

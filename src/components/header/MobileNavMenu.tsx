@@ -53,9 +53,9 @@ const NavMenu: React.FC<{ navMenuItem: NavMenuProps[] }> = ({
                 <Accordion type="single" collapsible className="border-0">
                   <AccordionItem
                     value={`item_${index}`}
-                    className="rounded border-0 data-[state=open]:bg-accent/50"
+                    className="rounded border-0 data-[state=open]:bg-background"
                   >
-                    <AccordionTrigger className="bg-transparent p-2 text-sm font-medium hover:bg-accent hover:no-underline md:text-base">
+                    <AccordionTrigger className="menu-accordion-item bg-transparent p-2 text-sm font-bold hover:no-underline md:text-base">
                       {item.label}
                     </AccordionTrigger>
                     <AccordionContent className="border-t bg-transparent p-2">
