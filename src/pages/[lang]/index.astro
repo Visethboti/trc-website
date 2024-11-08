@@ -2,6 +2,7 @@
 import HomeCarousel from "@/components/page/home/carousel/HomeCarousel.astro";
 import HomeMain from "@/components/page/home/HomeMain.astro";
 import MediaComponent from "@/components/page/home/media/Media.astro";
+import ServicesOffer from "@/components/page/home/services-offer/index.astro";
 import SpeedTestApp from "@/components/page/home/SpeedTestApp.astro";
 import TextElement from "@/components/TextElement";
 import UnitLinks from "@/components/UnitLinks.astro";
@@ -52,9 +53,18 @@ const featuredMedia = langMedia
       It was popularised in the 1960s
     </TextElement>
     <HomeCarousel content={latestActivities} lang={lang} />
-    <div
-      class="mx-auto flex flex-col items-center gap-6 md:gap-10 lg:gap-12 xl:gap-16"
-    >
+    <div class="mx-auto flex flex-col items-center gap-12">
+      <section
+        aria-labelledby="service-offer"
+        class="mt-12 w-full bg-primary px-24 py-10 max-lg:p-10 max-md:p-5 max-sm:px-0 max-sm:py-5"
+      >
+        <div class="container">
+          <TextElement variant="heading" className="text-white">
+            Service We Offer
+          </TextElement>
+          <ServicesOffer />
+        </div>
+      </section>
       <section
         aria-labelledby="about-dsc"
         class="max-md:pty-5 px-24 max-lg:px-10 max-lg:pt-10 max-md:px-5 max-sm:p-0"

@@ -33,6 +33,11 @@ export const ListItem = React.forwardRef<React.ElementRef<"a">, ListItemProps>(
                   className="size-5"
                   beforeInjection={(svg) => {
                     svg.classList.add("size-5");
+                    const paths = svg.querySelectorAll("path");
+                    paths.forEach((path) => {
+                      path.classList.add("fill-primary");
+                      path.classList.add("stroke-primary");
+                    });
                   }}
                 />
               )}
