@@ -4,6 +4,22 @@ import TextElement from "@/components/TextElement";
 
 import { ReactSVG } from "react-svg";
 
+const documentCards = [
+  {
+    label: "Application requesting for Qualified Agent Certificate License",
+    description: "The Application for Qualified Agent Certificate",
+    link: "/public/service/for-operator/QualifiedAgent/Application for Qualified Agent Certificate.pdf",
+  },
+  {
+    description: "The Application for Renewal of Qualified Agent Certificate",
+    link: "/public/service/for-operator/QualifiedAgent/Application for Renewal of Qualified Agent Certificate.pdf",
+  },
+  {
+    description: "The Guideline to Qualified Agent Certificate",
+    link: "/public/service/for-operator/QualifiedAgent/Guideline to Qualified Agent Certificate.pdf",
+  },
+];
+
 const QualifiedAgentPopup = () => {
   return (
     <Dialog>
@@ -20,9 +36,9 @@ const QualifiedAgentPopup = () => {
           </TextElement>
         </div>
       </DialogTrigger>
-      <DialogContent className="h-auto w-[350px] md:w-[700px] lg:w-[720px]">
-        <div className="flex flex-col items-center justify-center md:flex-row md:justify-around">
-          <div className="mb-6 flex flex-col items-center justify-center text-center md:mb-0 md:w-auto">
+      <DialogContent className="h-auto w-[90vw] max-w-[1000px] p-4 md:p-8">
+        <div className="flex flex-col items-center justify-center md:flex-row md:gap-5">
+          <div className="mb-6 flex flex-col items-center justify-center text-center md:mb-0 md:w-1/3">
             <ReactSVG
               src="/src/asset/service-icons/Qualified Agent.svg"
               className="mb-4 size-14"
@@ -39,62 +55,32 @@ const QualifiedAgentPopup = () => {
               Qualified Agent Certificate
             </span>
           </div>
-          <div className="grid grid-cols-1">
-            <div>
-              <TextElement className="w-5/5 mb-2 text-xs font-semibold md:w-[300px]">
-                Application requesting for Qualified Agent Certificate License
-              </TextElement>
-              <div className="mb-3 h-[100px] w-[300px] rounded-2xl bg-primary p-4 text-xs text-white">
-                <a href="/public/service/for-operator/QualifiedAgent/Application for Qualified Agent Certificate.pdf">
-                  <span>Application for Qualified Agent Certificate</span>
-                  <div className="flex items-center justify-between">
-                    <img
-                      src="/src/asset/network-Pattern.png"
-                      alt="Network Pattern"
-                      className="md:mr-30 mr-40 mt-6 h-[39px] rounded-lg"
-                      loading="lazy"
-                    />
-                    <div className="mt-6">
-                      <DownloadIcon />
+          <div className="grid grid-cols-1 gap-5 md:w-2/3 md:grid-cols-1 md:items-end lg:grid-cols-2">
+            {documentCards.map((card, index) => (
+              <div key={index} className="flex flex-col">
+                <TextElement className="mb-2 text-xs font-semibold">
+                  {card.label}
+                </TextElement>
+                <a href={card.link} target="_blank" rel="noopener noreferrer">
+                  <div className="relative flex h-auto max-h-[150px] min-h-[120px] flex-col justify-between overflow-hidden rounded-2xl bg-primary p-4 text-xs text-white md:h-[100px] md:w-[350px] lg:w-full">
+                    <span className="mb-2 grow">{card.description}</span>
+                    <div className="flex items-start justify-between">
+                      <div>
+                        <img
+                          src="/src/asset/network-Pattern.png"
+                          alt="Network Pattern"
+                          className="absolute bottom-0 left-0 w-[106px]"
+                          loading="lazy"
+                        />
+                      </div>
+                      <div>
+                        <DownloadIcon />
+                      </div>
                     </div>
                   </div>
                 </a>
               </div>
-            </div>
-            <div className="mb-3 h-[100px] w-[300px] rounded-2xl bg-primary p-4 text-xs text-white">
-              <a href="/public/service/for-operator/QualifiedAgent/Application for Renewal of Qualified Agent Certificate.pdf">
-                <span>
-                  Application for Renewal of Qualified Agent Certificate
-                </span>
-                <div className="flex items-center justify-between">
-                  <img
-                    src="/src/asset/network-Pattern.png"
-                    alt="Network Pattern"
-                    className="md:mr-30 mr-40 mt-1 h-[38px] rounded-lg"
-                    loading="lazy"
-                  />
-                  <div className="mt-2">
-                    <DownloadIcon />
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div className="h-[100px] w-[300px] rounded-2xl bg-primary p-4 text-xs text-white">
-              <a href="/public/service/for-operator/QualifiedAgent/Guideline to Qualified Agent Certificate.pdf">
-                <span>Guideline to Qualified Agent Certificatet</span>
-                <div className="flex items-center justify-between">
-                  <img
-                    src="/src/asset/network-Pattern.png"
-                    alt="Network Pattern"
-                    className="md:mr-30 mr-4 mt-6 h-[39px] rounded-lg"
-                    loading="lazy"
-                  />
-                  <div className="mt-6">
-                    <DownloadIcon />
-                  </div>
-                </div>
-              </a>
-            </div>
+            ))}
           </div>
         </div>
       </DialogContent>

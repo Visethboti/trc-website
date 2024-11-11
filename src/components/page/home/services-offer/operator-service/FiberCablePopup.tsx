@@ -4,6 +4,18 @@ import TextElement from "@/components/TextElement";
 
 import { ReactSVG } from "react-svg";
 
+const documentCards = [
+  {
+    label: "Application requesting for Fiber Cable Construction Permit License",
+    description: "The Application form for Fiber Cable Construction",
+    link: "/public/service/for-operator/FiberCable/Application Form for Fiber Cable Construction.docx",
+  },
+  {
+    description: "The Application form for Fiber Cable Maintenance",
+    link: "/public/service/for-operator/FiberCable/Application Form for Fiber Cable Maintenance.docx",
+  },
+];
+
 const FiberCablePopup = () => {
   return (
     <Dialog>
@@ -20,9 +32,9 @@ const FiberCablePopup = () => {
           </TextElement>
         </div>
       </DialogTrigger>
-      <DialogContent className="h-auto w-[350px] md:w-[700px]">
-        <div className="flex flex-col items-center justify-center md:flex-row md:justify-around">
-          <div className="mb-6 flex flex-col items-center justify-center text-center md:mb-0 md:w-auto">
+      <DialogContent className="h-auto w-[90vw] max-w-[1000px] p-4 md:p-8">
+        <div className="flex flex-col items-center justify-center md:flex-row md:gap-5">
+          <div className="mb-6 flex flex-col items-center justify-center text-center md:mb-0 md:w-1/3">
             <ReactSVG
               src="/src/asset/service-icons/Fiber Cable.svg"
               className="mb-4 size-14"
@@ -39,44 +51,32 @@ const FiberCablePopup = () => {
               Fiber Cable Construction Permit
             </span>
           </div>
-          <div className="flex flex-col">
-            <div>
-              <TextElement className="w-5/5 mb-2 text-xs font-semibold md:w-[330px]">
-                Application requesting for Fiber Cable Construction License
-              </TextElement>
-              <div className="mb-3 h-[90px] w-[310px] rounded-2xl bg-primary p-4 text-xs text-white md:h-[100px]">
-                <a href="/public/service/for-operator/FiberCable/Application Form for Fiber Cable Construction.docx">
-                  <span>Application Form for Fiber Cable Construction</span>
-                  <div className="flex items-center justify-around">
-                    <img
-                      src="/src/asset/network-Pattern.png"
-                      alt="Network Pattern"
-                      className="md:mr-30 mr-40 h-8 rounded-lg md:mt-1 md:h-[38px]"
-                      loading="lazy"
-                    />
-                    <div className="lg:mt-2">
-                      <DownloadIcon />
+          <div className="grid grid-cols-1 gap-5 md:w-2/3 md:grid-cols-1 md:items-end lg:grid-cols-2">
+            {documentCards.map((card, index) => (
+              <div key={index} className="flex flex-col">
+                <TextElement className="mb-2 text-xs font-semibold">
+                  {card.label}
+                </TextElement>
+                <a href={card.link} target="_blank" rel="noopener noreferrer">
+                  <div className="relative flex h-auto max-h-[150px] min-h-[120px] flex-col justify-between overflow-hidden rounded-2xl bg-primary p-4 text-xs text-white md:h-[100px] md:w-[350px] lg:w-full">
+                    <span className="mb-2 grow">{card.description}</span>
+                    <div className="flex items-start justify-between">
+                      <div>
+                        <img
+                          src="/src/asset/network-Pattern.png"
+                          alt="Network Pattern"
+                          className="absolute bottom-0 left-0 w-[106px]"
+                          loading="lazy"
+                        />
+                      </div>
+                      <div>
+                        <DownloadIcon />
+                      </div>
                     </div>
                   </div>
                 </a>
               </div>
-            </div>
-            <div className="h-[90px] w-[310px] rounded-2xl bg-primary p-4 text-xs text-white md:h-[100px]">
-              <a href="/public/service/for-operator/FiberCable/Application Form for Fiber Cable Maintenance.docx">
-                <span>Application Form for Fiber Cable Maintenance</span>
-                <div className="flex items-center justify-around">
-                  <img
-                    src="/src/asset/network-Pattern.png"
-                    alt="Network Pattern"
-                    className="md:mr-30 mr-40 h-8 rounded-lg md:mt-1 md:h-[38px]"
-                    loading="lazy"
-                  />
-                  <div className="lg:mt-2">
-                    <DownloadIcon />
-                  </div>
-                </div>
-              </a>
-            </div>
+            ))}
           </div>
         </div>
       </DialogContent>
