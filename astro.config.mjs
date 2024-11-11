@@ -8,7 +8,7 @@ import { visualizer } from "rollup-plugin-visualizer";
 export default defineConfig({
   site:
     process.env.PUBLIC_SITE_URL ||
-    process.env.NEXT_PUBLIC_VERCEL_URL ||
+    `https://${process.env.NEXT_PUBLIC_VERCEL_URL}` ||
     "http://localhost:4321",
   integrations: [
     react(),
