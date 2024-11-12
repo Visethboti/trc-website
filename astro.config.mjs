@@ -9,14 +9,14 @@ console.log(
 );
 console.log(process.env.PUBLIC_SITE_URL);
 console.log(process.env.NEXT_PUBLIC_VERCEL_URL);
-console.log(`https://${process.env.VERCEL_URL}`);
+console.log(process.env.VERCEL_URL);
 
 // https://astro.build/config
 export default defineConfig({
   site:
-    process.env.PUBLIC_SITE_URL ||
-    `https://${process.env.VERCEL_URL}` ||
-    "http://localhost:4321",
+    process.env.PUBLIC_SITE_URL || process.env.VERCEL_URL
+      ? `https://${process.env.VERCEL_URL}`
+      : "http://localhost:4321",
   integrations: [
     react(),
     tailwind({
