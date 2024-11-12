@@ -69,7 +69,7 @@ const InternetCafePopup: React.FC<Props> = ({ image, networkPattern }) => {
               Internet Cafe Permit
             </span>
           </div>
-          <div className="scroll grid max-h-[300px] grid-cols-1 gap-5 overflow-y-auto md:max-h-[450px] md:w-2/3 md:grid-cols-1 md:items-end lg:grid-cols-2">
+          <div className="scroll grid max-h-[300px] grid-cols-1 gap-5 overflow-y-auto md:max-h-[450px] md:w-2/3 md:grid-cols-1 md:items-end lg:max-h-[500px] lg:grid-cols-2">
             {documentCards.map((card, index) => (
               <div key={index} className="flex flex-col">
                 <TextElement className="mb-2 text-xs font-semibold">
