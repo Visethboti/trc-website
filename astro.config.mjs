@@ -6,7 +6,10 @@ import { visualizer } from "rollup-plugin-visualizer";
 
 // https://astro.build/config
 export default defineConfig({
-  site: process.env.PUBLIC_SITE_URL || "http://localhost:4321",
+  site:
+    `https://${process.env.PUBLIC_SITE_URL}` ||
+    `https://${process.env.VERCEL_URL}` ||
+    "http://localhost:4321",
   integrations: [
     react(),
     tailwind({
