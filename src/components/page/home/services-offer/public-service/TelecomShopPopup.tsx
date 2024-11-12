@@ -11,7 +11,7 @@ interface Props {
 
 const documentCards = [
   {
-    label: "Application Form for Telecom Equipment Shoop Certificate License",
+    label: "Application Form for Telecom Equipment Shop Certificate License",
     description:
       "1. Application Permit Letter on Radiocommunication and Telecommunication equipment Sale and or Repair Shop",
     link: "/public/service/for-public/TelecomEquipmentShop/1. Application Permit Letter on Radiocommunication and Telecommunication equipment Sale and_or Repair Shop.pdf",

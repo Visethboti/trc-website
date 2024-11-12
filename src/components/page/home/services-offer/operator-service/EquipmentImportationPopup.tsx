@@ -65,7 +65,7 @@ const EquipmentImportationPopup: React.FC<Props> = ({
               }}
             />
             <span className="w-full text-center text-xs text-primary">
-              Equipment Inmortation & Distribution Permit
+              Equipment Importation & Distribution Permit
             </span>
           </div>
           <div className="md:w-3/3 grid grid-cols-1 gap-5 md:grid-cols-1 md:items-end lg:grid-cols-2">
