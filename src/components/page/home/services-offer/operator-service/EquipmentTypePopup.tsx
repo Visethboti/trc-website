@@ -56,7 +56,7 @@ const EquipmentTypePopup: React.FC<Props> = ({ image, networkPattern }) => {
         <div className="flex h-[85px] min-w-[140px] flex-row items-center justify-center rounded-2xl border lg:h-[110px] xl:h-[140px]">
           <img
             src={image.src}
-            alt="TA Certificate"
+            alt="Equipment Type Approval Certificate"
             className="mb-2 ml-2 size-[30px] rounded-lg"
             loading="lazy"
           />

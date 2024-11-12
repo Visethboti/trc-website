@@ -25,7 +25,7 @@ const TowerConstructionPopup: React.FC<Props> = ({ image, networkPattern }) => {
         <div className="min-w-100 flex h-[203px] flex-col items-center justify-center rounded-2xl border md:h-[194px] lg:h-[240px] xl:h-[300px]">
           <img
             src={image.src}
-            alt="Tower Construction"
+            alt="Internet Service Provider"
             className="mb-2 size-14 rounded-lg"
             loading="lazy"
           />

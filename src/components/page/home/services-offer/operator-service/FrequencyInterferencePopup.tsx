@@ -32,7 +32,7 @@ const FrequencyInterferencePopup: React.FC<Props> = ({
         <div className="w-100 flex h-[203px] flex-col items-center justify-center rounded-2xl border md:h-[85px] md:w-[306px] md:flex-row lg:h-[110px] lg:w-[378px] xl:h-[140px] xl:w-[586px] 2xl:w-[680px]">
           <img
             src={image.src}
-            alt="Complaint"
+            alt="Frequency Interference Complaint"
             className="mb-2 ml-2 size-14 rounded-lg"
             loading="lazy"
           />

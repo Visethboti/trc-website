@@ -55,7 +55,7 @@ const TelecomNumberingPopup: React.FC<Props> = ({ image, networkPattern }) => {
         <div className="flex h-[85px] min-w-[140px] flex-row items-center justify-center rounded-2xl border md:h-[91px] lg:h-[112px] xl:mt-2 xl:h-[140px]">
           <img
             src={image.src}
-            alt="Numbering Permit"
+            alt="Telecom Numbering Permit"
             className="mb-2 size-[30px] rounded-lg"
             loading="lazy"
           />

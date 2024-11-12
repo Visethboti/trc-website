@@ -40,12 +40,12 @@ const EquipmentImportationPopup: React.FC<Props> = ({
         <div className="flex h-[85px] min-w-[140px] flex-row items-center justify-center rounded-2xl border md:h-[91px] lg:h-[112px] xl:h-[140px]">
           <img
             src={image.src}
-            alt="Tower Construction"
+            alt="Equipment Importation & Distribution Permit"
             className="mb-2 size-[30px] rounded-lg"
             loading="lazy"
           />
           <TextElement className="w-3/4 text-center text-xs">
-            Equipment Inmortation & Distribution Permit
+            Equipment Importation & Distribution Permit
           </TextElement>
         </div>
       </DialogTrigger>
