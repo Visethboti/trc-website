@@ -8,6 +8,8 @@ console.log(
   "/////////////////////////////////////////////////////////////////",
 );
 console.log(process.env.PUBLIC_SITE_URL);
+console.log(process.env.NEXT_PUBLIC_VERCEL_URL);
+console.log(process.env.VERCEL_URL);
 
 // https://astro.build/config
 export default defineConfig({
