@@ -59,6 +59,8 @@
   }
 }
 
-.scroll{
-  scrollbar-width: none;
+.scroll {
+  scrollbar-width: thin;
+  margin: 15px;
+  padding: 10px;
 }

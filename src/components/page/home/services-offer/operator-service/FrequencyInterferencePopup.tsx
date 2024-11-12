@@ -4,6 +4,11 @@ import TextElement from "@/components/TextElement";
 
 import { ReactSVG } from "react-svg";
 
+interface Props {
+  image: ImageMetadata;
+  networkPattern: ImageMetadata;
+}
+
 const documentCards = [
   {
     label:
@@ -17,13 +22,16 @@ const documentCards = [
   },
 ];
 
-const FrequencyInterferencePopup = () => {
+const FrequencyInterferencePopup: React.FC<Props> = ({
+  image,
+  networkPattern,
+}) => {
   return (
     <Dialog>
       <DialogTrigger style={{ width: "100%" }}>
         <div className="w-100 flex h-[203px] flex-col items-center justify-center rounded-2xl border md:h-[85px] md:w-[306px] md:flex-row lg:h-[110px] lg:w-[378px] xl:h-[140px] xl:w-[586px] 2xl:w-[680px]">
           <img
-            src="/src/asset/service-icons/Complaint.svg"
+            src={image.src}
             alt="Complaint"
             className="mb-2 ml-2 size-14 rounded-lg"
             loading="lazy"
@@ -33,11 +41,11 @@ const FrequencyInterferencePopup = () => {
           </TextElement>
         </div>
       </DialogTrigger>
-      <DialogContent className="h-auto w-[90vw] max-w-[1000px] p-4 md:p-8">
+      <DialogContent className="h-auto w-[90vw] max-w-[1000px] rounded-2xl p-4 md:p-8">
         <div className="flex flex-col items-center justify-center md:flex-row md:gap-5">
           <div className="mb-6 flex flex-col items-center justify-center text-center md:mb-0 md:w-1/3">
             <ReactSVG
-              src="/src/asset/service-icons/Complaint.svg"
+              src={image.src}
               className="mb-4 size-14"
               beforeInjection={(svg) => {
                 svg.classList.add("size-14");
@@ -52,7 +60,7 @@ const FrequencyInterferencePopup = () => {
               Frequency Interference Complaint
             </span>
           </div>
-          <div className="grid grid-cols-1 gap-5 md:w-2/3 md:grid-cols-1 md:items-end lg:grid-cols-2">
+          <div className="md:w-3/3 grid grid-cols-1 gap-5 md:grid-cols-1 md:items-end lg:grid-cols-2">
             {documentCards.map((card, index) => (
               <div key={index} className="flex flex-col">
                 <TextElement className="mb-2 text-xs font-semibold">
@@ -64,7 +72,7 @@ const FrequencyInterferencePopup = () => {
                     <div className="flex items-start justify-between">
                       <div>
                         <img
-                          src="/src/asset/network-Pattern.png"
+                          src={networkPattern.src}
                           alt="Network Pattern"
                           className="absolute bottom-0 left-0 w-[106px]"
                           loading="lazy"

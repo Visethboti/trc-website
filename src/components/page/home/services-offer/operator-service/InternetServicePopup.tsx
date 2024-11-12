@@ -4,6 +4,11 @@ import TextElement from "@/components/TextElement";
 
 import { ReactSVG } from "react-svg";
 
+interface Props {
+  image: ImageMetadata;
+  networkPattern: ImageMetadata;
+}
+
 const documentCards = [
   {
     label: "Application requesting for Internet Service Provider License",
@@ -13,13 +18,13 @@ const documentCards = [
   },
 ];
 
-const TowerConstructionPopup = () => {
+const TowerConstructionPopup: React.FC<Props> = ({ image, networkPattern }) => {
   return (
     <Dialog>
       <DialogTrigger style={{ width: "100%" }}>
         <div className="min-w-100 flex h-[203px] flex-col items-center justify-center rounded-2xl border md:h-[194px] lg:h-[240px] xl:h-[300px]">
           <img
-            src="/src/asset/service-icons/ISP.svg"
+            src={image.src}
             alt="Tower Construction"
             className="mb-2 size-14 rounded-lg"
             loading="lazy"
@@ -29,11 +34,11 @@ const TowerConstructionPopup = () => {
           </TextElement>
         </div>
       </DialogTrigger>
-      <DialogContent className="h-auto w-[90vw] max-w-[600px] p-4 md:p-8">
+      <DialogContent className="h-auto w-[90vw] max-w-[600px] rounded-2xl p-4 md:p-8">
         <div className="flex flex-col items-center justify-center md:flex-row md:gap-5">
           <div className="mb-6 flex flex-col items-center justify-center text-center md:mb-0 md:w-1/3">
             <ReactSVG
-              src="/src/asset/service-icons/ISP.svg"
+              src={image.src}
               className="mb-4 size-14"
               beforeInjection={(svg) => {
                 svg.classList.add("size-14");
@@ -60,7 +65,7 @@ const TowerConstructionPopup = () => {
                     <div className="flex items-start justify-between">
                       <div>
                         <img
-                          src="/src/asset/network-Pattern.png"
+                          src={networkPattern.src}
                           alt="Network Pattern"
                           className="absolute bottom-0 left-0 w-[106px]"
                           loading="lazy"

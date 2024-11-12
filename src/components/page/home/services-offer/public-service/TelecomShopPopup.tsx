@@ -11,61 +11,45 @@ interface Props {
 
 const documentCards = [
   {
-    label: "Application requesting for Spectrum License",
-    description: "1. Radio Amateur License",
-    link: "/public/service/for-operator/SpectrumLicense/1. Radio-Amateur-License.docx",
+    label: "Application Form for Telecom Equipment Shoop Certificate License",
+    description:
+      "1. Application Permit Letter on Radiocommunication and Telecommunication equipment Sale and or Repair Shop",
+    link: "/public/service/for-public/TelecomEquipmentShop/1. Application Permit Letter on Radiocommunication and Telecommunication equipment Sale and_or Repair Shop.pdf",
   },
   {
-    description: "2. Radiocom MFHFVHF UF License",
-    link: "/public/service/for-operator/SpectrumLicense/2. Radiocom-MFHFVHF-UHF-License.docx",
+    description:
+      "2. Application for change of address, store, and or repair of equipment, equipment, radio and telecommunications",
+    link: "/public/service/for-public/TelecomEquipmentShop/2. Application for change of address, store, and _ or repair of equipment, equipment, radio and telecommunications..pdf",
   },
   {
-    description: "3. Radio Sound Broadcasting",
-    link: "/public/service/for-operator/SpectrumLicense/3. Radio_Sound_Broadcasting.docx",
+    description:
+      "3. Application Business Transmission Validity of Licenses, Opening and or Repairing Equipment, Equipment, Radio and Telecommunication",
+    link: "/public/service/for-public/TelecomEquipmentShop/3. Application Business Transmission _ Validity of Licenses, Opening and _ or Repairing Equipment, Equipment, Radio and Telecommunication.pdf",
   },
   {
-    description: "4. Television VHFUHF License",
-    link: "/public/service/for-operator/SpectrumLicense/4. Television-VHFUHF-License.docx",
+    description:
+      "4. Application Offer application, store, and or repair equipment, equipment, telecommunication and telecommunication",
+    link: "/public/service/for-public/TelecomEquipmentShop/4. Application Offer application, store, and _ or repair equipment, equipment, telecommunication and telecommunication..pdf",
   },
   {
-    description: "5. Radio Microwave Station License",
-    link: "/public/service/for-operator/SpectrumLicense/5. Radio-Microwave-Station-License.docx",
-  },
-  {
-    description: "6. Base Station for Mobile",
-    link: "/public/service/for-operator/SpectrumLicense/6. Base_Station_for_Mobile.docx",
-  },
-  {
-    description: "7. Broadband Wireless Access License",
-    link: "/public/service/for-operator/SpectrumLicense/7. Broadband-Wireless-Access-License.docx",
-  },
-  {
-    description: "8. Radio VSAT License",
-    link: "/public/service/for-operator/SpectrumLicense/8. Radio-VSAT-License.docx",
-  },
-  {
-    description: "9. Radio INMARSAT License",
-    link: "/public/service/for-operator/SpectrumLicense/9. Radio-INMARSAT-License.docx",
-  },
-  {
-    description: "10. Radio SATELLITE PHONE License",
-    link: "/public/service/for-operator/SpectrumLicense/10. Radio-SATELLITE-PHONE-License.docx",
+    description: "Guidline",
+    link: "/public/service/for-public/TelecomEquipmentShop/Guideline.pdf",
   },
 ];
 
-const SpectrumPopup: React.FC<Props> = ({ image, networkPattern }) => {
+const TelecomShopPopup: React.FC<Props> = ({ image, networkPattern }) => {
   return (
     <Dialog>
       <DialogTrigger style={{ width: "100%" }}>
-        <div className="min-w-100 flex h-[203px] flex-col items-center justify-center rounded-2xl border md:h-[194px] lg:h-[240px] xl:h-[300px]">
+        <div className="flex max-h-[620px] min-h-[200px] flex-col items-center justify-center space-y-4 rounded-xl border md:h-[300px] md:w-[196px] lg:w-[244px] xl:h-[450px] xl:w-[369px] 2xl:h-[500px] 2xl:w-[400px]">
           <img
             src={image.src}
-            alt="Spectrum"
-            className="mb-2 size-14 rounded-lg"
+            alt="Hello"
+            className="mb-2 size-[58px] rounded-lg md:size-[76px] lg:size-[100px]"
             loading="lazy"
           />
-          <TextElement className="w-full text-center text-xs">
-            Spectrum License
+          <TextElement className="w-5/5 text-center text-xs">
+            Telecom Equipment Shop
           </TextElement>
         </div>
       </DialogTrigger>
@@ -85,7 +69,7 @@ const SpectrumPopup: React.FC<Props> = ({ image, networkPattern }) => {
               }}
             />
             <span className="w-full text-center text-xs text-primary">
-              Spectrum License
+              Telecom Equipment Shop
             </span>
           </div>
           <div className="scroll grid max-h-[300px] grid-cols-1 gap-5 overflow-y-auto md:max-h-[450px] md:w-2/3 md:grid-cols-1 md:items-end lg:grid-cols-2">
@@ -95,7 +79,7 @@ const SpectrumPopup: React.FC<Props> = ({ image, networkPattern }) => {
                   {card.label}
                 </TextElement>
                 <a href={card.link} target="_blank" rel="noopener noreferrer">
-                  <div className="relative flex h-auto max-h-[150px] min-h-[120px] flex-col justify-between overflow-hidden rounded-2xl bg-primary p-4 text-[13px] text-white md:h-[100px] md:w-[350px] lg:w-full">
+                  <div className="relative flex h-auto max-h-[150px] min-h-[120px] flex-col justify-between overflow-hidden rounded-2xl bg-primary p-4 text-[13px] text-white md:h-[145px] md:w-[350px] lg:w-full">
                     <span className="mb-2 grow">{card.description}</span>
                     <div className="flex items-start justify-between">
                       <div>
@@ -121,4 +105,4 @@ const SpectrumPopup: React.FC<Props> = ({ image, networkPattern }) => {
   );
 };
 
-export default SpectrumPopup;
+export default TelecomShopPopup;

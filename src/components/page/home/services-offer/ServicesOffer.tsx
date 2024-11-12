@@ -2,7 +2,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import TextElement from "@/components/TextElement";
 
 import OperatorService from "./operator-service/OperatorService";
-import PublicServiceList from "./public-service/PublicServiceList";
+import PublicService from "./public-service/PublicService";
 
 export function ServicesOffer() {
   return (
@@ -16,7 +16,7 @@ export function ServicesOffer() {
         </TabsTrigger>
       </TabsList>
       <TabsContent value="public" className="text-white">
-        <PublicServiceList />
+        <PublicService />
       </TabsContent>
       <TabsContent value="operator" className="text-white">
         <OperatorService />
