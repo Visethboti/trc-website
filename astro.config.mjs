@@ -15,7 +15,7 @@ console.log(process.env.VERCEL_URL);
 export default defineConfig({
   site:
     process.env.PUBLIC_SITE_URL ||
-    process.env.NEXT_PUBLIC_VERCEL_URL ||
+    process.env.VERCEL_URL ||
     "http://localhost:4321",
   integrations: [
     react(),
