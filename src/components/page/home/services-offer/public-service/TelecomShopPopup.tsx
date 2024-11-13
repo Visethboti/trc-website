@@ -58,9 +58,8 @@ const TelecomShopPopup: React.FC<Props> = ({ image, networkPattern }) => {
           <div className="mb-6 flex flex-col items-center justify-center text-center md:mb-0 md:w-1/3">
             <ReactSVG
               src={image.src}
-              className="mb-4 size-14"
               beforeInjection={(svg) => {
-                svg.classList.add("size-14");
+                svg.classList.add("size-28");
                 const paths = svg.querySelectorAll("path");
                 paths.forEach((path) => {
                   path.classList.add("fill-primary");
@@ -79,7 +78,7 @@ const TelecomShopPopup: React.FC<Props> = ({ image, networkPattern }) => {
                   {card.label}
                 </TextElement>
                 <a href={card.link} target="_blank" rel="noopener noreferrer">
-                  <div className="relative flex h-auto max-h-[150px] min-h-[120px] flex-col justify-between overflow-hidden rounded-2xl bg-primary p-4 text-[13px] text-white md:h-[145px] md:w-[350px] lg:w-full">
+                  <div className="relative flex h-auto min-h-[120px] w-full flex-col justify-between overflow-hidden rounded-2xl bg-primary p-4 text-[13px] text-white md:h-[145px] lg:w-full">
                     <span className="mb-2 grow">{card.description}</span>
                     <div className="flex items-start justify-between">
                       <div>

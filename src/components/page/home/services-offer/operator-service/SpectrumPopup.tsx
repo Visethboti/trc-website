@@ -61,10 +61,10 @@ const SpectrumPopup: React.FC<Props> = ({ image, networkPattern }) => {
           <img
             src={image.src}
             alt="Spectrum"
-            className="mb-2 size-14 rounded-lg"
+            className="mb-2 size-24 rounded-lg"
             loading="lazy"
           />
-          <TextElement className="w-full text-center text-xs">
+          <TextElement className="w-2/4 text-center text-[12px] lg:text-[13px]">
             Spectrum License
           </TextElement>
         </div>
@@ -74,12 +74,10 @@ const SpectrumPopup: React.FC<Props> = ({ image, networkPattern }) => {
           <div className="mb-6 flex flex-col items-center justify-center text-center md:mb-0 md:w-1/3">
             <ReactSVG
               src={image.src}
-              className="mb-4 size-14"
               beforeInjection={(svg) => {
-                svg.classList.add("size-14");
+                svg.classList.add("size-24");
                 const paths = svg.querySelectorAll("path");
                 paths.forEach((path) => {
-                  path.classList.add("fill-primary");
                   path.classList.add("stroke-primary");
                 });
               }}
