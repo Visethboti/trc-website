@@ -9,10 +9,10 @@ export function ServicesOffer() {
     <Tabs defaultValue="public" className="w-full">
       <TabsList className="flex flex-row items-center justify-evenly bg-primary p-12">
         <TabsTrigger value="public" className="rounded-3xl">
-          <TextElement variant="title">For Public</TextElement>{" "}
+          <TextElement variant="title">For Public</TextElement>
         </TabsTrigger>
         <TabsTrigger value="operator" className="rounded-3xl">
-          <TextElement variant="title">For Operator</TextElement>{" "}
+          <TextElement variant="title">For Operator</TextElement>
         </TabsTrigger>
       </TabsList>
       <TabsContent value="public" className="text-white">
