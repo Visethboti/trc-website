@@ -1,7 +1,10 @@
+import { useEffect, useState } from "react";
+
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { DownloadIcon } from "@/components/footer/SocialMediaLinks";
 import TextElement from "@/components/TextElement";
 
+import { X } from "lucide-react";
 import { ReactSVG } from "react-svg";
 
 interface Props {
@@ -54,9 +57,34 @@ const documentCards = [
 ];
 
 const SpectrumPopup: React.FC<Props> = ({ image, networkPattern }) => {
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
+  const [, setUrl] = useState("");
+
+  useEffect(() => {
+    const handleHashChange = () => {
+      setUrl(window.location.hash);
+      console.log(window.location.hash);
+
+      if (window.location.href.includes("spectrum-license")) {
+        setIsDialogOpen(true);
+      }
+    };
+
+    window.addEventListener("hashchange", handleHashChange);
+    handleHashChange();
+
+    return () => {
+      window.removeEventListener("hashchange", handleHashChange);
+    };
+  }, []);
+
+  const handleClick = () => {
+    setIsDialogOpen(true);
+  };
+
   return (
-    <Dialog>
-      <DialogTrigger style={{ width: "100%" }}>
+    <Dialog open={isDialogOpen}>
+      <DialogTrigger onClick={handleClick} style={{ width: "100%" }}>
         <div className="min-w-100 flex h-[203px] flex-col items-center justify-center rounded-2xl border md:h-[194px] lg:h-[240px] xl:h-[300px]">
           <img
             src={image.src}
@@ -70,6 +98,14 @@ const SpectrumPopup: React.FC<Props> = ({ image, networkPattern }) => {
         </div>
       </DialogTrigger>
       <DialogContent className="h-auto w-[90vw] max-w-[1000px] rounded-2xl p-4 md:p-8">
+        <button
+          className="absolute right-4 top-4 z-50 rounded-sm p-1 opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
+          onClick={() => setIsDialogOpen(false)}
+          aria-label="Close"
+        >
+          <X className="size-4" />
+          <span className="sr-only">Close</span>
+        </button>
         <div className="flex flex-col items-center justify-center md:flex-row md:gap-5">
           <div className="mb-6 flex flex-col items-center justify-center text-center md:mb-0 md:w-1/3">
             <ReactSVG

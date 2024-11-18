@@ -1,7 +1,10 @@
+import { useEffect, useState } from "react";
+
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { DownloadIcon } from "@/components/footer/SocialMediaLinks";
 import TextElement from "@/components/TextElement";
 
+import { X } from "lucide-react";
 import { ReactSVG } from "react-svg";
 
 interface Props {
@@ -26,9 +29,34 @@ const FrequencyInterferencePopup: React.FC<Props> = ({
   image,
   networkPattern,
 }) => {
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
+  const [, setUrl] = useState("");
+
+  useEffect(() => {
+    const handleHashChange = () => {
+      setUrl(window.location.hash);
+      console.log(window.location.hash);
+
+      if (window.location.href.includes("frequency-interference-complaint")) {
+        setIsDialogOpen(true);
+      }
+    };
+
+    window.addEventListener("hashchange", handleHashChange);
+    handleHashChange();
+
+    return () => {
+      window.removeEventListener("hashchange", handleHashChange);
+    };
+  }, []);
+
+  const handleClick = () => {
+    setIsDialogOpen(true);
+  };
+
   return (
-    <Dialog>
-      <DialogTrigger style={{ width: "100%" }}>
+    <Dialog open={isDialogOpen}>
+      <DialogTrigger onClick={handleClick} style={{ width: "100%" }}>
         <div className="w-100 flex h-[203px] flex-col items-center justify-center rounded-2xl border md:h-[85px] md:w-[306px] md:flex-row lg:h-[110px] lg:w-[378px] xl:h-[140px] xl:w-[586px] 2xl:w-[680px]">
           <img
             src={image.src}
@@ -42,6 +70,14 @@ const FrequencyInterferencePopup: React.FC<Props> = ({
         </div>
       </DialogTrigger>
       <DialogContent className="h-auto w-[90vw] max-w-[1000px] rounded-2xl p-4 md:p-8">
+        <button
+          className="absolute right-4 top-4 z-50 rounded-sm p-1 opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
+          onClick={() => setIsDialogOpen(false)}
+          aria-label="Close"
+        >
+          <X className="size-4" />
+          <span className="sr-only">Close</span>
+        </button>
         <div className="flex flex-col items-center justify-center md:flex-row md:gap-5">
           <div className="mb-6 flex flex-col items-center justify-center text-center md:mb-0 md:w-1/3">
             <ReactSVG
