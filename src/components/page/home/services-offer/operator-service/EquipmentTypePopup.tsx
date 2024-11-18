@@ -54,15 +54,16 @@ const documentCards = [
 
 const EquipmentTypePopup: React.FC<Props> = ({ image, networkPattern }) => {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
-  const [, setUrl] = useState("");
 
   useEffect(() => {
     const handleHashChange = () => {
-      setUrl(window.location.hash);
-      console.log(window.location.hash);
-
       if (window.location.href.includes("equipment-ta-certificate")) {
         setIsDialogOpen(true);
+        history.replaceState(
+          null,
+          "",
+          window.location.pathname + window.location.search,
+        );
       }
     };
 

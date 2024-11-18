@@ -22,15 +22,16 @@ const documentCards = [
 
 const TowerConstructionPopup: React.FC<Props> = ({ image, networkPattern }) => {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
-  const [, setUrl] = useState("");
 
   useEffect(() => {
     const handleHashChange = () => {
-      setUrl(window.location.hash);
-      console.log(window.location.hash);
-
       if (window.location.href.includes("tower-construction-permit")) {
         setIsDialogOpen(true);
+        history.replaceState(
+          null,
+          "",
+          window.location.pathname + window.location.search,
+        );
       }
     };
 

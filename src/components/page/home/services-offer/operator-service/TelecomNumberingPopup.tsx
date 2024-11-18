@@ -53,15 +53,16 @@ const documentCards = [
 
 const TelecomNumberingPopup: React.FC<Props> = ({ image, networkPattern }) => {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
-  const [, setUrl] = useState("");
 
   useEffect(() => {
     const handleHashChange = () => {
-      setUrl(window.location.hash);
-      console.log(window.location.hash);
-
       if (window.location.href.includes("telecom-numbering-permit")) {
         setIsDialogOpen(true);
+        history.replaceState(
+          null,
+          "",
+          window.location.pathname + window.location.search,
+        );
       }
     };
 

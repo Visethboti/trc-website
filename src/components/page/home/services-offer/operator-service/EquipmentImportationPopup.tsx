@@ -38,19 +38,20 @@ const EquipmentImportationPopup: React.FC<Props> = ({
   networkPattern,
 }) => {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
-  const [, setUrl] = useState("");
 
   useEffect(() => {
     const handleHashChange = () => {
-      setUrl(window.location.hash);
-      console.log(window.location.hash);
-
       if (
         window.location.href.includes(
           "equipment-importation-distribution-permit",
         )
       ) {
         setIsDialogOpen(true);
+        history.replaceState(
+          null,
+          "",
+          window.location.pathname + window.location.search,
+        );
       }
     };
 

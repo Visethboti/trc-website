@@ -30,15 +30,16 @@ const FrequencyInterferencePopup: React.FC<Props> = ({
   networkPattern,
 }) => {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
-  const [, setUrl] = useState("");
 
   useEffect(() => {
     const handleHashChange = () => {
-      setUrl(window.location.hash);
-      console.log(window.location.hash);
-
       if (window.location.href.includes("frequency-interference-complaint")) {
         setIsDialogOpen(true);
+        history.replaceState(
+          null,
+          "",
+          window.location.pathname + window.location.search,
+        );
       }
     };
 
