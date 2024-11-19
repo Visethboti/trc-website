@@ -14,10 +14,14 @@ export const MobileListItem = React.forwardRef<
   React.ElementRef<"a">,
   ListItemProps
 >(({ className, title, children, svgIcon, href, ...props }, ref) => {
+  const isDomainKH = title === "Domain .KH";
+  const domainHref = "https://domain.gov.kh/";
   return (
     <li>
       <a
-        href={href}
+        href={isDomainKH ? domainHref : href}
+        target={isDomainKH ? "_blank" : undefined}
+        rel="noopener noreferrer"
         className={cn(
           "ml-1 block select-none rounded-md px-2 py-2 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
           className,
