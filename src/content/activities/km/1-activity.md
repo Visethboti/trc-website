@@ -1,7 +1,7 @@
 ---
 categories: ["News"]
 date: 11/20/2020
-featured: false
+featured: true
 image: src/asset/media/activities/1-activity/photo-1.jpg
 title: Minister Vandeth Chea Participates in the TRC Leadership Transfer Ceremony
 author: Telecommunication Regulator of Cambodia
