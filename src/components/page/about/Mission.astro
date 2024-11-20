@@ -1,0 +1,70 @@
+---
+import TextElement from "../../TextElement";
+import image from "/src/asset/about/mission.svg";
+import { Image } from "astro:assets";
+
+const missionList = [
+  {
+    text: "TRC performs its missions in response to the needs of consumers, operators, service providers, and suppliers, in line with the Royal Government of Cambodia's policy towards ASEAN Economic Integration and Regional Globalization. The missions of the TRC include, but are not limited to:",
+  },
+];
+const missiontrcList = [
+  {
+    text: "Implementing the National Broadband Policy and Strategic Action Plan adopted by the Royal Government of Cambodia; ",
+  },
+  {
+    text: "Enforcing policies and regulations related to the telecommunications sector and information communication technology, as devised by the Ministry of Post and Telecommunications;",
+  },
+  {
+    text: "Promoting public understanding of telecommunications and ICT sector;",
+  },
+  {
+    text: "​Guaranteeing that consumers have access to acceptable and quality services at affordable prices;",
+  },
+  {
+    text: "Providing transparent regulatory processes and guidance and enforcing regulations to ensure fair competition and efficiency in the telecommunications industry",
+  },
+  {
+    text: "Following international standards and practices that contribute to the development and modernization of services and infrastructure;",
+  },
+  {
+    text: "​Ensuring the best use of scarce resources such as frequency spectrum and telecommunications numbering;",
+  },
+  {
+    text: "​Consulting regularly with consumers and service providers while facilitating collaboration in the telecommunications industry.",
+  },
+];
+---
+
+<div class="flex flex-col gap-8 md:flex-row">
+  <div class="flex w-full justify-center md:w-1/2">
+    <Image
+      src={image}
+      alt="mission"
+      sizes="(max-width: 640px) 100vw, (max-width: 768px) 256px, (max-width: 1024px) 256px, 128px"
+      quality="high"
+      loading="lazy"
+      format="webp"
+    />
+  </div>
+  <div class="w-full md:w-1/2">
+    <ul class="space-y-3">
+      {
+        missionList.map((about) => (
+          <li>
+            <TextElement variant="base">{about.text}</TextElement>
+          </li>
+        ))
+      }
+    </ul>
+    <ul class="list-disc pl-4">
+      {
+        missiontrcList.map((mission) => (
+          <li>
+            <TextElement variant="base">{mission.text}</TextElement>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</div>

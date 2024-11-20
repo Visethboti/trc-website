@@ -5,33 +5,7 @@ import { Image } from "astro:assets";
 
 const missionList = [
   {
-    text: "The Telecommunication Regulator of Cambodia (TRC) facilitates and regulates the telecommunications sector, promoting investment, innovation, and fair competition while providing high-quality, affordable, and accessible services to consumers. TRC contributes to the economic growth of Cambodia and uphold transparency, accountability, and ethical conduct.",
-  },
-  {
-    text: "The Telecommunication Regulator of Cambodia (TRC) performs its missions in response to the needs of consumers, operators, service providers, and suppliers in line with the Royal Government of Cambodia's policy towards ASEAN Economic Integration and Regional Globalization. The missions of the TRC include, but are not limited to: ",
-  },
-];
-const missiontrcList = [
-  {
-    text: "Implementing the National Broadband Policy and Strategic Action Plan adopted by the Royal Government of Cambodia;  ",
-  },
-  {
-    text: "Enforcing policies and regulations related to the telecommunications sector and information communication technology, as devised by the Ministry of Post and Telecommunications;",
-  },
-  {
-    text: "Promoting public understanding and ensuring acceptable telecommunications services for everyone;",
-  },
-  {
-    text: "Ensuring that consumers enjoy quality services at affordable prices;",
-  },
-  {
-    text: "Providing transparent regulatory processes and guidance;",
-  },
-  {
-    text: "Enforcing regulations for fair competition and efficiency in the telecommunications industry;",
-  },
-  {
-    text: "Following international standards and practices that contribute to the development and",
+    text: "The Telecommunication Regulator of Cambodia (TRC) aspires to build a dynamic and inclusive telecommunications sector that empowers Cambodia’s people, promotes sustainable economic growth, and advances the telecommunications and ICT sector landscape in Cambodia. TRC is dedicated to regulating and fostering a fair, competitive, and innovative market where providers can thrive, and consumers benefit from high-quality, affordable, and accessible telecommunications services.With a strong commitment to transparency, accountability, and ethical integrity, TRC strives to uphold a fair regulatory framework that meets the needs of service providers, users, and the broader community. As regulators of telecommunications in Cambodia, TRC plays a pivotal role in aligning the sector with development goals of the Royal Government of Cambodia, enhancing regional integration, and supporting the nation’s journey toward greater connectivity and prosperity.",
   },
 ];
 ---
@@ -53,15 +27,6 @@ const missiontrcList = [
         missionList.map((about) => (
           <li>
             <TextElement variant="base">{about.text}</TextElement>
-          </li>
-        ))
-      }
-    </ul>
-    <ul class="list-decimal pl-4 pt-4">
-      {
-        missiontrcList.map((mission) => (
-          <li>
-            <TextElement variant="base">{mission.text}</TextElement>
           </li>
         ))
       }
