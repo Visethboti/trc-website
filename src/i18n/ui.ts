@@ -60,7 +60,7 @@ export const ui: Record<string, Record<string, string>> = {
     "nav.about": "About",
     "nav.projects": "Projects",
     "home.whatwedo": "What We Do",
-    "home.media": "Media_KH",
+    "home.media": "Media",
     "home.seeMoreMedia": "See more media",
     "structure.heading": "Organization Structure of D.S.C.",
     "structure.intro":

@@ -25,10 +25,17 @@ const allActivities = await getCollection("activities");
 const langActivities = allActivities.filter((tip) => tip.data.lang === lang);
 
 const latestActivities = langActivities
+  .filter((tip) => tip.data.featured === false)
   .sort(
     (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime(),
   )
-  .slice(0, 3);
+  .slice(0, 2);
+
+const firstActivity = langActivities.filter(
+  (tip) => tip.data.featured === true,
+);
+
+const activitiesArray = [...firstActivity, ...latestActivities];
 
 const allEvents = await getCollection("events");
 const allNewsReleases = await getCollection("news-releases");
@@ -52,7 +59,7 @@ const featuredMedia = langMedia
     <TextElement variant="heading" className="sr-only">
       It was popularised in the 1960s
     </TextElement>
-    <HomeCarousel content={latestActivities} lang={lang} />
+    <HomeCarousel content={activitiesArray} lang={lang} />
     <div class="mx-auto flex flex-col items-center gap-12">
       <section
         aria-labelledby="service-offer"
