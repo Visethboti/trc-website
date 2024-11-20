@@ -81,14 +81,14 @@ const TelecomNumberingPopup: React.FC<Props> = ({ image, networkPattern }) => {
   return (
     <Dialog open={isDialogOpen}>
       <DialogTrigger onClick={handleClick} style={{ width: "100%" }}>
-        <div className="flex h-[85px] min-w-[140px] flex-row items-center justify-center rounded-2xl border md:h-[91px] lg:h-[112px] xl:mt-2 xl:h-[140px]">
+        <div className="flex h-[85px] min-w-[140px] flex-row items-center justify-center rounded-2xl border md:h-[91px] lg:h-[112px] xl:h-[140px]">
           <img
             src={image.src}
             alt="Telecom Numbering Permit"
-            className="mb-2 size-[30px] rounded-lg"
+            className="size-12 rounded-lg lg:size-20"
             loading="lazy"
           />
-          <TextElement className="w-3/4 text-center text-xs">
+          <TextElement className="w-2/4 text-center text-[12px] lg:text-[13px]">
             Telecom Numbering Permit
           </TextElement>
         </div>
@@ -106,9 +106,8 @@ const TelecomNumberingPopup: React.FC<Props> = ({ image, networkPattern }) => {
           <div className="mb-6 flex flex-col items-center justify-center text-center md:mb-0 md:w-1/3">
             <ReactSVG
               src={image.src}
-              className="mb-4 size-14"
               beforeInjection={(svg) => {
-                svg.classList.add("size-14");
+                svg.classList.add("size-24");
                 const paths = svg.querySelectorAll("path");
                 paths.forEach((path) => {
                   path.classList.add("fill-primary");

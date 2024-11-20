@@ -62,10 +62,10 @@ const QualifiedAgentPopup: React.FC<Props> = ({ image, networkPattern }) => {
           <img
             src={image.src}
             alt="Qualified"
-            className="mb-2 ml-2 size-[30px] rounded-lg"
+            className="size-12 rounded-lg lg:size-20"
             loading="lazy"
           />
-          <TextElement className="w-3/4 text-center text-xs">
+          <TextElement className="w-2/4 text-center text-[12px] md:w-2/5 lg:text-[13px] 2xl:w-2/5">
             Qualified Agent Certificate
           </TextElement>
         </div>
@@ -80,12 +80,11 @@ const QualifiedAgentPopup: React.FC<Props> = ({ image, networkPattern }) => {
           <span className="sr-only">Close</span>
         </button>
         <div className="flex flex-col items-center justify-center md:flex-row md:gap-5">
-          <div className="mb-6 flex flex-col items-center justify-center text-center md:mb-0 md:w-1/3">
+          <div className="mb-6 flex flex-col items-center justify-center text-center md:mb-0">
             <ReactSVG
               src={image.src}
-              className="mb-4 size-14"
               beforeInjection={(svg) => {
-                svg.classList.add("size-14");
+                svg.classList.add("size-24");
                 const paths = svg.querySelectorAll("path");
                 paths.forEach((path) => {
                   path.classList.add("fill-primary");
@@ -97,14 +96,14 @@ const QualifiedAgentPopup: React.FC<Props> = ({ image, networkPattern }) => {
               Qualified Agent Certificate
             </span>
           </div>
-          <div className="grid grid-cols-1 gap-5 md:w-3/5 md:grid-cols-1 md:items-end lg:grid-cols-2">
+          <div className="scroll grid max-h-[300px] grid-cols-1 gap-5 overflow-y-auto md:max-h-[450px] md:grid-cols-1 md:items-end lg:grid-cols-2">
             {documentCards.map((card, index) => (
               <div key={index} className="flex flex-col">
                 <TextElement className="mb-2 text-xs font-semibold">
                   {card.label}
                 </TextElement>
                 <a href={card.link} target="_blank" rel="noopener noreferrer">
-                  <div className="relative flex h-auto max-h-[150px] min-h-[120px] flex-col justify-between overflow-hidden rounded-2xl bg-primary p-4 text-xs text-white md:h-[100px] md:w-[350px] lg:w-full">
+                  <div className="relative flex h-auto min-h-[120px] w-full flex-col justify-between overflow-hidden rounded-2xl bg-primary p-4 text-[13px] text-white lg:w-full">
                     <span className="mb-2 grow">{card.description}</span>
                     <div className="flex items-start justify-between">
                       <div>

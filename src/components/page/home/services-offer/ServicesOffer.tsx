@@ -43,12 +43,12 @@ export function ServicesOffer() {
   }, []);
   return (
     <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
-      <TabsList className="flex flex-row items-center justify-evenly bg-primary p-12">
-        <TabsTrigger value="public">
-          <TextElement variant="title">For Public</TextElement>{" "}
+      <TabsList className="flex flex-row bg-primary p-14 md:justify-evenly">
+        <TabsTrigger value="public" className="rounded-3xl px-6">
+          <TextElement variant="title">For Public</TextElement>
         </TabsTrigger>
-        <TabsTrigger value="operator">
-          <TextElement variant="title">For Operator</TextElement>{" "}
+        <TabsTrigger value="operator" className="rounded-3xl px-6">
+          <TextElement variant="title">For Operator</TextElement>
         </TabsTrigger>
       </TabsList>
       <TabsContent value="public" className="text-white">

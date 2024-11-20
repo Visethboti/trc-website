@@ -58,14 +58,14 @@ const FrequencyInterferencePopup: React.FC<Props> = ({
   return (
     <Dialog open={isDialogOpen}>
       <DialogTrigger onClick={handleClick} style={{ width: "100%" }}>
-        <div className="w-100 flex h-[203px] flex-col items-center justify-center rounded-2xl border md:h-[85px] md:w-[306px] md:flex-row lg:h-[110px] lg:w-[378px] xl:h-[140px] xl:w-[586px] 2xl:w-[680px]">
+        <div className="flex h-[203px] flex-col items-center justify-center rounded-2xl border md:h-[85px] md:flex-row lg:h-[110px] xl:h-[140px]">
           <img
             src={image.src}
             alt="Frequency Interference Complaint"
-            className="mb-2 ml-2 size-14 rounded-lg"
+            className="size-24 rounded-lg p-2 lg:size-24"
             loading="lazy"
           />
-          <TextElement className="w-3/5 text-center text-xs">
+          <TextElement className="w-2/4 text-center text-[12px] lg:text-[13px]">
             Frequency Interference Complaint
           </TextElement>
         </div>
@@ -83,9 +83,8 @@ const FrequencyInterferencePopup: React.FC<Props> = ({
           <div className="mb-6 flex flex-col items-center justify-center text-center md:mb-0 md:w-1/3">
             <ReactSVG
               src={image.src}
-              className="mb-4 size-14"
               beforeInjection={(svg) => {
-                svg.classList.add("size-14");
+                svg.classList.add("size-24");
                 const paths = svg.querySelectorAll("path");
                 paths.forEach((path) => {
                   path.classList.add("fill-primary");

@@ -67,7 +67,7 @@ const InternetCafePopup: React.FC<Props> = ({ image, networkPattern }) => {
   return (
     <Dialog open={isDialogOpen}>
       <DialogTrigger onClick={handleClick} style={{ width: "100%" }}>
-        <div className="flex max-h-[620px] min-h-[200px] flex-col items-center justify-center space-y-4 rounded-xl border md:h-[300px] md:w-[196px] lg:w-[244px] xl:h-[450px] xl:w-[369px] 2xl:h-[500px] 2xl:w-[400px]">
+        <div className="flex max-h-[620px] min-h-[200px] flex-col items-center justify-center space-y-4 rounded-xl border md:h-[300px] xl:h-[450px] 2xl:h-[500px]">
           <img
             src={image.src}
             alt="Internet Cafe"
@@ -92,9 +92,8 @@ const InternetCafePopup: React.FC<Props> = ({ image, networkPattern }) => {
           <div className="mb-6 flex flex-col items-center justify-center text-center md:mb-0 md:w-1/3">
             <ReactSVG
               src={image.src}
-              className="mb-4 size-14"
               beforeInjection={(svg) => {
-                svg.classList.add("size-14");
+                svg.classList.add("size-28");
                 const paths = svg.querySelectorAll("path");
                 paths.forEach((path) => {
                   path.classList.add("fill-primary");
@@ -113,7 +112,7 @@ const InternetCafePopup: React.FC<Props> = ({ image, networkPattern }) => {
                   {card.label}
                 </TextElement>
                 <a href={card.link} target="_blank" rel="noopener noreferrer">
-                  <div className="relative flex h-auto max-h-[150px] min-h-[120px] flex-col justify-between overflow-hidden rounded-2xl bg-primary p-4 text-[13px] text-white md:h-[100px] md:w-[350px] lg:w-full">
+                  <div className="relative flex h-auto max-h-[150px] min-h-[120px] flex-col justify-between overflow-hidden rounded-2xl bg-primary p-4 text-[13px] text-white md:h-[100px] lg:w-full">
                     <span className="mb-2 grow">{card.description}</span>
                     <div className="flex items-start justify-between">
                       <div>

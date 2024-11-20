@@ -8,7 +8,7 @@ const Domain: React.FC<Props> = ({ image }) => {
   return (
     <a
       href="https://domain.gov.kh/"
-      className="flex max-h-[620px] min-h-[200px] flex-col items-center justify-center space-y-4 rounded-xl border md:h-[300px] md:w-[196px] lg:w-[244px] xl:h-[450px] xl:w-[369px] 2xl:h-[500px] 2xl:w-[400px]"
+      className="flex max-h-[620px] min-h-[200px] flex-col items-center justify-center space-y-4 rounded-xl border md:h-[300px] xl:h-[450px] 2xl:h-[500px]"
       target="_blank"
       rel="noopener noreferrer"
     >
