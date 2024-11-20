@@ -1,10 +1,10 @@
 ---
-title: Mr.
-name: Bunboren Tep
+title: លោក
+name: ហៀង បូរ៉ាន់
 role: director
-organization: Director of Telecommunications  Regulation Bureau
-image: src/asset/secretaries/user-avatar.png
-lang: en
+organization: ប្រធានការិយាល័យរដ្ឋបាល បុគ្គលិក និងទំនាក់ទំនងអន្តរជាតិ
+image: src/asset/secretaries/director-of-bureau/heang-boran.webp
+lang: km
 ---
 
 Mr. Boran has more than 10 years of experience in public sector. After working at the central level of government, in November 2022 he was appointed as the director of Administration, Personnel, and International Relations Bureau

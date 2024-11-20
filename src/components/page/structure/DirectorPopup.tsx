@@ -43,7 +43,7 @@ const DirectorPopup = ({
         </figcaption>
       </DialogTrigger>
 
-      <DialogContent className="overflow-hidden rounded-xl border-none bg-primary text-white lg:rounded-3xl lg:p-10">
+      <DialogContent className="w-11/12 max-w-3xl overflow-hidden rounded-xl border-none bg-primary text-white lg:w-full lg:rounded-3xl lg:p-10">
         <DialogHeader className="relative text-left">
           <DialogTitle className="flex items-end justify-start gap-4 md:gap-8">
             <img

@@ -1,8 +1,8 @@
 ---
 title: លោក
-name: ហៀង បូរ៉ាន់
+name: ប៉ាវ លាងឃុន
 role: director
-organization: ប្រធានការិយាល័យរដ្ឋបាល បុគ្គលិក និងទំនាក់ទំនងអន្តរជាតិ
+organization: នាយកផែនការ និងការិយាល័យហិរញ្ញវត្ថុ
 image: src/asset/secretaries/user-avatar.png
 lang: km
 ---

@@ -1,10 +1,10 @@
 ---
-title: លោក
-name: ទេព ប៊ុនបូរេន
+title: Mr.
+name: Boran Heang
 role: director
-organization: នាយកការិយាល័យនិយតកម្មទូរគមនាគមន៍
-image: src/asset/secretaries/user-avatar.png
-lang: km
+image: src/asset/secretaries/director-of-bureau/heang-boran.webp
+organization: Director of Administration, Personnel, and International Relations Bureau
+lang: en
 ---
 
 Mr. Boran has more than 10 years of experience in public sector. After working at the central level of government, in November 2022 he was appointed as the director of Administration, Personnel, and International Relations Bureau

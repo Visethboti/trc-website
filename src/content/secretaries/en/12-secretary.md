@@ -1,9 +1,9 @@
 ---
 title: Mr.
-name: Leang Khun Pav
+name: Bunboren Tep
 role: director
-organization: Director of Planning and Finance Bureau
-image: src/asset/secretaries/user-avatar.png
+organization: Director of Telecommunications  Regulation Bureau
+image: src/asset/secretaries/director-of-bureau/tep-bunboren.webp
 lang: en
 ---
 
