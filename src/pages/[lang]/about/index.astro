@@ -3,6 +3,7 @@ import { Separator } from "@/components/ui/separator";
 import Main from "@/components/Main.astro";
 import AboutTRC from "@/components/page/about/AboutTRC.astro";
 import ChairmanKeynote from "@/components/page/about/ChairmanKeynote.astro";
+import Mission from "@/components/page/about/Mission.astro";
 import MissionVision from "@/components/page/about/MissionVision.astro";
 import TextElement from "@/components/TextElement";
 
@@ -74,7 +75,7 @@ const description =
             <ChairmanKeynote />
           </section>
           <Separator
-            className="mx-auto border border-yellow-500 lg:w-[50rem]"
+            className="mx-auto mt-4 border border-yellow-500 lg:w-[50rem]"
           />
           <section
             aria-labelledby="mission-vision"
@@ -82,12 +83,25 @@ const description =
             class="scroll-mt-20 2xl:scroll-mt-[93px]"
           >
             <TextElement variant="subheading" className="p-2">
-              Mission & Vision
+              Vision
             </TextElement>
             <MissionVision />
           </section>
           <Separator
-            className="mx-auto border border-yellow-500 lg:w-[50rem]"
+            className="mx-auto mt-4 border border-yellow-500 lg:w-[50rem]"
+          />
+          <section
+            aria-labelledby="mission-vision"
+            id="mission-vision/"
+            class="scroll-mt-20 2xl:scroll-mt-[93px]"
+          >
+            <TextElement variant="subheading" className="p-2">
+              Mission
+            </TextElement>
+            <Mission />
+          </section>
+          <Separator
+            className="mx-auto mt-4 border border-yellow-500 lg:w-[50rem]"
           />
           <section
             aria-labelledby="about-trc"
