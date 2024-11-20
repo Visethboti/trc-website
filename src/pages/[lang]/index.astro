@@ -30,6 +30,14 @@ const latestActivities = langActivities
   )
   .slice(0, 3);
 
+const specialTitle =
+  "Minister Vandeth Chea Participates in the TRC Leadership Transfer Ceremony";
+const latestActivitiesWithSpecialTitle = latestActivities.sort((a, b) => {
+  if (a.data.title === specialTitle) return -1;
+  if (b.data.title === specialTitle) return 1;
+  return 0;
+});
+
 const allEvents = await getCollection("events");
 const allNewsReleases = await getCollection("news-releases");
 const allMedia = [...allActivities, ...allNewsReleases, ...allEvents];
@@ -52,7 +60,7 @@ const featuredMedia = langMedia
     <TextElement variant="heading" className="sr-only">
       It was popularised in the 1960s
     </TextElement>
-    <HomeCarousel content={latestActivities} lang={lang} />
+    <HomeCarousel content={latestActivitiesWithSpecialTitle} lang={lang} />
     <div class="mx-auto flex flex-col items-center gap-12">
       <section
         aria-labelledby="service-offer"
