@@ -1,9 +1,9 @@
 ---
 title: លោក
-name: ប៉ាវ លាងឃុន
+name: ទេព ប៊ុនបូរេន
 role: director
-organization: នាយកផែនការ និងការិយាល័យហិរញ្ញវត្ថុ
-image: src/asset/secretaries/user-avatar.png
+organization: នាយកការិយាល័យនិយតកម្មទូរគមនាគមន៍
+image: src/asset/secretaries/director-of-bureau/tep-bunboren.webp
 lang: km
 ---
 
