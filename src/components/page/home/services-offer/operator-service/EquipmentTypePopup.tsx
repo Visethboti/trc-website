@@ -18,37 +18,37 @@ const documentCards = [
       "Application requesting for Equipment Type Approval Certificate License",
     description:
       "1. The Application for Certificate of Accredited Agent for Importation, Supply, and Distribution",
-    link: "/public/service/for-operator/EquipmentType/1. The Application for Certificate of Accredited Agent for Importation, Supply, and Distribution.pdf",
+    link: "/service/for-operator/EquipmentType/1. The Application for Certificate of Accredited Agent for Importation, Supply, and Distribution.pdf",
   },
   {
     description:
       "2. The Application for Renewal of Certificate of Accredited Agent for Importation, Supply, and Distribution",
-    link: "/public/service/for-operator/EquipmentType/2. The Application for Renewal of Certificate of Accredited Agent for Importation, Supply, and Distribution.pdf",
+    link: "/service/for-operator/EquipmentType/2. The Application for Renewal of Certificate of Accredited Agent for Importation, Supply, and Distribution.pdf",
   },
   {
     description:
       "3. The Application for the import permit for radiocommunication equipment and telecommunications equipment",
-    link: "/public/service/for-operator/EquipmentType/3. The application for the import permit for radiocommunication equipment and telecommunications equipment.pdf",
+    link: "/service/for-operator/EquipmentType/3. The application for the import permit for radiocommunication equipment and telecommunications equipment.pdf",
   },
   {
     description:
       "4. The Application for the import permit for radiocommunication equipment and telecommunications equipment_QIP",
-    link: "/public/service/for-operator/EquipmentType/4. The application for the import permit for radiocommunication equipment and telecommunications equipment_QIP.pdf",
+    link: "/service/for-operator/EquipmentType/4. The application for the import permit for radiocommunication equipment and telecommunications equipment_QIP.pdf",
   },
   {
     description:
       "5. The Application for Type Approval Certificate of Radiocommunication Equipment and Telecommunication",
-    link: "/public/service/for-operator/EquipmentType/5. The Application for Type Approval Certificate of Radiocommunication Equipment and Telecommunication.pdf",
+    link: "/service/for-operator/EquipmentType/5. The Application for Type Approval Certificate of Radiocommunication Equipment and Telecommunication.pdf",
   },
   {
     description:
       "6. The Application for Revision of Type Approval Certificate of Radiocommunication Equipment and Telecommunication Equipment",
-    link: "/public/service/for-operator/EquipmentType/6. The Application for Revision of Type Approval Certificate of Radiocommunication Equipment and Telecommunication Equipment.pdf",
+    link: "/service/for-operator/EquipmentType/6. The Application for Revision of Type Approval Certificate of Radiocommunication Equipment and Telecommunication Equipment.pdf",
   },
   {
     description:
       "Guideline for Certificate And Authorization On The Import Of Radiocommunication Terminal Equipment",
-    link: "/public/service/for-operator/EquipmentType/Guideline for Certificate And Authorization On The Import Of Radiocommunication Terminal Equipment.pdf",
+    link: "/service/for-operator/EquipmentType/Guideline for Certificate And Authorization On The Import Of Radiocommunication Terminal Equipment.pdf",
   },
 ];
 
@@ -139,7 +139,9 @@ const EquipmentTypePopup: React.FC<Props> = ({ image, networkPattern }) => {
                         />
                       </div>
                       <div>
-                        <DownloadIcon />
+                        <a href={card.link} download>
+                          <DownloadIcon />
+                        </a>
                       </div>
                     </div>
                   </div>

@@ -17,11 +17,11 @@ const documentCards = [
     label:
       "Application requesting for Frequency Interference Complaint License",
     description: "The Application for Complaint",
-    link: "/public/service/for-operator/FrequencyInterference/Complaint Form.pdf",
+    link: "/service/for-operator/FrequencyInterference/Complaint Form.pdf",
   },
   {
     description: "The Guideline for Frequency Interference Complaint",
-    link: "/public/service/for-operator/FrequencyInterference/Guideline for Frequency Interference Complaint.pdf",
+    link: "/service/for-operator/FrequencyInterference/Guideline for Frequency Interference Complaint.pdf",
   },
 ];
 
@@ -115,7 +115,9 @@ const FrequencyInterferencePopup: React.FC<Props> = ({
                         />
                       </div>
                       <div>
-                        <DownloadIcon />
+                        <a href={card.link} download>
+                          <DownloadIcon />
+                        </a>
                       </div>
                     </div>
                   </div>

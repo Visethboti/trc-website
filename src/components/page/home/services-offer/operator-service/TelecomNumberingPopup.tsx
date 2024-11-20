@@ -16,38 +16,38 @@ const documentCards = [
   {
     label: "Fixed Phone Number Application",
     description: "License to use mobile number or telecom numbers",
-    link: "/public/service/for-operator/TelecomNumbering/1. License to use mobile number or telecom numbers.pdf",
+    link: "/service/for-operator/TelecomNumbering/1. License to use mobile number or telecom numbers.pdf",
   },
   {
     description: "Attachments for requesting fixed number or telecom numbers",
-    link: "/public/service/for-operator/TelecomNumbering/Attachments for requesting fixed number or telecom numbers.pdf",
+    link: "/service/for-operator/TelecomNumbering/Attachments for requesting fixed number or telecom numbers.pdf",
   },
   {
     label: "Mobile Phone Number Application",
     description: "1. License to use mobile number or telecom numbers",
-    link: "/public/service/for-operator/TelecomNumbering/1. License to use mobile number or telecom numbers.pdf",
+    link: "/service/for-operator/TelecomNumbering/1. License to use mobile number or telecom numbers.pdf",
   },
   {
     description: "Attachments for requesting mobile number or telecom numbers",
-    link: "/public/service/for-operator/TelecomNumbering/Attachments for requesting mobile number or telecom numbers.pdf",
+    link: "/service/for-operator/TelecomNumbering/Attachments for requesting mobile number or telecom numbers.pdf",
   },
   {
     label: "Return Fixed Phone Number Application",
     description: "1. License to return fixed number or telecom numbers",
-    link: "/public/service/for-operator/TelecomNumbering/1. License to return fixed number or telecom numbers.pdf",
+    link: "/service/for-operator/TelecomNumbering/1. License to return fixed number or telecom numbers.pdf",
   },
   {
     description: "Attachments for returning fixed number or telecom numbers",
-    link: "/public/service/for-operator/TelecomNumbering/Attachments for returning fixed number or telecom numbers.pdf",
+    link: "/service/for-operator/TelecomNumbering/Attachments for returning fixed number or telecom numbers.pdf",
   },
   {
     label: "Return Mobile Phone Number Application",
     description: "1. License to return mobile number or telecom number",
-    link: "/public/service/for-operator/TelecomNumbering/1. License to return mobile number or telecom numbers.pdf",
+    link: "/service/for-operator/TelecomNumbering/1. License to return mobile number or telecom numbers.pdf",
   },
   {
     description: "Attachments for returning mobile number or telecom numbers",
-    link: "/public/service/for-operator/TelecomNumbering/Attachments for returning mobile number or telecom numbers.pdf",
+    link: "/service/for-operator/TelecomNumbering/Attachments for returning mobile number or telecom numbers.pdf",
   },
 ];
 
@@ -81,14 +81,14 @@ const TelecomNumberingPopup: React.FC<Props> = ({ image, networkPattern }) => {
   return (
     <Dialog open={isDialogOpen}>
       <DialogTrigger onClick={handleClick} style={{ width: "100%" }}>
-        <div className="flex h-[85px] min-w-[140px] flex-row items-center justify-center rounded-2xl border md:h-[91px] lg:h-[112px] xl:h-[140px]">
+        <div className="flex h-[85px] min-w-[140px] flex-row items-center justify-center rounded-2xl border md:h-[91px] lg:h-[112px] xl:h-[140px] xl:space-x-5">
           <img
             src={image.src}
             alt="Telecom Numbering Permit"
             className="size-12 rounded-lg lg:size-20"
             loading="lazy"
           />
-          <TextElement className="w-2/4 text-center text-[12px] lg:text-[13px]">
+          <TextElement className="w-2/4 text-center text-[12px] lg:text-[13px] xl:w-1/4">
             Telecom Numbering Permit
           </TextElement>
         </div>
@@ -138,7 +138,9 @@ const TelecomNumberingPopup: React.FC<Props> = ({ image, networkPattern }) => {
                         />
                       </div>
                       <div>
-                        <DownloadIcon />
+                        <a href={card.link} download>
+                          <DownloadIcon />
+                        </a>
                       </div>
                     </div>
                   </div>

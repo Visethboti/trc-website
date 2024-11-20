@@ -17,26 +17,26 @@ const documentCards = [
     label: "Application Form for Telecom Equipment Shop Certificate License",
     description:
       "1. Application Permit Letter on Radiocommunication and Telecommunication equipment Sale and or Repair Shop",
-    link: "/public/service/for-public/TelecomEquipmentShop/1. Application Permit Letter on Radiocommunication and Telecommunication equipment Sale and_or Repair Shop.pdf",
+    link: "/service/for-public/TelecomEquipmentShop/1. Application Permit Letter on Radiocommunication and Telecommunication equipment Sale and_or Repair Shop.pdf",
   },
   {
     description:
       "2. Application for change of address, store, and or repair of equipment, equipment, radio and telecommunications",
-    link: "/public/service/for-public/TelecomEquipmentShop/2. Application for change of address, store, and _ or repair of equipment, equipment, radio and telecommunications..pdf",
+    link: "/service/for-public/TelecomEquipmentShop/2. Application for change of address, store, and _ or repair of equipment, equipment, radio and telecommunications..pdf",
   },
   {
     description:
       "3. Application Business Transmission Validity of Licenses, Opening and or Repairing Equipment, Equipment, Radio and Telecommunication",
-    link: "/public/service/for-public/TelecomEquipmentShop/3. Application Business Transmission _ Validity of Licenses, Opening and _ or Repairing Equipment, Equipment, Radio and Telecommunication.pdf",
+    link: "/service/for-public/TelecomEquipmentShop/3. Application Business Transmission _ Validity of Licenses, Opening and _ or Repairing Equipment, Equipment, Radio and Telecommunication.pdf",
   },
   {
     description:
       "4. Application Offer application, store, and or repair equipment, equipment, telecommunication and telecommunication",
-    link: "/public/service/for-public/TelecomEquipmentShop/4. Application Offer application, store, and _ or repair equipment, equipment, telecommunication and telecommunication..pdf",
+    link: "/service/for-public/TelecomEquipmentShop/4. Application Offer application, store, and _ or repair equipment, equipment, telecommunication and telecommunication..pdf",
   },
   {
     description: "Guidline",
-    link: "/public/service/for-public/TelecomEquipmentShop/Guideline.pdf",
+    link: "/service/for-public/TelecomEquipmentShop/Guideline.pdf",
   },
 ];
 
@@ -127,7 +127,9 @@ const TelecomShopPopup: React.FC<Props> = ({ image, networkPattern }) => {
                         />
                       </div>
                       <div>
-                        <DownloadIcon />
+                        <a href={card.link} download>
+                          <DownloadIcon />
+                        </a>
                       </div>
                     </div>
                   </div>

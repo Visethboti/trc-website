@@ -16,43 +16,43 @@ const documentCards = [
   {
     label: "Application requesting for Spectrum License",
     description: "1. Radio Amateur License",
-    link: "/public/service/for-operator/SpectrumLicense/1. Radio-Amateur-License.docx",
+    link: "/service/for-operator/SpectrumLicense/1. Radio-Amateur-License.docx",
   },
   {
     description: "2. Radiocom MFHFVHF UF License",
-    link: "/public/service/for-operator/SpectrumLicense/2. Radiocom-MFHFVHF-UHF-License.docx",
+    link: "/service/for-operator/SpectrumLicense/2. Radiocom-MFHFVHF-UHF-License.docx",
   },
   {
     description: "3. Radio Sound Broadcasting",
-    link: "/public/service/for-operator/SpectrumLicense/3. Radio_Sound_Broadcasting.docx",
+    link: "/service/for-operator/SpectrumLicense/3. Radio_Sound_Broadcasting.docx",
   },
   {
     description: "4. Television VHFUHF License",
-    link: "/public/service/for-operator/SpectrumLicense/4. Television-VHFUHF-License.docx",
+    link: "/service/for-operator/SpectrumLicense/4. Television-VHFUHF-License.docx",
   },
   {
     description: "5. Radio Microwave Station License",
-    link: "/public/service/for-operator/SpectrumLicense/5. Radio-Microwave-Station-License.docx",
+    link: "/service/for-operator/SpectrumLicense/5. Radio-Microwave-Station-License.docx",
   },
   {
     description: "6. Base Station for Mobile",
-    link: "/public/service/for-operator/SpectrumLicense/6. Base_Station_for_Mobile.docx",
+    link: "/service/for-operator/SpectrumLicense/6. Base_Station_for_Mobile.docx",
   },
   {
     description: "7. Broadband Wireless Access License",
-    link: "/public/service/for-operator/SpectrumLicense/7. Broadband-Wireless-Access-License.docx",
+    link: "/service/for-operator/SpectrumLicense/7. Broadband-Wireless-Access-License.docx",
   },
   {
     description: "8. Radio VSAT License",
-    link: "/public/service/for-operator/SpectrumLicense/8. Radio-VSAT-License.docx",
+    link: "/service/for-operator/SpectrumLicense/8. Radio-VSAT-License.docx",
   },
   {
     description: "9. Radio INMARSAT License",
-    link: "/public/service/for-operator/SpectrumLicense/9. Radio-INMARSAT-License.docx",
+    link: "/service/for-operator/SpectrumLicense/9. Radio-INMARSAT-License.docx",
   },
   {
     description: "10. Radio SATELLITE PHONE License",
-    link: "/public/service/for-operator/SpectrumLicense/10. Radio-SATELLITE-PHONE-License.docx",
+    link: "/service/for-operator/SpectrumLicense/10. Radio-SATELLITE-PHONE-License.docx",
   },
 ];
 
@@ -142,7 +142,9 @@ const SpectrumPopup: React.FC<Props> = ({ image, networkPattern }) => {
                         />
                       </div>
                       <div>
-                        <DownloadIcon />
+                        <a href={card.link} download>
+                          <DownloadIcon />
+                        </a>
                       </div>
                     </div>
                   </div>

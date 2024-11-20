@@ -17,7 +17,7 @@ const documentCards = [
     label: "Application requesting for Internet Service Provider License",
     description:
       "The Application for License on Operation and Provision of Internet Service",
-    link: "/public/service/for-operator/InternetService/The Application for License on Operation and Provision of Internet Service.pdf",
+    link: "/service/for-operator/InternetService/The Application for License on Operation and Provision of Internet Service.pdf",
   },
 ];
 
@@ -108,7 +108,9 @@ const TowerConstructionPopup: React.FC<Props> = ({ image, networkPattern }) => {
                         />
                       </div>
                       <div>
-                        <DownloadIcon />
+                        <a href={card.link} download>
+                          <DownloadIcon />
+                        </a>
                       </div>
                     </div>
                   </div>

@@ -17,11 +17,11 @@ const documentCards = [
   {
     label: "Application requesting for Fiber Cable Construction Permit License",
     description: "The Application form for Fiber Cable Construction",
-    link: "/public/service/for-operator/FiberCable/Application Form for Fiber Cable Construction.docx",
+    link: "/service/for-operator/FiberCable/Application Form for Fiber Cable Construction.docx",
   },
   {
     description: "The Application form for Fiber Cable Maintenance",
-    link: "/public/service/for-operator/FiberCable/Application Form for Fiber Cable Maintenance.docx",
+    link: "/service/for-operator/FiberCable/Application Form for Fiber Cable Maintenance.docx",
   },
 ];
 
@@ -62,7 +62,7 @@ const FiberCablePopup: React.FC<Props> = ({ image, networkPattern }) => {
             className="size-12 rounded-lg lg:size-20"
             loading="lazy"
           />
-          <TextElement className="w-2/4 text-center text-[12px] lg:w-2/5 lg:text-[13px]">
+          <TextElement className="w-2/4 text-center text-[12px] lg:w-2/5 lg:text-[13px] xl:w-1/3">
             Fiber Cable Construction Permit
           </TextElement>
         </div>
@@ -112,7 +112,9 @@ const FiberCablePopup: React.FC<Props> = ({ image, networkPattern }) => {
                         />
                       </div>
                       <div>
-                        <DownloadIcon />
+                        <a href={card.link} download>
+                          <DownloadIcon />
+                        </a>
                       </div>
                     </div>
                   </div>
