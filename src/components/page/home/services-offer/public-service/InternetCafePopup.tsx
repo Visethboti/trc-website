@@ -16,24 +16,24 @@ const documentCards = [
   {
     label: "Application Form for Internet Cafe Certificate License",
     description: "1. Application Form for the Certificate of Internet Cafe",
-    link: "/public/service/for-public/InternetCafe/1. Application Form for the Certificate of Internet Cafe╠ü.docx",
+    link: "/service/for-public/InternetCafe/1. Application Form for the Certificate of Internet Cafe╠ü.docx",
   },
   {
     description: "2. Application Form for Change Address Internet Cafe Shop ",
-    link: "/public/service/for-public/InternetCafe/Application Form for 2. Change Address Internet Cafe Shop.docx",
+    link: "/service/for-public/InternetCafe/Application Form for 2. Change Address Internet Cafe Shop.docx",
   },
   {
     description:
       "3. Application Form Business Continuity License, Internet Business Center Opening",
-    link: "/public/service/for-public/InternetCafe/3. Application Form Business Continuity _ License, Internet Business Center Opening.docx",
+    link: "/service/for-public/InternetCafe/3. Application Form Business Continuity _ License, Internet Business Center Opening.docx",
   },
   {
     description: "4. Application Form for Closing Internet Cafe Shop",
-    link: "/public/service/for-public/InternetCafe/4.  Application Form for Closing Internet Cafe Shop.docx",
+    link: "/service/for-public/InternetCafe/4.  Application Form for Closing Internet Cafe Shop.docx",
   },
   {
     description: "Guidline Internet Cafe",
-    link: "/public/service/for-public/InternetCafe/Guidline-Internet-Cafe.pdf",
+    link: "/service/for-public/InternetCafe/Guidline-Internet-Cafe.pdf",
   },
 ];
 
@@ -124,7 +124,9 @@ const InternetCafePopup: React.FC<Props> = ({ image, networkPattern }) => {
                         />
                       </div>
                       <div>
-                        <DownloadIcon />
+                        <a href={card.link} download>
+                          <DownloadIcon />
+                        </a>
                       </div>
                     </div>
                   </div>

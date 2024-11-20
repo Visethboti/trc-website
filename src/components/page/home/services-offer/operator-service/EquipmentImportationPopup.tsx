@@ -19,17 +19,17 @@ const documentCards = [
       "Application requesting for Equipment Importation & Distribution Permit License",
     description:
       "The Application for Equipment Importation & Distribution Permit - QIP",
-    link: "/public/service/for-operator/EquipmentImportation/Application for Equipment Importation & Distribution Permit - QIP.pdf",
+    link: "/service/for-operator/EquipmentImportation/Application for Equipment Importation & Distribution Permit - QIP.pdf",
   },
   {
     description:
       "The Application for Equipment Importation & Distribution Permit",
-    link: "/public/service/for-operator/EquipmentImportation/Application for Equipment Importation & Distribution Permit.pdf",
+    link: "/service/for-operator/EquipmentImportation/Application for Equipment Importation & Distribution Permit.pdf",
   },
   {
     description:
       "The Guideline for Equipment Importation & Distribution Permit",
-    link: "/public/service/for-operator/EquipmentImportation/Guideline for Equipment Importation & Distribution Permit.pdf",
+    link: "/service/for-operator/EquipmentImportation/Guideline for Equipment Importation & Distribution Permit.pdf",
   },
 ];
 
@@ -77,7 +77,7 @@ const EquipmentImportationPopup: React.FC<Props> = ({
             className="size-12 rounded-lg lg:size-20"
             loading="lazy"
           />
-          <TextElement className="w-2/4 text-center text-[12px] md:w-2/4 lg:w-2/5 lg:text-[13px]">
+          <TextElement className="w-2/4 text-center text-[12px] md:w-2/4 lg:w-2/5 lg:text-[13px] xl:w-1/3">
             Equipment Importation & Distribution Permit
           </TextElement>
         </div>
@@ -127,7 +127,9 @@ const EquipmentImportationPopup: React.FC<Props> = ({
                         />
                       </div>
                       <div>
-                        <DownloadIcon />
+                        <a href={card.link} download>
+                          <DownloadIcon />
+                        </a>
                       </div>
                     </div>
                   </div>

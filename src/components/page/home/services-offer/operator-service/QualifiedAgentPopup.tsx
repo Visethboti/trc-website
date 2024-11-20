@@ -16,15 +16,15 @@ const documentCards = [
   {
     label: "Application requesting for Qualified Agent Certificate License",
     description: "The Application for Qualified Agent Certificate",
-    link: "/public/service/for-operator/QualifiedAgent/Application for Qualified Agent Certificate.pdf",
+    link: "/service/for-operator/QualifiedAgent/Application for Qualified Agent Certificate.pdf",
   },
   {
     description: "The Application for Renewal of Qualified Agent Certificate",
-    link: "/public/service/for-operator/QualifiedAgent/Application for Renewal of Qualified Agent Certificate.pdf",
+    link: "/service/for-operator/QualifiedAgent/Application for Renewal of Qualified Agent Certificate.pdf",
   },
   {
     description: "The Guideline to Qualified Agent Certificate",
-    link: "/public/service/for-operator/QualifiedAgent/Guideline to Qualified Agent Certificate.pdf",
+    link: "/service/for-operator/QualifiedAgent/Guideline to Qualified Agent Certificate.pdf",
   },
 ];
 
@@ -115,7 +115,9 @@ const QualifiedAgentPopup: React.FC<Props> = ({ image, networkPattern }) => {
                         />
                       </div>
                       <div>
-                        <DownloadIcon />
+                        <a href={card.link} download>
+                          <DownloadIcon />
+                        </a>
                       </div>
                     </div>
                   </div>
