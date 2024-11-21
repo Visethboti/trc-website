@@ -33,10 +33,9 @@ const publicationDate = new Date(page.data.date);
 let previous = "";
 let next = "";
 const url = Astro.url.pathname;
-const splitUrl = url.split("/");
-const baseUrl = splitUrl.slice(0, -1).join("/");
+const baseUrl = url.split("/").slice(0, 4).join("/");
 
-const type = splitUrl[splitUrl.length - 2] as keyof ContentEntryMap;
+const type = baseUrl.split("/").pop() as keyof ContentEntryMap;
 
 const articles = await getCollection(type);
 const langArticles = articles.filter((article) => article.data.lang === lang);
