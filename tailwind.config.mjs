@@ -30,7 +30,7 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ["Calisto MT", "Kantumruy Pro", "sans-serif"],
+        sans: ["Roboto", "Kantumruy Pro", "sans-serif"],
       },
       colors: {
         border: "hsl(var(--border))",
