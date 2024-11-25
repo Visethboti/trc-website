@@ -75,38 +75,7 @@ export const NavRoutes = [
     ],
   },
   {
-    label: "Media",
-    children: [
-      { label: "News Releases", href: Routes.NewsRelease },
-      { label: "Activities", href: Routes.Activities },
-      { label: "Events", href: Routes.Events },
-    ],
-  },
-  {
-    label: "Resources",
-    children: [
-      { label: "Publications", href: Routes.UnderConstruction },
-      { label: "Telecom Statistics", href: Routes.UnderConstruction },
-      { label: "Active Operators", href: Routes.ActiveOperator },
-      { label: "Mobile Prefixes", href: Routes.MobilePrefixes },
-      { label: "Common Codes", href: Routes.CommonCodes },
-      { label: "Emergency Numbers", href: Routes.EmergencyNumbers },
-      { label: "Qualified Import Agents", href: Routes.UnderConstruction },
-      { label: "Tower Map", href: Routes.UnderConstruction },
-    ],
-  },
-  {
-    label: "About",
-    children: [
-      { label: "Chairman's Keynote", href: Routes.About },
-      { label: "Vision & Mission", href: Routes.VisionMission },
-      { label: "About TRC", href: Routes.AboutTRC },
-      { label: "TRC Leader", href: Routes.TrcLeader },
-      { label: "TRC Structure", href: Routes.TrcStructure },
-    ],
-  },
-  {
-    label: "Service",
+    label: "Services",
     children: [
       { label: "Public", isTitle: true },
       {
@@ -170,6 +139,38 @@ export const NavRoutes = [
         href: Routes.FrequencyInterferenceComplaint,
         icon: Complaint,
       },
+    ],
+  },
+  {
+    label: "Media",
+    children: [
+      { label: "News Releases", href: Routes.NewsRelease },
+      { label: "Activities", href: Routes.Activities },
+      { label: "Events", href: Routes.Events },
+    ],
+  },
+  {
+    label: "Resources",
+    children: [
+      { label: "Publications", href: Routes.UnderConstruction },
+      { label: "Telecom Statistics", href: Routes.UnderConstruction },
+      { label: "Active Operators", href: Routes.ActiveOperator },
+      { label: "Mobile Prefixes", href: Routes.MobilePrefixes },
+      { label: "Common Codes", href: Routes.CommonCodes },
+      { label: "Emergency Numbers", href: Routes.EmergencyNumbers },
+      { label: "Qualified Import Agents", href: Routes.UnderConstruction },
+      { label: "Type Approval", href: Routes.UnderConstruction },
+      { label: "Tower Map", href: Routes.UnderConstruction },
+    ],
+  },
+  {
+    label: "About",
+    children: [
+      { label: "Chairman's Keynote", href: Routes.About },
+      { label: "Vision & Mission", href: Routes.VisionMission },
+      { label: "About TRC", href: Routes.AboutTRC },
+      { label: "TRC Leader", href: Routes.TrcLeader },
+      { label: "TRC Structure", href: Routes.TrcStructure },
     ],
   },
   {
