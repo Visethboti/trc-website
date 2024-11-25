@@ -2,7 +2,7 @@
 title: លោក
 name: ទេព ប៊ុនបូរេន
 role: director
-organization: នាយកការិយាល័យនិយតកម្មទូរគមនាគមន៍
+organization: ប្រធាននាយកដ្ឋាននិយតកម្មទូរគមនាគមន៍
 image: src/asset/secretaries/director-of-bureau/tep-bunboren.webp
 lang: km
 ---
