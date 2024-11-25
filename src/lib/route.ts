@@ -159,8 +159,8 @@ export const NavRoutes = [
       { label: "Common Codes", href: Routes.CommonCodes },
       { label: "Emergency Numbers", href: Routes.EmergencyNumbers },
       { label: "Qualified Import Agents", href: Routes.UnderConstruction },
+      { label: "Type Approval", href: Routes.UnderConstruction },
       { label: "Tower Map", href: Routes.UnderConstruction },
-      { label: "Approval", href: Routes.UnderConstruction },
     ],
   },
   {
