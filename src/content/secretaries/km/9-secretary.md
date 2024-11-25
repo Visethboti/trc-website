@@ -2,7 +2,7 @@
 title: លោក
 name: វ៉ែន ទីន
 role: director
-organization: នាយកការិយាល័យសវនកម្មផ្ទៃក្នុង
+organization: ប្រធាននាយកដ្ឋានសវនកម្មផ្ទៃក្នុង
 image: src/asset/secretaries/director-of-bureau/ven-tin.webp
 lang: km
 ---
