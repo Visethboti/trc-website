@@ -35,7 +35,7 @@ export enum Routes {
   Activities = Media + "/activities",
   Events = Media + "/events",
   About = "/about",
-  VisionMission = About + "/#vision",
+  Vision = About + "/#vision",
   Mission = About + "/#mission",
   AboutTRC = About + "/#about-trc",
   TrcLeader = About + "/trc-leader",
@@ -168,7 +168,8 @@ export const NavRoutes = [
     label: "About",
     children: [
       { label: "Chairman's Keynote", href: Routes.About },
-      { label: "Vision & Mission", href: Routes.VisionMission },
+      { label: "Vision", href: Routes.Vision },
+      { label: "Mission", href: Routes.Mission },
       { label: "About TRC", href: Routes.AboutTRC },
       { label: "TRC Leader", href: Routes.TrcLeader },
       { label: "TRC Structure", href: Routes.TrcStructure },
