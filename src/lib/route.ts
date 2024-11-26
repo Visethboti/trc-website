@@ -11,7 +11,7 @@ import TACertificate from "@/asset/service-icons/TA Certificate.svg";
 import TelecomShop from "@/asset/service-icons/Telecom Shop.svg";
 import TowerConstructionPermit from "@/asset/service-icons/Tower Construction Permit.svg";
 import type { SupportedLanguage } from "@/i18n/ui";
-import { removeLanguagePrefix } from "@/i18n/utils";
+import { getTranslatedkey, removeLanguagePrefix } from "@/i18n/utils";
 import type { CollectionEntry } from "astro:content";
 import { getRelativeLocaleUrl } from "astro:i18n";
 
@@ -193,13 +193,13 @@ export function getLocalizedRoutes(
     if (path.href) {
       if (path.icon) {
         return {
-          label: path.label,
+          label: getTranslatedkey(path.label, locale),
           href: getRelativeLocaleUrl(locale, path.href),
           icon: path.icon,
         };
       } else {
         return {
-          label: path.label,
+          label: getTranslatedkey(path.label, locale),
           href: getRelativeLocaleUrl(locale, path.href),
         };
       }
@@ -207,7 +207,7 @@ export function getLocalizedRoutes(
 
     if (path.children) {
       return {
-        label: path.label,
+        label: getTranslatedkey(path.label, locale),
         children: getLocalizedRoutes(path.children, locale),
       };
     }

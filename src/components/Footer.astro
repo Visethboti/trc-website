@@ -9,13 +9,15 @@ import { defaultLang } from "@/i18n/ui";
 const locale = Astro.currentLocale ?? defaultLang;
 
 const navigationItems = getLocalizedRoutes(NavRoutes, locale);
+console.log(navigationItems);
+
 const quickLinks = navigationItems
   .flatMap((item) => item.children || [])
   .filter(
     (child) =>
-      child.label.toLowerCase() === "mobile prefixes" ||
-      child.label.toLowerCase() === "common codes" ||
-      child.label.toLowerCase() === "emergency numbers",
+      child.label === "mobile prefixes" ||
+      child.label === "common codes" ||
+      child.label === "emergency numbers",
   );
 ---
 
