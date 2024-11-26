@@ -44,7 +44,7 @@ export default function ImageCarousel({
         {carouselDatas?.map((item, index) => (
           <CarouselItem
             key={item.data.title}
-            className="relative h-[500px] w-full"
+            className="relative h-[500px] w-full lg:h-[600px]"
           >
             <a href={getContentUrl(item, lang)}>
               <img
