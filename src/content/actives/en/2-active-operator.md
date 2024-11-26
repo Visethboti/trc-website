@@ -1,9 +1,8 @@
 ---
 image: src/asset/resources/active-operator/1-logo-active.png
-title:  (Cambodia) Fiber Optic Communication Network Co., Ltd. (CFOCN) 
-descriptionOne:  License for Operation and Provision of Submarine Cable
-descriptionTwo:  License for Operation and Provision of Telecommunications Cable Network
-address: 168, Street 1946, Sangkat Phnom Penh Thmei, Khan SenSok, Phnom Penh
-phone: 070 882 645 / 011 369 028
+title: Angkor Cable TV Internet Co., Ltd.
+descriptionOne:  License for Operation and Provision of Internet Service
+address: 12, Phum Ta Phul, Sangkat Svay Dangkum, Siem Reap, Siem Reap Province
+phone: 085 365 024 / 086 365 024 / 068 365 024
 lang: en
 ---
