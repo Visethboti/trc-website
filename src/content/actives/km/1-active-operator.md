@@ -1,8 +1,9 @@
 ---
 image: src/asset/resources/active-operator/1-logo-active.png
-title:  (Cambodia) Fiber Optic Communication Network Co., Ltd. (CFOCN) 
-descriptionTwo:  License for Operation and Provision of Telecommunications Cable Network
-address: 168, Street 1946, Sangkat Phnom Penh Thmei, Khan SenSok, Phnom Penh
-phone: 070 882 645 / 011 369 028 
+title: (ខេមបូឌា) ហ្វីប៊ើរ អុបទិច ខមញូនីខេសិន ណេតវើក
+descriptionOne: អាជ្ញាបណ្ណប្រតិបត្តិការនិងផ្តល់សេវាខ្សែកាប្លិ៍អុបទិកក្រោមបាតសមុទ្រ
+descriptionTwo:  អាជ្ញាបណ្ណប្រតិបត្តិការនិងផ្តល់សេវាហេដ្ឋារចនាសម្ព័ន្ធបណ្តាញខ្សែកាប្លិ៍ទូរគមនាគមន៍
+address: អគារលេខ ១៦៨ ផ្លូវលេខ១៩៤៦ សង្កាត់ ភ្នំពេញថ្មី ខណ្ឌសែនសុខ រាជធានីភ្នំពេញ
+phone: ០៧០ ៨៨២ ៦៤៥ / ០១១ ៣៦៩ ០២៨
 lang: km
 ---
