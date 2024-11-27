@@ -269,13 +269,13 @@ export const ui: Record<string, Record<string, string>> = {
     "about.chairmanKeyNote.paragraph3":
       "ឥរិយាបទរបស់មន្ត្រីរាជការ និងបុគ្គលិកនៃនិយ័តករទូរគមនាគមន៍កម្ពុជា មានគុណលក្ខណៈស្នូលចំនួន ៤ ដូចខាងក្រោម ដើម្បីបម្រើឱ្យវិនិយោគិនកាន់តែប្រសើរឡើង ក្នុងនាមជាអ្នកផ្តល់បណ្តាញ និងសេវាទូរគមនាគមន៍ និងប្រជាជនជាអ្នកប្រើប្រាស់បណ្តាញ និងសេវា៖",
     "about.chairmanKeyNote.list1":
-      "Ownership: Take responsibility and perform tasks to the best of their ability.",
+      "ឆន្ទៈនៃភាពជាម្ចាស់៖ ការខិតខំប្រឹងប្រែងដើម្បីអនុវត្តភារកិច្ចដែលត្រូវធ្វើឱ្យអស់ពីសមត្ថភាពរបស់ពួកគេ។",
     "about.chairmanKeyNote.list2":
-      "Loyalty: Demonstrate loyalty to the people and state institutions.",
+      "ភាពស្មោះត្រង់៖ បង្ហាញភាពស្មោះត្រង់ចំពោះប្រជាជន និងស្ថាប័នរដ្ឋ។",
     "about.chairmanKeyNote.list3":
-      "Professional Conscience: Maintain a professional conscience to ensure effectiveness and accountability in their work.",
+      "មនសិការវិជ្ជាជីវៈ៖ រក្សាមនសិការវិជ្ជាជីវៈដើម្បីធានានូវសមត្ថភាពនៃការអនុវត្តការងារប្រកបដោយប្រសិទ្ធភាព និងគណនេយ្យភាព។",
     "about.chairmanKeyNote.list4":
-      "​Public Service Culture: Uphold a culture of public service aimed at providing high-quality services that meet the needs of the people, enhance wellbeing, and promote national growth.",
+      "វប្បធម៌នៃសេវាសាធារណៈ៖ ការបំពេញតម្រូវការជាក់ស្តែងរបស់ប្រជាពលរដ្ឋ និងផ្លាស់ប្តូរទម្រង់នៃការអនុវត្តការងារក្នុងគោលបំណងបម្រើប្រជាពលរដ្ឋឱ្យកាន់តែប្រសើរឡើង ដើម្បីជាប្រយោជន៍ដល់សុខុមាលភាព និងការរីកចម្រើនរបស់ប្រទេសជាតិ។",
     "about.chairmanKeyNote.paragraph4":
       "គោលនយោបាយស្តីពីការផ្តល់សិទ្ធិគ្រប់គ្រងទីផ្សារទូរគមនាគមន៍ និងបច្ចេកវិទ្យាគមនាគមន៍និងព័ត៌មាន និងការផ្តល់សេវាសាធារណៈជូនសាធារណជនដល់និយ័តករទូរគមនាគមន៍កម្ពុជាតាមរយៈច្បាប់ស្តីពីទូរគមនាគមន៍ គឺជាស្នូលនៃកំណែទម្រង់រដ្ឋបាលរបស់រាជរដ្ឋាភិបាលកម្ពុជាក្នុងអាណត្តិនេះ។",
     "about.chairmanKeyNote.paragraph5":

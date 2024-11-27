@@ -3,7 +3,7 @@ categories: ["News"]
 date: 08/01/2024
 featured: false
 isCarousel: false
-image: src/asset/media/new-release/1-new-release/photo-1.jpg
+image: src/asset/media/news-release/3-news-release/thumbnail.webp
 title: Announcement on Deactivation and Resale of Consumers' Mobile Phone Numbers and Deductions from Mobile Phone Number Account Balances Contrary to Applicable Law and Regulation
 author: Telecommunication Regulator of Cambodia
 lang: en
@@ -23,3 +23,5 @@ To promote fair competition and protect consumer interests, the TRC encourages c
 ● Lack of resolution of complaints from mobile network operators.
 
 For more details, please refer to the TRC's official announcement.
+
+![photo 1](src/asset/media/news-release/3-news-release/photo-1.webp)

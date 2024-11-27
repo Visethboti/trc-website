@@ -3,7 +3,7 @@ categories: ["News"]
 date: 11/26/2020
 featured: false
 isCarousel: true
-image: src/asset/media/activities/1-activity/photo-1.jpg
+image: src/asset/media/activities/1-activity/photo-1.webp
 title: Minister Vandeth Chea Participates in the TRC Leadership Transfer
   Ceremony
 author: Semtararath
@@ -47,10 +47,11 @@ human capital and fostering technical capability.
 In his closing remarks, Minister Chea once again expressed his confidence in the leadership and energy of Chairman Thong and thanked MPTC and TRC
 leaderships, officials, and employees for their contribution to TRC’s missions and goals as well as to the public good.
 
-![photo 2](src/asset/media/activities/1-activity/photo-1.jpg)
-![photo 3](src/asset/media/activities/1-activity/photo-2.jpg)
-![photo 4](src/asset/media/activities/1-activity/photo-3.jpg)
-![photo 5](src/asset/media/activities/1-activity/photo-4.jpg)
-![photo 6](src/asset/media/activities/1-activity/photo-5.jpg)
-![photo 7](src/asset/media/activities/1-activity/photo-6.jpg)
-![photo 8](src/asset/media/activities/1-activity/photo-7.jpg)
+![photo 1](src/asset/media/activities/1-activity/photo-8.webp)
+![photo 2](src/asset/media/activities/1-activity/photo-1.webp)
+![photo 3](src/asset/media/activities/1-activity/photo-2.webp)
+![photo 4](src/asset/media/activities/1-activity/photo-3.webp)
+![photo 5](src/asset/media/activities/1-activity/photo-4.webp)
+![photo 6](src/asset/media/activities/1-activity/photo-5.webp)
+![photo 7](src/asset/media/activities/1-activity/photo-6.webp)
+![photo 8](src/asset/media/activities/1-activity/photo-7.webp)

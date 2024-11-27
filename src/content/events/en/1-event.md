@@ -3,7 +3,7 @@ categories: ["News"]
 date: 02/14/2023
 featured: false
 isCarousel: true
-image: src/asset/media/activities/3-activity/photo-1.jpg
+image: src/asset/media/event/1-event/thumbnail.webp
 title: Telecommunication Regulator of Cambodia Collaborated with International Institute of Communications to Host Asia Telecommunications & Media Forum 2023
 author: Telecommunication Regulator of Cambodia
 lang: en
@@ -37,3 +37,8 @@ connectivity, ASEAN Digital Masterplan, Digital transformation & content,
 Competition in digital markets, Data privacy, data protection, localization, and cross-border data flows, Countering harmful online content to prevent consumer harm, Cybersecurity risks, and realities, to the metaverse and digital assets.
 
 In addition, H.E. Chenda Thong and his officials had a separate meeting with Mr. Yih-Choung Teh, Group Director for Strategy and Research of OFCOM, to exchange experiences in regulating the telecommunications sector, including licenses regime, spectrum frequency, data centers, consumer protection in the digital transformation.
+
+![photo 1](src/asset/media/event/1-event/photo-1.webp)
+![photo 2](src/asset/media/event/1-event/photo-2.webp)
+![photo 2](src/asset/media/event/1-event/photo-3.webp)
+![photo 2](src/asset/media/event/1-event/photo-4.webp)

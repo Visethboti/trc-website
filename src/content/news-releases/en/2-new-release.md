@@ -3,7 +3,7 @@ categories: ["News"]
 date: 07/03/2024
 featured: false
 isCarousel: false
-image: src/asset/media/new-release/1-new-release/photo-1.jpg
+image: src/asset/media/new-release/2-new-release/photo-1.webp
 title: Announcement on Illegal import, supply, and distribution of telecommunications equipment and illegal use of telecommunications services
 author: Telecommunication Regulator of Cambodia
 lang: en
@@ -17,3 +17,5 @@ As a preventive measure, the TRC has urged users not to install or use internet 
 The TRC also reminds companies to apply for a license before offering internet services in Cambodia and to get approval for importing or distributing telecom equipment. Failure to comply will result in penalties under the Law on Telecommunications.
 
 The TRC has also urged the public to report any cases of illegal sale,distribution, installation, or use of telecommunications equipment and services to the TRC via a hotline or email.
+
+![photo 1](src/asset/media/news-release/2-news-release/photo-1.webp)
