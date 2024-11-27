@@ -5,6 +5,7 @@ featured: false
 isCarousel: true
 image: src/asset/media/event/1-event/thumbnail.webp
 title: Telecommunication Regulator of Cambodia Collaborated with International Institute of Communications to Host Asia Telecommunications & Media Forum 2023
+description: Telecommunication Regulator of Cambodia Collaborated with International Institute of Communications to Host Asia Telecommunications & Media Forum 2023
 author: Telecommunication Regulator of Cambodia
 lang: en
 type: event

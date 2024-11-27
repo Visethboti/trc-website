@@ -5,6 +5,7 @@ featured: false
 isCarousel: false
 image: src/asset/media/activities/3-activity/thumbnail.webp
 title: មន្រ្តី ន.ទ.ក បានចូលរួមកិច្ចប្រជុំសមាជិកសមាគម Asia Pacific Top Level Domain លើកទី៨៣ និងកិច្ចប្រជុំប្រចាំឆ្នាំនៅទីក្រុងវៀងចន្ទ ប្រទេសឡាវ
+description: TRC commissioners attended APTLD83 Meeting in Vientiane, Laos
 author: និយ័តករទូរគមនាគមន៍កម្ពុជា
 lang: km
 type: activity

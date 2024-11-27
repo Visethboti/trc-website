@@ -5,6 +5,7 @@ featured: false
 isCarousel: true
 image: src/asset/media/event/1-event/thumbnail.webp
 title: និយ័តករទូរគមនាគមន៍កម្ពុជាសហការជាមួយវិទ្យាស្ថានគមនាគមន៍អន្តរជាតិរៀបចំវេទិកាទូរគមនាគមន៍និងប្រព័ន្ធផ្សព្វផ្សាយប្រចាំតំបន់អាស៊ី ២០២៣
+description: Telecommunication Regulator of Cambodia Collaborated with International Institute of Communications to Host Asia
 author: និយ័តករទូរគមនាគមន៍កម្ពុជា
 lang: km
 type: event

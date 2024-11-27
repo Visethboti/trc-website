@@ -5,6 +5,7 @@ featured: false
 isCarousel: false
 image: src/asset/media/activities/3-activity/thumbnail.webp
 title: TRC commissioners attended APTLD83 Meeting in Vientiane, Laos
+description: TRC commissioners attended APTLD83 Meeting in Vientiane, Laos
 author: Telecommunication Regulator of Cambodia
 lang: en
 type: activity

@@ -5,6 +5,7 @@ featured: false
 isCarousel: true
 image: src/asset/media/activities/2-activity/thumbnail.webp
 title: Telecommunication Regulator of Cambodia (TRC) and the Securities Exchange Regulator of Cambodia (SERC) organized a collaborative Capacity Building Training on "Cybersecurity”
+description: TRC and SERC organized a collaborative Capacity Building Training on "Cybersecurity”
 author: Telecommunication Regulator of Cambodia
 lang: en
 type: activity

@@ -55,6 +55,9 @@ const mediaSchema = ({ image }: SchemaContext) =>
     isCarousel: z.boolean(),
     image: image(),
     title: z.string(),
+    description: z.string().max(160, {
+      message: "Description must be at most 160 characters long",
+    }),
     lang: z.enum(SupportedLanguage),
     type: MediaTypeEnum,
   });

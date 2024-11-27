@@ -6,6 +6,8 @@ isCarousel: false
 image: src/asset/media/news-release/1-news-release/photo-1.webp
 title: Announcement On The Use of Common Codes *1201#, *1202#, *1203*
   PIN#, and 1204 For All Mobile Networks
+description: Announcement On The Use of Common Codes *1201#, *1202#, *1203*
+  PIN#, and 1204 For All Mobile Networks
 author: Ministry of Post and Telecommunications
 lang: en
 type: news-release

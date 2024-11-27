@@ -5,6 +5,7 @@ featured: false
 isCarousel: false
 image: src/asset/media/news-release/2-news-release/thumbnail.webp
 title: Announcement on Illegal import, supply, and distribution of telecommunications equipment and illegal use of telecommunications services
+description: Announcement on Illegal import, supply, and distribution of telecommunications equipment and illegal use of telecommunications services
 author: Telecommunication Regulator of Cambodia
 lang: km
 type: news-release

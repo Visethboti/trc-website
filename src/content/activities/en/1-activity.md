@@ -6,6 +6,7 @@ isCarousel: true
 image: src/asset/media/activities/1-activity/photo-1.webp
 title: Minister Vandeth Chea Participates in the TRC Leadership Transfer
   Ceremony
+description: Minister Vandeth Chea Participates in the TRC Leadership Transfer
 author: Semtararath
 lang: en
 type: activity

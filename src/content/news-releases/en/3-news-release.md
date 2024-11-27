@@ -5,6 +5,7 @@ featured: false
 isCarousel: false
 image: src/asset/media/news-release/3-news-release/thumbnail.webp
 title: Announcement on Deactivation and Resale of Consumers' Mobile Phone Numbers and Deductions from Mobile Phone Number Account Balances Contrary to Applicable Law and Regulation
+description: Announcement on Deactivation and Resale of Consumers' Mobile Phone Numbers and Deductions from Mobile Phone Number Account Balances Contrary to Applicable
 author: Telecommunication Regulator of Cambodia
 lang: en
 type: news-release
