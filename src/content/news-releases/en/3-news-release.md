@@ -24,4 +24,5 @@ To promote fair competition and protect consumer interests, the TRC encourages c
 
 For more details, please refer to the TRC's official announcement.
 
-![photo 1](src/asset/media/news-release/3-news-release/photo-1.webp)
+![photo 1](src/asset/media/news-release/3-news-release/thumbnail.webp)
+![photo 2](src/asset/media/news-release/3-news-release/photo-1.webp)
