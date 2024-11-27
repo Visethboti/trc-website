@@ -9,15 +9,14 @@ import { defaultLang } from "@/i18n/ui";
 const locale = Astro.currentLocale ?? defaultLang;
 
 const navigationItems = getLocalizedRoutes(NavRoutes, locale);
-console.log(navigationItems);
 
 const quickLinks = navigationItems
   .flatMap((item) => item.children || [])
   .filter(
     (child) =>
-      child.label === "mobile prefixes" ||
-      child.label === "common codes" ||
-      child.label === "emergency numbers",
+      child.href === "/km/resources/mobile-prefixes/" ||
+      child.href === "/km/resources/common-codes/" ||
+      child.href === "/km/resources/emergency-numbers/",
   );
 ---
 
