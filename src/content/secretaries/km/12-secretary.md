@@ -7,4 +7,4 @@ image: src/asset/secretaries/director-of-bureau/tep-bunboren.webp
 lang: km
 ---
 
-គ្មានជីវប្រវត្តិ
+មិនទាន់មាន

@@ -7,4 +7,4 @@ image: src/asset/secretaries/chairman-comissioner/seng-sothy.webp
 lang: km
 ---
 
-គ្មានជីវប្រវត្តិ
+មិនទាន់មាន
