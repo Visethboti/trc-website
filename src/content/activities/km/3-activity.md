@@ -1,14 +1,17 @@
 ---
 categories: ["News"]
-date: 12/07/2022
+date: 02/21/2023
 featured: false
-image: src/asset/media/activities/3-activity/photo-1.webp
-title: TRC commissioners measured the quality of services in tourist, natural protected, and remote areas in Siem Reap
-author: Telecommunication Regulator of Cambodia
-description: ឯកឧត្តម ជា វ៉ាន់ដេត ចូលរួមក្នុងពិធីការផ្ទេរតំណែងថ្នាក់ដឹកនាំ TRC
+isCarousel: false
+image: src/asset/media/activities/3-activity/thumbnail.webp
+title: មន្រ្តី ន.ទ.ក បានចូលរួមកិច្ចប្រជុំសមាជិកសមាគម Asia Pacific Top Level Domain លើកទី៨៣ និងកិច្ចប្រជុំប្រចាំឆ្នាំនៅទីក្រុងវៀងចន្ទ ប្រទេសឡាវ
+description: TRC commissioners attended APTLD83 Meeting in Vientiane, Laos
+author: និយ័តករទូរគមនាគមន៍កម្ពុជា
 lang: km
 type: activity
 ---
 
-TRC commissioners joined the opening ceremony of "Project of 5G and
-Digital Future of Cambodia" hosted by the US Embassy
+មន្រ្តី ន.ទ.ក បានចូលរួមកិច្ចប្រជុំសមាជិកសមាគម Asia Pacific Top Level Domain លើកទី៨៣ និងកិច្ចប្រជុំប្រចាំឆ្នាំ ដែលប្រព្រឹត្តទៅចាប់ពីថ្ងៃទី២០ ដល់ថ្ងៃទី២៤ ខែកុម្ភៈ ឆ្នាំ២០២៣ នៅទីក្រុងវៀងចន្ទ ប្រទេសឡាវ។
+
+![photo 1](src/asset/media/activities/3-activity/photo-1.webp)
+![photo 2](src/asset/media/activities/3-activity/photo-2.webp)

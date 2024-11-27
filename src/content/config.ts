@@ -52,6 +52,7 @@ const mediaSchema = ({ image }: SchemaContext) =>
     categories: z.array(z.string()).default(["News", "Article"]),
     date: z.string(),
     featured: z.boolean(),
+    isCarousel: z.boolean(),
     image: image(),
     title: z.string(),
     description: z.string().max(160, {

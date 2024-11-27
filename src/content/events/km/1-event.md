@@ -1,59 +1,25 @@
 ---
 categories: ["News"]
-date: 11/26/2020
+date: 02/14/2023
 featured: false
-image: src/asset/media/event/1-event/photo-8.jpg
-title: Minister Vandeth Chea Participates in the TRC Leadership Transfer
- Ceremony
-author: Digital Security Committee
-description: On behalf of Samdech Thipadei HUN MANET, Prime Minister, H.E. Santibandit Neth Savoeun, Deputy Prime Minister has presided over the meeting.
+isCarousel: true
+image: src/asset/media/event/1-event/thumbnail.webp
+title: និយ័តករទូរគមនាគមន៍កម្ពុជាសហការជាមួយវិទ្យាស្ថានគមនាគមន៍អន្តរជាតិរៀបចំវេទិកាទូរគមនាគមន៍និងប្រព័ន្ធផ្សព្វផ្សាយប្រចាំតំបន់អាស៊ី ២០២៣
+description: Telecommunication Regulator of Cambodia Collaborated with International Institute of Communications to Host Asia
+author: និយ័តករទូរគមនាគមន៍កម្ពុជា
 lang: km
 type: event
 ---
 
-O Phnom Penh, 26 November 2020, Minister of Post and
- Telecommunications Vandeth Chea participated in the leadership transfer
- ceremony of Telecommunication Regulator of Cambodia (TRC) held at the
- TRC premises. Present at the ceremony were MPTC leadership, TRC
- leadership and officials.
+ចាប់ពីថ្ងៃទី១៤ ដល់ថ្ងៃទី១៦ ខែកម្ភៈ ឆ្នាំ២០២៣ និយ័តករទូរគមនាគមន៍កម្ពុជា (ន.ទ.ក.) បានសហការជាមួយវិទ្យាស្ថានគមនាគមន៍អន្តរជាតិ រៀបចំវេទិកាទូរគមនាគមន៍និងប្រព័ន្ធផ្សព្វផ្សាយប្រចាំតំបន់អាស៊ី នៅឯសណ្ឋាគារ Rosewood ទីក្រុងភ្នំពេញ។វេទិកានេះមានកិច្ចប្រជុំសំខាន់ចំនួនពីរគឺ ១) កិច្ចប្រជុំតុមូលសម្រាប់និយ័តករ​ និង២) វេទិកាទូរគមនាគមន៍និងប្រព័ន្ធផ្សព្វផ្សាយ ដោយមានការអញ្ជើញចូលរួមពីឯកឧត្តមរដ្ឋមន្ត្រីនិងថ្នាក់ដឹក​នាំក្រសួងប្រៃសណីយ៍និងទូរគមនាគមន៍ (ក.ប.ទ.) បណ្តានិយ័តករ ប្រតិបតិ្តករទូរគមនាគមន៍ ក្រុមហ៊ុនបច្ចេកវិទ្យាធំៗ និងអ្នកពាក់ព័ន្ធចំនួន ១០០ នាក់ មកពី ១៥ ប្រទេសផ្សេងៗគ្នា។
 
- Secretary of State Chakrya Moa highlighted some of TRC’s past
- achievements, particularly the modernization of equipment, increasing
- effectiveness of the telecommunications and ICT infrastructure, and crime
- prevention. TRC has also provided capacity building and livelihood support
- programs for officials and employees as a way to promote team spirit.
+ក្នុងថ្ងៃទី១ កិច្ចប្រជុំតុមូលសម្រាប់និយ័តករពិភាក្សាក្រោមប្រធានបទ “បទប្បញ្ញត្តិនៅក្នុងសម័យឌីជីថល៖ តើត្រូវធ្វើដូចម្តេចដើម្បីអាចសម្របខ្លួនទៅនឹងបរិយាកាសដែលផ្លាស់ប្តូរដ៏ឆាប់រហ័ស?”ដែលបានដឹកនាំនិងសម្របសម្រួលដោយឯកឧត្តមថោង ចិន្ដា ប្រធានន.ទ.ក និងមានការអញ្ជើញចូលរួមពីតំណាងនិយ័តករមកពី ៨ ប្រទេសផ្សេងៗគ្នា។វេទិកានេះធ្វើការពិភាក្សាដោយផ្តោតសំខាន់លើបួនផ្នែកគឺ ១) ការផ្លាស់ប្តូររចនាសម្ព័ន្ធនិងការគ្រប់គ្រង ២)វិធីសាស្ត្រឆ្លើយតបទៅនឹងការបង្រួមគ្នា (Convergence) ៣)សហប្រតិបតិ្តការជាតិនិងអន្តរជាតិ និង៤)ការពិសោធនិងនវានុវត្តន៍។
 
-  Speaking at the ceremony, H.E. Chenda Thong, the newly appointed
- chairman of TRC, expressed gratitude towards the government and Minister
- Chea for placing trust and confidence in his ability to lead TRC. Chairman
- Thong also took the opportunity to commend Secretary Moa for his leadership
- of TRC, bringing about noticeable development of the telecoms sector. Under
- the new administration, Chairman Thong stated his commitment to
- implementing restructuring policies to the highest standards, in line with
- Minister Chea’s steadfast, strategic leadership and government policies in
- advancing the quality and effectiveness of the sector and ensuring fair
- competition among telecoms operators.
+ក្នុងថ្ងៃទី២និងថ្ងៃទី៣ វេទិកាទូរគមនាគមន៍និងប្រព័ន្ធផ្សព្វផ្សាយពិភាក្សាលើប្រធានបទសំខាន់ៗ រួមមាន ការតភ្ជាប់ឌីជីថលជាតិនិងអន្តរជាតិ, ការពិនិត្យនិងវាយតម្លៃផែនការមេឌីជីថលអាស៊ានពាក់កណ្តាលអាណត្តិ, បរិវត្តកម្មឌីជីថល និងមាតិកា, ការប្រកួតប្រជែងក្នុងទីផ្សារឌីជីថល, ឯកជនភាព ការគំាពារទិន្នន័យ ការៀបចំទុកដាក់ទិន្នន័យ​​​​​​​​​​​​​​​​​, ការទប់ស្កាត់មាតិកាគំរាមកំហែងតាមប្រព័ន្ធអនឡាញ ដើម្បីការពារអ្នកប្រើប្រាស់, ហានិភ័យនៃសន្តិសុខសាយប័រ និងការពិត, Metaverse និងទ្រព្យសម្បត្តិឌីជីថល។
 
-  On this occasion, Minister Chea praised Secretary Moa for his past
- contribution to the sector and TRC. However, H.E. Minister stated that there
- remained key and urgent tasks for Chairman Thong to focus on to enforce the
- regulations, license regime management and revenue mobilization.
+បន្ថែមលើនេះ ឯកឧត្តមប្រធាន ន.ទ.ក. និងមន្ត្រីក្រោមឱវាទក៏បានជួបពិភាក្សាជាមួយលោក Yih-Choung Teh នាយកទទួលបន្ទុកផ្នែកយុទ្ធសាស្ត្រនិងស្រាវជ្រាវរបស់ OFCOM នៃចក្រភពអង់គ្លេស ដើម្បីផ្លាស់ប្តូរ បទពិសោធន៍ក្នុងការធ្វើនិយ័តកម្មក្នុងវិស័យទូរគមនាគមន៍ ជាអាទិ៍ របបអាជ្ញាបណ្ណ ហ្វ្រេកង់ស៍វិទ្យុ មជ្ឈមណ្ឌលទិន្នន័យ ការការពារអ្នកប្រើប្រាស់ក្នុងបរិវត្តកម្មឌីជីថល។​
 
- In addition, Minister Chea urged Chairman Thong to draft relevant laws and
- regulations to guarantee fair business practice, consumer protection, and
- reliable telecoms services and equipment. H.E. Minister also advised TRC to
- improve their administrative process in carrying out duties, strengthening
- human capital and fostering technical capability.
-
- In his closing remarks, Minister Chea once again expressed his confidence in
- the leadership and energy of Chairman Thong and thanked MPTC and TRC
- leaderships, officials, and employees for their contribution to TRC’s missions
- and goals as well as to the public good.
-
-![photo 2](src/asset/media/event/1-event/photo-1.jpg)
-![photo 3](src/asset/media/event/1-event/photo-2.jpg)
-![photo 4](src/asset/media/event/1-event/photo-3.jpg)
-![photo 5](src/asset/media/event/1-event/photo-4.jpg)
-![photo 6](src/asset/media/event/1-event/photo-5.jpg)
-![photo 7](src/asset/media/event/1-event/photo-6.jpg)
-![photo 8](src/asset/media/event/1-event/photo-7.jpg)
+![photo 1](src/asset/media/event/1-event/photo-1.webp)
+![photo 2](src/asset/media/event/1-event/photo-2.webp)
+![photo 2](src/asset/media/event/1-event/photo-3.webp)
+![photo 2](src/asset/media/event/1-event/photo-4.webp)

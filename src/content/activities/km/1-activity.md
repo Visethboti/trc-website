@@ -1,31 +1,54 @@
 ---
 categories: ["News"]
-date: 11/20/2020
-featured: true
+date: 11/26/2020
+featured: false
+isCarousel: true
 image: src/asset/media/activities/1-activity/photo-1.webp
-title: Minister Vandeth Chea Participates in the TRC Leadership Transfer Ceremony
-author: Telecommunication Regulator of Cambodia
-description: ឯកឧត្តម ជា វ៉ាន់ដេត ចូលរួមក្នុងពិធីការផ្ទេរតំណែងថ្នាក់ដឹកនាំ TRC
+title: Minister Vandeth Chea Participates in the TRC Leadership Transfer
+  Ceremony
+description: Minister Vandeth Chea Participates in the TRC Leadership Transfer
+author: Semtararath
 lang: km
 type: activity
 ---
 
-ឯកឧត្តមសន្តិបណ្ឌិត នេត សាវឿន ឧបនាយករដ្ឋមន្ត្រី តំណាងដ៏ខ្ពង់ខ្ពស់ សម្តេចមហាបវរធិបតី
-ហ៊ុន ម៉ាណែត នាយករដ្ឋមន្ត្រី នៃព្រះរាជាណាចក្រកម្ពុជា បានអញ្ចើញជាអធិបតីភាព ដឹកនាំកិច្ចប្រជុំប្រកាស សមាសភាពជាផ្លូវការ និងផ្សព្វផ្សាយគោលការណ៍ណែនាំ សម្រាប់គណៈកម្មាធិការសន្តិសុខឌីជីថល (គ.ស.ឌ.) នៅសាលប្រជុំទីស្តីការគណៈរដ្ឋមន្ត្រី
+Phnom Penh, 26 November 2020, Minister of Post and
+Telecommunications Vandeth Chea participated in the leadership transfer
+ceremony of Telecommunication Regulator of Cambodia (TRC) held at the
+TRC premises. Present at the ceremony were MPTC leadership, TRC
+leadership and officials.
 
-នារសៀលថ្ងៃសុក្រ ១០រោច ខែចេត្រ ឆ្នាំរោង ឆស័ក ព.ស២៥៦៧ ត្រូវនឹងថ្ងៃទី៣
-ខែឧសភា ឆ្នាំ២០២៤នេះ ឯកឧត្តមសន្តិបណ្ឌិត នេត សាវឿន ឧបនាយករដ្ឋមន្ត្រី អនុប្រធានប្រចាំការគណៈកម្មាធិការសន្តិសុខឌីជីថល ជាតំណាងដ៏ខ្ពង់ខ្ពស់
-សម្តេចមហាបវរធិបតី ហ៊ុន ម៉ាណែត នាយករដ្ឋមន្ត្រី និងជាប្រធានគណៈកម្មាធិការ
-សន្តិសុខឌីជីថល បានអញ្ចើញជាអធិបតីភាពដឹកនាំកិច្ចប្រជុំប្រកាសសមាសភាពជា
-ផ្លូវការនិងផ្សព្វផ្សាយគោលការណ៍ណែនាំសម្រាប់គណៈកម្មាធិការសន្តិសុខឌីជីថល នៅសាលប្រជុំទីស្តីការគណៈរដ្ឋមន្ត្រី៕
+Secretary of State Chakrya Moa highlighted some of TRC’s past
+achievements, particularly the modernization of equipment, increasing
+effectiveness of the telecommunications and ICT infrastructure, and crime
+prevention. TRC has also provided capacity building and livelihood support
+programs for officials and employees as a way to promote team spirit.
 
-គណៈកម្មាធិការសន្តិសុខឌីជីថល ត្រូវបានបង្កើតឡើងក្នុងគោលដៅធានាប្រសិទ្ធភាព និងស័ក្តិសិទ្ធភាពនៃការបំពេញមុខងារដឹកនាំ សម្របសម្រួល និងជំរុញការគ្រប់គ្រង
-សន្តិសុខឌីជីថលដើម្បីការពារអត្ថប្រយោជន៍របស់គ្រប់តួអង្គសង្គមទប់ទល់នឹងការ
-វាយប្រហារគ្រប់រូបភាពឆ្លើតតបគ្រប់ផ្នែកទាំងបច្ចេកទេសនិងកម្លាំងពាក់ព័ន្ធនឹងការ
-ធានានិងការពារសន្តិសុខឌីជីថល៕
+Speaking at the ceremony, H.E. Chenda Thong, the newly appointed
+chairman of TRC, expressed gratitude towards the government and Minister
+Chea for placing trust and confidence in his ability to lead TRC. Chairman
+Thong also took the opportunity to commend Secretary Moa for his leadership
+of TRC, bringing about noticeable development of the telecoms sector. Under
+the new administration, Chairman Thong stated his commitment to
+implementing restructuring policies to the highest standards, in line with
+Minister Chea’s steadfast, strategic leadership and government policies in
+advancing the quality and effectiveness of the sector and ensuring fair
+competition among telecoms operators.
 
-រាជធានីភ្នំពេញ៖ សាលប្រជុំទីស្តីការគណៈរដ្ឋមន្ត្រី​ ថ្ងៃទី៣ ឧសភា ឆ្នាំ២០២៤
+On this occasion, Minister Chea praised Secretary Moa for his past
+contribution to the sector and TRC. However, H.E. Minister stated that there remained key and urgent tasks for Chairman Thong to focus on to enforce the
+regulations, license regime management and revenue mobilization.
 
+In addition, Minister Chea urged Chairman Thong to draft relevant laws and
+regulations to guarantee fair business practice, consumer protection, and
+reliable telecoms services and equipment. H.E. Minister also advised TRC to
+improve their administrative process in carrying out duties, strengthening
+human capital and fostering technical capability.
+
+In his closing remarks, Minister Chea once again expressed his confidence in the leadership and energy of Chairman Thong and thanked MPTC and TRC
+leaderships, officials, and employees for their contribution to TRC’s missions and goals as well as to the public good.
+
+![photo 1](src/asset/media/activities/1-activity/photo-8.webp)
 ![photo 2](src/asset/media/activities/1-activity/photo-1.webp)
 ![photo 3](src/asset/media/activities/1-activity/photo-2.webp)
 ![photo 4](src/asset/media/activities/1-activity/photo-3.webp)

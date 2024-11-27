@@ -11,7 +11,7 @@ import TACertificate from "@/asset/service-icons/TA Certificate.svg";
 import TelecomShop from "@/asset/service-icons/Telecom Shop.svg";
 import TowerConstructionPermit from "@/asset/service-icons/Tower Construction Permit.svg";
 import type { SupportedLanguage } from "@/i18n/ui";
-import { removeLanguagePrefix } from "@/i18n/utils";
+import { getTranslatedkey, removeLanguagePrefix } from "@/i18n/utils";
 import type { CollectionEntry } from "astro:content";
 import { getRelativeLocaleUrl } from "astro:i18n";
 
@@ -64,119 +64,128 @@ export enum Routes {
 
 export const NavRoutes = [
   {
-    label: "Laws & Regulations",
+    label: "nav.lawsRegulations",
     children: [
-      { label: "Laws", href: Routes.Laws },
-      { label: "Royal Decrees", href: Routes.RoyalDecrees },
-      { label: "Sub Decrees", href: Routes.SubDecrees },
-      { label: "Circulations", href: Routes.Circulations },
-      { label: "Prakas", href: Routes.Prakas },
-      { label: "Decisions", href: Routes.Decisions },
-      { label: "Guidelines", href: Routes.Guidelines },
+      { label: "nav.lawsRegulations.laws", href: Routes.Laws },
+      { label: "nav.lawsRegulations.royalDecrees", href: Routes.RoyalDecrees },
+      { label: "nav.lawsRegulations.subDecrees", href: Routes.SubDecrees },
+      { label: "nav.lawsRegulations.circulations", href: Routes.Circulations },
+      { label: "nav.lawsRegulations.prakas", href: Routes.Prakas },
+      { label: "nav.lawsRegulations.decisions", href: Routes.Decisions },
+      { label: "nav.lawsRegulations.guidelines", href: Routes.Guidelines },
     ],
   },
   {
-    label: "Services",
+    label: "nav.services",
     children: [
-      { label: "Public", isTitle: true },
+      { label: "nav.services.public", isTitle: true },
       {
-        label: "Domain .KH",
+        label: "nav.services.domainKH",
         href: Routes.HomeServicePunblicSection,
         icon: Domain,
       },
       {
-        label: "Internet Cafe",
+        label: "nav.services.internetCafe",
         href: Routes.InternetCafe,
         icon: InternetCafe,
       },
       {
-        label: "Telecom Equipment Shop",
+        label: "nav.services.telecomEquipmentShop",
         href: Routes.TelecomEquipmentShop,
         icon: TelecomShop,
       },
-      { label: "Operator", isTitle: true },
+      { label: "nav.services.operator", isTitle: true },
       {
-        label: "Operational License",
+        label: "nav.services.operationalLicense",
         href: Routes.OperationalLicense,
         icon: ISP,
       },
       {
-        label: "Spectrum License",
+        label: "nav.services.spectrumLicense",
         href: Routes.SpectrumLicense,
         icon: Spectrum,
       },
       {
-        label: "Telecom Numbering Permit",
+        label: "nav.services.telecomNumberingPermit",
         href: Routes.TelecomNumberingPermit,
         icon: NumberingPermit,
       },
       {
-        label: "Equipment TA Certificate",
+        label: "nav.services.equipmentTACertificate",
         href: Routes.EquipmentTACertificate,
         icon: TACertificate,
       },
       {
-        label: "Qualified Agent Certification",
+        label: "nav.services.qualifiedAgentCertification",
         href: Routes.QualifiedAgentCertification,
         icon: QualifiesAgent,
       },
       {
-        label: "Equipment Importation & Distribution Permit",
+        label: "nav.services.equipmentImportationDistributionPermit",
         href: Routes.EquipmentImportationDistributionPermit,
         icon: Import,
       },
       {
-        label: "Tower Construction Permit",
+        label: "nav.services.towerConstructionPermit",
         href: Routes.TowerConstructionPermit,
         icon: TowerConstructionPermit,
       },
       {
-        label: "Fiber Cable Construction Permit",
+        label: "nav.services.fiberCableConstructionPermit",
         href: Routes.FiberCableConstructionPermit,
         icon: FiberCable,
       },
       {
-        label: "Frequency Interference Complaint",
+        label: "nav.services.frequencyInterferenceComplaint",
         href: Routes.FrequencyInterferenceComplaint,
         icon: Complaint,
       },
     ],
   },
   {
-    label: "Media",
+    label: "nav.media",
     children: [
-      { label: "News Releases", href: Routes.NewsRelease },
-      { label: "Activities", href: Routes.Activities },
-      { label: "Events", href: Routes.Events },
+      { label: "nav.media.newsReleases", href: Routes.NewsRelease },
+      { label: "nav.media.activities", href: Routes.Activities },
+      { label: "nav.media.events", href: Routes.Events },
     ],
   },
   {
-    label: "Resources",
+    label: "nav.resources",
     children: [
-      { label: "Publications", href: Routes.UnderConstruction },
-      { label: "Telecom Statistics", href: Routes.UnderConstruction },
-      { label: "Active Operators", href: Routes.ActiveOperator },
-      { label: "Mobile Prefixes", href: Routes.MobilePrefixes },
-      { label: "Common Codes", href: Routes.CommonCodes },
-      { label: "Emergency Numbers", href: Routes.EmergencyNumbers },
-      { label: "Qualified Import Agents", href: Routes.UnderConstruction },
-      { label: "Type Approval", href: Routes.UnderConstruction },
-      { label: "Tower Map", href: Routes.UnderConstruction },
+      { label: "nav.resources.publications", href: Routes.UnderConstruction },
+      {
+        label: "nav.resources.telecomStatistics",
+        href: Routes.UnderConstruction,
+      },
+      { label: "nav.resources.activeOperators", href: Routes.ActiveOperator },
+      { label: "nav.resources.mobilePrefixes", href: Routes.MobilePrefixes },
+      { label: "nav.resources.commonCodes", href: Routes.CommonCodes },
+      {
+        label: "nav.resources.emergencyNumbers",
+        href: Routes.EmergencyNumbers,
+      },
+      {
+        label: "nav.resources.qualifiedImportAgents",
+        href: Routes.UnderConstruction,
+      },
+      { label: "nav.resources.typeApproval", href: Routes.UnderConstruction },
+      { label: "nav.resources.towerMap", href: Routes.UnderConstruction },
     ],
   },
   {
-    label: "About",
+    label: "nav.about",
     children: [
-      { label: "Chairman's Keynote", href: Routes.About },
-      { label: "Vision", href: Routes.Vision },
-      { label: "Mission", href: Routes.Mission },
-      { label: "About TRC", href: Routes.AboutTRC },
-      { label: "TRC Leader", href: Routes.TrcLeader },
-      { label: "TRC Structure", href: Routes.TrcStructure },
+      { label: "nav.about.chairmansKeynote", href: Routes.About },
+      { label: "nav.about.vision", href: Routes.Vision },
+      { label: "nav.about.mission", href: Routes.Mission },
+      { label: "nav.about.aboutTRC", href: Routes.AboutTRC },
+      { label: "nav.about.trcLeader", href: Routes.TrcLeader },
+      { label: "nav.about.trcStructure", href: Routes.TrcStructure },
     ],
   },
   {
-    label: "Contact",
+    label: "nav.contact",
     href: Routes.ContactUsForm,
   },
 ];
@@ -196,13 +205,13 @@ export function getLocalizedRoutes(
     if (path.href) {
       if (path.icon) {
         return {
-          label: path.label,
+          label: getTranslatedkey(path.label, locale),
           href: getRelativeLocaleUrl(locale, path.href),
           icon: path.icon,
         };
       } else {
         return {
-          label: path.label,
+          label: getTranslatedkey(path.label, locale),
           href: getRelativeLocaleUrl(locale, path.href),
         };
       }
@@ -210,7 +219,7 @@ export function getLocalizedRoutes(
 
     if (path.children) {
       return {
-        label: path.label,
+        label: getTranslatedkey(path.label, locale),
         children: getLocalizedRoutes(path.children, locale),
       };
     }

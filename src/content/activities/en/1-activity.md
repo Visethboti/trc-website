@@ -1,17 +1,18 @@
 ---
 categories: ["News"]
-date: 11/20/2020
-featured: true
+date: 11/26/2020
+featured: false
+isCarousel: true
 image: src/asset/media/activities/1-activity/photo-1.webp
 title: Minister Vandeth Chea Participates in the TRC Leadership Transfer
   Ceremony
+description: Minister Vandeth Chea Participates in the TRC Leadership Transfer
 author: Semtararath
-description: On behalf of Samdech Thipadei HUN MANET, Prime Minister, H.E. Santibandit Neth Savoeun, Deputy Prime Minister has presided over the meeting.
 lang: en
 type: activity
 ---
 
-O Phnom Penh, 26 November 2020, Minister of Post and
+Phnom Penh, 26 November 2020, Minister of Post and
 Telecommunications Vandeth Chea participated in the leadership transfer
 ceremony of Telecommunication Regulator of Cambodia (TRC) held at the
 TRC premises. Present at the ceremony were MPTC leadership, TRC
@@ -35,8 +36,7 @@ advancing the quality and effectiveness of the sector and ensuring fair
 competition among telecoms operators.
 
 On this occasion, Minister Chea praised Secretary Moa for his past
-contribution to the sector and TRC. However, H.E. Minister stated that there
-remained key and urgent tasks for Chairman Thong to focus on to enforce the
+contribution to the sector and TRC. However, H.E. Minister stated that there remained key and urgent tasks for Chairman Thong to focus on to enforce the
 regulations, license regime management and revenue mobilization.
 
 In addition, Minister Chea urged Chairman Thong to draft relevant laws and
@@ -45,11 +45,10 @@ reliable telecoms services and equipment. H.E. Minister also advised TRC to
 improve their administrative process in carrying out duties, strengthening
 human capital and fostering technical capability.
 
-In his closing remarks, Minister Chea once again expressed his confidence in
-the leadership and energy of Chairman Thong and thanked MPTC and TRC
-leaderships, officials, and employees for their contribution to TRC’s missions
-and goals as well as to the public good.
+In his closing remarks, Minister Chea once again expressed his confidence in the leadership and energy of Chairman Thong and thanked MPTC and TRC
+leaderships, officials, and employees for their contribution to TRC’s missions and goals as well as to the public good.
 
+![photo 1](src/asset/media/activities/1-activity/photo-8.webp)
 ![photo 2](src/asset/media/activities/1-activity/photo-1.webp)
 ![photo 3](src/asset/media/activities/1-activity/photo-2.webp)
 ![photo 4](src/asset/media/activities/1-activity/photo-3.webp)
