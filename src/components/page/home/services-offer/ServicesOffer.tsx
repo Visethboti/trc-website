@@ -42,7 +42,11 @@ export function ServicesOffer() {
     };
   }, []);
   return (
-    <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
+    <Tabs
+      value={activeTab}
+      onValueChange={setActiveTab}
+      className="w-full md:h-[400px] lg:h-[500px] xl:h-[620px]"
+    >
       <TabsList className="flex flex-row bg-primary p-14 md:justify-evenly">
         <TabsTrigger value="public" className="rounded-3xl px-6">
           <TextElement variant="title">For Public</TextElement>

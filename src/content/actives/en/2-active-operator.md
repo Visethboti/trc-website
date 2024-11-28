@@ -1,5 +1,5 @@
 ---
-image: src/asset/resources/active-operator/1-logo-active.png
+image: src/asset/resources/active-operator/building.svg
 title: Angkor Cable TV Internet Co., Ltd.
 descriptionOne:  License for Operation and Provision of Internet Service
 address: 12, Phum Ta Phul, Sangkat Svay Dangkum, Siem Reap, Siem Reap Province

@@ -1,5 +1,5 @@
 ---
-image: src/asset/resources/active-operator/1-logo-active.png
+image: src/asset/resources/active-operator/building.svg
 title: Angkor Data Communication Group (ADCG)
 descriptionOne:  License for Operation and Provision of Internet Service
 descriptionTwo:  Permit for connecting cross-border fiber optical cable network

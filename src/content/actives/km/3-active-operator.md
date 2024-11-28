@@ -1,5 +1,5 @@
 ---
-image: src/asset/resources/active-operator/1-logo-active.png
+image: src/asset/resources/active-operator/building.svg
 title: អង្គរ ដាតា ខមម្ញូនីខេសិន គ្រុប (អេ ឌី ស៊ី)
 descriptionOne: អាជ្ញាបណ្ណប្រតិបត្តិការនិងផ្តល់សេវាអ៊ីនធឺណិត
 descriptionTwo: លិខិតអនុញ្ញាតតភ្ជាប់ បណ្តាញខ្សែកាប្លិ៍អុបទិកឆ្លងកាត់ព្រំដែន

@@ -3,7 +3,7 @@ categories: ["News"]
 date: 12/29/2024
 featured: false
 isCarousel: false
-image: src/asset/media/news-release/1-news-release/photo-1.webp
+image: src/asset/media/news-release/1-news-release/thumbnail.webp
 title: Announcement On The Use of Common Codes *1201#, *1202#, *1203*
   PIN#, and 1204 For All Mobile Networks
 description: Announcement On The Use of Common Codes *1201#, *1202#, *1203*
@@ -27,5 +27,5 @@ The Ministry of Post and Telecommunications would like to inform the public that
 
 The public may use the five common codes above across all mobile networks, free-of-charge, to terminate any unwanted value-added services, check credit balance, check user identity, top-up, or contact the customer service of each mobile network operator, starting 1 January 2022. For additional information, please contact the TRC hotline at 6789 during business hours.
 
-![photo 2](src/asset/media/news-release/1-news-release/photo-2.webp)
-![photo 3](src/asset/media/news-release/1-news-release/photo-3.webp)
+![photo 1](src/asset/media/news-release/1-news-release/photo-1.webp)
+![photo 2](src/asset/media/news-release/1-news-release/thumbnail.webp)

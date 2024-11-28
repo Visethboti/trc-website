@@ -25,7 +25,6 @@ export enum Routes {
   Prakas = LawsAndRegulations + "/prakas",
   Decisions = LawsAndRegulations + "/decisions",
   Guidelines = LawsAndRegulations + "/guidelines",
-  Media = "/media",
   Resources = "/resources",
   MobilePrefixes = Resources + "/mobile-prefixes",
   CommonCodes = Resources + "/common-codes",
@@ -36,6 +35,7 @@ export enum Routes {
   QualifiedImportAgents = Resources + "/qualified-import-agents",
   TypeApproval = Resources + "/type-approval",
   TowerMap = Resources + "/tower-map",
+  Media = "/media",
   NewsRelease = Media + "/news-releases",
   Activities = Media + "/activities",
   Events = Media + "/events",
@@ -45,13 +45,7 @@ export enum Routes {
   AboutTRC = About + "/#about-trc",
   TrcLeader = About + "/trc-leader",
   TrcStructure = About + "/trcstructure",
-  Policies = "/policies",
-  PressRelease = "/press-release",
-  Videos = "/videos",
-  Aritcles = "/articles",
-  Projects = "/projects",
   ContactUsForm = "/contactusform",
-  CybersecurityTips = "/cybersecurity-tips",
   UnderConstruction = "/under-construction",
   HomeServicePunblicSection = "/#public",
   InternetCafe = "/#internet-cafe/",
@@ -200,6 +194,7 @@ interface RouteType {
   label: string;
   icon?: ImageMetadata;
   children?: RouteType[];
+  isTitle?: boolean;
 }
 
 export function getLocalizedRoutes(
@@ -228,39 +223,29 @@ export function getLocalizedRoutes(
         children: getLocalizedRoutes(path.children, locale),
       };
     }
-
-    return path;
+    return {
+      label: getTranslatedkey(path.label, locale),
+      isTitle: path.isTitle,
+    };
   });
 }
 
 export const getContentUrl = (
-  entry: CollectionEntry<
-    | "articles"
-    | "cybersecurity-tips"
-    | "events"
-    | "news-releases"
-    | "activities"
-  >,
+  entry: CollectionEntry<"events" | "news-releases" | "activities">,
   lang: SupportedLanguage,
 ) => {
   const baseUrl = getRelativeLocaleUrl(lang);
   const slug = removeLanguagePrefix(entry.slug, lang);
 
-  const articlePath = Routes.Aritcles.replace(/^\//, "");
-  const cybersecurityTipsPath = Routes.CybersecurityTips.replace(/^\//, "");
   const newsReleasePath = Routes.NewsRelease.replace(/^\//, "");
   const activitiesPath = Routes.Activities.replace(/^\//, "");
   const eventsPath = Routes.Events.replace(/^\//, "");
 
   const urlGenerators: {
-    articles: () => string;
-    "cybersecurity-tips": () => string;
     events: () => string;
     "news-releases": () => string;
     activities: () => string;
   } = {
-    articles: () => `${baseUrl}${articlePath}/${slug}`,
-    "cybersecurity-tips": () => `${baseUrl}${cybersecurityTipsPath}/${slug}`,
     "news-releases": () => `${baseUrl}${newsReleasePath}/${slug}`,
     activities: () => `${baseUrl}${activitiesPath}/${slug}`,
     events: () => `${baseUrl}${eventsPath}/${slug}`,

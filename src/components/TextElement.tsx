@@ -3,27 +3,27 @@ import { cn } from "@/lib/utils";
 const CONFIG = {
   heading: {
     tag: "h1",
-    tw: "scroll-m-20 text-4xl font-bold  lg:text-5xl text-text tracking-wide",
+    tw: "scroll-m-20 text-4xl font-bold  lg:text-5xl text-text tracking-wide font-khmerMEF2",
   },
   subheading: {
     tag: "h2",
-    tw: "scroll-m-20 text-xl lg:text-2xl xl:text-3xl font-bold tracking-wide text-text",
+    tw: "scroll-m-20 text-xl lg:text-2xl xl:text-3xl font-bold tracking-wide text-text font-khmerMEF2",
   },
   smallheading: {
     tag: "h2",
-    tw: "scroll-m-20 text-lg lg:text-xl font-bold tracking-wide text-text",
+    tw: "scroll-m-20 text-lg lg:text-xl font-bold tracking-wide text-text font-khmerMEF2",
   },
   title: {
     tag: "h3",
-    tw: "scroll-m-20 text-lg lg:text-xl font-medium tracking-normal text-text",
+    tw: "scroll-m-20 text-lg lg:text-xl font-bold tracking-normal text-text",
   },
   mediumtitle: {
     tag: "h3",
-    tw: "scroll-m-20 text-base lg:text-lg font-medium tracking-normal text-text",
+    tw: "scroll-m-20 text-base lg:text-lg font-bold tracking-normal text-text",
   },
   smalltitle: {
     tag: "h4",
-    tw: "scroll-m-20 text-16 font-medium tracking-normal text-text",
+    tw: "scroll-m-20 text-16 font-bold tracking-normal text-text",
   },
   large: {
     tag: "p",
@@ -31,7 +31,7 @@ const CONFIG = {
   },
   medium: {
     tag: "p",
-    tw: "leading-7 text-xl lg:text-2xl xl:text-4xl text-text",
+    tw: "leading-12 text-xl lg:text-2xl xl:text-4xl text-text",
   },
   paragraph: {
     tag: "p",
