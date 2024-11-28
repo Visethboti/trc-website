@@ -13,7 +13,7 @@ interface ListItemProps extends React.ComponentPropsWithoutRef<"a"> {
 
 export const ListItem = React.forwardRef<React.ElementRef<"a">, ListItemProps>(
   ({ className, title, children, svgIcon, href, ...props }, ref) => {
-    const isDomainKH = title === "Domain .KH";
+    const isDomainKH = title === "Domain .KH" || title === "ឈ្មោះដែនជាតិ";
     const domainHref = "https://domain.gov.kh/";
     return (
       <li>

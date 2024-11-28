@@ -11,12 +11,20 @@
     url("/assets/fonts/calist.woff") format("woff");
 }
 @font-face {
-  font-family: "Kantumruy Pro";
-  font-weight: 100 700;
+  font-family: "Khmer MEF1";
+  font-weight: 100 200 300 400 500 600 700;
   font-display: optional;
   src:
-    url("/assets/fonts/kantumruypro.woff2") format("woff2"),
-    url("/assets/fonts/kantumruypro.woff") format("woff");
+    url("/assets/fonts/KhmerMEF1.woff2") format("woff2"),
+    url("/assets/fonts/KhmerMEF1.woff") format("woff");
+}
+@font-face {
+  font-family: "Khmer MEF2";
+  font-weight: 100 200 300 400 500 600 700;
+  font-display: optional;
+  src:
+    url("/assets/fonts/KhmerMEF2.woff2") format("woff2"),
+    url("/assets/fonts/KhmerMEF2.woff") format("woff");
 }
 
 @layer base {

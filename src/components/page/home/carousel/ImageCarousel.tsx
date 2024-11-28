@@ -70,7 +70,7 @@ export default function ImageCarousel({
                         </Badge>
                         <TextElement
                           variant="medium"
-                          className="line-clamp-4 whitespace-pre-line text-pretty text-center font-normal leading-10 lg:text-right"
+                          className="leading-12 line-clamp-4 whitespace-pre-line text-pretty text-center font-normal lg:text-right"
                         >
                           {item.data.title}
                         </TextElement>
