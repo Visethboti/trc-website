@@ -38,20 +38,20 @@ export default function ImageCarousel({
     <Carousel
       plugins={[plugin.current]}
       opts={{ loop: true }}
-      className="w-full"
+      className="h-[calc(100vh-175px)] max-h-screen overflow-hidden lg:h-[calc(100vh-139px)]"
     >
       <CarouselContent>
         {carouselDatas?.map((item, index) => (
           <CarouselItem
             key={item.data.title}
-            className="relative h-[500px] w-full lg:h-[600px]"
+            className="relative h-screen w-full"
           >
             <a href={getContentUrl(item, lang)}>
               <img
                 src={item.data.image.src}
                 alt={item.data.title}
                 sizes="100vw"
-                className="absolute inset-0 size-full object-cover object-center"
+                className="size-full object-cover"
                 loading="eager"
               />
               <div className="absolute inset-0 flex w-full items-center justify-center bg-black/70 lg:justify-end lg:bg-transparent lg:bg-gradient-to-r lg:from-transparent lg:to-black/50">
