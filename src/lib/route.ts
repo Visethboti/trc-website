@@ -30,6 +30,11 @@ export enum Routes {
   CommonCodes = Resources + "/common-codes",
   EmergencyNumbers = Resources + "/emergency-numbers",
   ActiveOperator = Resources + "/active-operator",
+  Publications = Resources + "/publications",
+  TelecomStatistics = Resources + "/telecom-statistics",
+  QualifiedImportAgents = Resources + "/qualified-import-agents",
+  TypeApproval = Resources + "/type-approval",
+  TowerMap = Resources + "/tower-map",
   Media = "/media",
   NewsRelease = Media + "/news-releases",
   Activities = Media + "/activities",
@@ -147,10 +152,10 @@ export const NavRoutes = [
   {
     label: "nav.resources",
     children: [
-      { label: "nav.resources.publications", href: Routes.UnderConstruction },
+      { label: "nav.resources.publications", href: Routes.Publications },
       {
         label: "nav.resources.telecomStatistics",
-        href: Routes.UnderConstruction,
+        href: Routes.TelecomStatistics,
       },
       { label: "nav.resources.activeOperators", href: Routes.ActiveOperator },
       { label: "nav.resources.mobilePrefixes", href: Routes.MobilePrefixes },
@@ -161,10 +166,10 @@ export const NavRoutes = [
       },
       {
         label: "nav.resources.qualifiedImportAgents",
-        href: Routes.UnderConstruction,
+        href: Routes.QualifiedImportAgents,
       },
-      { label: "nav.resources.typeApproval", href: Routes.UnderConstruction },
-      { label: "nav.resources.towerMap", href: Routes.UnderConstruction },
+      { label: "nav.resources.typeApproval", href: Routes.TypeApproval },
+      { label: "nav.resources.towerMap", href: Routes.TowerMap },
     ],
   },
   {
