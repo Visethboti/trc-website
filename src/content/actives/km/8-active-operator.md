@@ -1,5 +1,5 @@
 ---
-image: src/asset/resources/active-operator/1-logo-active.png
+image: src/asset/resources/active-operator/building.svg
 title: សាខាក្រុមហ៊ុន អិនធីធី (ថៃលែន) លីមីធីត
 descriptionOne: អាជ្ញាបណ្ណប្រតិបត្តិការនិងផ្តល់សេវាអ៊ីនធឺណិត
 address: ភ្នំពេញសេនធ័រ ប្លុក F កែងមហា វិថីព្រះសីហនុ និងវិថីសុធារស សង្កាត់ទន្លេបាសាក់ ខណ្ឌចំការមន រាជធានីភ្នំពេញ
