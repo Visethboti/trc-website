@@ -21,7 +21,10 @@ const { title, description, canonicalURL, publishDate, image } = Astro.props;
   publishDate={publishDate}
 >
   <Fragment slot="head">
-    <meta property="article:author" content="Digital Security Committee" />
+    <meta
+      property="article:author"
+      content="Telecommunication Regulator of Cambodia"
+    />
 
     {
       publishDate && (
@@ -45,7 +48,7 @@ const { title, description, canonicalURL, publishDate, image } = Astro.props;
         dateModified: publishDate.toISOString(),
         author: {
           "@type": "Organization",
-          name: "Digital Security Committee",
+          name: "Telecommunication Regulator of Cambodia",
           url: Astro.site,
         },
       })}

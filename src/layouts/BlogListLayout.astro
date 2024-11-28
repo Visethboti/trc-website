@@ -10,8 +10,6 @@ interface Props {
   description: string;
   canonicalURL: string;
   content: (
-    | CollectionEntry<"articles">
-    | CollectionEntry<"cybersecurity-tips">
     | CollectionEntry<"news-releases">
     | CollectionEntry<"events">
     | CollectionEntry<"activities">
@@ -46,7 +44,7 @@ const { title, description, canonicalURL, content, image } = Astro.props;
         image: new URL(image || "/default-og-image.jpg", Astro.url).toString(),
         isPartOf: {
           "@type": "WebSite",
-          name: "Digital Security Committee",
+          name: "Telecommunication Regulator of Cambodia",
           url: Astro.site,
         },
         about: {
@@ -66,7 +64,7 @@ const { title, description, canonicalURL, content, image } = Astro.props;
             : undefined,
           author: {
             "@type": "Organization",
-            name: "Digital Security Committee",
+            name: "Telecommunication Regulator of Cambodia",
             url: Astro.site,
           },
         })),
