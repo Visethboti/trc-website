@@ -1,0 +1,16 @@
+---
+import UnderConstruction from "@/components/under-construction/under-construction.astro";
+
+import { languages } from "@/i18n/ui";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+
+export async function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({
+    params: { lang },
+  }));
+}
+---
+
+<BaseLayout title={"Page Not Found"}>
+  <UnderConstruction />
+</BaseLayout>
