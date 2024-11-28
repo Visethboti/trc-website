@@ -228,7 +228,6 @@ export function getLocalizedRoutes(
       label: getTranslatedkey(path.label, locale),
       isTitle: path.isTitle,
     };
-    // return path;
   });
 }
 
