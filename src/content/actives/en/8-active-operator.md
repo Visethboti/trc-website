@@ -1,5 +1,5 @@
 ---
-image: src/asset/resources/active-operator/1-logo-active.png
+image: src/asset/resources/active-operator/building.svg
 title: Branch of NTT (Thailand) Limited
 descriptionOne:  License for Operation and Provision of Internet Service
 address: Phnom Penh Center, Block F, Corner of Sihanouk Blvd. & Street Sothearos, Sangkat Tonle Basak, Khan Chamkarmon, Phnom Penh
