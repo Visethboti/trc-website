@@ -38,7 +38,7 @@ export default function ImageCarousel({
     <Carousel
       plugins={[plugin.current]}
       opts={{ loop: true }}
-      className="h-[calc(100vh-175px)] max-h-screen overflow-hidden md:h-[calc(100vh-139px)]"
+      className="h-[calc(100vh-175px)] max-h-screen overflow-hidden lg:h-[calc(100vh-139px)]"
     >
       <CarouselContent>
         {carouselDatas?.map((item, index) => (
