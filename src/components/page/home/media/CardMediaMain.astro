@@ -31,11 +31,11 @@ const articleType = type.replace(/-/g, " ");
       <Image
         src={image}
         alt={type}
-        widths={[384, 512, 768]}
-        sizes="(max-width: 640px) 100vw, (max-width: 768px) 256px, (max-width: 1024px) 256px, 128px"
+        widths={[512, 768, 1024]}
+        sizes="(max-width: 640px) 100vw, (max-width: 768px) 512px, (max-width: 1024px) 768px, 1024px"
         quality="high"
         class="size-full max-h-72 object-cover"
-        loading="lazy"
+        loading="eager"
         format="webp"
       />
     </figure>

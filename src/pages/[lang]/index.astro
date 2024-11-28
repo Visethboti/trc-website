@@ -9,7 +9,7 @@ import UnitLinks from "@/components/UnitLinks.astro";
 
 import CommonCodes from "@/asset/resources/common-codes.png";
 import { languages, type SupportedLanguage } from "@/i18n/ui";
-// import { useTranslations } from "@/i18n/utils";
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import { Image } from "astro:assets";
 import { getCollection } from "astro:content";
@@ -36,7 +36,10 @@ const featuredMedia = langMedia
     (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime(),
   )
   .slice(0, 5);
-// const t = useTranslations(lang);
+console.log("here", lang);
+
+const t = useTranslations(getLangFromUrl(Astro.url.pathname));
+console.log(typeof Astro.url.pathname);
 ---
 
 <BaseLayout
@@ -55,7 +58,7 @@ const featuredMedia = langMedia
       >
         <div class="container">
           <TextElement variant="heading" className="text-white">
-            Service We Offer
+            {t("home.serviceWeOffer")}
           </TextElement>
           <ServicesOffer />
         </div>

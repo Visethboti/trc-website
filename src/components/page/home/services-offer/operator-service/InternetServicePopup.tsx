@@ -4,6 +4,7 @@ import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { DownloadIcon } from "@/components/footer/SocialMediaLinks";
 import TextElement from "@/components/TextElement";
 
+import { getLangFromUrl } from "@/i18n/utils";
 import { X } from "lucide-react";
 import { ReactSVG } from "react-svg";
 
@@ -12,7 +13,7 @@ interface Props {
   networkPattern: ImageMetadata;
 }
 
-const documentCards = [
+const documentCardsEN = [
   {
     label: "Application requesting for Internet Service Provider License",
     description:
@@ -21,8 +22,26 @@ const documentCards = [
   },
 ];
 
+const documentCardsKH = [
+  {
+    label: "KH Application requesting for Internet Service Provider License",
+    description:
+      "KH The Application for License on Operation and Provision of Internet Service",
+    link: "/service/for-operator/InternetService/The Application for License on Operation and Provision of Internet Service.pdf",
+  },
+];
+
+let documentCards = [];
+
 const TowerConstructionPopup: React.FC<Props> = ({ image, networkPattern }) => {
+  const [url, setUrl] = useState("");
   const [isDialogOpen, setIsDialogOpen] = useState(false);
+
+  useEffect(() => {
+    setUrl(window.location.pathname);
+  }, []);
+  const lang = getLangFromUrl(url);
+  documentCards = lang === "en" ? documentCardsEN : documentCardsKH;
 
   useEffect(() => {
     const handleHashChange = () => {
