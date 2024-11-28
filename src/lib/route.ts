@@ -195,6 +195,7 @@ interface RouteType {
   label: string;
   icon?: ImageMetadata;
   children?: RouteType[];
+  isTitle?: boolean;
 }
 
 export function getLocalizedRoutes(
@@ -223,8 +224,11 @@ export function getLocalizedRoutes(
         children: getLocalizedRoutes(path.children, locale),
       };
     }
-
-    return path;
+    return {
+      label: getTranslatedkey(path.label, locale),
+      isTitle: path.isTitle,
+    };
+    // return path;
   });
 }
 

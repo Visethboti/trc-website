@@ -207,7 +207,7 @@ export const ui: Record<string, Record<string, string>> = {
     "nav.resources.mobilePrefixes": "ក្បាលលេខទូរស័ព្ទចល័ត",
     "nav.resources.commonCodes": "លេខកូដរួម",
     "nav.resources.emergencyNumbers": "លេខកូដខ្លីសេវាសាធារណៈ",
-    "nav.resources.qualifiedImportagents": "ភ្នាក់ងារនាំចូលឧបករណ៍",
+    "nav.resources.qualifiedImportAgents": "ភ្នាក់ងារនាំចូលឧបករណ៍",
     "nav.resources.typeApproval": "ប្រភេទការអនុម័ត",
     "nav.resources.towerMap": "ទីតាំងបង្គោលអង់តែន",
     "nav.about": "អំពី",
