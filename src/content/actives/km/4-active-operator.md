@@ -1,5 +1,5 @@
 ---
-image: src/asset/resources/active-operator/1-logo-active.png
+image: src/asset/resources/active-operator/building.svg
 title: អង្គរ ដាតា អ៊ិនហ្វ្រេស្រ្តាក់ឈ័រ ឯ.ក
 descriptionOne:  អាជ្ញាបណ្ណប្រតិបត្តិការនិងផ្តល់សេវាហេដ្ឋារចនាសម្ព័ន្ធបណ្តាញខ្សែកាប្លិ៍ទូរគមនាគមន៍
 address: អគារលេខ២៥៥ ផ្លូវលេខ៥១កែងនិងផ្លូវលេខ៣៧០ សង្កាត់បឹងកេងកងទី១ ខណ្ឌចំការមន រាជធានីភ្នំពេញ

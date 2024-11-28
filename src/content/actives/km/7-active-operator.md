@@ -1,5 +1,5 @@
 ---
-image: src/asset/resources/active-operator/1-logo-active.png
+image: src/asset/resources/active-operator/building.svg
 title: សាខាក្រុមហ៊ុន ឆាយណា ធេលីខម គ្លូប៊ល លីមីធីត 
 descriptionOne: អាជ្ញាបណ្ណប្រតិបត្តិការនិងផ្តល់សេវាអ៊ីនធឺណិត
 address: បន្ទប់ ២០០៦ ជាន់ទី២០ អគារវឌ្ឍនៈ (៦៦) មហាវិថីព្រះមុនីវង្ស សង្កាត់វត្តភ្នំ ខណ្ឌដូនពេញ រាជធានីភ្នំពេញ

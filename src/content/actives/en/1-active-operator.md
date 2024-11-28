@@ -1,5 +1,5 @@
 ---
-image: src/asset/resources/active-operator/1-logo-active.png
+image: src/asset/resources/active-operator/building.svg
 title:  (Cambodia) Fiber Optic Communication Network Co., Ltd. (CFOCN) 
 descriptionOne:  License for Operation and Provision of Submarine Cable
 descriptionTwo:  License for Operation and Provision of Telecommunications Cable Network
