@@ -31,7 +31,7 @@ export enum Routes {
   CommonCodes = Resources + "/common-codes",
   EmergencyNumbers = Resources + "/emergency-numbers",
   ActiveOperator = Resources + "/active-operator",
-  PublicAtions = Resources + "/publications",
+  Publications = Resources + "/publications",
   TelecomStatistics = Resources + "/telecom-statistics",
   QualifiedImportAgents = Resources + "/qualified-import-agents",
   TypeApproval = Resources + "/type-approval",
@@ -158,7 +158,7 @@ export const NavRoutes = [
   {
     label: "nav.resources",
     children: [
-      { label: "nav.resources.publications", href: Routes.PublicAtions },
+      { label: "nav.resources.publications", href: Routes.Publications },
       {
         label: "nav.resources.telecomStatistics",
         href: Routes.TelecomStatistics,
