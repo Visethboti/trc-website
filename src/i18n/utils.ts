@@ -24,7 +24,7 @@ export function removeLanguagePrefix(
 }
 
 export function getLangFromUrl(input: string | URL) {
-  const url = typeof input === "string" ? input : input.pathname; // Extract pathname from URL object
+  const url = typeof input === "string" ? input : input.pathname;
 
   const [, lang] = url.split("/");
   console.log(lang);

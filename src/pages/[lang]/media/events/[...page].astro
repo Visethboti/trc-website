@@ -5,6 +5,7 @@ import Pagination from "@/components/Pagination.astro";
 import TextElement from "@/components/TextElement";
 
 import { languages } from "@/i18n/ui";
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
 import BlogListLayout from "@/layouts/BlogListLayout.astro";
 import { PER_PAGE } from "@/utils/constant.ts";
 import type { PaginateFunction } from "astro";
@@ -37,6 +38,8 @@ const { page } = Astro.props;
 
 const title = "Events";
 const description = "A collection of events.";
+
+const t = useTranslations(getLangFromUrl(Astro.url.pathname));
 ---
 
 <BlogListLayout
@@ -48,7 +51,7 @@ const description = "A collection of events.";
   <Main>
     <section aria-label={title}>
       <TextElement variant="heading" className="text-center">
-        {title}
+        {t("nav.media.events")}
       </TextElement>
       <ContentList content={page.data} lang={lang} />
       <Pagination page={page} />

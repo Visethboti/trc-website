@@ -39,7 +39,6 @@ const featuredMedia = langMedia
 console.log("here", lang);
 
 const t = useTranslations(getLangFromUrl(Astro.url.pathname));
-console.log(typeof Astro.url.pathname);
 ---
 
 <BaseLayout
@@ -104,7 +103,7 @@ console.log(typeof Astro.url.pathname);
             id="Ministry and Autonomous Units"
             className="text-text mb-4"
           >
-            {"Ministry and Autonomous Units"}
+            {t("home.unitLink.ministryAutonomousUnits")}
           </TextElement>
           <UnitLinks />
         </div>

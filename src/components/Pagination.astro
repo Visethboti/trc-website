@@ -2,6 +2,7 @@
 import PaginationComponent from "@/components/PaginationComponent.astro";
 import TextElement from "@/components/TextElement";
 
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
 import type { Page } from "astro";
 
 interface Props {
@@ -9,6 +10,7 @@ interface Props {
 }
 
 const { page } = Astro.props;
+const t = useTranslations(getLangFromUrl(Astro.url.pathname));
 ---
 
 <div
@@ -16,9 +18,17 @@ const { page } = Astro.props;
   class="mt-12 flex items-center justify-center gap-10"
 >
   <TextElement variant="body" className="hidden lg:inline-block">
-    Showing<span> {page.start + 1}</span>
-    {page.end !== page.start && <span>to {page.end + 1}</span>}
-    of <span>{page.total}</span>
+    {t("showing")}<span> {page.start + 1}</span>
+    {
+      page.end !== page.start && (
+        <span>
+          {" "}
+          {t("to")} {page.end + 1}
+        </span>
+      )
+    }
+    {t("of")}{" "}
+    <span>{page.total}</span>
   </TextElement>
   <PaginationComponent page={page} />
 </div>

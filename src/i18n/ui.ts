@@ -2,6 +2,8 @@ export const ui: Record<string, Record<string, string>> = {
   en: {
     telecommunicationRegulatorofCambodia:
       "Telecommunication Regulator of Cambodia",
+    published: "Published",
+    date: "Date",
     previous: "Previous",
     next: "Next",
     showing: "Showing",
@@ -87,6 +89,9 @@ export const ui: Record<string, Record<string, string>> = {
     "home.serviceWeOffer.forOperator.qualifiedAgentCertificate":
       "Qualified Agent Certificate",
     "home.media": "Media",
+    "home.media.activity": "Activity",
+    "home.media.event": "Event",
+    "home.media.news-release": "News Release",
     "home.seeMoreMedia": "See more media",
     "home.speedtest.mptc": "MPTC",
     "home.speedtest.speedTestApp": "Speed Test App",
@@ -157,6 +162,8 @@ export const ui: Record<string, Record<string, string>> = {
   },
   km: {
     telecommunicationRegulatorofCambodia: "និយ័តករទូរគមនាគមន៍កម្ពុជា",
+    published: "បោះពុម្ពផ្សាយដោយ",
+    date: "កាលបរិច្ឆេទ",
     previous: "ថយក្រោយ",
     next: "ទៅមុខ",
     showing: "បង្ហាញពី",
@@ -244,6 +251,9 @@ export const ui: Record<string, Record<string, string>> = {
     "home.serviceWeOffer.forOperator.qualifiedAgentCertificate":
       "វិញ្ញាបនបត្រទទួលគុណវុឌ្ឍិជាភ្នាក់ងារ",
     "home.media": "ព័ត៌មាន",
+    "home.media.activity": "សកម្មភាព",
+    "home.media.event": "ព្រឹត្តិការណ៍",
+    "home.media.news-release": "ព័ត៌មាន",
     "home.seeMoreMedia": "ព័ត៌មានផ្សេងទៀត",
     "home.speedtest.mptc": "កម្មវិធី",
     "home.speedtest.speedTestApp": "វាស់ស្ទង់ល្បឿនអ៊ីនធឺណិត",
