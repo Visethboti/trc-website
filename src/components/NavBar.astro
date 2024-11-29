@@ -11,7 +11,7 @@ import { Image } from "astro:assets";
 import { getRelativeLocaleUrl } from "astro:i18n";
 import { getLangFromUrl } from "src/i18n/utils.ts";
 
-const locale = getLangFromUrl(Astro.url) ?? defaultLang;
+const locale = getLangFromUrl(Astro.url.pathname) ?? defaultLang;
 const currentPath = Astro.url.pathname;
 const navigationItems = getLocalizedRoutes(NavRoutes, locale);
 ---

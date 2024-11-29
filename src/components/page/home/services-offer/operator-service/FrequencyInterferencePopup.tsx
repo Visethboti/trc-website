@@ -4,6 +4,7 @@ import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { DownloadIcon } from "@/components/footer/SocialMediaLinks";
 import TextElement from "@/components/TextElement";
 
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
 import { X } from "lucide-react";
 import { ReactSVG } from "react-svg";
 
@@ -12,7 +13,7 @@ interface Props {
   networkPattern: ImageMetadata;
 }
 
-const documentCards = [
+const documentCardsEN = [
   {
     label:
       "Application requesting for Frequency Interference Complaint License",
@@ -25,11 +26,33 @@ const documentCards = [
   },
 ];
 
+const documentCardsKH = [
+  {
+    label: "លិខិតស្នើសុំអាជ្ញាប័ណ្ណពាក្យបណ្តឹង",
+    description: "ពាក្យស្នើសុំបណ្តឹងតវ៉ា",
+    link: "/service/for-operator/FrequencyInterference/Complaint Form.pdf",
+  },
+  {
+    description: "ការផ្តល់កិច្ចអន្តរាគមន៍លើការប្តឹងតវ៉ា",
+    link: "/service/for-operator/FrequencyInterference/Guideline for Frequency Interference Complaint.pdf",
+  },
+];
+
+let documentCards = [];
+
 const FrequencyInterferencePopup: React.FC<Props> = ({
   image,
   networkPattern,
 }) => {
+  const [url, setUrl] = useState("");
   const [isDialogOpen, setIsDialogOpen] = useState(false);
+
+  useEffect(() => {
+    setUrl(window.location.pathname);
+  }, []);
+  const lang = getLangFromUrl(url);
+  documentCards = lang === "en" ? documentCardsEN : documentCardsKH;
+  const t = useTranslations(lang);
 
   useEffect(() => {
     const handleHashChange = () => {
@@ -66,7 +89,7 @@ const FrequencyInterferencePopup: React.FC<Props> = ({
             loading="lazy"
           />
           <TextElement className="w-2/4 text-center text-[12px] lg:text-[13px]">
-            Frequency Interference Complaint
+            {t("nav.services.frequencyInterferenceComplaint")}
           </TextElement>
         </div>
       </DialogTrigger>
@@ -93,7 +116,7 @@ const FrequencyInterferencePopup: React.FC<Props> = ({
               }}
             />
             <span className="w-full text-center text-xs text-primary">
-              Frequency Interference Complaint
+              {t("nav.services.frequencyInterferenceComplaint")}
             </span>
           </div>
           <div className="md:w-3/3 grid grid-cols-1 gap-5 md:grid-cols-1 md:items-end lg:grid-cols-2">
@@ -103,7 +126,7 @@ const FrequencyInterferencePopup: React.FC<Props> = ({
                   {card.label}
                 </TextElement>
                 <a href={card.link} target="_blank" rel="noopener noreferrer">
-                  <div className="relative flex h-auto max-h-[150px] min-h-[120px] flex-col justify-between overflow-hidden rounded-2xl bg-primary p-4 text-xs text-white md:h-[100px] md:w-[350px] lg:w-full">
+                  <div className="relative flex h-auto max-h-[150px] min-h-[120px] flex-col justify-between overflow-hidden rounded-2xl bg-primary p-4 text-xs text-white md:h-[100px] md:w-[350px] lg:w-[300px]">
                     <span className="mb-2 grow">{card.description}</span>
                     <div className="flex items-start justify-between">
                       <div>

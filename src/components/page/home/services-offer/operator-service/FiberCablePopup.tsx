@@ -4,6 +4,7 @@ import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { DownloadIcon } from "@/components/footer/SocialMediaLinks";
 import TextElement from "@/components/TextElement";
 
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
 import type { ImageMetadata } from "astro";
 import { X } from "lucide-react";
 import { ReactSVG } from "react-svg";
@@ -13,7 +14,7 @@ interface Props {
   networkPattern: ImageMetadata;
 }
 
-const documentCards = [
+const documentCardsEN = [
   {
     label: "Application requesting for Fiber Cable Construction Permit License",
     description: "The Application form for Fiber Cable Construction",
@@ -25,8 +26,30 @@ const documentCards = [
   },
 ];
 
+const documentCardsKH = [
+  {
+    label: "លិខិតស្នើសុំអាជ្ញាប័ណ្ណសាងសង់ខ្សែកាបអុបទិក",
+    description: "ពាក្យស្នើសុំសម្រាប់ការសាងសង់ខ្សែកាបអុបទិក",
+    link: "/service/for-operator/FiberCable/Application Form for Fiber Cable Construction.docx",
+  },
+  {
+    description: "ពាក្យស្នើសុំសម្រាប់ការថែទាំខ្សែកាបអុបទិក",
+    link: "/service/for-operator/FiberCable/Application Form for Fiber Cable Maintenance.docx",
+  },
+];
+
+let documentCards = [];
+
 const FiberCablePopup: React.FC<Props> = ({ image, networkPattern }) => {
+  const [url, setUrl] = useState("");
   const [isDialogOpen, setIsDialogOpen] = useState(false);
+
+  useEffect(() => {
+    setUrl(window.location.pathname);
+  }, []);
+  const lang = getLangFromUrl(url);
+  documentCards = lang === "en" ? documentCardsEN : documentCardsKH;
+  const t = useTranslations(lang);
 
   useEffect(() => {
     const handleHashChange = () => {
@@ -63,7 +86,7 @@ const FiberCablePopup: React.FC<Props> = ({ image, networkPattern }) => {
             loading="lazy"
           />
           <TextElement className="w-2/4 text-center text-[12px] lg:w-2/5 lg:text-[13px] xl:w-1/3">
-            Fiber Cable Construction Permit
+            {t("nav.services.fiberCableConstructionPermit")}
           </TextElement>
         </div>
       </DialogTrigger>
@@ -90,7 +113,7 @@ const FiberCablePopup: React.FC<Props> = ({ image, networkPattern }) => {
               }}
             />
             <span className="w-full text-center text-xs text-primary">
-              Fiber Cable Construction Permit
+              {t("nav.services.fiberCableConstructionPermit")}
             </span>
           </div>
           <div className="md:w-3/3 grid grid-cols-1 gap-5 md:grid-cols-1 md:items-end lg:grid-cols-2">

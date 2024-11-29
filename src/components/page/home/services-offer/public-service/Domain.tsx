@@ -1,10 +1,22 @@
+import { useEffect, useState } from "react";
+
 import TextElement from "@/components/TextElement";
+
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
 
 interface Props {
   image: ImageMetadata;
 }
 
 const Domain: React.FC<Props> = ({ image }) => {
+  const [url, setUrl] = useState("");
+  const lang = getLangFromUrl(url);
+  const t = useTranslations(lang);
+
+  useEffect(() => {
+    setUrl(window.location.pathname);
+  }, []);
+
   return (
     <a
       href="https://domain.gov.kh/"
@@ -18,7 +30,9 @@ const Domain: React.FC<Props> = ({ image }) => {
         className="mb-2 size-[58px] rounded-lg md:size-[76px] lg:size-[100px]"
         loading="lazy"
       />
-      <TextElement className="w-5/5 text-center text-xs">Domain.KH</TextElement>
+      <TextElement className="w-5/5 text-center text-xs">
+        {t("nav.services.domainKH")}
+      </TextElement>
     </a>
   );
 };

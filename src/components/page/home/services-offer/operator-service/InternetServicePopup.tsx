@@ -4,6 +4,7 @@ import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { DownloadIcon } from "@/components/footer/SocialMediaLinks";
 import TextElement from "@/components/TextElement";
 
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
 import { X } from "lucide-react";
 import { ReactSVG } from "react-svg";
 
@@ -12,7 +13,7 @@ interface Props {
   networkPattern: ImageMetadata;
 }
 
-const documentCards = [
+const documentCardsEN = [
   {
     label: "Application requesting for Internet Service Provider License",
     description:
@@ -21,8 +22,27 @@ const documentCards = [
   },
 ];
 
-const TowerConstructionPopup: React.FC<Props> = ({ image, networkPattern }) => {
+const documentCardsKH = [
+  {
+    label: "ពាក្យស្នើសុំអាជ្ញាប័ណ្ណផ្តល់សេវាអ៊ីនធឺណិត",
+    description:
+      "ពាក្យស្នើសុំអាជ្ញាប័ណ្ណប្រតិបត្តិការ និងការផ្តល់សេវាអ៊ីនធឺណិត",
+    link: "/service/for-operator/InternetService/The Application for License on Operation and Provision of Internet Service.pdf",
+  },
+];
+
+let documentCards = [];
+
+const InternetServicePopup: React.FC<Props> = ({ image, networkPattern }) => {
+  const [url, setUrl] = useState("");
   const [isDialogOpen, setIsDialogOpen] = useState(false);
+
+  useEffect(() => {
+    setUrl(window.location.pathname);
+  }, []);
+  const lang = getLangFromUrl(url);
+  documentCards = lang === "en" ? documentCardsEN : documentCardsKH;
+  const t = useTranslations(lang);
 
   useEffect(() => {
     const handleHashChange = () => {
@@ -59,7 +79,7 @@ const TowerConstructionPopup: React.FC<Props> = ({ image, networkPattern }) => {
             loading="lazy"
           />
           <TextElement className="w-3/4 text-center text-[12px] lg:text-[13px]">
-            Internet Service Provider
+            {t("nav.services.operationalLicense")}
           </TextElement>
         </div>
       </DialogTrigger>
@@ -86,7 +106,7 @@ const TowerConstructionPopup: React.FC<Props> = ({ image, networkPattern }) => {
               }}
             />
             <span className="w-full text-center text-xs text-primary">
-              Internet Service Provider License
+              {t("nav.services.operationalLicense")}
             </span>
           </div>
           <div className="grid grid-cols-1 gap-5 md:w-2/3 md:grid-cols-1 md:items-end">
@@ -124,4 +144,4 @@ const TowerConstructionPopup: React.FC<Props> = ({ image, networkPattern }) => {
   );
 };
 
-export default TowerConstructionPopup;
+export default InternetServicePopup;
