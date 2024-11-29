@@ -2,47 +2,14 @@
 import TextElement from "../../TextElement";
 import Chairmankeynote from "/src/asset/about/chairman-keynote-img.webp";
 import chairmankeynoteone from "/src/asset/about/chairman's-keynote-img.webp";
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
 import { Image } from "astro:assets";
 
-const ChairmankeynoteList = [
-  {
-    text: "Under the wise leadership of Prime Minister Samdech Akka Moha Sena Padei Techo HUN SEN, the development of the telecommunications and information technology sector, in line with the law, relevant frameworks and the policies of the Royal Government of Cambodia, is a key priority in the public administrative reform programs. This goal is at the core of the Rectangular Strategy, National Strategic Development Plan and political Platform of the Royal Government, aimed at promoting economic growth, employment, equity, and efficiency in the Kingdom of Cambodia.",
-  },
-  {
-    text: "The primary functions and duties of the Telecommunication Regulator of Cambodia are to ensure effectiveness, transparency, and quality in the telecommunications and ICT sectors while safeguarding the interests of service providers and users. These functions align with the strategic development plan and legal framework established by the Royal Government of Cambodia through the Ministry of Post and Telecommunications as the technical guardian. They are strategically crucial for achieving the Cambodia Millennium Development Goals, which promote investment, enhance national economic growth, and alleviate poverty. Therefore, it is essential that these duties are performed with due diligence throughout the country to serve the needs of the people.",
-  },
-  {
-    text: "As providers and users of networks and telecommunication services, civil servants and individuals working under the Telecommunication Regulator of Cambodia must possess four core qualities which are as follows:  ",
-  },
-];
-
-const ChairmankeynotetrcList = [
-  {
-    text: "Ownership: Take responsibility and perform tasks to the best of their ability.",
-  },
-  {
-    text: "Loyalty: Demonstrate loyalty to the people and state institutions.",
-  },
-  {
-    text: "Professional Conscience: Maintain a professional conscience to ensure effectiveness and accountability in their work.",
-  },
-  {
-    text: "​Public Service Culture: Uphold a culture of public service aimed at providing high-quality services that meet the needs of the people, enhance wellbeing, and promote national growth.",
-  },
-];
-
-const ChairmankeynoteoneList = [
-  {
-    text: "The policy on the provision of the right to regulate the telecommunications and ICT market and the policy on the provision of public services granted to the Telecommunication Regulator of Cambodia through the Laws on Telecommunications is the core of the administrative reform of the Royal Government of Cambodia in this mandate.",
-  },
-  {
-    text: "These policies equip the Telecommunication Regulator of Cambodia with approaches and mechanisms to improve service quality for telecommunications providers and users, ensuring services are delivered reliably, conveniently, and transparently across locations as needed. This approach makes regulation and public services more responsive to actual needs, allowing providers and users of telecommunications and ICT services to benefit from reliable, effective, and transparent support, with full information available about the regulator and its services.",
-  },
-];
+const t = useTranslations(getLangFromUrl(Astro.url.pathname));
 ---
 
 <div class="flex flex-col gap-8 md:flex-row">
-  <div class="grid w-full gap-8 md:w-1/2">
+  <div class="flex w-full flex-col gap-8 md:w-1/2">
     <div>
       <Image
         src={chairmankeynoteone}
@@ -66,31 +33,55 @@ const ChairmankeynoteoneList = [
   </div>
   <div class="w-full md:w-1/2">
     <ul class="space-y-3">
-      {
-        ChairmankeynoteList.map((about) => (
-          <li>
-            <TextElement variant="base">{about.text}</TextElement>
-          </li>
-        ))
-      }
+      <li>
+        <TextElement variant="base"
+          >{t("about.chairmanKeyNote.paragraph1")}</TextElement
+        >
+      </li>
+      <li>
+        <TextElement variant="base"
+          >{t("about.chairmanKeyNote.paragraph2")}</TextElement
+        >
+      </li>
+      <li>
+        <TextElement variant="base"
+          >{t("about.chairmanKeyNote.paragraph3")}</TextElement
+        >
+      </li>
     </ul>
     <ul class="list-disc pl-4">
-      {
-        ChairmankeynotetrcList.map((about) => (
-          <li>
-            <TextElement variant="base">{about.text}</TextElement>
-          </li>
-        ))
-      }
+      <li>
+        <TextElement variant="base"
+          >{t("about.chairmanKeyNote.list1")}</TextElement
+        >
+      </li>
+      <li>
+        <TextElement variant="base"
+          >{t("about.chairmanKeyNote.list2")}</TextElement
+        >
+      </li>
+      <li>
+        <TextElement variant="base"
+          >{t("about.chairmanKeyNote.list3")}</TextElement
+        >
+      </li>
+      <li>
+        <TextElement variant="base"
+          >{t("about.chairmanKeyNote.list4")}</TextElement
+        >
+      </li>
     </ul>
     <ul class="space-y-3 pt-4">
-      {
-        ChairmankeynoteoneList.map((about) => (
-          <li>
-            <TextElement variant="base">{about.text}</TextElement>
-          </li>
-        ))
-      }
+      <li>
+        <TextElement variant="base">
+          {t("about.chairmanKeyNote.paragraph4")}
+        </TextElement>
+      </li>
+      <li>
+        <TextElement variant="base">
+          {t("about.chairmanKeyNote.paragraph5")}
+        </TextElement>
+      </li>
     </ul>
   </div>
 </div>

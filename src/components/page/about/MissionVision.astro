@@ -1,13 +1,10 @@
 ---
 import TextElement from "../../TextElement";
 import image from "/src/asset/about/mission-vision-img.webp";
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
 import { Image } from "astro:assets";
 
-const missionList = [
-  {
-    text: "The Telecommunication Regulator of Cambodia (TRC) aspires to build a dynamic and inclusive telecommunications sector that empowers Cambodia’s people, promotes sustainable economic growth, and advances the telecommunications and ICT sector landscape in Cambodia. TRC is dedicated to regulating and fostering a fair, competitive, and innovative market where providers can thrive, and consumers benefit from high-quality, affordable, and accessible telecommunications services.With a strong commitment to transparency, accountability, and ethical integrity, TRC strives to uphold a fair regulatory framework that meets the needs of service providers, users, and the broader community. As regulators of telecommunications in Cambodia, TRC plays a pivotal role in aligning the sector with development goals of the Royal Government of Cambodia, enhancing regional integration, and supporting the nation’s journey toward greater connectivity and prosperity.",
-  },
-];
+const t = useTranslations(getLangFromUrl(Astro.url.pathname));
 ---
 
 <div class="flex flex-col gap-8 md:flex-row">
@@ -23,13 +20,9 @@ const missionList = [
   </div>
   <div class="w-full md:w-1/2">
     <ul class="space-y-3">
-      {
-        missionList.map((about) => (
-          <li>
-            <TextElement variant="base">{about.text}</TextElement>
-          </li>
-        ))
-      }
+      <li>
+        <TextElement variant="base">{t("about.vision.paragraph")}</TextElement>
+      </li>
     </ul>
   </div>
 </div>

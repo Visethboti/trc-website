@@ -36,7 +36,6 @@ const featuredMedia = langMedia
     (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime(),
   )
   .slice(0, 5);
-console.log("here", lang);
 
 const t = useTranslations(getLangFromUrl(Astro.url.pathname));
 ---

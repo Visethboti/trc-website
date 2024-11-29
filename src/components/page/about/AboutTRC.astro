@@ -1,19 +1,10 @@
 ---
 import TextElement from "../../TextElement";
 import image from "/src/asset/about/about-trc.webp";
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
 import { Image } from "astro:assets";
 
-const aboutList = [
-  {
-    text: "The Telecommunication Regulator of Cambodia (TRC), established by the Law on Telecommunications in 2015, plays a crucial role in regulating Cambodia's telecommunications sector. As a public legal entity, TRC operates autonomously and independently from telecommunications operators and other individuals in the industry.",
-  },
-  {
-    text: "The main objective of TRC is to ensure fair, efficient, and transparent competition in the telecommunications sector. To achieve this goal, TRC formulates regulations and guidelines for the operation and provision of telecommunications services and networks in accordance with the Royal Government's policies. These regulations are implemented through the enforcement of relevant laws and serve as the legal framework for the sector",
-  },
-  {
-    text: "In addition to its regulatory and arbitration roles, TRC also supervises the telecommunications sector. TRC monitors compliance with regulations, investigates possible breaches, and takes appropriate action to maintain a level playing field for all industry players.Act as a policy maker to review and decide on proposal for revision and/or amendment of laws, regulations, and policies related to digital security.",
-  },
-];
+const t = useTranslations(getLangFromUrl(Astro.url.pathname));
 ---
 
 <div class="flex flex-col gap-8 md:flex-row">
@@ -29,13 +20,15 @@ const aboutList = [
   </div>
   <div class="w-full md:w-1/2">
     <ul class="space-y-3">
-      {
-        aboutList.map((about) => (
-          <li>
-            <TextElement variant="base">{about.text}</TextElement>
-          </li>
-        ))
-      }
+      <li>
+        <TextElement variant="base">{t("about.trc.paragraph1")}</TextElement>
+      </li>
+      <li>
+        <TextElement variant="base">{t("about.trc.paragraph2")}</TextElement>
+      </li>
+      <li>
+        <TextElement variant="base">{t("about.trc.paragraph3")}</TextElement>
+      </li>
     </ul>
   </div>
 </div>

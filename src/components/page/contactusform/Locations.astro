@@ -1,9 +1,12 @@
 ---
 import TextElement from "@/components/TextElement";
 
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
 import { Clock4, Mail, MapIcon, Phone } from "lucide-react";
 
-const contactItems = [
+const lang = getLangFromUrl(Astro.url.pathname);
+
+const contactItemsEN = [
   {
     icon: MapIcon,
     label: "Street 102, Sangkat Wat Phnom, Khan Daun Penh, Phnom Penh",
@@ -12,13 +15,27 @@ const contactItems = [
   { icon: Mail, label: "info@trc.gov.kh" },
   { icon: Clock4, label: "7:30 AM - 5:30 PM / (Mon - Fri)" },
 ];
+
+const contactItemsKH = [
+  {
+    icon: MapIcon,
+    label: "ផ្លូវ១០២ សង្កាត់វត្តភ្នំ ខណ្ឌដូនពេញ រាជធានីភ្នំពេញ",
+  },
+  { icon: Phone, label: "៦៧៨៩​​​​​​​​ (ខ្សែទូរស័ព្ទ) / (៨៥៥) ២៣ ៧២២ ៣៣៣" },
+  { icon: Mail, label: "info@trc.gov.kh" },
+  { icon: Clock4, label: "៧:៣០ ព្រឹក ដល់ ៥:៣០ រសៀល / ចន្ទ ដល់ សុក្រ" },
+];
+
+const contactItems = lang === "en" ? contactItemsEN : contactItemsKH;
+
+const t = useTranslations(getLangFromUrl(Astro.url.pathname));
 ---
 
 <TextElement
   variant="paragraph"
   className="rounded-t-2xl bg-secondary p-4 text-white"
 >
-  Telecommunication Regulator of Cambodia
+  {t("telecommunicationRegulatorofCambodia")}
 </TextElement>
 <div class="rounded-b-2xl border border-t-0 border-black">
   {

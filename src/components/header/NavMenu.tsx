@@ -62,7 +62,7 @@ const NavMenu = ({
                     {item.label}
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
-                    <ul className="grid w-[100px] p-2 md:w-[100px] md:grid-cols-1 lg:w-[250px]">
+                    <ul className="noscroll grid max-h-[calc(100vh-175px)] w-[100px] overflow-y-scroll p-2 md:w-[100px] md:grid-cols-1 lg:max-h-[calc(100vh-154px)] lg:w-[250px]">
                       {item.children?.map((child) =>
                         child.isTitle ? (
                           <ListItemTitle

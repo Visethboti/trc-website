@@ -8,6 +8,7 @@ import MissionVision from "@/components/page/about/MissionVision.astro";
 import TextElement from "@/components/TextElement";
 
 import { languages, type SupportedLanguage } from "@/i18n/ui";
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
 import OrganizationLayout from "@/layouts/OrganizationLayout.astro";
 import enAboutUs from "src/static/about-us/en-about-us.webp";
 import kmAboutUs from "src/static/about-us/km-about-us.webp";
@@ -30,6 +31,8 @@ const currentImage = langImages[lang] || enAboutUs;
 const title = "About";
 const description =
   "Learn about the Digital Security Committee's strategic goals, roles, and responsibilities in developing Cambodia's digital government policy for 2022-2035.";
+
+const t = useTranslations(getLangFromUrl(Astro.url.pathname));
 ---
 
 <OrganizationLayout
@@ -45,7 +48,7 @@ const description =
             variant="heading"
             className="text-text text-center lg:text-3xl"
           >
-            Telecommunication Regulator of Cambodia
+            {t("telecommunicationRegulatorofCambodia")}
           </TextElement>
         </header>
       </section>
@@ -53,16 +56,16 @@ const description =
         <aside class="sticky top-1/2 h-full">
           <ul class="hidden xl:flex xl:flex-col">
             <li class="whitespace-nowrap text-secondary">
-              <a href="#chairman-keynote/">Chairman keynote</a>
+              <a href="#chairman-keynote/">{t("about.ChairmanKeynote")}</a>
             </li>
             <li class="whitespace-nowrap">
-              <a href="#vision/">Vision</a>
+              <a href="#vision/">{t("about.vision")}</a>
             </li>
             <li class="whitespace-nowrap">
-              <a href="#mission/">Mission</a>
+              <a href="#mission/">{t("about.mission")}</a>
             </li>
             <li class="whitespace-nowrap">
-              <a href="#about-trc/">About TRC</a>
+              <a href="#about-trc/">{t("about.aboutTRC")}</a>
             </li>
           </ul>
         </aside>
@@ -73,7 +76,7 @@ const description =
             class="scroll-mt-20 2xl:scroll-mt-[93px]"
           >
             <TextElement variant="subheading" className="p-2">
-              Chairman’s Keynote
+              {t("about.ChairmanKeynote")}
             </TextElement>
             <ChairmanKeynote />
           </section>
@@ -86,7 +89,7 @@ const description =
             class="scroll-mt-20 2xl:scroll-mt-[93px]"
           >
             <TextElement variant="subheading" className="p-2">
-              Vision
+              {t("about.vision")}
             </TextElement>
             <MissionVision />
           </section>
@@ -99,7 +102,7 @@ const description =
             class="scroll-mt-20 2xl:scroll-mt-[93px]"
           >
             <TextElement variant="subheading" className="p-2">
-              Mission
+              {t("about.mission")}
             </TextElement>
             <Mission />
           </section>
@@ -112,7 +115,7 @@ const description =
             class="scroll-mt-20 2xl:scroll-mt-[93px]"
           >
             <TextElement variant="subheading" className="p-2">
-              About TRC
+              {t("about.aboutTRC")}
             </TextElement>
             <AboutTRC />
           </section>

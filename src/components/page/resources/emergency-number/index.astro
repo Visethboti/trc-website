@@ -1,7 +1,10 @@
 ---
 import EmergencyList from "./EmergencyList.astro";
+import { getLangFromUrl } from "@/i18n/utils";
 
-const MOI = [
+const lang = getLangFromUrl(Astro.url.pathname);
+
+const MOIEN = [
   {
     Title: "Police",
     Number: "117",
@@ -32,7 +35,40 @@ const MOI = [
   },
 ];
 
-const MOH = [
+const MOIKH = [
+  {
+    Title: "នគរបាល",
+    Number: "១១៧",
+  },
+  {
+    Title: "រថយន្តពន្លត់អគ្គីភ័យ",
+    Number: "១១៨",
+  },
+  {
+    Title: "សន្តិសុខសាធារណៈ",
+    Number: "១២៨៣",
+  },
+  {
+    Title: "ការងារអន្តោប្រវេសន៍",
+    Number: "១១២៨៤",
+  },
+  {
+    Title: "ជួញដូរមនុស្សនិង ការពារអនិតិជន",
+    Number: "១២៨៨",
+  },
+  {
+    Title: "តាមដានការប្រើប្រាស់សំបុត្រ និងបញ្ជីអាត្រានុកូលដ្ឋាន",
+    Number: "១២៩០",
+  },
+  {
+    Title: "ផ្សព្វផ្សាយស្ថានីយ៍វិទ្យុ និងទរទស្សន៍មហាផ្ទៃ",
+    Number: "១២៧៦",
+  },
+];
+
+const MOI = lang === "en" ? MOIEN : MOIKH;
+
+const MOHEN = [
   {
     Title: "Calmette Hospital",
     Number: "115",
@@ -42,13 +78,37 @@ const MOH = [
     Number: "119",
   },
 ];
-const MAFF = [
+
+const MOHKH = [
+  {
+    Title: "មន្ទីរពេទ្យកាល់ម៉ែត",
+    Number: "១១៥",
+  },
+  {
+    Title: "រថយន្ដសង្គ្រោះ",
+    Number: "១១៩",
+  },
+];
+
+const MOH = lang === "en" ? MOHEN : MOHKH;
+
+const MAFFEN = [
   {
     Title: "Avian Influenza",
     Number: "1287 / 1289",
   },
 ];
-const MLVT = [
+
+const MAFFKH = [
+  {
+    Title: "ផ្តាសាយបក្សី",
+    Number: "១២៨៧ / ១២៨៩",
+  },
+];
+
+const MAFF = lang === "en" ? MAFFEN : MAFFKH;
+
+const MLVTEN = [
   {
     Title: "Occupational Accidents",
     Number: "1286",
@@ -58,7 +118,21 @@ const MLVT = [
     Number: "1297",
   },
 ];
-const Other = [
+
+const MLVTKH = [
+  {
+    Title: "គ្រោះថ្នាក់ការងារ",
+    Number: "១២៨៦",
+  },
+  {
+    Title: "ច្បាប់ការងារ",
+    Number: "១២៩៧",
+  },
+];
+
+const MLVT = lang === "en" ? MLVTEN : MLVTKH;
+
+const OtherEN = [
   {
     Title: "Child and Youth Benefits",
     Number: "1280",
@@ -116,22 +190,83 @@ const Other = [
     Number: "1278 / 1279",
   },
 ];
+
+const OtherKH = [
+  {
+    Title: "ផលប្រយោជន៍កុមារ និងយុវវ័យ",
+    Number: "១២៨០",
+  },
+  {
+    Title: "សេវាផ្លូវច្បាប់ជូនជនក្រីក្",
+    Number: "១២៨១",
+  },
+  {
+    Title: "អង្គភាពប្រឆាំងអំពើពុករលួយ",
+    Number: "១២៨២",
+  },
+  {
+    Title: "ផ្តល់ព័ត៌មានបន្ទាន់ពាក់ព័ន្ធនឹងការបោះឆ្នោត",
+    Number: "១២៨៥",
+  },
+  {
+    Title: "មជ្ឈមណ្ឌលជាតិផ្តល់ឈាម",
+    Number: "១២៩១",
+  },
+  {
+    Title: "អង្គការតម្លាភាពកម្ពុជា",
+    Number: "១២៩២",
+  },
+  {
+    Title: "អង្គការ One World UK",
+    Number: "១២៩៣",
+  },
+  {
+    Title: "គណៈកម្មការជាតិគ្រប់គ្រងគ្រោះមហន្តរាយ",
+    Number: "១២៩៤",
+  },
+  {
+    Title: "អង្គការសុខភាពគ្រួសារ ៣៦០",
+    Number: "១២៩៥",
+  },
+  {
+    Title: "អង្គការ People in Need",
+    Number: "១២៩៦",
+  },
+  {
+    Title: "អគ្គិសនីកម្ពុជា EDC",
+    Number: "១២៩៨",
+  },
+  {
+    Title: "រដ្ឋបាល​រាជធានីភ្នំពេញ",
+    Number: "១២៩៩",
+  },
+  {
+    Title: "អគ្គនាយកដ្ឋានពន្ធដា",
+    Number: "១២៧៧",
+  },
+  {
+    Title: "សហភាពសហព័ន្ធយុវជនកម្ពុជា (ស.ស.យ.ក)",
+    Number: "១២៧៨ / ១២៧៩",
+  },
+];
+
+const Other = lang === "en" ? OtherEN : OtherKH;
 ---
 
 <div class="grid grid-cols-1 gap-7 md:grid-cols-1 lg:grid-cols-2">
   <div class="flex flex-col gap-4">
-    <EmergencyList ministry="Ministry of Interior" emergencyList={MOI} />
-    <EmergencyList ministry="Ministry of Health" emergencyList={MOH} />
+    <EmergencyList ministry="ministryofInterior" emergencyList={MOI} />
+    <EmergencyList ministry="ministryofHealth" emergencyList={MOH} />
     <EmergencyList
-      ministry="Ministry of Agricuture Forestry and Fisheries"
+      ministry="ministryofAgricutureForestryandFisheries"
       emergencyList={MAFF}
     />
     <EmergencyList
-      ministry="Ministry of Labor and Vocational Training"
+      ministry="ministryofLaborandVocationalTraining"
       emergencyList={MLVT}
     />
   </div>
   <div class="flex flex-col gap-4">
-    <EmergencyList ministry="Other" emergencyList={Other} />
+    <EmergencyList ministry="other" emergencyList={Other} />
   </div>
 </div>

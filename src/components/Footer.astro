@@ -5,8 +5,9 @@ import SocialMedia from "./footer/SocialMedia";
 import { MailIcon, MapPinIcon, PhoneIcon } from "./footer/SocialMediaLinks";
 import { Separator } from "./ui/separator";
 import { defaultLang } from "@/i18n/ui";
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
 
-const locale = Astro.currentLocale ?? defaultLang;
+const locale = getLangFromUrl(Astro.url.pathname) ?? defaultLang;
 
 const navigationItems = getLocalizedRoutes(NavRoutes, locale);
 
@@ -14,10 +15,17 @@ const quickLinks = navigationItems
   .flatMap((item) => item.children || [])
   .filter(
     (child) =>
-      child.href === "/km/resources/mobile-prefixes/" ||
-      child.href === "/km/resources/common-codes/" ||
-      child.href === "/km/resources/emergency-numbers/",
+      child.label === "Mobile Prefixes" ||
+      child.label === "Common Codes" ||
+      child.label === "Emergency Numbers" ||
+      child.label === "ក្បាលលេខទូរស័ព្ទចល័ត" ||
+      child.label === "លេខកូដរួម" ||
+      child.label === "លេខកូដខ្លីសេវាសាធារណៈ",
   );
+
+console.log(quickLinks);
+
+const t = useTranslations(getLangFromUrl(Astro.url.pathname));
 ---
 
 <footer class="mt-auto w-auto bg-primary text-primary-foreground">
@@ -26,13 +34,13 @@ const quickLinks = navigationItems
       <div class="grid gap-12 lg:w-3/4 lg:grid-cols-5">
         <address class="not-italic lg:col-span-2">
           <h2 class="mb-4 text-lg font-semibold">
-            Telecommunication Regulator of Cambodia
+            {t("telecommunicationRegulatorofCambodia")}
           </h2>
           <ul class="space-y-3">
             <li>
               <a href="tel:+85594858349751" class="flex hover:underline">
                 <PhoneIcon />
-                <span class="ml-4">6789 (Hotline) / (855) 23 722 333</span>
+                <span class="ml-4">{t("footer.hotline")}</span>
               </a>
             </li>
             <li>
@@ -49,16 +57,14 @@ const quickLinks = navigationItems
                 class="flex hover:underline"
               >
                 <MapPinIcon />
-                <span class="ml-4"
-                  >Street 102, Sangkat Wat Phnom, Khan Daun Penh, Phnom Penh</span
-                >
+                <span class="ml-4">{t("footer.address")}</span>
               </a>
             </li>
           </ul>
         </address>
         <div class="hidden lg:col-span-1 lg:flex"></div>
         <nav class="lg:col-span-1">
-          <h2 class="mb-4 text-lg font-semibold">Quick Links</h2>
+          <h2 class="mb-4 text-lg font-semibold">{t("footer.quickLink")}</h2>
           <ul class="space-y-3">
             {
               quickLinks.map((item) => (
@@ -78,7 +84,7 @@ const quickLinks = navigationItems
   <Separator className="h-[2px] w-full bg-secondary" />
   <div class="flex items-center justify-center px-4 py-12 lg:p-8 2xl:px-16">
     <p>
-      © All right reserved by Telecommunication Regulator of Cambodia - T.R.C
+      © {t("footer.copyright")}
     </p>
   </div>
 </footer>

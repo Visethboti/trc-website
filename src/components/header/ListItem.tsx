@@ -30,23 +30,25 @@ export const ListItem = React.forwardRef<React.ElementRef<"a">, ListItemProps>(
             {...props}
           >
             <div className="flex w-full justify-between">
-              <div className="pr-4 text-16 font-medium leading-tight">
+              <div className="max-w-[178px] text-wrap break-words pr-4 text-16 font-medium leading-tight">
                 {title}
               </div>
-              {svgIcon && (
-                <ReactSVG
-                  src={svgIcon.src}
-                  className="size-5"
-                  beforeInjection={(svg) => {
-                    svg.classList.add("size-5");
-                    const paths = svg.querySelectorAll("path");
-                    paths.forEach((path) => {
-                      path.classList.add("fill-primary");
-                      path.classList.add("stroke-primary");
-                    });
-                  }}
-                />
-              )}
+              <div className="w-fit">
+                {svgIcon && (
+                  <ReactSVG
+                    src={svgIcon.src}
+                    className="size-5"
+                    beforeInjection={(svg) => {
+                      svg.classList.add("size-5");
+                      const paths = svg.querySelectorAll("path");
+                      paths.forEach((path) => {
+                        path.classList.add("fill-primary");
+                        path.classList.add("stroke-primary");
+                      });
+                    }}
+                  />
+                )}
+              </div>
             </div>
             <p className="line-clamp-2 text-16 leading-snug text-muted-foreground">
               {children}
