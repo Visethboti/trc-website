@@ -15,16 +15,16 @@
   font-weight: 100 200 300 400 500 600 700;
   font-display: optional;
   src:
-    url("/assets/fonts/KhmerMEF1.woff2") format("woff2"),
-    url("/assets/fonts/KhmerMEF1.woff") format("woff");
+    url("/assets/fonts/khmerMEF1.woff2") format("woff2"),
+    url("/assets/fonts/khmerMEF1.woff") format("woff");
 }
 @font-face {
   font-family: "Khmer MEF2";
   font-weight: 100 200 300 400 500 600 700;
   font-display: optional;
   src:
-    url("/assets/fonts/KhmerMEF2.woff2") format("woff2"),
-    url("/assets/fonts/KhmerMEF2.woff") format("woff");
+    url("/assets/fonts/khmerMEF2.woff2") format("woff2"),
+    url("/assets/fonts/khmerMEF2.woff") format("woff");
 }
 
 @layer base {
