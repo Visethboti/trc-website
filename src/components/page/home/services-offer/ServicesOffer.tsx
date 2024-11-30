@@ -5,9 +5,16 @@ import TextElement from "@/components/TextElement";
 
 import OperatorService from "./operator-service/OperatorService";
 import PublicService from "./public-service/PublicService";
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
 
 export function ServicesOffer() {
+  const [url, setUrl] = useState("");
   const [activeTab, setActiveTab] = useState("public");
+
+  useEffect(() => {
+    setUrl(window.location.pathname);
+  }, []);
+  const t = useTranslations(getLangFromUrl(url));
 
   useEffect(() => {
     const handleHashChange = () => {
@@ -49,10 +56,14 @@ export function ServicesOffer() {
     >
       <TabsList className="flex flex-row bg-primary p-14 md:justify-evenly">
         <TabsTrigger value="public" className="rounded-3xl px-6">
-          <TextElement variant="title">For Public</TextElement>
+          <TextElement variant="title">
+            {t("home.serviceWeOffer.forPublic")}
+          </TextElement>
         </TabsTrigger>
         <TabsTrigger value="operator" className="rounded-3xl px-6">
-          <TextElement variant="title">For Operator</TextElement>
+          <TextElement variant="title">
+            {t("home.serviceWeOffer.forOperator")}
+          </TextElement>
         </TabsTrigger>
       </TabsList>
       <TabsContent value="public" className="text-white">

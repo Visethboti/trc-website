@@ -23,8 +23,10 @@ export function removeLanguagePrefix(
   return slug.replace(`${lang}/`, "");
 }
 
-export function getLangFromUrl(url: URL) {
-  const [, lang] = url.pathname.split("/");
+export function getLangFromUrl(input: string | URL) {
+  const url = typeof input === "string" ? input : input.pathname;
+
+  const [, lang] = url.split("/");
   if (lang in ui) return lang as keyof typeof ui;
   return defaultLang;
 }

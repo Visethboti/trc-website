@@ -8,6 +8,7 @@ import ProseWrapper from "@/components/ProseWrapper.astro";
 import TextElement from "@/components/TextElement";
 
 import type { SupportedLanguage } from "@/i18n/ui";
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
 import ArticleLayout from "@/layouts/ArticleLayout.astro";
 import { Image } from "astro:assets";
 import type { CollectionEntry, ContentEntryMap } from "astro:content";
@@ -25,6 +26,8 @@ const {
   params: { lang },
 } = Astro;
 const { Content } = await page.render();
+
+const t = useTranslations(getLangFromUrl(Astro.url.pathname));
 
 const publicationDate = new Date(page.data.date);
 
@@ -87,7 +90,7 @@ langArticles.map((article, index) => {
             class="items-center gap-10 text-sm text-muted-foreground sm:flex"
           >
             <span class="author byline flex flex-row gap-2">
-              <span class="italic text-secondary">Published:</span>
+              <span class="italic text-secondary">{t("published")}:</span>
 
               <span class="italic">{page.data.author}</span>
             </span>
@@ -96,7 +99,7 @@ langArticles.map((article, index) => {
               datetime={toISOString(publicationDate)}
               class="dateline flex flex-row gap-2"
             >
-              <span class="italic text-secondary">Date:</span>
+              <span class="italic text-secondary">{t("date")}:</span>
 
               <span class="italic"
                 >{formatDate(publicationDate, lang as SupportedLanguage)}</span

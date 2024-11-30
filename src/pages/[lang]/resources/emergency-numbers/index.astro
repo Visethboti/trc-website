@@ -4,6 +4,7 @@ import EmergencyNumbers from "@/components/page/resources/emergency-number/index
 import TextElement from "@/components/TextElement";
 
 import { languages } from "@/i18n/ui";
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 
 const title = "Emergency Numbers";
@@ -13,12 +14,14 @@ export async function getStaticPaths() {
     params: { lang },
   }));
 }
+
+const t = useTranslations(getLangFromUrl(Astro.url.pathname));
 ---
 
 <BaseLayout title={title}>
   <Main>
     <TextElement variant="heading" className="text-text mb-6 text-center">
-      {title}
+      {t("nav.resources.emergencyNumbers")}
     </TextElement>
     <EmergencyNumbers />
   </Main>

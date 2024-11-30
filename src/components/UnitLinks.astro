@@ -4,8 +4,11 @@ import CADTLogo from "@/asset/logo/CADT.png";
 import CPLogo from "@/asset/logo/Cambodia-Post-Logo.png";
 import MPTCLogo from "@/asset/logo/MPTC.png";
 import TCLogo from "@/asset/logo/Telecom-Cambodia.svg";
+import { getLangFromUrl } from "@/i18n/utils";
 
-const ExternalLinks = [
+const lang = getLangFromUrl(Astro.url.pathname);
+
+const ExternalLinksEN = [
   {
     label: "Ministry of Post and Telecommunications",
     link: "https://mptc.gov.kh",
@@ -27,6 +30,30 @@ const ExternalLinks = [
     image: CADTLogo,
   },
 ];
+const ExternalLinksKH = [
+  {
+    label: "ក្រសួងប្រៃសណីយ៍និងទូរគមនាគមន៍",
+    link: "https://mptc.gov.kh",
+    image: MPTCLogo,
+  },
+  {
+    label: "ទូរគមនាគមន៍កម្ពុជា",
+    link: "http://tc.com.kh",
+    image: TCLogo,
+  },
+  {
+    label: "ប្រៃសណីយ៍កម្ពុជា",
+    link: "https://cambodiapost.com.kh/",
+    image: CPLogo,
+  },
+  {
+    label: "បណ្ឌិត្យសភាបច្ចេកវិទ្យាឌីជីថលកម្ពុជា",
+    link: "https://www.cadt.edu.kh/",
+    image: CADTLogo,
+  },
+];
+
+const ExternalLinks = lang === "en" ? ExternalLinksEN : ExternalLinksKH;
 ---
 
 <nav>
