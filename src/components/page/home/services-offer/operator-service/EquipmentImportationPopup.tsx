@@ -4,6 +4,7 @@ import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { DownloadIcon } from "@/components/footer/SocialMediaLinks";
 import TextElement from "@/components/TextElement";
 
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
 import type { ImageMetadata } from "astro";
 import { X } from "lucide-react";
 import { ReactSVG } from "react-svg";
@@ -13,7 +14,7 @@ interface Props {
   networkPattern: ImageMetadata;
 }
 
-const documentCards = [
+const documentCardsEN = [
   {
     label:
       "Application requesting for Equipment Importation & Distribution Permit License",
@@ -33,11 +34,39 @@ const documentCards = [
   },
 ];
 
+const documentCardsKH = [
+  {
+    label: "លិខិតស្នើសុំអាជ្ញាប័ណ្ណនាំចូល និងចែកចាយគ្រឿងសម្ភារបរិក្ខារ",
+    description:
+      "ពាក្យស្នើសុំអាជ្ញាប័ណ្ណនាំចូល និងចែកចាយគ្រឿងសម្ភារបរិក្ខារ - QIP",
+    link: "/service/for-operator/EquipmentImportation/Application for Equipment Importation & Distribution Permit - QIP.pdf",
+  },
+  {
+    description: "ពាក្យស្នើសុំការអនុញ្ញាតនាំចូល និងចែកចាយគ្រឿងសម្ភារបរិក្ខារ",
+    link: "/service/for-operator/EquipmentImportation/Application for Equipment Importation & Distribution Permit.pdf",
+  },
+  {
+    description:
+      "គោលការណ៍ណែនាំសម្រាប់ការអនុញ្ញាតឱ្យនាំចូល និងចែកចាយគ្រឿងសម្ភារបរិក្ខារ",
+    link: "/service/for-operator/EquipmentImportation/Guideline for Equipment Importation & Distribution Permit.pdf",
+  },
+];
+
+let documentCards = [];
+
 const EquipmentImportationPopup: React.FC<Props> = ({
   image,
   networkPattern,
 }) => {
+  const [url, setUrl] = useState("");
   const [isDialogOpen, setIsDialogOpen] = useState(false);
+
+  useEffect(() => {
+    setUrl(window.location.pathname);
+  }, []);
+  const lang = getLangFromUrl(url);
+  documentCards = lang === "en" ? documentCardsEN : documentCardsKH;
+  const t = useTranslations(lang);
 
   useEffect(() => {
     const handleHashChange = () => {
@@ -78,7 +107,7 @@ const EquipmentImportationPopup: React.FC<Props> = ({
             loading="lazy"
           />
           <TextElement className="w-2/4 text-center text-[12px] md:w-2/4 lg:w-2/5 lg:text-[13px] xl:w-1/3">
-            Equipment Importation & Distribution Permit
+            {t("nav.services.equipmentImportationDistributionPermit")}
           </TextElement>
         </div>
       </DialogTrigger>
@@ -105,7 +134,7 @@ const EquipmentImportationPopup: React.FC<Props> = ({
               }}
             />
             <span className="w-full text-center text-xs text-primary">
-              Equipment Importation & Distribution Permit
+              {t("nav.services.equipmentImportationDistributionPermit")}
             </span>
           </div>
           <div className="md:w-3/3 grid grid-cols-1 gap-5 md:grid-cols-1 md:items-end lg:grid-cols-2">

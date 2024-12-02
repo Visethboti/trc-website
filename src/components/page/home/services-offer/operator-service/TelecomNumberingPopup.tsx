@@ -4,6 +4,7 @@ import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { DownloadIcon } from "@/components/footer/SocialMediaLinks";
 import TextElement from "@/components/TextElement";
 
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
 import { X } from "lucide-react";
 import { ReactSVG } from "react-svg";
 
@@ -12,7 +13,7 @@ interface Props {
   networkPattern: ImageMetadata;
 }
 
-const documentCards = [
+const documentCardsEN = [
   {
     label: "Fixed Phone Number Application",
     description: "License to use mobile number or telecom numbers",
@@ -51,8 +52,61 @@ const documentCards = [
   },
 ];
 
+const documentCardsKH = [
+  {
+    label: "លិខិតអនុញ្ញាតប្រើប្រាស់លេខទូរស័ព្ទអចល័ត",
+    description:
+      "ពាក្យស្នើសុំលិខិតអនុញ្ញាតប្រើប្រាស់លេខទូរស័ព្ទ ឬលេខទូរគមនាគមន៍",
+    link: "/service/for-operator/TelecomNumbering/1. License to use mobile number or telecom numbers.pdf",
+  },
+  {
+    description: "ឯកសារភ្ជាប់ឯកសារភ្ជាប់សម្រាប់ការស្នើសុំលេខទូរស័ព្ទអចល័ត",
+    link: "/service/for-operator/TelecomNumbering/Attachments for requesting fixed number or telecom numbers.pdf",
+  },
+  {
+    label: "លិខិតអនុញ្ញាតប្រើប្រាស់លេខទូរស័ព្ទចល័ត",
+    description:
+      "1. ពាក្យស្នើសុំលិខិតអនុញ្ញាតប្រើប្រាស់លេខទូរស័ព្ទ ឬលេខទូរគមនាគមន៍",
+    link: "/service/for-operator/TelecomNumbering/1. License to use mobile number or telecom numbers.pdf",
+  },
+  {
+    description: "ឯកសារភ្ជាប់ឯកសារភ្ជាប់សម្រាប់ការស្នើសុំលេខទូរស័ព្ទចល័ត",
+    link: "/service/for-operator/TelecomNumbering/Attachments for requesting mobile number or telecom numbers.pdf",
+  },
+  {
+    label: "លិខិតអនុញ្ញាតប្រគល់លេខទូរស័ព្ទអចល័ត",
+    description:
+      "1. ពាក្យស្នើសុំលិខិតអនុញ្ញាតប្រគល់លេខទូរស័ព្ទអចល័ត ឬលេខទូរគមនាគមន៍",
+    link: "/service/for-operator/TelecomNumbering/1. License to return fixed number or telecom numbers.pdf",
+  },
+  {
+    description: "ឯកសារភ្ជាប់សម្រាប់ការប្រគល់លេខទូរស័ព្ទអចល័ត ឬលេខទូរគមនាគមន៍",
+    link: "/service/for-operator/TelecomNumbering/Attachments for returning fixed number or telecom numbers.pdf",
+  },
+  {
+    label: "លិខិតអនុញ្ញាតប្រគល់លេខទូរស័ព្ទ",
+    description:
+      "1. ពាក្យស្នើសុំលិខិតអនុញ្ញាតប្រគល់លេខទូរស័ព្ទ ឬលេខទូរគមនាគមន៍",
+    link: "/service/for-operator/TelecomNumbering/1. License to return mobile number or telecom numbers.pdf",
+  },
+  {
+    description: "ឯកសារភ្ជាប់សម្រាប់ការប្រគល់លេខទូរស័ព្ទចល័ត ឬលេខទូរគមនាគមន៍",
+    link: "/service/for-operator/TelecomNumbering/Attachments for returning mobile number or telecom numbers.pdf",
+  },
+];
+
+let documentCards = [];
+
 const TelecomNumberingPopup: React.FC<Props> = ({ image, networkPattern }) => {
+  const [url, setUrl] = useState("");
   const [isDialogOpen, setIsDialogOpen] = useState(false);
+
+  useEffect(() => {
+    setUrl(window.location.pathname);
+  }, []);
+  const lang = getLangFromUrl(url);
+  documentCards = lang === "en" ? documentCardsEN : documentCardsKH;
+  const t = useTranslations(lang);
 
   useEffect(() => {
     const handleHashChange = () => {
@@ -89,7 +143,7 @@ const TelecomNumberingPopup: React.FC<Props> = ({ image, networkPattern }) => {
             loading="lazy"
           />
           <TextElement className="w-2/4 text-center text-[12px] lg:text-[13px] xl:w-1/4">
-            Telecom Numbering Permit
+            {t("nav.services.telecomNumberingPermit")}
           </TextElement>
         </div>
       </DialogTrigger>
@@ -116,7 +170,7 @@ const TelecomNumberingPopup: React.FC<Props> = ({ image, networkPattern }) => {
               }}
             />
             <span className="w-full text-center text-xs text-primary">
-              Telecom Numbering Permit
+              {t("nav.services.telecomNumberingPermit")}
             </span>
           </div>
           <div className="scroll grid max-h-[300px] grid-cols-1 gap-5 overflow-y-auto md:max-h-[450px] md:w-2/3 md:grid-cols-1 md:items-end lg:grid-cols-2">

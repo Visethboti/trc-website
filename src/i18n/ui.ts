@@ -196,10 +196,10 @@ export const ui: Record<string, Record<string, string>> = {
     "nav.services.domainKH": "ឈ្មោះដែនជាតិ",
     "nav.services.internetCafe": "សាលបម្រើសេវាអ៊ីនធឺណិត",
     "nav.services.telecomEquipmentShop":
-      "ហាងបើកលក់និងជួសជុលគ្រឿងសម្ភារៈបរិក្ខារទូរគមនាគមន៍",
+      "ហាងបើកលក់និងជួសជុលគ្រឿងសម្ភារបរិក្ខារទូរគមនាគមន៍",
     "nav.services.operator": "ប្រតិបត្តិករ",
-    "nav.services.operationalLicense": "អាជ្ញាបណ្ណប្រតិបត្តិការ",
-    "nav.services.spectrumLicense": "អាជ្ញាបណ្ណវិសាលគមន៍ហ្រ្វេកង់ស៍វិទ្យុ",
+    "nav.services.operationalLicense": "អាជ្ញាប័ណ្ណប្រតិបត្តិការ",
+    "nav.services.spectrumLicense": "អាជ្ញាប័ណ្ណវិសាលគមន៍ហ្រ្វេកង់ស៍វិទ្យុ",
     "nav.services.telecomNumberingPermit": "លិខិតអនុញ្ញាតលេខទូរគមនាគមន៍",
     "nav.services.equipmentTACertificate":
       "វិញ្ញាបនបត្រទទួលស្គាល់យថាប្រភេទគ្រឿងសម្ភារបរិក្ខារ",
@@ -209,7 +209,7 @@ export const ui: Record<string, Record<string, string>> = {
       "លិខិតអនុញ្ញាតនាំចូលនិងចែកចាយគ្រឿងសម្ភារបរិក្ខារ",
     "nav.services.towerConstructionPermit": "លិខិតអនុញ្ញាតសាងសង់បង្គោលអង់តែន",
     "nav.services.fiberCableConstructionPermit":
-      "លិខិតអនុញ្ញាតសាងសង់ខ្សែកាប្លិ៍អុបទិក",
+      "លិខិតអនុញ្ញាតសាងសង់ខ្សែកាបអុបទិក",
     "nav.services.frequencyInterferenceComplaint":
       "បណ្តឹងលើការឆ្លងរំខានហ្វ្រេកង់ស៍",
     "nav.media": "ព័ត៌មាន",

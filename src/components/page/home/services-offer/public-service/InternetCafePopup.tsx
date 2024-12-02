@@ -4,6 +4,7 @@ import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { DownloadIcon } from "@/components/footer/SocialMediaLinks";
 import TextElement from "@/components/TextElement";
 
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
 import { X } from "lucide-react";
 import { ReactSVG } from "react-svg";
 
@@ -12,7 +13,7 @@ interface Props {
   networkPattern: ImageMetadata;
 }
 
-const documentCards = [
+const documentCardsEN = [
   {
     label: "Application Form for Internet Cafe Certificate License",
     description: "1. Application Form for the Certificate of Internet Cafe",
@@ -37,8 +38,44 @@ const documentCards = [
   },
 ];
 
+const documentCardsKH = [
+  {
+    label: "លិខិតស្នើសុំសាលបម្រើសេវាអ៊ីនធឺណិត",
+    description:
+      "1. ពាក្យស្នើសុំលិខិតអនុញ្ញាតបើកអាជីវកម្មសាលបម្រើសេវាអ៊ិនធឺណិត",
+    link: "/service/for-public/InternetCafe/1. Application Form for the Certificate of Internet Cafe╠ü.docx",
+  },
+  {
+    description: "2. ពាក្យស្នើសុំផ្លាស់ប្តូរអាសយដ្ឋានសាលបម្រើសេវាអ៊ិនធឺណិត",
+    link: "/service/for-public/InternetCafe/Application Form for 2. Change Address Internet Cafe Shop.docx",
+  },
+  {
+    description:
+      "3. ពាក្យស្នើសុំបន្តអាជីវកម្ម/លិខិតអនុញ្ញាតការបើកអាជីវកម្មសាលបម្រើសេវាអ៊ិនធឺណិត",
+    link: "/service/for-public/InternetCafe/3. Application Form Business Continuity _ License, Internet Business Center Opening.docx",
+  },
+  {
+    description: "4. ពាក្យស្នើសុំបិទអាជីវកម្មសាលបម្រើសេវាអ៊ិនធឺណិត",
+    link: "/service/for-public/InternetCafe/4.  Application Form for Closing Internet Cafe Shop.docx",
+  },
+  {
+    description: "សេចក្តីណែនាំ",
+    link: "/service/for-public/InternetCafe/Guidline-Internet-Cafe.pdf",
+  },
+];
+
+let documentCards = [];
+
 const InternetCafePopup: React.FC<Props> = ({ image, networkPattern }) => {
+  const [url, setUrl] = useState("");
   const [isDialogOpen, setIsDialogOpen] = useState(false);
+
+  useEffect(() => {
+    setUrl(window.location.pathname);
+  }, []);
+  const lang = getLangFromUrl(url);
+  documentCards = lang === "en" ? documentCardsEN : documentCardsKH;
+  const t = useTranslations(lang);
 
   useEffect(() => {
     const handleHashChange = () => {
@@ -75,7 +112,7 @@ const InternetCafePopup: React.FC<Props> = ({ image, networkPattern }) => {
             loading="lazy"
           />
           <TextElement className="w-5/5 text-center text-xs">
-            Internet Cafe Permit
+            {t("nav.services.internetCafe")}
           </TextElement>
         </div>
       </DialogTrigger>
@@ -102,7 +139,7 @@ const InternetCafePopup: React.FC<Props> = ({ image, networkPattern }) => {
               }}
             />
             <span className="w-full text-center text-xs text-primary">
-              Internet Cafe Permit
+              {t("nav.services.internetCafe")}
             </span>
           </div>
           <div className="scroll grid max-h-[300px] grid-cols-1 gap-5 overflow-y-auto md:max-h-[450px] md:w-2/3 md:grid-cols-1 md:items-end lg:max-h-[500px] lg:grid-cols-2">

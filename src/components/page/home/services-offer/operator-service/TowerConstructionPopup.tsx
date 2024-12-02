@@ -4,6 +4,7 @@ import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { DownloadIcon } from "@/components/footer/SocialMediaLinks";
 import TextElement from "@/components/TextElement";
 
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
 import { X } from "lucide-react";
 import { ReactSVG } from "react-svg";
 
@@ -12,16 +13,34 @@ interface Props {
   networkPattern: ImageMetadata;
 }
 
-const documentCards = [
+const documentCardsEN = [
   {
-    label: "Application requesting for Tower Construction License",
+    label: "Tower Construction Permit",
     description: "The Application for Tower Construction",
     link: "/service/for-operator/TowerConstruction/The Application for Tower Construction.pdf",
   },
 ];
 
+const documentCardsKH = [
+  {
+    label: "លិខិតអនុញ្ញាតសាងសង់បង្គោលអង់តែន",
+    description: "ពាក្យស្នើសុំសាងសង់បង្គោលអង់តែន",
+    link: "/service/for-operator/TowerConstruction/The Application for Tower Construction.pdf",
+  },
+];
+
+let documentCards = [];
+
 const TowerConstructionPopup: React.FC<Props> = ({ image, networkPattern }) => {
+  const [url, setUrl] = useState("");
   const [isDialogOpen, setIsDialogOpen] = useState(false);
+
+  useEffect(() => {
+    setUrl(window.location.pathname);
+  }, []);
+  const lang = getLangFromUrl(url);
+  documentCards = lang === "en" ? documentCardsEN : documentCardsKH;
+  const t = useTranslations(lang);
 
   useEffect(() => {
     const handleHashChange = () => {
@@ -58,7 +77,7 @@ const TowerConstructionPopup: React.FC<Props> = ({ image, networkPattern }) => {
             loading="lazy"
           />
           <TextElement className="w-2/4 text-center text-[12px] md:w-3/5 lg:w-2/5 lg:text-[13px]">
-            Tower Construction Permit
+            {t("nav.services.towerConstructionPermit")}
           </TextElement>
         </div>
       </DialogTrigger>
@@ -85,7 +104,7 @@ const TowerConstructionPopup: React.FC<Props> = ({ image, networkPattern }) => {
               }}
             />
             <span className="w-full text-center text-xs text-primary">
-              Tower Construction Permit
+              {t("nav.services.towerConstructionPermit")}
             </span>
           </div>
           <div className="grid grid-cols-1 gap-5 md:w-4/5 md:grid-cols-1 md:items-end">

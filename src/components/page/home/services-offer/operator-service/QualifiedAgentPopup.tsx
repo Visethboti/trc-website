@@ -4,6 +4,7 @@ import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { DownloadIcon } from "@/components/footer/SocialMediaLinks";
 import TextElement from "@/components/TextElement";
 
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
 import { X } from "lucide-react";
 import { ReactSVG } from "react-svg";
 
@@ -12,7 +13,7 @@ interface Props {
   networkPattern: ImageMetadata;
 }
 
-const documentCards = [
+const documentCardsEN = [
   {
     label: "Application requesting for Qualified Agent Certificate License",
     description: "The Application for Qualified Agent Certificate",
@@ -28,8 +29,35 @@ const documentCards = [
   },
 ];
 
+const documentCardsKH = [
+  {
+    label:
+      "លិខិតសុំស្នើសុំអាជ្ញាប័ណ្ណវិញ្ញាបនបត្រទទួលគុណវុឌ្ឍិជាភ្នាក់ងារមានលក្ខណៈសម្បត្តិគ្រប់គ្រាន់",
+    description: "វិញ្ញាបនបត្រទទួលគុណវុឌ្ឍិជាភ្នាក់ងារ",
+    link: "/service/for-operator/QualifiedAgent/Application for Qualified Agent Certificate.pdf",
+  },
+  {
+    description: "បន្តវិញ្ញាបនបត្រទទួលគុណវុឌ្ឍិជាភ្នាក់ងារ",
+    link: "/service/for-operator/QualifiedAgent/Application for Renewal of Qualified Agent Certificate.pdf",
+  },
+  {
+    description: "សេចក្តីណែនាំ",
+    link: "/service/for-operator/QualifiedAgent/Guideline to Qualified Agent Certificate.pdf",
+  },
+];
+
+let documentCards = [];
+
 const QualifiedAgentPopup: React.FC<Props> = ({ image, networkPattern }) => {
+  const [url, setUrl] = useState("");
   const [isDialogOpen, setIsDialogOpen] = useState(false);
+
+  useEffect(() => {
+    setUrl(window.location.pathname);
+  }, []);
+  const lang = getLangFromUrl(url);
+  documentCards = lang === "en" ? documentCardsEN : documentCardsKH;
+  const t = useTranslations(lang);
 
   useEffect(() => {
     const handleHashChange = () => {
@@ -66,7 +94,7 @@ const QualifiedAgentPopup: React.FC<Props> = ({ image, networkPattern }) => {
             loading="lazy"
           />
           <TextElement className="w-2/4 text-center text-[12px] md:w-2/5 lg:text-[13px] 2xl:w-2/5">
-            Qualified Agent Certificate
+            {t("nav.services.qualifiedAgentCertification")}
           </TextElement>
         </div>
       </DialogTrigger>
@@ -93,7 +121,7 @@ const QualifiedAgentPopup: React.FC<Props> = ({ image, networkPattern }) => {
               }}
             />
             <span className="w-full text-center text-xs text-primary">
-              Qualified Agent Certificate
+              {t("nav.services.qualifiedAgentCertification")}
             </span>
           </div>
           <div className="scroll grid max-h-[300px] grid-cols-1 gap-5 overflow-y-auto md:max-h-[450px] md:grid-cols-1 md:items-end lg:grid-cols-2">

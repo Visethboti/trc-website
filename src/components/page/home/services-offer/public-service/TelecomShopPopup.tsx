@@ -4,6 +4,7 @@ import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { DownloadIcon } from "@/components/footer/SocialMediaLinks";
 import TextElement from "@/components/TextElement";
 
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
 import { X } from "lucide-react";
 import { ReactSVG } from "react-svg";
 
@@ -12,7 +13,7 @@ interface Props {
   networkPattern: ImageMetadata;
 }
 
-const documentCards = [
+const documentCardsEN = [
   {
     label: "Application Form for Telecom Equipment Shop Certificate License",
     description:
@@ -40,8 +41,47 @@ const documentCards = [
   },
 ];
 
+const documentCardsKH = [
+  {
+    label:
+      "លិខិតស្នើសុំអាជ្ញាប័ណ្ណ វិញ្ញាបនបត្រហាងលក់គ្រឿងសម្ភារបរិក្ខារវិទ្យុគមនាគមន៍​​ និងទូរគមនាគមន៍",
+    description:
+      "1. ពាក្យស្នើសុំលិខិតអនុញ្ញាតបើកលក់​​ និង/ឬ​ ជួលជុលគ្រឿងសម្ភារបរិក្ខារវិទ្យុគមនាគមន៍​​ និងទូរគមនាគមន៍ នៅក្នុងរាជធានីភ្នំពេញ",
+    link: "/service/for-public/TelecomEquipmentShop/1. Application Permit Letter on Radiocommunication and Telecommunication equipment Sale and_or Repair Shop.pdf",
+  },
+  {
+    description:
+      "2. ពាក្យស្នើសុំផ្លាស់ប្តូរអាសយដ្ឋានហាងលក់ និង/ឬ ជួលជុលគ្រឿងសម្ភារបិក្ខារវិទ្យុគមនាគមន៍ និងទូរគមនាគមន៍",
+    link: "/service/for-public/TelecomEquipmentShop/2. Application for change of address, store, and _ or repair of equipment, equipment, radio and telecommunications..pdf",
+  },
+  {
+    description:
+      "3. ពាក្យស្នើសុំបន្តអាជីវកម្ម/សុពលភាពលិខិតអនុញ្ញាតការបើកលក់ និង/ឬ​​ ជួលជុលគ្រឿងសម្ភារបរិក្ខារវិទ្យុគមនាគមន៍ និងទូរគមនាគមន៍",
+    link: "/service/for-public/TelecomEquipmentShop/3. Application Business Transmission _ Validity of Licenses, Opening and _ or Repairing Equipment, Equipment, Radio and Telecommunication.pdf",
+  },
+  {
+    description:
+      "4. ពាក្យស្នើសុំបិទអាជីវកម្មហាងលក់ និង/ឬ ជួលជុលគ្រឿងសម្ភារបរិក្ខារវិទ្យុគមនាគមន៍ និងទូរគមនាគមន៍",
+    link: "/service/for-public/TelecomEquipmentShop/4. Application Offer application, store, and _ or repair equipment, equipment, telecommunication and telecommunication..pdf",
+  },
+  {
+    description: "សេចក្តីណែនាំ",
+    link: "/service/for-public/TelecomEquipmentShop/Guideline.pdf",
+  },
+];
+
+let documentCards = [];
+
 const TelecomShopPopup: React.FC<Props> = ({ image, networkPattern }) => {
+  const [url, setUrl] = useState("");
   const [isDialogOpen, setIsDialogOpen] = useState(false);
+
+  useEffect(() => {
+    setUrl(window.location.pathname);
+  }, []);
+  const lang = getLangFromUrl(url);
+  documentCards = lang === "en" ? documentCardsEN : documentCardsKH;
+  const t = useTranslations(lang);
 
   useEffect(() => {
     const handleHashChange = () => {
@@ -78,7 +118,7 @@ const TelecomShopPopup: React.FC<Props> = ({ image, networkPattern }) => {
             loading="lazy"
           />
           <TextElement className="w-5/5 text-center text-xs">
-            Telecom Equipment Shop
+            {t("nav.services.telecomEquipmentShop")}
           </TextElement>
         </div>
       </DialogTrigger>
@@ -105,7 +145,7 @@ const TelecomShopPopup: React.FC<Props> = ({ image, networkPattern }) => {
               }}
             />
             <span className="w-full text-center text-xs text-primary">
-              Telecom Equipment Shop
+              {t("nav.services.telecomEquipmentShop")}
             </span>
           </div>
           <div className="scroll grid max-h-[300px] grid-cols-1 gap-5 overflow-y-auto md:max-h-[450px] md:w-2/3 md:grid-cols-1 md:items-end lg:max-h-[600px] lg:grid-cols-2">

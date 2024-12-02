@@ -17,7 +17,7 @@ interface Props {
 
 const { content, lang } = Astro.props;
 
-const t = useTranslations(getLangFromUrl(Astro.url));
+const t = useTranslations(getLangFromUrl(Astro.url.pathname));
 
 const firstContent = content[0];
 const restContent = content.slice(1);

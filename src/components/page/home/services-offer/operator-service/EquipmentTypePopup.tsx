@@ -4,6 +4,7 @@ import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { DownloadIcon } from "@/components/footer/SocialMediaLinks";
 import TextElement from "@/components/TextElement";
 
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
 import { X } from "lucide-react";
 import { ReactSVG } from "react-svg";
 
@@ -12,7 +13,7 @@ interface Props {
   networkPattern: ImageMetadata;
 }
 
-const documentCards = [
+const documentCardsEN = [
   {
     label:
       "Application requesting for Equipment Type Approval Certificate License",
@@ -52,8 +53,58 @@ const documentCards = [
   },
 ];
 
+const documentCardsKH = [
+  {
+    label:
+      "លិខិតសុំស្នើសុំអាជ្ញាប័ណ្ណ វិញ្ញាបនបត្រ ការយល់ព្រមពីប្រភេទគ្រឿងសម្ភារបរិក្ខារ",
+    description:
+      "1. ពាក្យស្នើសុំវិញ្ញាបនបត្រទទួលស្គាល់គុណវុឌ្ឈិជាភ្នាក់ងារនាំចូល ផ្គត់ផ្គង់ និង ការចែកចាយគ្រឿងសម្ភារបរិក្ខារវិទ្យុគមនាគមន៍ និងទូរគមនាគមន៍",
+    link: "/service/for-operator/EquipmentType/1. The Application for Certificate of Accredited Agent for Importation, Supply, and Distribution.pdf",
+  },
+  {
+    description:
+      "2. ពាក្យស្នើសុំបន្តសុពលភាពវិញ្ញាបនបត្រទទួលស្គាល់គុណវុឌ្ឈិជាភ្នាក់ងារនាំចូល ផ្គត់ផ្គង់ និង ការចែកចាយគ្រឿងសម្ភារបរិក្ខារវិទ្យុគមនាគមន៍ និងទូរគមនាគមន៍",
+    link: "/service/for-operator/EquipmentType/2. The Application for Renewal of Certificate of Accredited Agent for Importation, Supply, and Distribution.pdf",
+  },
+  {
+    description:
+      "3. ពាក្យស្នើសុំលិខិតអនុញ្ញាតការនាំចូលគ្រឿងសម្ភារបរិក្ខារវិទ្យុគមនាគមន៍​ និងគ្រឿងសម្ភារបរិក្ខារទូរគមនាគមន៍",
+    link: "/service/for-operator/EquipmentType/3. The application for the import permit for radiocommunication equipment and telecommunications equipment.pdf",
+  },
+  {
+    description:
+      "4. ពាក្យស្នើសុំលិខិតអនុញ្ញាតការនាំចូលគ្រឿងសម្ភារបរិក្ខារវិទ្យុគមនាគមន៍​ និងគ្រឿងសម្ភារបរិក្ខារទូរគមនាគមន៍​ - QIP",
+    link: "/service/for-operator/EquipmentType/4. The application for the import permit for radiocommunication equipment and telecommunications equipment_QIP.pdf",
+  },
+  {
+    description:
+      "5. ពាក្យស្នើសុំវិញ្ញាបនបត្រទទួលស្គាល់យថាប្រភេទនៃគ្រឿងសម្ភារបរិក្ខារវិទ្យុគមនាគមន៍​ និងគ្រឿងសម្ភារបរិក្ខារទូរគមនាគមន៍",
+    link: "/service/for-operator/EquipmentType/5. The Application for Type Approval Certificate of Radiocommunication Equipment and Telecommunication.pdf",
+  },
+  {
+    description:
+      "6. ពាក្យស្នើសុំវិញ្ញាបនបត្រកែសម្រួលវិញ្ញាបនបត្រទទួលស្គាល់យថាប្រភេទនៃគ្រឿងសម្ភារបរិក្ខារវិទ្យុគមនាគមន៍​ និងគ្រឿងសម្ភារបរិក្ខារទូរគមនាគមន៍",
+    link: "/service/for-operator/EquipmentType/6. The Application for Revision of Type Approval Certificate of Radiocommunication Equipment and Telecommunication Equipment.pdf",
+  },
+  {
+    description:
+      "សេចក្តីណែនាំស្តីពីការស្នើសុំវិញ្ញាបនបត្រ​​ លិខិតអនុញ្ញាតនាំចូលគ្រឿងសម្ភារបរិក្ខារវិទ្យុគមនាគមន៍​ និងគ្រឿងសម្ភារបរិក្ខារទូរគមនាគមន៍",
+    link: "/service/for-operator/EquipmentType/Guideline for Certificate And Authorization On The Import Of Radiocommunication Terminal Equipment.pdf",
+  },
+];
+
+let documentCards = [];
+
 const EquipmentTypePopup: React.FC<Props> = ({ image, networkPattern }) => {
+  const [url, setUrl] = useState("");
   const [isDialogOpen, setIsDialogOpen] = useState(false);
+
+  useEffect(() => {
+    setUrl(window.location.pathname);
+  }, []);
+  const lang = getLangFromUrl(url);
+  documentCards = lang === "en" ? documentCardsEN : documentCardsKH;
+  const t = useTranslations(lang);
 
   useEffect(() => {
     const handleHashChange = () => {
@@ -90,7 +141,7 @@ const EquipmentTypePopup: React.FC<Props> = ({ image, networkPattern }) => {
             loading="lazy"
           />
           <TextElement className="w-2/4 text-center text-[12px] lg:w-2/5 lg:text-[13px]">
-            Equipment Type Approval Certificate
+            {t("nav.services.equipmentTACertificate")}
           </TextElement>
         </div>
       </DialogTrigger>
@@ -117,7 +168,7 @@ const EquipmentTypePopup: React.FC<Props> = ({ image, networkPattern }) => {
               }}
             />
             <span className="w-full text-center text-xs text-primary">
-              Equipment Type Approval Certificate
+              {t("nav.services.equipmentTACertificate")}
             </span>
           </div>
           <div className="scroll grid max-h-[300px] grid-cols-1 gap-5 overflow-y-auto md:max-h-[450px] md:grid-cols-1 md:items-end lg:grid-cols-2">

@@ -4,6 +4,7 @@ import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { DownloadIcon } from "@/components/footer/SocialMediaLinks";
 import TextElement from "@/components/TextElement";
 
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
 import { X } from "lucide-react";
 import { ReactSVG } from "react-svg";
 
@@ -12,7 +13,7 @@ interface Props {
   networkPattern: ImageMetadata;
 }
 
-const documentCards = [
+const documentCardsEN = [
   {
     label: "Application requesting for Spectrum License",
     description: "1. Radio Amateur License",
@@ -56,8 +57,65 @@ const documentCards = [
   },
 ];
 
+const documentCardsKH = [
+  {
+    label: "លិខិតស្នើសុំអាជ្ញាប័ណ្ណវិសាលគមន៍ហ្រ្វេកង់ស៍វិទ្យុ",
+    description: "1. ពាក្យសុំអាជ្ញាប័ណ្ណហ្វ្រេកង់ស៍វិទ្យុអាម៉ាទ័រ",
+    link: "/service/for-operator/SpectrumLicense/1. Radio-Amateur-License.docx",
+  },
+  {
+    description: "2. ពាក្យស្នើសុំអាជ្ញាប័ណ្ណហ្វ្រេកង់ស៍វិទ្យុទាក់ទង",
+    link: "/service/for-operator/SpectrumLicense/2. Radiocom-MFHFVHF-UHF-License.docx",
+  },
+  {
+    description: "3. ពាក្យស្នើសុំអាជ្ញាប័ណ្ណហ្វ្រេកង់ស៍វិទ្យុផ្សាយសំឡេង",
+    link: "/service/for-operator/SpectrumLicense/3. Radio_Sound_Broadcasting.docx",
+  },
+  {
+    description: "4. ពាក្យស្នើសុំអាជ្ញាប័ណ្ណហ្វ្រេកង់ស៍ទូរទស្សន៍",
+    link: "/service/for-operator/SpectrumLicense/4. Television-VHFUHF-License.docx",
+  },
+  {
+    description: "5. ពាក្យស្នើសុំអាជ្ញាប័ណ្ណហ្វ្រេកង់ស៍វិទ្យុម៉ៃក្រូវ៉េវ",
+    link: "/service/for-operator/SpectrumLicense/5. Radio-Microwave-Station-License.docx",
+  },
+  {
+    description:
+      "6. ពាក្យស្នើសុំហ្រេ្វកង់ស៍វិទ្យុផ្តល់សេវាទូរស័ព្ទចល័ត អចល័តឥតខ្សែ",
+    link: "/service/for-operator/SpectrumLicense/6. Base_Station_for_Mobile.docx",
+  },
+  {
+    description:
+      "7. ពាក្យស្នើសុំអាជ្ញាប័ណ្ណហ្វ្រេកង់ស៍វិទ្យុផ្តល់សេវាអ៊ីនធឺណេត",
+    link: "/service/for-operator/SpectrumLicense/7. Broadband-Wireless-Access-License.docx",
+  },
+  {
+    description: "8. ពាក្យស្នើសុំអាជ្ញាប័ណ្ណហ្វ្រេកង់ស៍វិទ្យុVSAT",
+    link: "/service/for-operator/SpectrumLicense/8. Radio-VSAT-License.docx",
+  },
+  {
+    description: "9. ពាក្យស្នើសុំអាជ្ញាប័ណ្ណហ្វ្រេកង់ស៍វិទ្យុ INMARSAT",
+    link: "/service/for-operator/SpectrumLicense/9. Radio-INMARSAT-License.docx",
+  },
+  {
+    description:
+      "10. ពាក្យសុំអាជ្ញាប័ណ្ណប្រើប្រាស់ទូរស័ព្ទចល័តតាមផ្កាយរណប (SATELLITE PHONE)",
+    link: "/service/for-operator/SpectrumLicense/10. Radio-SATELLITE-PHONE-License.docx",
+  },
+];
+
+let documentCards = [];
+
 const SpectrumPopup: React.FC<Props> = ({ image, networkPattern }) => {
+  const [url, setUrl] = useState("");
   const [isDialogOpen, setIsDialogOpen] = useState(false);
+
+  useEffect(() => {
+    setUrl(window.location.pathname);
+  }, []);
+  const lang = getLangFromUrl(url);
+  documentCards = lang === "en" ? documentCardsEN : documentCardsKH;
+  const t = useTranslations(lang);
 
   useEffect(() => {
     const handleHashChange = () => {
@@ -94,7 +152,7 @@ const SpectrumPopup: React.FC<Props> = ({ image, networkPattern }) => {
             loading="lazy"
           />
           <TextElement className="w-2/4 text-center text-[12px] lg:text-[13px]">
-            Spectrum License
+            {t("nav.services.spectrumLicense")}
           </TextElement>
         </div>
       </DialogTrigger>
@@ -120,7 +178,7 @@ const SpectrumPopup: React.FC<Props> = ({ image, networkPattern }) => {
               }}
             />
             <span className="w-full text-center text-xs text-primary">
-              Spectrum License
+              {t("nav.services.spectrumLicense")}
             </span>
           </div>
           <div className="scroll grid max-h-[300px] grid-cols-1 gap-5 overflow-y-auto md:max-h-[450px] md:w-2/3 md:grid-cols-1 md:items-end lg:grid-cols-2">
