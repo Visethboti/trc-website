@@ -7,4 +7,4 @@ image: src/asset/secretaries/chairman-comissioner/ou-borath.webp
 lang: en
 ---
 
-No Bio
+preparing

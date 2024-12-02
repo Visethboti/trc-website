@@ -7,4 +7,5 @@ image: src/asset/secretaries/chairman-comissioner/chea-chandara.webp
 lang: km
 ---
 
-មិនទាន់មាន
+កំពុងរៀបចំ
+

@@ -7,4 +7,4 @@ image: src/asset/secretaries/chairman-comissioner/srun-kimsan.webp
 lang: en
 ---
 
-No Bio
+preparing

@@ -7,4 +7,4 @@ image: src/asset/secretaries/chairman-comissioner/seng-sothy.webp
 lang: en
 ---
 
-No Bio
+preparing
