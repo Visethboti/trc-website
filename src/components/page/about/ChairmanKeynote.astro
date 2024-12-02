@@ -1,7 +1,6 @@
 ---
 import TextElement from "../../TextElement";
 import Chairmankeynote from "/src/asset/about/chairman-keynote-img.webp";
-import chairmankeynoteone from "/src/asset/about/chairman's-keynote-img.webp";
 import { getLangFromUrl, useTranslations } from "@/i18n/utils";
 import { Image } from "astro:assets";
 
@@ -10,16 +9,6 @@ const t = useTranslations(getLangFromUrl(Astro.url.pathname));
 
 <div class="flex flex-col gap-8 md:flex-row">
   <div class="flex w-full flex-col gap-8 md:w-1/2">
-    <div>
-      <Image
-        src={chairmankeynoteone}
-        alt="chairman’s keynote image "
-        sizes="(max-width: 640px) 100vw, (max-width: 768px) 256px, (max-width: 1024px) 256px, 128px"
-        quality="high"
-        loading="lazy"
-        format="webp"
-      />
-    </div>
     <div>
       <Image
         src={Chairmankeynote}
@@ -33,11 +22,6 @@ const t = useTranslations(getLangFromUrl(Astro.url.pathname));
   </div>
   <div class="w-full md:w-1/2">
     <ul class="space-y-3">
-      <li>
-        <TextElement variant="base"
-          >{t("about.chairmanKeyNote.paragraph1")}</TextElement
-        >
-      </li>
       <li>
         <TextElement variant="base"
           >{t("about.chairmanKeyNote.paragraph2")}</TextElement
@@ -69,18 +53,6 @@ const t = useTranslations(getLangFromUrl(Astro.url.pathname));
         <TextElement variant="base"
           >{t("about.chairmanKeyNote.list4")}</TextElement
         >
-      </li>
-    </ul>
-    <ul class="space-y-3 pt-4">
-      <li>
-        <TextElement variant="base">
-          {t("about.chairmanKeyNote.paragraph4")}
-        </TextElement>
-      </li>
-      <li>
-        <TextElement variant="base">
-          {t("about.chairmanKeyNote.paragraph5")}
-        </TextElement>
       </li>
     </ul>
   </div>

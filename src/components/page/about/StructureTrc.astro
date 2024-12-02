@@ -36,7 +36,11 @@ const t = useTranslations(getLangFromUrl(Astro.url.pathname));
   </div>
 </section>
 <div class="mx-auto flex max-w-full justify-end py-4">
-  <a href="/src/asset/about/downlond structure trc.pdf">
+  <a
+    href={lang === "en"
+      ? "/src/asset/about/english-trc-structure.png"
+      : "/src/asset/about/khmer-trc-structure.png"}
+  >
     <Button className="rounded-lg p-6 hover:bg-blue-900">
       {t("trcStructure.download")}
     </Button>
