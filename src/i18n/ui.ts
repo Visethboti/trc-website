@@ -324,7 +324,7 @@ export const ui: Record<string, Record<string, string>> = {
     "about.trc.paragraph2":
       "គោលបំណងសំខាន់របស់ ន.ទ.ក. គឺធានាឱ្យមានការប្រកួតប្រជែងប្រកបដោយយុត្តិធម៌ ប្រសិទ្ធភាព និងតម្លាភាពក្នុងវិស័យទូរគមនាគមន៍។ ដើម្បីសម្រេចបាននូវគោលដៅនេះ ន.ទ.ក. បង្កើតបទប្បញ្ញត្តិ និងគោលការណ៍ណែនាំសម្រាប់ប្រតិបត្តិការ និងការផ្តល់សេវាទូរគមនាគមន៍ និងបណ្តាញនានា ស្របតាមគោលនយោបាយរបស់រាជរដ្ឋាភិបាល។ បទប្បញ្ញត្តិទាំងនេះត្រូវបានអនុវត្ត និងក្លាយជាក្របខណ្ឌគតិយុត្តសម្រាប់វិស័យនេះ។",
     "about.trc.paragraph3":
-      "In addition to its regulatory and arbitration roles, TRC also supervises the telecommunications sector. TRC monitors compliance with regulations, investigates possible breaches, and takes appropriate action to maintain a level playing field for all industry players.Act as a policy maker to review and decide on proposal for revision and/or amendment of laws, regulations, and policies related to digital security.",
+      "បន្ថែមពីលើតួនាទីនិយ័តកម្ម និងអ្នកដោះស្រាយវិវាទ ន.ទ.ក. ក៏តាមដានការធ្វើប្រតិបត្តិការក្នុងវិស័យទូរគមនាគមន៍ផងដែរ។ ន.ទ.ក. ត្រួតពិនិត្យការអនុវត្តអនុលោមភាពតាមបទប្បញ្ញត្តិ ធ្វើអធិការកិច្ចលើការបំពានច្បាប់ដែលអាចកើតមាន និងចាត់វិធានការសមស្រប ដើម្បីរក្សាបាននូវបរិកាសប្រកួតប្រជែងស្មើភាពគ្នាសម្រាប់ប្រតិបត្តិករទូរគមនាគមន៍ទាំងអស់​។",
     trcLeader: "ថ្នាក់ដឹកនាំ",
     "trcLeader.description":
       "និយតករទូរគមនាគមន៍កម្ពុជា ដឹកនាំដោយឯកឧត្ដម ថោង ចិន្តា និងមានឯកឧត្ដមសមាជិក និងប្រធាននាយកដ្ឋានដូចខាងក្រោម៖",
