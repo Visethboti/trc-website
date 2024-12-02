@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import { getContentUrl } from "@/lib/route";
 
@@ -14,6 +14,7 @@ import {
 import TextElement from "@/components/TextElement";
 
 import type { SupportedLanguage } from "@/i18n/ui";
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
 import type { CollectionEntry } from "astro:content";
 import Autoplay from "embla-carousel-autoplay";
 
@@ -34,6 +35,12 @@ export default function ImageCarousel({
     }),
   );
 
+  const [url, setUrl] = useState("");
+
+  useEffect(() => {
+    setUrl(window.location.pathname);
+  }, []);
+  const t = useTranslations(getLangFromUrl(url));
   return (
     <Carousel
       plugins={[plugin.current]}
@@ -66,7 +73,7 @@ export default function ImageCarousel({
                           variant="secondary"
                           className="mb-4 rounded-3xl bg-secondary px-7 py-2 font-normal capitalize text-white hover:bg-secondary"
                         >
-                          {item.data.type}
+                          {t("home.media." + item.data.type)}
                         </Badge>
                         <TextElement
                           variant="medium"

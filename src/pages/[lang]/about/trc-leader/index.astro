@@ -6,6 +6,7 @@ import TextElement from "@/components/TextElement";
 
 import { LEADERS_TYPES } from "@/content/leader.type";
 import { languages, type SupportedLanguage } from "@/i18n/ui";
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import { getCollection } from "astro:content";
 
@@ -32,32 +33,35 @@ const commissioners = allLeaders.filter(
 const directors = allLeaders.filter(
   (leaders) => leaders.data.role === LEADERS_TYPES.DIRECTOR,
 );
+
+const t = useTranslations(getLangFromUrl(Astro.url.pathname));
 ---
 
 <BaseLayout title={title}>
   <Main class="max-w-[1680px]">
     <header>
       <TextElement variant="heading" className="text-text text-center">
-        TRC Leader
+        {t("trcLeader")}
       </TextElement>
     </header>
     <div class="flex flex-nowrap gap-0 xl:gap-5 2xl:gap-10">
       <aside class="sticky top-1/2 h-full">
         <ul class="hidden xl:flex xl:flex-col">
           <li class="whitespace-nowrap text-secondary">
-            <a href="#chairman/">Chairman</a>
+            <a href="#chairman/">{t("trcLeader.chairman")}</a>
           </li>
           <li class="whitespace-nowrap">
-            <a href="#comissioner/">Commissioner</a>
+            <a href="#comissioner/">{t("trcLeader.commissioner")}</a>
           </li>
-          <li class="whitespace-nowrap"><a href="#director/">Director</a></li>
+          <li class="whitespace-nowrap">
+            <a href="#director/">{t("trcLeader.directorOfBureau")}</a>
+          </li>
         </ul>
       </aside>
 
       <main class="w-full">
         <TextElement variant="body" className="py-2 pb-6 text-center">
-          The Telecommunication Regulator of Cambodia is led by Chairman Chenda
-          Thong, along with the following Commissioners and Directors of Bureaus
+          {t("trcLeader.description")}
         </TextElement>
         <section
           aria-label="Leadership"
@@ -87,7 +91,7 @@ const directors = allLeaders.filter(
             variant="subheading"
             className="py-12 text-center text-primary"
           >
-            Commissioner
+            {t("trcLeader.commissioner")}
           </TextElement>
           <div class="">
             <ul class="flex flex-wrap justify-center">
@@ -118,7 +122,7 @@ const directors = allLeaders.filter(
             variant="subheading"
             className="py-12 text-center text-primary"
           >
-            Director of Bureau
+            {t("trcLeader.directorOfBureau")}
           </TextElement>
           <div class="">
             <ul class="flex flex-wrap">

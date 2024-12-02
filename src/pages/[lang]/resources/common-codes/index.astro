@@ -4,6 +4,7 @@ import TextElement from "@/components/TextElement";
 
 import image from "@/asset/resources/common-codes.png";
 import { languages } from "@/i18n/ui";
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import { Image } from "astro:assets";
 
@@ -14,13 +15,15 @@ export async function getStaticPaths() {
     params: { lang },
   }));
 }
+
+const t = useTranslations(getLangFromUrl(Astro.url.pathname));
 ---
 
 <BaseLayout title={title}>
   <Main>
     <section aria-label={title} class="pb-6">
       <TextElement variant="heading" className="text-text text-center">
-        {title}
+        {t("nav.resources.commonCodes")}
       </TextElement>
     </section>
     <Image

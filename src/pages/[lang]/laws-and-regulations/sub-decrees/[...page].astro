@@ -6,6 +6,7 @@ import TextElement from "@/components/TextElement";
 
 import { DIRECTIVE_TYPES } from "@/content/content.type";
 import { languages } from "@/i18n/ui";
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import { PER_PAGE } from "@/utils/constant.ts";
 import type { PaginateFunction } from "astro";
@@ -41,6 +42,8 @@ export async function getStaticPaths({
 
 const { lang } = Astro.params;
 const { page } = Astro.props;
+
+const t = useTranslations(getLangFromUrl(Astro.url.pathname));
 ---
 
 <BaseLayout title={title}>
@@ -48,7 +51,7 @@ const { page } = Astro.props;
     <section aria-label={title}>
       <header>
         <TextElement variant="heading" className="text-center">
-          {title}
+          {t("nav.lawsRegulations.subDecrees")}
         </TextElement>
       </header>
       <DirectiveCardList directives={page.data} lang={lang} />

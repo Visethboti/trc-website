@@ -1,6 +1,8 @@
 ---
 import TextElement from "@/components/TextElement";
 
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
+
 interface Props {
   ministry: string;
   emergencyList: {
@@ -10,12 +12,15 @@ interface Props {
 }
 
 const { ministry, emergencyList } = Astro.props;
+
+const t = useTranslations(getLangFromUrl(Astro.url.pathname));
 ---
 
 <div class="flex flex-col rounded-lg border p-5">
   <div class="flex flex-row justify-between p-4">
-    <TextElement variant="title">{ministry}</TextElement>
-    <TextElement variant="title">Number</TextElement>
+    <TextElement variant="title">{t("emergencyNumber." + ministry)}</TextElement
+    >
+    <TextElement variant="title">{t("emergencyNumber.number")}</TextElement>
   </div>
   <hr />
   {

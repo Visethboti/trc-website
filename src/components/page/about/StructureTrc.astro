@@ -2,18 +2,24 @@
 import { Button } from "@/components/ui/button";
 import TextElement from "@/components/TextElement";
 
-import image from "/src/asset/about/TRC Structure.svg";
+import imageEN from "/src/asset/about/trc-structure-english.svg";
+import imageKH from "/src/asset/about/trc-structure-khmer.svg";
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
 import { Image } from "astro:assets";
+
+const lang = getLangFromUrl(Astro.url.pathname);
+const image = lang === "en" ? imageEN : imageKH;
+
+const t = useTranslations(getLangFromUrl(Astro.url.pathname));
 ---
 
 <section>
   <header>
     <TextElement variant="heading" className="text-text text-center">
-      TRC Structure
+      {t("nav.about.trcStructure")}
     </TextElement>
     <TextElement variant="body" className="py-4">
-      The Telecommunication Regulator of Cambodia is led by Chairman Chenda
-      Thong, along with the following Commissioners and Directors of Bureaus:
+      {t("trcStructure.description")}
     </TextElement>
   </header>
 </section>
@@ -24,7 +30,7 @@ import { Image } from "astro:assets";
       alt="structure diagram of trc"
       sizes="(max-width: 640px) 100vw, (max-width: 768px) 256px, (max-width: 1024px) 256px, 128px"
       quality="high"
-      loading="lazy"
+      loading="eager"
       format="webp"
     />
   </div>
@@ -32,7 +38,7 @@ import { Image } from "astro:assets";
 <div class="mx-auto flex max-w-full justify-end py-4">
   <a href="/src/asset/about/downlond structure trc.pdf">
     <Button className="rounded-lg p-6 hover:bg-blue-900">
-      Download TRC Structure
+      {t("trcStructure.download")}
     </Button>
   </a>
 </div>

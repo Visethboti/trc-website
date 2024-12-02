@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import TextElement from "@/components/TextElement";
 
 import networkPattern from "@/asset/network-pattern.png";
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
 import { Fade, Slide } from "react-awesome-reveal";
 
 interface ChairmanCardProps {
@@ -13,6 +14,13 @@ interface ChairmanCardProps {
 }
 
 const ChairmanCard = ({ children, title, name, image }: ChairmanCardProps) => {
+  const [url, setUrl] = useState("");
+
+  useEffect(() => {
+    setUrl(window.location.pathname);
+  }, []);
+  const t = useTranslations(getLangFromUrl(url));
+
   const [isVisible, setIsVisible] = useState(false);
 
   const handleClick = () => {
@@ -46,7 +54,7 @@ const ChairmanCard = ({ children, title, name, image }: ChairmanCardProps) => {
             variant="subheading"
             className="py-5 text-center text-secondary"
           >
-            Chairman
+            {t("trcLeader.chairman")}
           </TextElement>
           <div className="relative size-60 overflow-hidden rounded-full drop-shadow-lg dark:border-gray-300">
             <img
@@ -70,7 +78,7 @@ const ChairmanCard = ({ children, title, name, image }: ChairmanCardProps) => {
                 variant="subheading"
                 className="py-5 text-center text-secondary"
               >
-                Chairman
+                {t("trcLeader.chairman")}
               </TextElement>
               <div className="relative size-60 overflow-hidden rounded-full drop-shadow-lg dark:border-gray-300">
                 <img

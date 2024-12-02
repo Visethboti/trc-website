@@ -24,7 +24,7 @@ const documentCardsEN = [
 
 const documentCardsKH = [
   {
-    label: "ពាក្យស្នើសុំអាជ្ញាប័ណ្ណផ្តល់សេវាអ៊ីនធឺណិត",
+    label: "លិខិតស្នើសុំអាជ្ញាប័ណ្ណផ្តល់សេវាអ៊ីនធឺណិត",
     description:
       "ពាក្យស្នើសុំអាជ្ញាប័ណ្ណប្រតិបត្តិការ និងការផ្តល់សេវាអ៊ីនធឺណិត",
     link: "/service/for-operator/InternetService/The Application for License on Operation and Provision of Internet Service.pdf",

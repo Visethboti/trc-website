@@ -5,6 +5,7 @@ import Locations from "@/components/page/contactusform/Locations.astro";
 import TextElement from "@/components/TextElement";
 
 import { languages } from "@/i18n/ui";
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 
 const title = "Contact Us TRC";
@@ -14,13 +15,15 @@ export async function getStaticPaths() {
     params: { lang },
   }));
 }
+
+const t = useTranslations(getLangFromUrl(Astro.url.pathname));
 ---
 
 <BaseLayout title={title}>
   <Main>
     <header>
       <TextElement variant="heading" className="text-text text-center">
-        Contact
+        {t("contact")}
       </TextElement>
     </header>
     <section aria-label={title} class="py-12">

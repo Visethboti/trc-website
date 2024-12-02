@@ -2,6 +2,8 @@ export const ui: Record<string, Record<string, string>> = {
   en: {
     telecommunicationRegulatorofCambodia:
       "Telecommunication Regulator of Cambodia",
+    published: "Published",
+    date: "Date",
     previous: "Previous",
     next: "Next",
     showing: "Showing",
@@ -87,6 +89,9 @@ export const ui: Record<string, Record<string, string>> = {
     "home.serviceWeOffer.forOperator.qualifiedAgentCertificate":
       "Qualified Agent Certificate",
     "home.media": "Media",
+    "home.media.activity": "Activity",
+    "home.media.event": "Event",
+    "home.media.news-release": "News Release",
     "home.seeMoreMedia": "See more media",
     "home.speedtest.mptc": "MPTC",
     "home.speedtest.speedTestApp": "Speed Test App",
@@ -99,8 +104,8 @@ export const ui: Record<string, Record<string, string>> = {
       "Ministry of Agricuture Forestry and Fisheries",
     "emergencyNumber.ministryofLaborandVocationalTraining":
       "Ministry of Labor and Vocational Training",
-    "emergencyNumber.Other": "Other",
-    "emergencyNumber.Number": "Number",
+    "emergencyNumber.other": "Other",
+    "emergencyNumber.number": "Number",
     "about.ChairmanKeynote": "Chairman's Keynote",
     "about.vision": "Vision",
     "about.mission": "Mission",
@@ -149,6 +154,15 @@ export const ui: Record<string, Record<string, string>> = {
       "The main objective of TRC is to ensure fair, efficient, and transparent competition in the telecommunications sector. To achieve this goal, TRC formulates regulations and guidelines for the operation and provision of telecommunications services and networks in accordance with the Royal Government's policies. These regulations are implemented through the enforcement of relevant laws and serve as the legal framework for the sector.",
     "about.trc.paragraph3":
       "In addition to its regulatory and arbitration roles, TRC also supervises the telecommunications sector. TRC monitors compliance with regulations, investigates possible breaches, and takes appropriate action to maintain a level playing field for all industry players.Act as a policy maker to review and decide on proposal for revision and/or amendment of laws, regulations, and policies related to digital security.",
+    trcLeader: "TRC Leader",
+    "trcLeader.description":
+      "The Telecommunication Regulator of Cambodia is led by Chairman Chenda Thong, along with the following Commissioners and Directors of Bureaus",
+    "trcLeader.chairman": "Chairman",
+    "trcLeader.commissioner": "Commissioner",
+    "trcLeader.directorOfBureau": "Director of Bureau",
+    "trcStructure.description":
+      "The Telecommunication Regulator of Cambodia is led by Chairman Chenda Thong, along with the following Commissioners and Directors of Bureaus:",
+    "trcStructure.download": "Download TRC Structure",
     contact: "Contact",
     "contact.description":
       "We are welcomed for any questions and feedback. Please fill in the form below and we will get back to you shortly. We appreciate your interest.",
@@ -157,6 +171,8 @@ export const ui: Record<string, Record<string, string>> = {
   },
   km: {
     telecommunicationRegulatorofCambodia: "និយ័តករទូរគមនាគមន៍កម្ពុជា",
+    published: "បោះពុម្ពផ្សាយដោយ",
+    date: "កាលបរិច្ឆេទ",
     previous: "ថយក្រោយ",
     next: "ទៅមុខ",
     showing: "បង្ហាញពី",
@@ -244,6 +260,9 @@ export const ui: Record<string, Record<string, string>> = {
     "home.serviceWeOffer.forOperator.qualifiedAgentCertificate":
       "វិញ្ញាបនបត្រទទួលគុណវុឌ្ឍិជាភ្នាក់ងារ",
     "home.media": "ព័ត៌មាន",
+    "home.media.activity": "សកម្មភាព",
+    "home.media.event": "ព្រឹត្តិការណ៍",
+    "home.media.news-release": "ព័ត៌មាន",
     "home.seeMoreMedia": "ព័ត៌មានផ្សេងទៀត",
     "home.speedtest.mptc": "កម្មវិធី",
     "home.speedtest.speedTestApp": "វាស់ស្ទង់ល្បឿនអ៊ីនធឺណិត",
@@ -256,8 +275,8 @@ export const ui: Record<string, Record<string, string>> = {
       "ក្រសួងកសិកម្ម រុក្ខាប្រមាញ់ និងនេសាទ",
     "emergencyNumber.ministryofLaborandVocationalTraining":
       "ក្រសួងការងារ និងបណ្តុះបណ្តាលវិជ្ជាជីវៈ",
-    "emergencyNumber.Other": "ផ្សេងៗ",
-    "emergencyNumber.Number": "លេខ",
+    "emergencyNumber.other": "ផ្សេងៗ",
+    "emergencyNumber.number": "លេខ",
     "about.ChairmanKeynote": "សុន្ទរកថារបស់ឯកឧត្តមប្រធាន",
     "about.vision": "ចក្ខុវិស័យ",
     "about.mission": "បេសកកម្ម",
@@ -306,6 +325,15 @@ export const ui: Record<string, Record<string, string>> = {
       "គោលបំណងសំខាន់របស់ ន.ទ.ក. គឺធានាឱ្យមានការប្រកួតប្រជែងប្រកបដោយយុត្តិធម៌ ប្រសិទ្ធភាព និងតម្លាភាពក្នុងវិស័យទូរគមនាគមន៍។ ដើម្បីសម្រេចបាននូវគោលដៅនេះ ន.ទ.ក. បង្កើតបទប្បញ្ញត្តិ និងគោលការណ៍ណែនាំសម្រាប់ប្រតិបត្តិការ និងការផ្តល់សេវាទូរគមនាគមន៍ និងបណ្តាញនានា ស្របតាមគោលនយោបាយរបស់រាជរដ្ឋាភិបាល។ បទប្បញ្ញត្តិទាំងនេះត្រូវបានអនុវត្ត និងក្លាយជាក្របខណ្ឌគតិយុត្តសម្រាប់វិស័យនេះ។",
     "about.trc.paragraph3":
       "In addition to its regulatory and arbitration roles, TRC also supervises the telecommunications sector. TRC monitors compliance with regulations, investigates possible breaches, and takes appropriate action to maintain a level playing field for all industry players.Act as a policy maker to review and decide on proposal for revision and/or amendment of laws, regulations, and policies related to digital security.",
+    trcLeader: "ថ្នាក់ដឹកនាំ",
+    "trcLeader.description":
+      "និយតករទូរគមនាគមន៍កម្ពុជា ដឹកនាំដោយឯកឧត្ដម ថោង ចិន្តា និងមានឯកឧត្ដមសមាជិក និងប្រធាននាយកដ្ឋានដូចខាងក្រោម៖",
+    "trcLeader.chairman": "ឯកឧត្ដមប្រធាន",
+    "trcLeader.commissioner": "ឯកឧត្ដមសមាជិក",
+    "trcLeader.directorOfBureau": "ប្រធាននាយកដ្ឋាន",
+    "trcStructure.description":
+      "និយតករទូរគមនាគមន៍កម្ពុជា ដឹកនាំដោយឯកឧត្ដម ថោង ចិន្តា និងមានឯកឧត្ដមសមាជិក និងប្រធាននាយកដ្ឋានដូចខាងក្រោម៖",
+    "trcStructure.download": "ទាញយករចនាសម្ព័ន្ធ ន.ទ.ក.",
     contact: "ទំនាក់ទំនង",
     "contact.description":
       "យើងស្វាគមន៍ចំពោះសំណួរ និងមតិកែលម្អណាមួយ។ សូមបំពេញទម្រង់ខាងក្រោម ហើយយើងនឹងឆ្លើយតបទៅអ្នកវិញក្នុងពេលឆាប់ៗនេះ។ យើងសូមកោតសរសើរចំពោះចំណាប់អារម្មណ៍របស់អ្នក។",

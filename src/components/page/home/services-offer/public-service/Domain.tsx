@@ -10,12 +10,11 @@ interface Props {
 
 const Domain: React.FC<Props> = ({ image }) => {
   const [url, setUrl] = useState("");
-  const lang = getLangFromUrl(url);
-  const t = useTranslations(lang);
 
   useEffect(() => {
     setUrl(window.location.pathname);
   }, []);
+  const t = useTranslations(getLangFromUrl(url));
 
   return (
     <a
@@ -31,7 +30,7 @@ const Domain: React.FC<Props> = ({ image }) => {
         loading="lazy"
       />
       <TextElement className="w-5/5 text-center text-xs">
-        {t("nav.services.domainKH")}
+        {t("home.serviceWeOffer.forPublic.domainKH")}
       </TextElement>
     </a>
   );

@@ -59,7 +59,7 @@ const documentCardsEN = [
 
 const documentCardsKH = [
   {
-    label: "ពាក្យស្នើសុំអាជ្ញាប័ណ្ណវិសាលគមន៍ហ្រ្វេកង់ស៍វិទ្យុ",
+    label: "លិខិតស្នើសុំអាជ្ញាប័ណ្ណវិសាលគមន៍ហ្រ្វេកង់ស៍វិទ្យុ",
     description: "1. ពាក្យសុំអាជ្ញាប័ណ្ណហ្វ្រេកង់ស៍វិទ្យុអាម៉ាទ័រ",
     link: "/service/for-operator/SpectrumLicense/1. Radio-Amateur-License.docx",
   },
