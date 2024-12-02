@@ -8,13 +8,13 @@ import TextElement from "@/components/TextElement";
 import UnitLinks from "@/components/UnitLinks.astro";
 
 import CommonCodes from "@/asset/resources/common-codes.png";
-import { languages, type SupportedLanguage } from "@/i18n/ui";
+import { languages } from "@/i18n/ui";
 import { getLangFromUrl, useTranslations } from "@/i18n/utils";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import { Image } from "astro:assets";
 import { getCollection } from "astro:content";
 
-const lang = Astro.currentLocale as SupportedLanguage;
+const lang = getLangFromUrl(Astro.url.pathname);
 
 export function getStaticPaths() {
   return Object.values(languages).map((lang) => ({ params: { lang } }));
