@@ -15,6 +15,7 @@ import { Image } from "astro:assets";
 import { getCollection } from "astro:content";
 
 const lang = Astro.currentLocale as SupportedLanguage;
+const language = getLangFromUrl(Astro.url.pathname);
 
 export function getStaticPaths() {
   return Object.values(languages).map((lang) => ({ params: { lang } }));
@@ -25,7 +26,7 @@ const allEvents = await getCollection("events");
 const allNewsReleases = await getCollection("news-releases");
 const allMedia = [...allActivities, ...allNewsReleases, ...allEvents];
 
-const langMedia = allMedia.filter((article) => article.data.lang === lang);
+const langMedia = allMedia.filter((article) => article.data.lang === language);
 
 const carousels = langMedia
   .filter((tip) => tip.data.isCarousel === true)

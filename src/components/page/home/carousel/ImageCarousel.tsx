@@ -45,13 +45,13 @@ export default function ImageCarousel({
     <Carousel
       plugins={[plugin.current]}
       opts={{ loop: true }}
-      className="h-[calc(100vh-175px)] max-h-screen overflow-hidden lg:h-[calc(100vh-139px)]"
+      className="max-h-screen overflow-hidden"
     >
       <CarouselContent>
         {carouselDatas?.map((item, index) => (
           <CarouselItem
             key={item.data.title}
-            className="relative h-screen w-full"
+            className="relative h-[calc(100vh-175px)] min-h-96 w-full lg:h-[calc(100vh-139px)]"
           >
             <a href={getContentUrl(item, lang)}>
               <img
@@ -61,12 +61,12 @@ export default function ImageCarousel({
                 className="size-full object-cover"
                 loading="eager"
               />
-              <div className="absolute inset-0 flex w-full items-center justify-center bg-black/70 lg:justify-end lg:bg-transparent lg:bg-gradient-to-r lg:from-transparent lg:to-black/50">
+              <div className="absolute inset-0 flex size-full items-center bg-black/70 lg:bg-transparent lg:bg-gradient-to-r lg:from-transparent lg:to-black/50">
                 <section
                   aria-labelledby="about-dsc"
                   className="w-full px-24 max-lg:p-10 max-md:p-5 max-sm:px-0 max-sm:py-5"
                 >
-                  <div className="container">
+                  <div className="container size-full">
                     <CardContent className="flex flex-col items-center justify-center space-y-4 p-0 text-center text-primary-foreground lg:items-end lg:justify-end">
                       <div className="flex w-full flex-col items-center justify-center lg:w-1/2 lg:items-end lg:justify-end">
                         <Badge
@@ -77,7 +77,7 @@ export default function ImageCarousel({
                         </Badge>
                         <TextElement
                           variant="medium"
-                          className="leading-12 line-clamp-4 whitespace-pre-line text-pretty text-center font-normal lg:text-right"
+                          className="line-clamp-4 whitespace-pre-line text-pretty text-center font-normal lg:text-right"
                         >
                           {item.data.title}
                         </TextElement>
