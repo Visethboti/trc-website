@@ -38,8 +38,8 @@ const t = useTranslations(getLangFromUrl(Astro.url.pathname));
 <div class="mx-auto flex max-w-full justify-end py-4">
   <a
     href={lang === "en"
-      ? "/src/asset/about/english-trc-structure.png"
-      : "/src/asset/about/khmer-trc-structure.png"}
+      ? "/structure/english-trc-structure.png"
+      : "/structure/khmer-trc-structure.png"}
   >
     <Button className="rounded-lg p-6 hover:bg-blue-900">
       {t("trcStructure.download")}
