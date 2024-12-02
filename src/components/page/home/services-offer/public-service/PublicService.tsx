@@ -8,7 +8,7 @@ import telecomShopImage from "src/asset/service-icons/Telecom Shop.svg";
 
 const PublicService = () => {
   return (
-    <div className="grid grid-cols-3 gap-5 xl:gap-10">
+    <div className="grid h-full grid-cols-3 gap-5 xl:gap-10">
       <Domain image={domainImage} />
       <InternetCafePopup
         image={internetCafeImage}

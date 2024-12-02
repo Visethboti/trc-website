@@ -22,6 +22,7 @@ interface Props {
 
 const { title, href, image, date, lang, type } = Astro.props as Props;
 const t = useTranslations(getLangFromUrl(Astro.url.pathname));
+console.log(lang);
 ---
 
 <a href={href} aria-labelledby={`read-more-${href}`}>

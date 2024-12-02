@@ -134,15 +134,18 @@ const TelecomNumberingPopup: React.FC<Props> = ({ image, networkPattern }) => {
 
   return (
     <Dialog open={isDialogOpen}>
-      <DialogTrigger onClick={handleClick} style={{ width: "100%" }}>
-        <div className="flex h-[85px] min-w-[140px] flex-row items-center justify-center rounded-2xl border md:h-[91px] lg:h-[112px] xl:h-[140px] xl:space-x-5">
+      <DialogTrigger
+        onClick={handleClick}
+        style={{ width: "100%", height: "100%" }}
+      >
+        <div className="flex h-full min-w-[140px] flex-row items-center justify-center rounded-2xl border py-2 xl:space-x-5 2xl:py-6">
           <img
             src={image.src}
             alt="Telecom Numbering Permit"
             className="size-12 rounded-lg lg:size-20"
             loading="lazy"
           />
-          <TextElement className="w-2/4 text-center text-[12px] lg:text-[13px] xl:w-1/4">
+          <TextElement className="w-2/4 break-words text-center text-[12px] lg:text-[13px] xl:w-1/4">
             {t("nav.services.telecomNumberingPermit")}
           </TextElement>
         </div>
