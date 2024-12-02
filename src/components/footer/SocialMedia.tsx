@@ -1,16 +1,6 @@
-import { useEffect, useState } from "react";
-
 import { FacebookIcon, TelegramIcon, YouTubeIcon } from "./SocialMediaLinks";
-import { getLangFromUrl, useTranslations } from "@/i18n/utils";
 
 export default function SocialMedia() {
-  const [url, setUrl] = useState("");
-
-  useEffect(() => {
-    setUrl(window.location.pathname);
-  }, []);
-  const t = useTranslations(getLangFromUrl(url));
-
   const socialMediaLinks = [
     {
       Icon: FacebookIcon,
@@ -26,21 +16,18 @@ export default function SocialMedia() {
   ];
 
   return (
-    <nav aria-label="Social Media Links" className="lg:col-span-1">
-      <h2 className="mb-4 text-lg font-semibold">{t("footer.followUs")}</h2>
-      <ul className="flex gap-6">
-        {socialMediaLinks.map(({ Icon, label, link }) => (
-          <li key={label}>
-            <a
-              href={link}
-              aria-label={label}
-              className="transition-colors hover:text-secondary"
-            >
-              <Icon className="size-6" />
-            </a>
-          </li>
-        ))}
-      </ul>
-    </nav>
+    <ul className="flex gap-6">
+      {socialMediaLinks.map(({ Icon, label, link }) => (
+        <li key={label}>
+          <a
+            href={link}
+            aria-label={label}
+            className="transition-colors hover:text-secondary"
+          >
+            <Icon className="size-6" />
+          </a>
+        </li>
+      ))}
+    </ul>
   );
 }
