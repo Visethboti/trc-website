@@ -31,7 +31,6 @@ export default {
     extend: {
       fontFamily: {
         sans: ["Calisto MT", "Khmer MEF1", "sans-serif"],
-        khmerMEF2: ["Calisto MT", "Khmer MEF2", "sans-serif"],
       },
       colors: {
         border: "hsl(var(--border))",
