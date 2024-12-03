@@ -7,4 +7,4 @@ image: src/asset/secretaries/chairman-comissioner/auk-dorany.webp
 lang: en
 ---
 
-No Bio
+preparing

@@ -7,4 +7,5 @@ image: src/asset/secretaries/director-of-bureau/tep-bunboren.webp
 lang: km
 ---
 
-មិនទាន់មាន
+កំពុងរៀបចំ
+

@@ -7,4 +7,5 @@ image: src/asset/secretaries/chairman-comissioner/ou-borath.webp
 lang: km
 ---
 
-មិនទាន់មាន
+កំពុងរៀបចំ
+

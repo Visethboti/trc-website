@@ -7,4 +7,5 @@ image: src/asset/secretaries/chairman-comissioner/seng-sothy.webp
 lang: km
 ---
 
-មិនទាន់មាន
+កំពុងរៀបចំ
+

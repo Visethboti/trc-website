@@ -60,14 +60,14 @@ const absoluteFileUrl = new URL(file, Astro.site).href;
       </figure>
       <TextElement
         variant="mediumtitle"
-        className="line-clamp-2 pr-20 sm:pr-24 lg:pr-44"
+        className="line-clamp-2 text-center sm:text-left"
         id={`article-${title}`}
       >
         {title}
       </TextElement>
       <time
         datetime={toISOString(date)}
-        class="leading-2 text-text mt-4 text-left text-xs"
+        class="leading-2 mt-4 text-left text-xs"
       >
         <TextElement className="sr-only" variant="small"
           >published on:</TextElement

@@ -7,4 +7,4 @@ image: src/asset/secretaries/director-of-bureau/tep-bunboren.webp
 lang: en
 ---
 
-No Bio
+preparing
