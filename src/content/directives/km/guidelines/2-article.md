@@ -1,5 +1,5 @@
 ---
-date: 11/02/2019
+date: 08/12/2020
 file: laws-regulations/Guideline/Guideline on Measures to Strengthen the Implementation of the Law on Telecommunications.pdf
 featured: true
 image: src/asset/logo/TRC-Logo.png
