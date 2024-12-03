@@ -25,17 +25,16 @@ const dateFormat = (num: number) => {
   class="mt-12 flex items-center justify-center gap-10"
 >
   <TextElement variant="body" className="hidden lg:inline-block">
-    {t("showing")}<span> {dateFormat(page.start + 1)}</span>
+    {t("showing")}<span> {dateFormat(page.start + 1)} </span>
     {
       page.end !== page.start && (
         <span>
-          {" "}
           {t("to")} {dateFormat(page.end + 1)}
         </span>
       )
     }
-    {t("of")}{" "}
-    <span>{dateFormat(page.total)}</span>
+    {t("of")}
+    <span> {dateFormat(page.total)}</span>
   </TextElement>
   <PaginationComponent page={page} />
 </div>
