@@ -183,7 +183,7 @@ export const ui: Record<string, Record<string, string>> = {
     spokesPersons: "អ្នកនាំពាក្យ: លោក សៀង សិទ្ធី",
     "footer.hotline": "៦៧៨៩​​​​​​​​ (ខ្សែទូរស័ព្ទ) / (៨៥៥) ២៣ ៧២២ ៣៣៣",
     "footer.phoneNumber": "(៨៥៥) ១១​ ៨០៩ ៨៨៨",
-    "footer.address": "ផ្លូវ១០២ សង្កាត់វត្តភ្នំ ខណ្ឌដូនពេញ រាជធានីភ្នំពេញ",
+    "footer.address": "ផ្លូវ១០២ សង្កាត់វត្តភ្នំ, ខណ្ឌដូនពេញ, រាជធានីភ្នំពេញ",
     "footer.quickLink": "តំណភ្ជាប់រហ័ស",
     "footer.copyright": "រក្សាសិទ្ធិគ្រប់យ៉ាងដោយ និយ័តករទូរគមនាគមន៍កម្ពុជា",
     "footer.followUs": "បណ្ដាញសង្គម",
