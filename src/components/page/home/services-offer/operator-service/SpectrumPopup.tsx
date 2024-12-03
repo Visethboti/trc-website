@@ -60,46 +60,46 @@ const documentCardsEN = [
 const documentCardsKH = [
   {
     label: "លិខិតស្នើសុំអាជ្ញាប័ណ្ណវិសាលគមន៍ហ្រ្វេកង់ស៍វិទ្យុ",
-    description: "1. ពាក្យសុំអាជ្ញាប័ណ្ណហ្វ្រេកង់ស៍វិទ្យុអាម៉ាទ័រ",
+    description: "១. ពាក្យសុំអាជ្ញាប័ណ្ណហ្វ្រេកង់ស៍វិទ្យុអាម៉ាទ័រ",
     link: "/service/for-operator/SpectrumLicense/1. Radio-Amateur-License.docx",
   },
   {
-    description: "2. ពាក្យស្នើសុំអាជ្ញាប័ណ្ណហ្វ្រេកង់ស៍វិទ្យុទាក់ទង",
+    description: "២. ពាក្យស្នើសុំអាជ្ញាប័ណ្ណហ្វ្រេកង់ស៍វិទ្យុទាក់ទង",
     link: "/service/for-operator/SpectrumLicense/2. Radiocom-MFHFVHF-UHF-License.docx",
   },
   {
-    description: "3. ពាក្យស្នើសុំអាជ្ញាប័ណ្ណហ្វ្រេកង់ស៍វិទ្យុផ្សាយសំឡេង",
+    description: "៣. ពាក្យស្នើសុំអាជ្ញាប័ណ្ណហ្វ្រេកង់ស៍វិទ្យុផ្សាយសំឡេង",
     link: "/service/for-operator/SpectrumLicense/3. Radio_Sound_Broadcasting.docx",
   },
   {
-    description: "4. ពាក្យស្នើសុំអាជ្ញាប័ណ្ណហ្វ្រេកង់ស៍ទូរទស្សន៍",
+    description: "៤. ពាក្យស្នើសុំអាជ្ញាប័ណ្ណហ្វ្រេកង់ស៍ទូរទស្សន៍",
     link: "/service/for-operator/SpectrumLicense/4. Television-VHFUHF-License.docx",
   },
   {
-    description: "5. ពាក្យស្នើសុំអាជ្ញាប័ណ្ណហ្វ្រេកង់ស៍វិទ្យុម៉ៃក្រូវ៉េវ",
+    description: "៥. ពាក្យស្នើសុំអាជ្ញាប័ណ្ណហ្វ្រេកង់ស៍វិទ្យុម៉ៃក្រូវ៉េវ",
     link: "/service/for-operator/SpectrumLicense/5. Radio-Microwave-Station-License.docx",
   },
   {
     description:
-      "6. ពាក្យស្នើសុំហ្រេ្វកង់ស៍វិទ្យុផ្តល់សេវាទូរស័ព្ទចល័ត អចល័តឥតខ្សែ",
+      "៦. ពាក្យស្នើសុំហ្រេ្វកង់ស៍វិទ្យុផ្តល់សេវាទូរស័ព្ទចល័ត អចល័តឥតខ្សែ",
     link: "/service/for-operator/SpectrumLicense/6. Base_Station_for_Mobile.docx",
   },
   {
     description:
-      "7. ពាក្យស្នើសុំអាជ្ញាប័ណ្ណហ្វ្រេកង់ស៍វិទ្យុផ្តល់សេវាអ៊ីនធឺណេត",
+      "៧. ពាក្យស្នើសុំអាជ្ញាប័ណ្ណហ្វ្រេកង់ស៍វិទ្យុផ្តល់សេវាអ៊ីនធឺណេត",
     link: "/service/for-operator/SpectrumLicense/7. Broadband-Wireless-Access-License.docx",
   },
   {
-    description: "8. ពាក្យស្នើសុំអាជ្ញាប័ណ្ណហ្វ្រេកង់ស៍វិទ្យុVSAT",
+    description: "៨. ពាក្យស្នើសុំអាជ្ញាប័ណ្ណហ្វ្រេកង់ស៍វិទ្យុVSAT",
     link: "/service/for-operator/SpectrumLicense/8. Radio-VSAT-License.docx",
   },
   {
-    description: "9. ពាក្យស្នើសុំអាជ្ញាប័ណ្ណហ្វ្រេកង់ស៍វិទ្យុ INMARSAT",
+    description: "៩. ពាក្យស្នើសុំអាជ្ញាប័ណ្ណហ្វ្រេកង់ស៍វិទ្យុ INMARSAT",
     link: "/service/for-operator/SpectrumLicense/9. Radio-INMARSAT-License.docx",
   },
   {
     description:
-      "10. ពាក្យសុំអាជ្ញាប័ណ្ណប្រើប្រាស់ទូរស័ព្ទចល័តតាមផ្កាយរណប (SATELLITE PHONE)",
+      "១០. ពាក្យសុំអាជ្ញាប័ណ្ណប្រើប្រាស់ទូរស័ព្ទចល័តតាមផ្កាយរណប (SATELLITE PHONE)",
     link: "/service/for-operator/SpectrumLicense/10. Radio-SATELLITE-PHONE-License.docx",
   },
 ];

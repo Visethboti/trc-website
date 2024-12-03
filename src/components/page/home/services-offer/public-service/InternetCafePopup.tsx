@@ -42,20 +42,20 @@ const documentCardsKH = [
   {
     label: "លិខិតស្នើសុំសាលបម្រើសេវាអ៊ីនធឺណិត",
     description:
-      "1. ពាក្យស្នើសុំលិខិតអនុញ្ញាតបើកអាជីវកម្មសាលបម្រើសេវាអ៊ិនធឺណិត",
+      "១. ពាក្យស្នើសុំលិខិតអនុញ្ញាតបើកអាជីវកម្មសាលបម្រើសេវាអ៊ិនធឺណិត",
     link: "/service/for-public/InternetCafe/1. Application Form for the Certificate of Internet Cafe╠ü.docx",
   },
   {
-    description: "2. ពាក្យស្នើសុំផ្លាស់ប្តូរអាសយដ្ឋានសាលបម្រើសេវាអ៊ិនធឺណិត",
+    description: "២. ពាក្យស្នើសុំផ្លាស់ប្តូរអាសយដ្ឋានសាលបម្រើសេវាអ៊ិនធឺណិត",
     link: "/service/for-public/InternetCafe/Application Form for 2. Change Address Internet Cafe Shop.docx",
   },
   {
     description:
-      "3. ពាក្យស្នើសុំបន្តអាជីវកម្ម/លិខិតអនុញ្ញាតការបើកអាជីវកម្មសាលបម្រើសេវាអ៊ិនធឺណិត",
+      "៣. ពាក្យស្នើសុំបន្តអាជីវកម្ម/លិខិតអនុញ្ញាតការបើកអាជីវកម្មសាលបម្រើសេវាអ៊ិនធឺណិត",
     link: "/service/for-public/InternetCafe/3. Application Form Business Continuity _ License, Internet Business Center Opening.docx",
   },
   {
-    description: "4. ពាក្យស្នើសុំបិទអាជីវកម្មសាលបម្រើសេវាអ៊ិនធឺណិត",
+    description: "៤. ពាក្យស្នើសុំបិទអាជីវកម្មសាលបម្រើសេវាអ៊ិនធឺណិត",
     link: "/service/for-public/InternetCafe/4.  Application Form for Closing Internet Cafe Shop.docx",
   },
   {

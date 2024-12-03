@@ -1,4 +1,6 @@
 ---
+import { toKhmerNumerals } from "@/lib/date-helper";
+
 import PaginationComponent from "@/components/PaginationComponent.astro";
 import TextElement from "@/components/TextElement";
 
@@ -10,7 +12,12 @@ interface Props {
 }
 
 const { page } = Astro.props;
-const t = useTranslations(getLangFromUrl(Astro.url.pathname));
+const lang = getLangFromUrl(Astro.url.pathname);
+const t = useTranslations(lang);
+
+const dateFormat = (num: number) => {
+  return lang === "km" ? toKhmerNumerals(`${num}`) : num;
+};
 ---
 
 <div
@@ -18,17 +25,17 @@ const t = useTranslations(getLangFromUrl(Astro.url.pathname));
   class="mt-12 flex items-center justify-center gap-10"
 >
   <TextElement variant="body" className="hidden lg:inline-block">
-    {t("showing")}<span> {page.start + 1}</span>
+    {t("showing")}<span> {dateFormat(page.start + 1)}</span>
     {
       page.end !== page.start && (
         <span>
           {" "}
-          {t("to")} {page.end + 1}
+          {t("to")} {dateFormat(page.end + 1)}
         </span>
       )
     }
     {t("of")}{" "}
-    <span>{page.total}</span>
+    <span>{dateFormat(page.total)}</span>
   </TextElement>
   <PaginationComponent page={page} />
 </div>

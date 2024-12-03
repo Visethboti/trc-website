@@ -66,7 +66,7 @@ const documentCardsKH = [
   {
     label: "លិខិតអនុញ្ញាតប្រើប្រាស់លេខទូរស័ព្ទចល័ត",
     description:
-      "1. ពាក្យស្នើសុំលិខិតអនុញ្ញាតប្រើប្រាស់លេខទូរស័ព្ទ ឬលេខទូរគមនាគមន៍",
+      "១. ពាក្យស្នើសុំលិខិតអនុញ្ញាតប្រើប្រាស់លេខទូរស័ព្ទ ឬលេខទូរគមនាគមន៍",
     link: "/service/for-operator/TelecomNumbering/1. License to use mobile number or telecom numbers.pdf",
   },
   {
@@ -76,7 +76,7 @@ const documentCardsKH = [
   {
     label: "លិខិតអនុញ្ញាតប្រគល់លេខទូរស័ព្ទអចល័ត",
     description:
-      "1. ពាក្យស្នើសុំលិខិតអនុញ្ញាតប្រគល់លេខទូរស័ព្ទអចល័ត ឬលេខទូរគមនាគមន៍",
+      "១. ពាក្យស្នើសុំលិខិតអនុញ្ញាតប្រគល់លេខទូរស័ព្ទអចល័ត ឬលេខទូរគមនាគមន៍",
     link: "/service/for-operator/TelecomNumbering/1. License to return fixed number or telecom numbers.pdf",
   },
   {
@@ -86,7 +86,7 @@ const documentCardsKH = [
   {
     label: "លិខិតអនុញ្ញាតប្រគល់លេខទូរស័ព្ទ",
     description:
-      "1. ពាក្យស្នើសុំលិខិតអនុញ្ញាតប្រគល់លេខទូរស័ព្ទ ឬលេខទូរគមនាគមន៍",
+      "១. ពាក្យស្នើសុំលិខិតអនុញ្ញាតប្រគល់លេខទូរស័ព្ទ ឬលេខទូរគមនាគមន៍",
     link: "/service/for-operator/TelecomNumbering/1. License to return mobile number or telecom numbers.pdf",
   },
   {
