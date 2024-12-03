@@ -3,15 +3,15 @@ import { cn } from "@/lib/utils";
 const CONFIG = {
   heading: {
     tag: "h1",
-    tw: "scroll-m-20 text-4xl font-bold  lg:text-5xl text-text tracking-wide font-khmerMEF2",
+    tw: "scroll-m-20 text-4xl font-bold  lg:text-5xl text-text tracking-wide",
   },
   subheading: {
     tag: "h2",
-    tw: "scroll-m-20 text-xl lg:text-2xl xl:text-3xl font-bold tracking-wide text-text leading-relaxed font-khmerMEF2",
+    tw: "scroll-m-20 text-xl lg:text-2xl xl:text-3xl font-bold tracking-wide text-text leading-relaxed",
   },
   smallheading: {
     tag: "h2",
-    tw: "scroll-m-20 text-lg lg:text-xl font-bold tracking-wide text-text font-khmerMEF2",
+    tw: "scroll-m-20 text-lg lg:text-xl font-bold tracking-wide text-text",
   },
   title: {
     tag: "h3",
