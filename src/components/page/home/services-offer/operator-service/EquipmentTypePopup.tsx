@@ -132,8 +132,11 @@ const EquipmentTypePopup: React.FC<Props> = ({ image, networkPattern }) => {
 
   return (
     <Dialog open={isDialogOpen}>
-      <DialogTrigger onClick={handleClick} style={{ width: "100%" }}>
-        <div className="flex h-[85px] min-w-[140px] flex-row items-center justify-center rounded-2xl border lg:h-[110px] xl:h-[140px]">
+      <DialogTrigger
+        onClick={handleClick}
+        style={{ width: "100%", height: "100%" }}
+      >
+        <div className="flex h-full min-w-[140px] flex-row items-center justify-center rounded-2xl border py-2 2xl:py-6">
           <img
             src={image.src}
             alt="Equipment Type Approval Certificate"

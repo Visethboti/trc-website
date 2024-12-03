@@ -110,7 +110,7 @@ const TelecomShopPopup: React.FC<Props> = ({ image, networkPattern }) => {
   return (
     <Dialog open={isDialogOpen}>
       <DialogTrigger onClick={handleClick} style={{ width: "100%" }}>
-        <div className="flex max-h-[620px] min-h-[200px] flex-col items-center justify-center space-y-4 rounded-2xl border md:h-[300px] xl:h-[450px] 2xl:h-[500px]">
+        <div className="flex h-full max-h-[620px] min-h-[200px] flex-col items-center justify-center space-y-4 rounded-2xl border">
           <img
             src={image.src}
             alt="Telecom Equipment Shop"

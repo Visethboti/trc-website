@@ -85,15 +85,18 @@ const QualifiedAgentPopup: React.FC<Props> = ({ image, networkPattern }) => {
 
   return (
     <Dialog open={isDialogOpen}>
-      <DialogTrigger onClick={handleClick} style={{ width: "100%" }}>
-        <div className="flex h-[85px] min-w-[140px] flex-row items-center justify-center rounded-2xl border lg:h-[110px] xl:h-[140px]">
+      <DialogTrigger
+        onClick={handleClick}
+        style={{ width: "100%", height: "100%" }}
+      >
+        <div className="flex h-full min-w-[140px] flex-row items-center justify-center rounded-2xl border py-2 2xl:py-6">
           <img
             src={image.src}
             alt="Qualified"
             className="size-12 rounded-lg lg:size-20"
             loading="lazy"
           />
-          <TextElement className="w-2/4 text-center text-[12px] md:w-2/5 lg:text-[13px] 2xl:w-2/5">
+          <TextElement className="w-2/4 break-words text-center text-[12px] md:w-2/5 lg:text-[13px] 2xl:w-2/5">
             {t("nav.services.qualifiedAgentCertification")}
           </TextElement>
         </div>

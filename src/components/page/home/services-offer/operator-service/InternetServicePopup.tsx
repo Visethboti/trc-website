@@ -70,15 +70,18 @@ const InternetServicePopup: React.FC<Props> = ({ image, networkPattern }) => {
 
   return (
     <Dialog open={isDialogOpen}>
-      <DialogTrigger onClick={handleClick} style={{ width: "100%" }}>
-        <div className="min-w-100 flex h-[203px] flex-col items-center justify-center rounded-2xl border md:h-[194px] lg:h-[240px] xl:h-[300px]">
+      <DialogTrigger
+        onClick={handleClick}
+        style={{ width: "100%", height: "100%" }}
+      >
+        <div className="min-w-100 flex h-full flex-col items-center justify-center rounded-2xl border py-2 2xl:py-6">
           <img
             src={image.src}
             alt="Internet Service Provider"
             className="mb-2 size-24 rounded-lg p-2"
             loading="lazy"
           />
-          <TextElement className="w-3/4 text-center text-[12px] lg:text-[13px]">
+          <TextElement className="w-3/4 break-words text-center text-[12px] lg:text-[13px]">
             {t("nav.services.operationalLicense")}
           </TextElement>
         </div>

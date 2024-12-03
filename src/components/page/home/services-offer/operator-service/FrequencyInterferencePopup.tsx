@@ -80,15 +80,18 @@ const FrequencyInterferencePopup: React.FC<Props> = ({
 
   return (
     <Dialog open={isDialogOpen}>
-      <DialogTrigger onClick={handleClick} style={{ width: "100%" }}>
-        <div className="flex h-[203px] flex-col items-center justify-center rounded-2xl border md:h-[85px] md:flex-row lg:h-[110px] xl:h-[140px]">
+      <DialogTrigger
+        onClick={handleClick}
+        style={{ width: "100%", height: "100%" }}
+      >
+        <div className="flex h-full flex-col items-center justify-center rounded-2xl border py-2 md:h-full md:flex-row 2xl:py-6">
           <img
             src={image.src}
             alt="Frequency Interference Complaint"
             className="size-24 rounded-lg p-2 lg:size-24"
             loading="lazy"
           />
-          <TextElement className="w-2/4 text-center text-[12px] lg:text-[13px]">
+          <TextElement className="break-word w-2/4 text-center text-[12px] lg:text-[13px]">
             {t("nav.services.frequencyInterferenceComplaint")}
           </TextElement>
         </div>
