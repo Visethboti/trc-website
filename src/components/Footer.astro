@@ -30,10 +30,10 @@ const t = useTranslations(getLangFromUrl(Astro.url.pathname));
 <footer class="mt-auto w-auto bg-primary text-[15px] text-primary-foreground">
   <div class="w-full p-8">
     <div class="flex flex-col lg:flex-row lg:justify-center">
-      <div class="lg:w-4/4 grid gap-8 lg:grid-cols-7">
+      <div class="lg:w-4/4 grid gap-12 lg:grid-cols-7">
         <div class="hidden lg:col-span-1 lg:flex"></div>
         <address class="not-italic lg:col-span-2">
-          <TextElement className="mb-4 text-lg font-semibold">
+          <TextElement variant="mediumtitle" className="mb-4">
             {t("telecommunicationRegulatorofCambodia")}
           </TextElement>
           <ul class="space-y-3">
@@ -63,7 +63,7 @@ const t = useTranslations(getLangFromUrl(Astro.url.pathname));
           </ul>
         </address>
         <address class="not-italic lg:col-span-2">
-          <TextElement className="mb-4 text-lg font-semibold">
+          <TextElement variant="mediumtitle" className="mb-4">
             {t("spokesPersons")}
           </TextElement>
           <ul class="space-y-3">
@@ -93,9 +93,9 @@ const t = useTranslations(getLangFromUrl(Astro.url.pathname));
           </ul>
         </address>
         <nav class="lg:col-span-1">
-          <TextElement className="mb-4 text-lg font-semibold"
-            >{t("footer.quickLink")}</TextElement
-          >
+          <TextElement variant="mediumtitle" className="mb-4"
+            >{t("footer.quickLink")}
+          </TextElement>
           <ul class="space-y-3">
             {
               quickLinks.map((item) => (
@@ -109,9 +109,9 @@ const t = useTranslations(getLangFromUrl(Astro.url.pathname));
           </ul>
         </nav>
         <nav class="lg:col-span-1 lg:ml-5">
-          <TextElement className="mb-4 text-lg font-semibold"
-            >{t("footer.followUs")}</TextElement
-          >
+          <TextElement variant="mediumtitle" className="mb-4"
+            >{t("footer.followUs")}
+          </TextElement>
           <SocialMedia />
         </nav>
       </div>
