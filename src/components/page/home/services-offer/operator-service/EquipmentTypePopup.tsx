@@ -58,32 +58,32 @@ const documentCardsKH = [
     label:
       "លិខិតសុំស្នើសុំអាជ្ញាប័ណ្ណ វិញ្ញាបនបត្រ ការយល់ព្រមពីប្រភេទគ្រឿងសម្ភារបរិក្ខារ",
     description:
-      "1. ពាក្យស្នើសុំវិញ្ញាបនបត្រទទួលស្គាល់គុណវុឌ្ឈិជាភ្នាក់ងារនាំចូល ផ្គត់ផ្គង់ និង ការចែកចាយគ្រឿងសម្ភារបរិក្ខារវិទ្យុគមនាគមន៍ និងទូរគមនាគមន៍",
+      "១. ពាក្យស្នើសុំវិញ្ញាបនបត្រទទួលស្គាល់គុណវុឌ្ឈិជាភ្នាក់ងារនាំចូល ផ្គត់ផ្គង់ និង ការចែកចាយគ្រឿងសម្ភារបរិក្ខារវិទ្យុគមនាគមន៍ និងទូរគមនាគមន៍",
     link: "/service/for-operator/EquipmentType/1. The Application for Certificate of Accredited Agent for Importation, Supply, and Distribution.pdf",
   },
   {
     description:
-      "2. ពាក្យស្នើសុំបន្តសុពលភាពវិញ្ញាបនបត្រទទួលស្គាល់គុណវុឌ្ឈិជាភ្នាក់ងារនាំចូល ផ្គត់ផ្គង់ និង ការចែកចាយគ្រឿងសម្ភារបរិក្ខារវិទ្យុគមនាគមន៍ និងទូរគមនាគមន៍",
+      "២. ពាក្យស្នើសុំបន្តសុពលភាពវិញ្ញាបនបត្រទទួលស្គាល់គុណវុឌ្ឈិជាភ្នាក់ងារនាំចូល ផ្គត់ផ្គង់ និង ការចែកចាយគ្រឿងសម្ភារបរិក្ខារវិទ្យុគមនាគមន៍ និងទូរគមនាគមន៍",
     link: "/service/for-operator/EquipmentType/2. The Application for Renewal of Certificate of Accredited Agent for Importation, Supply, and Distribution.pdf",
   },
   {
     description:
-      "3. ពាក្យស្នើសុំលិខិតអនុញ្ញាតការនាំចូលគ្រឿងសម្ភារបរិក្ខារវិទ្យុគមនាគមន៍​ និងគ្រឿងសម្ភារបរិក្ខារទូរគមនាគមន៍",
+      "៣. ពាក្យស្នើសុំលិខិតអនុញ្ញាតការនាំចូលគ្រឿងសម្ភារបរិក្ខារវិទ្យុគមនាគមន៍​ និងគ្រឿងសម្ភារបរិក្ខារទូរគមនាគមន៍",
     link: "/service/for-operator/EquipmentType/3. The application for the import permit for radiocommunication equipment and telecommunications equipment.pdf",
   },
   {
     description:
-      "4. ពាក្យស្នើសុំលិខិតអនុញ្ញាតការនាំចូលគ្រឿងសម្ភារបរិក្ខារវិទ្យុគមនាគមន៍​ និងគ្រឿងសម្ភារបរិក្ខារទូរគមនាគមន៍​ - QIP",
+      "៤. ពាក្យស្នើសុំលិខិតអនុញ្ញាតការនាំចូលគ្រឿងសម្ភារបរិក្ខារវិទ្យុគមនាគមន៍​ និងគ្រឿងសម្ភារបរិក្ខារទូរគមនាគមន៍​ - QIP",
     link: "/service/for-operator/EquipmentType/4. The application for the import permit for radiocommunication equipment and telecommunications equipment_QIP.pdf",
   },
   {
     description:
-      "5. ពាក្យស្នើសុំវិញ្ញាបនបត្រទទួលស្គាល់យថាប្រភេទនៃគ្រឿងសម្ភារបរិក្ខារវិទ្យុគមនាគមន៍​ និងគ្រឿងសម្ភារបរិក្ខារទូរគមនាគមន៍",
+      "៥. ពាក្យស្នើសុំវិញ្ញាបនបត្រទទួលស្គាល់យថាប្រភេទនៃគ្រឿងសម្ភារបរិក្ខារវិទ្យុគមនាគមន៍​ និងគ្រឿងសម្ភារបរិក្ខារទូរគមនាគមន៍",
     link: "/service/for-operator/EquipmentType/5. The Application for Type Approval Certificate of Radiocommunication Equipment and Telecommunication.pdf",
   },
   {
     description:
-      "6. ពាក្យស្នើសុំវិញ្ញាបនបត្រកែសម្រួលវិញ្ញាបនបត្រទទួលស្គាល់យថាប្រភេទនៃគ្រឿងសម្ភារបរិក្ខារវិទ្យុគមនាគមន៍​ និងគ្រឿងសម្ភារបរិក្ខារទូរគមនាគមន៍",
+      "៦. ពាក្យស្នើសុំវិញ្ញាបនបត្រកែសម្រួលវិញ្ញាបនបត្រទទួលស្គាល់យថាប្រភេទនៃគ្រឿងសម្ភារបរិក្ខារវិទ្យុគមនាគមន៍​ និងគ្រឿងសម្ភារបរិក្ខារទូរគមនាគមន៍",
     link: "/service/for-operator/EquipmentType/6. The Application for Revision of Type Approval Certificate of Radiocommunication Equipment and Telecommunication Equipment.pdf",
   },
   {

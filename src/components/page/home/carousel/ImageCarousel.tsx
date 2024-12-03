@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 
+import { toKhmerNumerals } from "@/lib/date-helper";
 import { getContentUrl } from "@/lib/route";
 
 import { Badge } from "@/components/ui/badge";
@@ -41,6 +42,11 @@ export default function ImageCarousel({
     setUrl(window.location.pathname);
   }, []);
   const t = useTranslations(getLangFromUrl(url));
+
+  const dateFormat = (index: number) => {
+    return lang === "km" ? toKhmerNumerals(`${index}`) : index;
+  };
+
   return (
     <Carousel
       plugins={[plugin.current]}
@@ -89,7 +95,9 @@ export default function ImageCarousel({
                           {index === i ? (
                             <div className="flex items-center gap-5">
                               <hr className="h-2 w-20 rounded-2xl border-none bg-secondary" />
-                              <div className="font-semibold">{index + 1}</div>
+                              <div className="font-semibold">
+                                {dateFormat(index + 1)}
+                              </div>
                             </div>
                           ) : (
                             <div className="size-2 rounded-full border-2 border-solid border-secondary"></div>

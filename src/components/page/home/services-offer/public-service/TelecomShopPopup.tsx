@@ -46,22 +46,22 @@ const documentCardsKH = [
     label:
       "លិខិតស្នើសុំអាជ្ញាប័ណ្ណ វិញ្ញាបនបត្រហាងលក់គ្រឿងសម្ភារបរិក្ខារវិទ្យុគមនាគមន៍​​ និងទូរគមនាគមន៍",
     description:
-      "1. ពាក្យស្នើសុំលិខិតអនុញ្ញាតបើកលក់​​ និង/ឬ​ ជួលជុលគ្រឿងសម្ភារបរិក្ខារវិទ្យុគមនាគមន៍​​ និងទូរគមនាគមន៍ នៅក្នុងរាជធានីភ្នំពេញ",
+      "១. ពាក្យស្នើសុំលិខិតអនុញ្ញាតបើកលក់​​ និង/ឬ​ ជួលជុលគ្រឿងសម្ភារបរិក្ខារវិទ្យុគមនាគមន៍​​ និងទូរគមនាគមន៍ នៅក្នុងរាជធានីភ្នំពេញ",
     link: "/service/for-public/TelecomEquipmentShop/1. Application Permit Letter on Radiocommunication and Telecommunication equipment Sale and_or Repair Shop.pdf",
   },
   {
     description:
-      "2. ពាក្យស្នើសុំផ្លាស់ប្តូរអាសយដ្ឋានហាងលក់ និង/ឬ ជួលជុលគ្រឿងសម្ភារបិក្ខារវិទ្យុគមនាគមន៍ និងទូរគមនាគមន៍",
+      "២. ពាក្យស្នើសុំផ្លាស់ប្តូរអាសយដ្ឋានហាងលក់ និង/ឬ ជួលជុលគ្រឿងសម្ភារបិក្ខារវិទ្យុគមនាគមន៍ និងទូរគមនាគមន៍",
     link: "/service/for-public/TelecomEquipmentShop/2. Application for change of address, store, and _ or repair of equipment, equipment, radio and telecommunications..pdf",
   },
   {
     description:
-      "3. ពាក្យស្នើសុំបន្តអាជីវកម្ម/សុពលភាពលិខិតអនុញ្ញាតការបើកលក់ និង/ឬ​​ ជួលជុលគ្រឿងសម្ភារបរិក្ខារវិទ្យុគមនាគមន៍ និងទូរគមនាគមន៍",
+      "៣. ពាក្យស្នើសុំបន្តអាជីវកម្ម/សុពលភាពលិខិតអនុញ្ញាតការបើកលក់ និង/ឬ​​ ជួលជុលគ្រឿងសម្ភារបរិក្ខារវិទ្យុគមនាគមន៍ និងទូរគមនាគមន៍",
     link: "/service/for-public/TelecomEquipmentShop/3. Application Business Transmission _ Validity of Licenses, Opening and _ or Repairing Equipment, Equipment, Radio and Telecommunication.pdf",
   },
   {
     description:
-      "4. ពាក្យស្នើសុំបិទអាជីវកម្មហាងលក់ និង/ឬ ជួលជុលគ្រឿងសម្ភារបរិក្ខារវិទ្យុគមនាគមន៍ និងទូរគមនាគមន៍",
+      "៤. ពាក្យស្នើសុំបិទអាជីវកម្មហាងលក់ និង/ឬ ជួលជុលគ្រឿងសម្ភារបរិក្ខារវិទ្យុគមនាគមន៍ និងទូរគមនាគមន៍",
     link: "/service/for-public/TelecomEquipmentShop/4. Application Offer application, store, and _ or repair equipment, equipment, telecommunication and telecommunication..pdf",
   },
   {
