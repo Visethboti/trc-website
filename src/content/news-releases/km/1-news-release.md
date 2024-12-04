@@ -4,28 +4,27 @@ date: 12/29/2024
 featured: false
 isCarousel: false
 image: src/asset/media/news-release/1-news-release/thumbnail.webp
-title: Announcement On The Use of Common Codes *1201#, *1202#, *1203*
-  PIN#, and 1204 For All Mobile Networks
+title: សេចក្ដីជូនដំណឹង ស្ដីពី ការប្រើលេខកូដរួម *1200# *1201# *1202# *1203* PIN# និង 1204 សម្រាប់ប្រើប្រាស់គ្រប់ប្រព័ន្ធទូរសព្ទចល័ត
 description: Announcement On The Use of Common Codes *1201#, *1202#, *1203*
   PIN#, and 1204 For All Mobile Networks
-author: Ministry of Post and Telecommunications
+author: ក្រសួងប្រៃសណីយ៍និងទូរគមនាគមន៍
 lang: km
 type: news-release
 ---
 
-The Ministry of Post and Telecommunications would like to inform the public that, in order to provide convenience to all mobile services users, the Telecommunication Regulator of Cambodia has required all mobile network operators across the country to prepare common codes with standards according to the national telecommunications code. The codes and their functions are provided in detail as follows:
+ក្រសួងប្រៃសណីយ៍និងទូរគមនាគមន៍ សូមជម្រាបជូនដំណឹងដល់សាធារណជនទាំងអស់ ឱ្យបានជ្រាបថា ដើម្បីផ្តល់ភាពងាយស្រួលដល់អ្នកប្រើប្រាស់សេវាទូរសព្ទចល័តទាំងអស់ និយ័តករទូរគមនាគមន៍កម្ពុជាបានតម្រូវឱ្យប្រតិបត្តិករផ្តល់សេវាទូរសព្ទចល័តនៅទូទាំងប្រទេស រៀបចំលេខកូដរួមដែលមានលក្ខណៈស្តង់ដារស្របតាមលេខកូដទូរគមនាគមន៍ជាតិ ដែលមានមុខសញ្ញាប្រើប្រាស់ ដូចខាងក្រោម៖
 
-(1) \*1200# To terminate any unwanted value-added services (VAS)
+(១) \*1200# ផ្តាច់សេវាបន្ថែម (VAS) ដែលមិនត្រូវការប្រើ
 
-(2) \*1201# To check the balance
+(២) \*1201# ពិនិត្យសមតុល្យទឹកប្រាក់
 
-(3) \*1202# To check the user identity
+(៣) \*1202# ពិនិត្យអត្តសញ្ញាណអ្នកប្រើប្រាស់
 
-(4) *1203*PIN# To top-up
+(៤) \*1203\*PIN# បញ្ចូលទឹកប្រាក់
 
-(5) 1204 To contact customer service
+(៥) 1204 ទាក់ទងទៅកាន់សេវាបម្រើអតិថិជន
 
-The public may use the five common codes above across all mobile networks, free-of-charge, to terminate any unwanted value-added services, check credit balance, check user identity, top-up, or contact the customer service of each mobile network operator, starting 1 January 2022. For additional information, please contact the TRC hotline at 6789 during business hours.
+ដូចនេះ សាធារណជនអាចប្រើប្រាស់លេខកូដទាំង៥ ខាងលើបានគ្រប់ប្រព័ន្ធទូរសព្ទចល័តទាំងអស់ ដើម្បីធ្វើការផ្ដាច់សេវាបន្ថែម(Value Added Services) ដែលមិនត្រូវការប្រើ ពិនិត្យសមតុល្យទឹកប្រាក់ ពិនិត្យអត្តសញ្ញាណអ្នកប្រើប្រាស់ បញ្ចូលទឹកប្រាក់ ឬទាក់ទងទៅកាន់សេវាបម្រើអតិថិជនរបស់ក្រុមហ៊ុនទូរសព្ទចល័តនីមួយៗ ដោយឥតគិតថ្លៃ ចាប់ពីថ្ងៃទី១ ខែមករា ឆ្នាំ២០២២ តទៅ។ សម្រាប់ព័ត៌មានបន្ថែមសូមទាក់ទង និយ័តករទូរគមនាគមន៍កម្ពុជា តាមរយៈលេខទូរសព្ទ ៦៧៨៩ រៀងរាល់ម៉ោងធ្វើការ ។
 
 ![photo 1](src/asset/media/news-release/1-news-release/photo-1.webp)
 ![photo 2](src/asset/media/news-release/1-news-release/thumbnail.webp)

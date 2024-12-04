@@ -35,7 +35,8 @@ export const ui: Record<string, Record<string, string>> = {
     "nav.services.operationalLicense": "Operational License",
     "nav.services.spectrumLicense": "Spectrum License",
     "nav.services.telecomNumberingPermit": "Telecom Numbering Permit",
-    "nav.services.equipmentTACertificate": "Equipment TA Certificate",
+    "nav.services.equipmentTACertificate":
+      "Equipment Type Approval Certificate",
     "nav.services.qualifiedAgentCertification": "Qualified Agent Certification",
     "nav.services.equipmentImportationDistributionPermit":
       "Equipment Importation & Distribution Permit",
@@ -56,7 +57,7 @@ export const ui: Record<string, Record<string, string>> = {
     "nav.resources.commonCodes": "Common Codes",
     "nav.resources.emergencyNumbers": "Emergency Numbers",
     "nav.resources.qualifiedImportAgents": "Qualified Import Agents",
-    "nav.resources.equipmentTypeApproval": "Equipment Type Approval",
+    "nav.resources.equipmentTypeApproval": "Type-Approved Equipment",
     "nav.resources.towerMap": "Tower Map",
     "nav.about": "About",
     "nav.about.chairmansKeynote": "Chairman's Keynote",

@@ -4,9 +4,9 @@ date: 07/03/2024
 featured: false
 isCarousel: false
 image: src/asset/media/news-release/2-news-release/thumbnail.webp
-title: Announcement on Illegal import, supply, and distribution of telecommunications equipment and illegal use of telecommunications services
+title: សេចក្ដីជូនដំណឹង ស្តីពី ការនាំចូល ការផ្គត់ផ្គង់ និងការចែកចាយគ្រឿងសម្ភារៈបរិក្ខារ និងការប្រើប្រាស់សេវាទូរគមនាគមន៍ខុសច្បាប់
 description: Announcement on Illegal import, supply, and distribution of telecommunications equipment and illegal use of telecommunications services
-author: Telecommunication Regulator of Cambodia
+author: និយ័តករទូរគមនាគមន៍កម្ពុជា
 lang: km
 type: news-release
 ---

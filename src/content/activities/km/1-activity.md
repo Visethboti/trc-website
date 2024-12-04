@@ -4,49 +4,22 @@ date: 11/26/2020
 featured: false
 isCarousel: true
 image: src/asset/media/activities/1-activity/photo-1.webp
-title: Minister Vandeth Chea Participates in the TRC Leadership Transfer
-  Ceremony
+title: ឯកឧត្តមរដ្ឋមន្រ្តី ជា វ៉ាន់ដេត អញ្ជើញជាអធិបតីភាពក្នុងពិធីផ្ទេរតំណែងប្រធាននិយ័តករទូរគមនាគមន៍កម្ពុជា
 description: Minister Vandeth Chea Participates in the TRC Leadership Transfer
 author: Semtararath
 lang: km
 type: activity
 ---
 
-Phnom Penh, 26 November 2020, Minister of Post and
-Telecommunications Vandeth Chea participated in the leadership transfer
-ceremony of Telecommunication Regulator of Cambodia (TRC) held at the
-TRC premises. Present at the ceremony were MPTC leadership, TRC
-leadership and officials.
+រាជធានីភ្នំពេញ៖ នារសៀលថ្ងៃទី២៦ ខែវិច្ឆិកា ឆ្នាំ២០២០ នៅទីស្ដីការនិយ័តករទូរគមនាគមន៍កម្ពុជា ឯកឧត្តម ជា វ៉ាន់ដេត រដ្ឋមន្រ្តីក្រសួងប្រៃសណីយ៍និងទូរគមនាគមន៍ បានអញ្ជើញជាអធិបតីភាពក្នុងពិធីផ្ទេរតំណែងប្រធាននិយ័តករទូរគមនាគមន៍កម្ពុជា ដោយមានការអញ្ជើញចូលរួមពីថ្នាក់ដឹកនាំក្រសួងប្រៃសណីយ៍និងទូរគមនាគមន៍ ព្រមទាំងថ្នាក់ដឹកនាំនិងមន្ត្រីបុគ្គលិករបស់និយ័តករទូរគមនាគមន៍កម្ពុជា ជាច្រើនរូប។
 
-Secretary of State Chakrya Moa highlighted some of TRC’s past
-achievements, particularly the modernization of equipment, increasing
-effectiveness of the telecommunications and ICT infrastructure, and crime
-prevention. TRC has also provided capacity building and livelihood support
-programs for officials and employees as a way to promote team spirit.
+ឯកឧត្តម ម៉ូវ ចរិយា រដ្ឋលេខាធិការក្រសួងប្រៃសណីយ៍និងទូរគមនាគមន៍បានធ្វើរបាយការណ៍សង្ខេបស្តីពីសមិទ្ធផលការងារធំៗរបស់និយ័តករទូរគមនាគមន៍កម្ពុជាក្នុងរយៈពេលកន្លងមកនេះ ទាក់ទងនឹងការធ្វើទំនើបកម្មឧបករណ៍សម្ភារៈ ពង្រីកប្រសិទ្ធភាពនៃហេដ្ឋារចនាសម្ព័ន្ធទូរគមនាគមន៍និង ICT ការបង្រ្កាបបទល្មើស និងបង្កើនសមត្ថភាពធនធានមនុស្ស ការគាំពារជីវភាពមន្ត្រីរាជការ និយោជិត ដើម្បីធានាបាននូវភាពរឹងមាំនៃស្មារតីសាមគ្គីភាព ជាដើម។
 
-Speaking at the ceremony, H.E. Chenda Thong, the newly appointed
-chairman of TRC, expressed gratitude towards the government and Minister
-Chea for placing trust and confidence in his ability to lead TRC. Chairman
-Thong also took the opportunity to commend Secretary Moa for his leadership
-of TRC, bringing about noticeable development of the telecoms sector. Under
-the new administration, Chairman Thong stated his commitment to
-implementing restructuring policies to the highest standards, in line with
-Minister Chea’s steadfast, strategic leadership and government policies in
-advancing the quality and effectiveness of the sector and ensuring fair
-competition among telecoms operators.
+ថ្លែងនាឱកាសនោះ ឯកឧត្ដម ថោង ចិន្តា ប្រធាននិយ័តករទូរគមនាគមន៍កម្ពុជាដែលទើបត្រូវបានតែងតាំង បានមានប្រសាសន៍ថា ឯកឧត្តម សូមគោរពថ្លែងអំណរគុណដ៏ជ្រាលជ្រៅជូនចំពោះ ប្រមុខរាជរដ្ឋាភិបាល និងឯកឧត្តមរដ្ឋមន្ត្រី ដែលបានផ្តល់ទំនុកចិត្ត តែងតាំងឯកឧត្តមមកដឹកនាំនិយ័តករទូរគមនាគមន៍កម្ពុជា ។ ឆ្លៀតក្នុងឱកាសនោះដែរ ឯកឧត្តម ក៏បានកោតសរសើរចំពោះការខិតខំប្រឹងប្រែងរបស់ ឯកឧត្តម ម៉ូវ ចរិយា ក្នុងការដឹកនាំស្ថាប័នក្នុងរយៈពេលកន្លងមក ដែលធ្វើឱ្យវិស័យនេះមានការប្រែប្រួលរីកចម្រើនគួរឱ្យកត់សម្គាល់។ ឯកឧត្តមប្រធាន បានធ្វើការប្តេជ្ញាចិត្តខ្ពស់ចូលរួមអនុវត្តឱ្យបានជោគជ័យនូវគោលនយោបាយកែទម្រង់ដែលមិនរារែក និងមិនរាថយ ប្រកាន់ខ្ជាប់សិល្បៈដឹកនាំទន់ភ្លន់តែម៉ឺងម៉ាត់ ប្រកបដោយថាមភាពរស់រវើករបស់ឯកឧត្តមរដ្ឋមន្ត្រី ក៏ដូចជាកម្មវិធីនយោបាយរបស់រាជរដ្ឋាភិបាលពាក់ព័ន្ធនឹងការអភិវឌ្ឍនិងធ្វើទំនើបកម្មវិស័យទូរគមនាគមន៍ប្រកបដោយគុណភាព ប្រសិទ្ធភាព និងការប្រកួតប្រជែងស្មោះត្រង់។
 
-On this occasion, Minister Chea praised Secretary Moa for his past
-contribution to the sector and TRC. However, H.E. Minister stated that there remained key and urgent tasks for Chairman Thong to focus on to enforce the
-regulations, license regime management and revenue mobilization.
+នៅក្នុងឱកាសដ៏ថ្លៃថ្លានេះ ឯកឧត្ដមរដ្ឋមន្ត្រី បានវាយតម្លៃខ្ពស់ចំពោះសមិទ្ធផលសំខាន់ៗជាច្រើនរបស់ ឯកឧត្តម ម៉ូវ ចរិយា ដែលសម្រេចបានសម្រាប់វិស័យ និងអង្គភាពក្នុងពេលកន្លងមក។ ឯកឧត្ដមរដ្ឋមន្ត្រី បានធ្វើការគូសរំលេចនូវកិច្ចការជាអាទិភាពសំខាន់ៗមួយចំនួនសម្រាប់ ឯកឧត្តម ថោង ចិន្តា ឱ្យផ្តោតការយកចិត្តទុកដាក់ក្នុងបង្កើនប្រសិទ្ធភាពនៃការធ្វើនិយ័តកម្ម ការគ្រប់គ្រងរបបអាជ្ញាបណ្ណ ការប្រមូលចំណូលពីវិស័យទូរគមនាគមន៍ ជំរុញរៀបចំលិខិតបទដ្ឋានគតិយុត្តិពាក់ព័ន្ធនានា សំដៅធានាឱ្យបាននូវការប្រកួតប្រជែងដោយស្មោះត្រង់ ការការពារអ្នកប្រើប្រាស់ ព្រមទាំងពង្រឹងគុណភាពសេវាទូរគមនាគមន៍ និងស្ថង់ដារគ្រឿងសម្ភារៈបរិក្ខារទូរគមនាគមន៍។ ឯកឧត្ដមរដ្ឋមន្ត្រី ក៏បានណែនាំឱ្យនិយ័តករទូរគមនាគមន៍កម្ពុជា បន្តពង្រឹងការគ្រប់គ្រងរដ្ឋបាលឱ្យមានប្រសិទ្ធភាពខ្ពស់ក្នុងការបំពេញមុខងាររបស់ខ្លួន ជំរុញពង្រឹងសមត្ថភាពធនធានមនុស្ស និងសមត្ថភាពជំនាញតាមរយៈការបណ្តុះបណ្តាលបន្ថែម។
 
-In addition, Minister Chea urged Chairman Thong to draft relevant laws and
-regulations to guarantee fair business practice, consumer protection, and
-reliable telecoms services and equipment. H.E. Minister also advised TRC to
-improve their administrative process in carrying out duties, strengthening
-human capital and fostering technical capability.
-
-In his closing remarks, Minister Chea once again expressed his confidence in the leadership and energy of Chairman Thong and thanked MPTC and TRC
-leaderships, officials, and employees for their contribution to TRC’s missions and goals as well as to the public good.
+មុននឹងបញ្ចប់ ឯកឧត្ដមរដ្ឋមន្ត្រី បានគូសបញ្ជាក់ពីជំនឿជាក់យ៉ាងមុតមាំថាក្រោមការដឹកនាំដ៏សកម្ម និងប្រកបដោយថាមពលរបស់ ឯកឧត្តម ថោង ចិន្តា និងជាពិសេសការគាំទ្រ និងកិច្ចខិតខំប្រឹងប្រែងរួមរបស់ ថ្នាក់ដឹកនាំ និងមន្រ្តីរាជការ និយោជិត គ្រប់ជាន់ថ្នាក់ និយ័តករទូរគមនាគមន៍កម្ពុជានឹងបន្តសម្រេចបាននូវសមិទ្ធផលជាច្រើនថែមទៀតជូនជាតិមាតុភូមិ៕
 
 ![photo 1](src/asset/media/activities/1-activity/photo-8.webp)
 ![photo 2](src/asset/media/activities/1-activity/photo-1.webp)
