@@ -2,7 +2,7 @@
 date: 09/09/2020
 file: laws-regulations/Guideline/Guideline on the Application for a Permit to Build Cell Tower.pdf
 featured: true
-image: src/asset/laws-regulations/royal-decree-thumnail.png
+image: src/asset/logo/TRC-Logo.png
 title: Guideline on the Application for a Permit to Build Cell Tower
 type: guideline
 lang: en
