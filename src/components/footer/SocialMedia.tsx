@@ -16,7 +16,7 @@ export default function SocialMedia() {
   ];
 
   return (
-    <ul className="flex gap-6">
+    <ul className="flex gap-5">
       {socialMediaLinks.map(({ Icon, label, link }) => (
         <li key={label}>
           <a
