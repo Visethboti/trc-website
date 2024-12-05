@@ -19,6 +19,7 @@ const formFieldsss = [
 ];
 
 const t = useTranslations(getLangFromUrl(Astro.url.pathname));
+const mbcUrl = "https://mbc.gov.kh/complaint";
 ---
 
 <div class="">
@@ -102,4 +103,14 @@ const t = useTranslations(getLangFromUrl(Astro.url.pathname));
   <Button type="submit" className="inline-block w-full rounded-2xl text-white">
     {t("contact.submit")}
   </Button>
+
+  <TextElement variant="base" className="mt-4">
+    {t("contact.additionalText")}
+    <a
+      href={mbcUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      class="text-primary hover:underline">mbc.gov.kh</a
+    >
+  </TextElement>
 </div>

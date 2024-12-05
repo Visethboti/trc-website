@@ -56,10 +56,10 @@ export const ui: Record<string, Record<string, string>> = {
     "nav.resources.mobilePrefixes": "Mobile Prefixes",
     "nav.resources.commonCodes": "Common Codes",
     "nav.resources.emergencyNumbers": "Emergency Numbers",
-    "nav.resources.qualifiedImportAgents": "Qualified Import Agents",
+    "nav.resources.qualifiedImportAgents": "Qualified Agents",
     "nav.resources.equipmentTypeApproval": "Type-Approved Equipment",
     "nav.resources.towerMap": "Tower Map",
-    "nav.about": "About",
+    "nav.about": "About Us",
     "nav.about.chairmansKeynote": "Chairman's Keynote",
     "nav.about.vision": "Vision",
     "nav.about.mission": "Mission",
@@ -171,6 +171,8 @@ export const ui: Record<string, Record<string, string>> = {
       "We are welcomed for any questions and feedback. Please fill in the form below and we will get back to you shortly. We appreciate your interest.",
     "contact.submit": "Submit",
     "contact.workHour": "7:30 AM - 5:30 PM / (Mon - Fri)",
+    "contact.additionalText":
+      "If you have any complaints regarding internet or telecommunications issues, kindly refer to ",
   },
   km: {
     telecommunicationRegulatorofCambodia: "និយ័តករទូរគមនាគមន៍កម្ពុជា",
@@ -228,8 +230,8 @@ export const ui: Record<string, Record<string, string>> = {
     "nav.resources.mobilePrefixes": "ក្បាលលេខទូរស័ព្ទចល័ត",
     "nav.resources.commonCodes": "លេខកូដរួម",
     "nav.resources.emergencyNumbers": "លេខកូដខ្លីសេវាសាធារណៈ",
-    "nav.resources.qualifiedImportAgents": "ភ្នាក់ងារនាំចូលឧបករណ៍",
-    "nav.resources.equipmentTypeApproval": "យថាប្រភេទបរិក្ខារ",
+    "nav.resources.qualifiedImportAgents": "ភ្នាក់ងារមានគុណវុឌ្ឍិ",
+    "nav.resources.equipmentTypeApproval": "បរិក្ខារមានថាប្រភេទ",
     "nav.resources.towerMap": "ទីតាំងបង្គោលអង់តែន",
     "nav.about": "អំពី​​ ន.ទ.ក.",
     "nav.about.chairmansKeynote": "សុន្ទរកថារបស់ឯកឧត្តមប្រធាន",
@@ -344,6 +346,8 @@ export const ui: Record<string, Record<string, string>> = {
       "យើងស្វាគមន៍ចំពោះសំណួរ និងមតិកែលម្អណាមួយ។ សូមបំពេញទម្រង់ខាងក្រោម ហើយយើងនឹងឆ្លើយតបទៅអ្នកវិញក្នុងពេលឆាប់ៗនេះ។ យើងសូមកោតសរសើរចំពោះចំណាប់អារម្មណ៍របស់អ្នក។",
     "contact.submit": "ដាក់ស្នើ",
     "contact.workHour": "៧:៣០ ព្រឹក ដល់ ៥:៣០ រសៀល / ចន្ទ ដល់ សុក្រ",
+    "contact.additionalText":
+      "ប្រសិនបើលោកអ្នកមានបញ្ហាអុីនធឺណិត ឬបញ្ហាទូរគមនាគមន៍ផ្សេងៗ សូមចូលទៅកាន់តំណភ្ជាប់នេះ ",
   },
 } as const;
 
