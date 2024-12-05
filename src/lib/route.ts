@@ -33,7 +33,7 @@ export enum Routes {
   Publications = Resources + "/publications",
   TelecomStatistics = Resources + "/telecom-statistics",
   QualifiedImportAgents = Resources + "/qualified-import-agents",
-  EquipmentTypeApproval = Resources + "/equipment-type-approval",
+  EquipmentTypeApproval = Resources + "/type-approved-equipment",
   TowerMap = Resources + "/tower-map",
   Media = "/media",
   NewsRelease = Media + "/news-releases",
