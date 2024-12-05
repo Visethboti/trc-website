@@ -17,6 +17,7 @@ export async function getStaticPaths() {
 }
 
 const t = useTranslations(getLangFromUrl(Astro.url.pathname));
+const mbcUrl = "https://mbc.gov.kh/complaint";
 ---
 
 <BaseLayout title={title}>
@@ -24,6 +25,15 @@ const t = useTranslations(getLangFromUrl(Astro.url.pathname));
     <header>
       <TextElement variant="heading" className="text-text text-center">
         {t("contact")}
+      </TextElement>
+      <TextElement variant="paragraph" className="text-center">
+        {t("contact.additionalText")}
+        <a
+          href={mbcUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-primary hover:underline">mbc.gov.kh</a
+        >
       </TextElement>
     </header>
     <section aria-label={title} class="py-12">

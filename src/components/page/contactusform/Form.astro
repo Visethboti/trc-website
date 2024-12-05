@@ -100,8 +100,13 @@ const mbcUrl = "https://mbc.gov.kh/complaint";
       ))
     }
   </form>
-  <Button type="submit" className="inline-block w-full rounded-2xl text-white">
-    {t("contact.submit")}
+  <Button
+    type="submit"
+    className="inline-block w-full rounded-2xl p-2 text-white"
+  >
+    <TextElement variant="body">
+      {t("contact.submit")}
+    </TextElement>
   </Button>
 
   <TextElement variant="base" className="mt-4">
