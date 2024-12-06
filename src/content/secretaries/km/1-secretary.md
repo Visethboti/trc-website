@@ -7,10 +7,10 @@ image: src/asset/secretaries/chairman-comissioner/thong-chenda.webp
 lang: km
 ---
 
-H.E Chenda Thong has more than 20 years of experience in public sector. After working at the central level of government, in November 2020 he was appointed Chairman of the Telecommunication Regulator of Cambodia.
+ឯកឧត្តម ថោង ចិន្តា មានបទពិសោធន៍ការងារជាង២០ឆ្នាំនៅក្នុងវិស័យសាធារណៈ។ បន្ទាប់ពីបានបម្រើការងារនៅក្នុងរដ្ឋបាលថ្នាក់ជាតិ ឯកឧត្តមលោកត្រូវបានតែងតាំងជាប្រធាននិយ័តករទូរគមនាគមន៍កម្ពុជានៅខែ វិច្ឆិកា ឆ្នាំ២០២០។
 
-Prior to joining the TRC, Chairman Chenda held various positions such as a Secretary of State for the Ministry of Post and Telecommunications, an advisor to the Office of the Council of Ministers, a legal advisor to the Chairman of the Third Committee of the National Assembly and the Vice President of the Royal Academy for Judicial Professions, one of the first state institutions to offer a fair and transparent national judicial entrance examination.
+មុនពេលចូលបម្រើការងារនៅនិយ័តករទូរគនាគមន៍កម្ពុជា ឯកឧត្តមប្រធាន ថោង ចិន្តាបានកាន់តំណែងជាច្រើនដែលរួមមានដូចជា រដ្ឋលេខាធិការក្រសួងប្រៃសណីយ៍ និងទូរគមនាគមន៍ ទីប្រឹក្សាទីស្តីការគណៈរដ្ឋមន្រ្តី និងទីប្រឹក្សាផ្នែកច្បាប់របស់ប្រធានគណៈកម្មាធិការអាណត្តិ ទីបី នៃរដ្ឋសភាជាតិនិងអនុប្រធានបណ្ឌិត្យសភាភូមិន្ទយុត្តិធម៌កម្ពុជា ដែលជាស្ថាប័នដំបូងគេនៅក្នុងប្រទេសកម្ពុជាដែលផ្តល់ការប្រឡងចូលតុលាការជាតិដោយយុត្តិធម៌ និងតម្លាភាព។
 
-As a renowned leader within the public entity, Chairman Chenda creates a culture of solidarity and harmony with the core value of high integrity in the working place. His previous background powered his aspiration to lead the TRC to be one of the world class regulators, finding practical answers for some of the nation's complex questions and to ensure good governance and transparency in management and operations.
+ក្នុងនាមជាថ្នាក់ដឹកនាំអង្គភាពវិស័យសាធារណៈ ឯកឧត្តមប្រធាន ថោង ចិន្តា បានបង្កើតនូវវប្បធម៌ការងារដែលពោរពេញដោយសាមគ្គីភាព និងភាពសុខដុមរមនា ភ្ជាប់ជាមួយនឹងគុណតម្លៃស្នូលប្រកបដោយសុចរិតភាពខ្ពស់។ បទពិសោធន៍ការងាររបស់ឯកឧត្តមប្រធាននៅក្នុងវិស័យសាធារណៈគឺជាមូលដ្ឋានគ្រឹះដ៍រឹងមាំដែលជម្រុញឲ្យឯកឧត្តមលោកមានចក្ចុវិស័យក្នុងការដឹកនាំនិយ័តករទូរគមនាគមន៍កម្ពុជាឲ្យក្លាយទៅជានិយ័តករដែលមានការទទួលស្គាល់ជាលំដាប់ថ្នាក់អន្តរជាតិ និងជានិយ័តករដែលសិក្សាស្វែងរកដំណោះស្រាយសម្រាប់បញ្ហា  ឬបញ្ហាប្រឈមនៅក្នុងប្រទេស ដើម្បីធានាបាននូវអភិបាលកិច្ចត្រឹមត្រូវ និងតម្លាភាពក្នុងការគ្រប់គ្រង និងប្រតិបត្តិការក្នុងវិស័យទូរគមនាគមន៍។
 
-Chairman Chenda holds qualifications in Law from Norton University and English literature from the Institute of Foreign Languages in Cambodia.
+ឯកឧត្តមប្រធាន ថោង ចិន្តា បានបញ្ចប់បរិញ្ញាបត្រផ្នែកច្បាប់ពីសាកលវិទ្យាល័យន័រតុននិងអក្សរសាស្រ្តភាសាអង់គ្លេសពីវិទ្យាស្ថានភាសាបរទេសនៃសាកលវិទ្យាល័យភូមិន្ទភ្នំពេញនៅប្រទេសកម្ពុជា។
