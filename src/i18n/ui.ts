@@ -9,7 +9,7 @@ export const ui: Record<string, Record<string, string>> = {
     showing: "Showing",
     to: "to",
     of: "of",
-    spokesPersons: "Spokespersons: Mr. Sithy Sieng",
+    spokesPerson: "Spokesperson: Mr. Sithy Sieng",
     "footer.hotline": "6789 (Hotline) / (855) 23 722 333",
     "footer.phoneNumber": "(855) 11 809 888",
     "footer.address":
@@ -183,7 +183,7 @@ export const ui: Record<string, Record<string, string>> = {
     showing: "បង្ហាញពី",
     to: "ទៅ",
     of: "នៃ",
-    spokesPersons: "អ្នកនាំពាក្យ: លោក សៀង សិទ្ធី",
+    spokesPerson: "អ្នកនាំពាក្យ: លោក សៀង សិទ្ធី",
     "footer.hotline": "៦៧៨៩         (ខ្សែទូរស័ព្ទ) / (៨៥៥) ២៣ ៧២២ ៣៣៣",
     "footer.phoneNumber": "(៨៥៥) ១១  ៨០៩ ៨៨៨",
     "footer.address": "ផ្លូវ១០២ សង្កាត់វត្តភ្នំ, ខណ្ឌដូនពេញ, រាជធានីភ្នំពេញ",
