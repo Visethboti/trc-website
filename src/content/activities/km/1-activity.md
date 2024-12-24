@@ -3,6 +3,7 @@ categories: ["News"]
 date: 11/26/2020
 featured: false
 isCarousel: true
+index: 2
 image: src/asset/media/activities/1-activity/photo-1.webp
 title: ឯកឧត្តមរដ្ឋមន្រ្តី ជា វ៉ាន់ដេត អញ្ជើញជាអធិបតីភាពក្នុងពិធីផ្ទេរតំណែងប្រធាននិយ័តករទូរគមនាគមន៍កម្ពុជា
 description: Minister Vandeth Chea Participates in the TRC Leadership Transfer

@@ -28,6 +28,7 @@ const mediaSchema = ({ image }: SchemaContext) =>
     date: z.string(),
     featured: z.boolean(),
     isCarousel: z.boolean(),
+    index: z.number().optional(),
     image: image(),
     title: z.string(),
     description: z.string().max(160, {

@@ -64,7 +64,10 @@ const trimmedTitle = title.trim().replace(/\s+/g, "-");
         {title}
       </TextElement>
       <section aria-label="Article summary" class="grow">
-        <TextElement variant="base" className="mt-2 line-clamp-1 lg:mt-3">
+        <TextElement
+          variant="base"
+          className="mt-2 line-clamp-1 h-full lg:mt-3"
+        >
           {description}
         </TextElement>
       </section>

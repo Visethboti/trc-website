@@ -74,7 +74,7 @@ export default function ImageCarousel({
                 >
                   <div className="container size-full">
                     <CardContent className="flex flex-col items-center justify-center space-y-4 p-0 text-center text-primary-foreground lg:items-end lg:justify-end">
-                      <div className="flex w-full flex-col items-center justify-center lg:w-1/2 lg:items-end lg:justify-end">
+                      <div className="lg:h-5/5 flex w-full flex-col items-center justify-center lg:w-3/4 lg:items-end lg:justify-end">
                         <Badge
                           variant="secondary"
                           className="mb-4 rounded-3xl bg-secondary px-7 py-2 font-normal capitalize text-white hover:bg-secondary"
