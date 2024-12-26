@@ -4,7 +4,7 @@ date: 12/04/2024
 featured: false
 isCarousel: true
 index: 1
-image: src/asset/media/activities/2-activity/thumbnail.webp
+image: src/asset/media/activities/5-activity/thumbnail.webp
 title: The Signing of a New MOU with the Telecommunication Regulator of Cambodia (TRC) to Strengthen Cooperation in Tackling Phone Scams
 description: Singapore and Cambodia Join Forces To Combat Phone Scams
 author: Infocomm Media Development Authority
@@ -26,5 +26,6 @@ The new MOU marks a key step in combating phone scams, with a focus on the mutua
 
 Find out how we’re keeping everyone safe from scams: https://lnkd.in/gN-fxGV4
 
-![photo 1](src/asset/media/activities/2-activity/photo-1.webp)
-![photo 2](src/asset/media/activities/2-activity/photo-2.webp)
+![photo 1](src/asset/media/activities/5-activity/photo-1.webp)
+![photo 2](src/asset/media/activities/5-activity/photo-2.webp)
+![photo 2](src/asset/media/activities/5-activity/photo-3.webp)
