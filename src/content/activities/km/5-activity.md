@@ -4,7 +4,7 @@ date: 12/04/2024
 featured: false
 isCarousel: true
 index: 1
-image: src/asset/media/activities/2-activity/thumbnail.webp
+image: src/asset/media/activities/5-activity/thumbnail.webp
 title: ការចុះ MOU ថ្មីជាមួយនិយតករទូរគមនាគមន៍កម្ពុជា (TRC) ដើម្បីពង្រឹងកិច្ចសហប្រតិបត្តិការក្នុងការដោះស្រាយការឆបោកតាមទូរស័ព្ទ
 description: ប្រទេស​សិង្ហបុរី និងប្រទេស​កម្ពុជារួម​កម្លាំង​ដើម្បី​ប្រយុទ្ធ​ប្រឆាំង​នឹង​ការ​ឆបោក​តាម​ទូរស័ព្ទ
 author: Infocomm Media Development Authority
@@ -26,5 +26,6 @@ type: activity
 
 ស្វែងយល់បន្ថែមពីរបៀបដែលក្រុមការងារយើងការពារអ្នកទាំងអស់គ្នាពីការបោកប្រាស់តាមរយៈតំណ៖ https://lnkd.in/gN-fxGV4
 
-![photo 1](src/asset/media/activities/2-activity/photo-1.webp)
-![photo 2](src/asset/media/activities/2-activity/photo-2.webp)
+![photo 1](src/asset/media/activities/5-activity/photo-1.webp)
+![photo 2](src/asset/media/activities/5-activity/photo-2.webp)
+![photo 2](src/asset/media/activities/5-activity/photo-3.webp)
