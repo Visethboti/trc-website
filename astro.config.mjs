@@ -42,4 +42,7 @@ export default defineConfig({
   experimental: {
     contentIntellisense: true,
   },
+  optimizeDeps: {
+    include: ["react", "react-dom"],
+  },
 });
