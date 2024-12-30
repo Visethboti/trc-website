@@ -3,6 +3,7 @@ categories: ["News"]
 date: 05/31/2023
 featured: false
 isCarousel: true
+index: 3
 image: src/asset/media/activities/2-activity/thumbnail.webp
 title: និយ័តករទូរគមនាគមន៍កម្ពុជា (ន.ទ.ក.) និងនិយ័តករមូលបត្រកម្ពុជា (ន.ម.ក.) បានសហការរៀបចំវគ្គបណ្តុះបណ្តាលកសាងសមត្ថភាពស្តីពី “សន្តិសុខតាមប្រព័ន្ធអ៊ីនធឺណិត”
 description: TRC and SERC organized a collaborative Capacity Building Training on "Cybersecurity”

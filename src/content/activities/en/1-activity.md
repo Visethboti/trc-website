@@ -3,6 +3,7 @@ categories: ["News"]
 date: 11/26/2020
 featured: false
 isCarousel: true
+index: 2
 image: src/asset/media/activities/1-activity/photo-1.webp
 title: Minister Vandeth Chea Participates in the TRC Leadership Transfer
   Ceremony

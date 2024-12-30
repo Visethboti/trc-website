@@ -29,6 +29,11 @@ const langMedia = allMedia.filter((article) => article.data.lang === lang);
 
 const carousels = langMedia
   .filter((tip) => tip.data.isCarousel === true)
+  .sort((a, b) => {
+    const indexA = a.data?.index ?? Infinity;
+    const indexB = b.data?.index ?? Infinity;
+    return indexA - indexB;
+  })
   .slice(0, 3);
 
 const featuredMedia = langMedia
